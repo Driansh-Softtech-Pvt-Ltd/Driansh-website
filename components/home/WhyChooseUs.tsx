@@ -31,10 +31,10 @@ export default function WhyChooseUs() {
               />
             </div>
 
-            <h3 className="text-2xl font-semibold mb-3 group-hover:text-blue-600 transition-colors duration-300">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
               {item.title}
             </h3>
-            <p className="leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed">
               {item.desc}
             </p>
           </motion.div>

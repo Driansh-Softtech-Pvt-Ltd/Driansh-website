@@ -24,54 +24,54 @@ export const navItems = [
           { label: "Kamailio Development", path: "/services/kamailio-devlopment-service" },
         ],
       },
-      {
-        title: "OPEN SOURCE",
-        path: "#",
-        items: [
-          { label: "Sip.js Development", path: "/services/sip-js-devlopment-service" },
-          { label: "VICIdial Development", path: "/services/vicidial-development-service" },
-          { label: "FusionPBX Development", path: "/services/fusionpbx-development-service" },
-          { label: "Linphone Development", path: "/services/linphone-app-development" },
-        ],
-      },
-      {
-        title: "PLATFORM",
-        path: "#",        
-        items: [{ label: "SignalWire Development", path: "/services/signalwire" }],
-      },
-      {
-        title: "DEVOPS SERVICES",
-        path: "/services/devops-services",
-        items: [],
-      },
-      {
-        title: "PRODUCT ENGINEERING",
-        path: "/services/product-engineering-service",
-        items: [],
-      },
-      {
-        title: "VOIP TESTING",
-        path: "/services/voip-testing",
-        items: [],
-      },
-      {
-        title: "MOBILE APP DEVELOPMENT",
-        path: "/services/mobile-app-development",
-        items: [
-          { label: "Android Development", path: "/services/android-app-development" },
-          { label: "iOS Development", path: "/services/ios-app-development" },
-          { label: "React Native Development", path: "/services/react-native-app-development" },
-          { label: "Flutter App Development", path: "/services/flutter-app-development" },
-        ],
-      },
-      {
-        title: "WEB DEVELOPMENT",
-        path: "/services/web-development",
-        items: [
-          { label: "Front End Development", path: "/services/front-end-development" },
-          { label: "Back End Development", path: "/services/back-end-development" },
-        ],
-      },
+      // {
+      //   title: "OPEN SOURCE",
+      //   path: "#",
+      //   items: [
+      //     { label: "Sip.js Development", path: "/services/sip-js-devlopment-service" },
+      //     { label: "VICIdial Development", path: "/services/vicidial-development-service" },
+      //     { label: "FusionPBX Development", path: "/services/fusionpbx-development-service" },
+      //     { label: "Linphone Development", path: "/services/linphone-app-development" },
+      //   ],
+      // },
+      // {
+      //   title: "PLATFORM",
+      //   path: "#",        
+      //   items: [{ label: "SignalWire Development", path: "/services/signalwire" }],
+      // },
+      // {
+      //   title: "DEVOPS SERVICES",
+      //   path: "/services/devops-services",
+      //   items: [],
+      // },
+      // {
+      //   title: "PRODUCT ENGINEERING",
+      //   path: "/services/product-engineering-service",
+      //   items: [],
+      // },
+      // {
+      //   title: "VOIP TESTING",
+      //   path: "/services/voip-testing",
+      //   items: [],
+      // },
+      // {
+      //   title: "MOBILE APP DEVELOPMENT",
+      //   path: "/services/mobile-app-development",
+      //   items: [
+      //     { label: "Android Development", path: "/services/android-app-development" },
+      //     { label: "iOS Development", path: "/services/ios-app-development" },
+      //     { label: "React Native Development", path: "/services/react-native-app-development" },
+      //     { label: "Flutter App Development", path: "/services/flutter-app-development" },
+      //   ],
+      // },
+      // {
+      //   title: "WEB DEVELOPMENT",
+      //   path: "/services/web-development",
+      //   items: [
+      //     { label: "Front End Development", path: "/services/front-end-development" },
+      //     { label: "Back End Development", path: "/services/back-end-development" },
+      //   ],
+      // },
     ],
   },
   {
@@ -83,16 +83,16 @@ export const navItems = [
           { label: "Multi Tenant IP PBX Solution", path: "/multi-tenant-ip-pbx-solution" },
           { label: "Call Center Solution", path: "/call-center-solution" },
           { label: "Voice Broadcasting Solution", path: "/voice-broadcasting-solution" },
-          { label: "Audio & Video Conferencing Solution", path: "/audio-video-conferencing-solution" },
+          // { label: "Audio & Video Conferencing Solution", path: "/audio-video-conferencing-solution" },
           { label: "Unified Communication Solution", path: "/unified-communications-solution" },
-          { label: "Class 5 Softswitch Solution", path: "/class-5-softswitch-solution" },
-          { label: "Class 4 Softswitch Solution", path: "/class-4-softswitch-solution" },
-          { label: "VoIP Billing Solution", path: "/voip-billing-solution" },
-          { label: "Calling Card Solution", path: "/calling-card-solution" },
-          { label: "Enterprise VoIP Solution", path: "/enterprise-voip-solutions" },
-          { label: "VoIP Business Solutions", path: "/voip-business-solutions" },
-          { label: "Faxing Solution", path: "/faxing-solution" },
-          { label: "Live Call Monitoring Solution", path: "/live-call-monitoring-solution" },
+          // { label: "Class 5 Softswitch Solution", path: "/class-5-softswitch-solution" },
+          // { label: "Class 4 Softswitch Solution", path: "/class-4-softswitch-solution" },
+          // { label: "VoIP Billing Solution", path: "/voip-billing-solution" },
+          // { label: "Calling Card Solution", path: "/calling-card-solution" },
+          // { label: "Enterprise VoIP Solution", path: "/enterprise-voip-solutions" },
+          // { label: "VoIP Business Solutions", path: "/voip-business-solutions" },
+          // { label: "Faxing Solution", path: "/faxing-solution" },
+          // { label: "Live Call Monitoring Solution", path: "/live-call-monitoring-solution" },
         ],
       },
     ],
@@ -236,10 +236,10 @@ export const OUR_PRODUCTS = [
 
 export const FOOTER_LINKS = {
   services: [
-    { name: "VoIP Development", href: "/services/voip-devlopment-service" },
-    { name: "Mobile App Development", href: "/services/mobile-app-development" },
-    { name: "Web Development", href: "/services/web-development" },
-    { name: "DevOps Services", href: "/services/devops-services" },
+    { name: "VoIP Development", href: "/services/voip" },
+    { name: "Mobile App Development", href: "/services/mobile" },
+    { name: "Web Development", href: "/services/web" },
+    { name: "DevOps Services", href: "/services/devops" },
   ],
   solution: [
     { name: "Multi Tenant IP PBX Solution", href: "/multi-tenant-ip-pbx-solution"},

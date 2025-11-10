@@ -143,7 +143,7 @@ export default function VoIPServicePage() {
           <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
           <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
-            src="/images/services/voip-devlopment-service/freeswitch-devlopment-service/FreeSWITCH-Development.webp"
+            src="/images/services/voip-devlopment-service/freeswitch-devlopment-service/image.png"
             alt="Asterisk Developer"
             width={400}
             height={400}
@@ -156,15 +156,12 @@ export default function VoIPServicePage() {
       <section className="flex flex-col lg:flex-row items-center justify-center gap-10 py-16 px-8 bg-gray-150">
         {/* Left Section - Image */}
         <div className="relative max-w-md w-full flex justify-center">
-          <div className="absolute -z-10 top-10 left-0 right-0 mx-auto w-80 h-60 bg-orange-500 rounded-3xl"></div>
-          <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
-          <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
-            src="/images/services/voip-devlopment-service/asterisk-devlopment-service/Asterisk-Development.webp"
+            src="/images/services/voip-devlopment-service/asterisk-devlopment-service/Asterisk-img.jpeg"
             alt="Asterisk Developer"
             width={400}
             height={400}
-            className="rounded-2xl relative z-10"
+            className="rounded-2xl relative "
           />
         </div>
 
@@ -277,7 +274,7 @@ export default function VoIPServicePage() {
           <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
           <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
-            src="/images/services/voip-devlopment-service/opensips-devlopment-service/OpenSIPs-Development.webp"
+            src="/images/services/voip-devlopment-service/opensips-devlopment-service/openSIP-img.png"
             alt="openSIPs Developer"
             width={400}
             height={400}
@@ -294,7 +291,7 @@ export default function VoIPServicePage() {
           <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
           <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
-            src="/images/services/voip-devlopment-service/kamailio-devlopment-service/kamailio.png"
+            src="/images/services/voip-devlopment-service/kamailio-devlopment-service/kamailio-img.png"
             alt="kamailio Developer"
             width={400}
             height={400}
@@ -402,11 +399,8 @@ export default function VoIPServicePage() {
 
         {/* Right Section - Image */}
         <div className="relative max-w-md w-full flex justify-center">
-          <div className="absolute -z-10 top-10 left-0 right-0 mx-auto w-80 h-60 bg-orange-500 rounded-3xl"></div>
-          <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
-          <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
-            src="/images/services/voip-devlopment-service/webrtc-devlopment-service/webRTC.png"
+            src="/images/services/voip-devlopment-service/webrtc-devlopment-service/webRTC-img.jpeg"
             alt="webrtc Developer"
             width={400}
             height={400}

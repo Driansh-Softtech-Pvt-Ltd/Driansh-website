@@ -112,7 +112,7 @@ export default function VoIPTestingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {SERVICES_VOIP_TESTING_PROTOCOLTEST.map((test, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow min-h-[200px]">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold ">
                     {index + 1}

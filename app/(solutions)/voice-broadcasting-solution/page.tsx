@@ -61,9 +61,9 @@ export default function VoiceBroadcastringPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 flex text-center  md:justify-center">
             <Image
-              src="/images/solutions/voice-broadcasting/image-02.webp"
+              src="/images/solutions/voice-broadcasting/voice-broadcasting-img.png"
               alt="Voice Broadcasting Solution"
-              width={500}
+              width={550}
               height={400}
               className="object-contain rounded-xl"
             />
@@ -128,11 +128,11 @@ export default function VoiceBroadcastringPage() {
           </div>
           <div className="w-full lg:w-[45%] flex justify-center">
             <Image
-              src="/images/solutions/voice-broadcasting/image-03.webp"
+              src="/images/solutions/voice-broadcasting/call-broadcasting-solution-img.jpeg"
               alt="Voice Broadcasting Solution"
               width={800}
               height={600}
-              className="object-cover w-full"
+              className="object-cover w-full rounded-2xl"
             />
           </div>
         </div>

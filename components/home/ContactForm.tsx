@@ -36,16 +36,11 @@ export default function ContactForm() {
       await sendMail(data);
       setSuccessMsg("Thank you! We'll contact you soon.");
       reset();
-      saveContact(data).catch((err) => {
-        if (process.env.NODE_ENV !== "production") {
-          console.error("Failed to save contact in DB:", err);
-        }
-      }
+      saveContact(data).catch((err) =>
+        console.error("Failed to save contact in DB:", err)
       );
     } catch (err) {
-      if (process.env.NODE_ENV !== "production") {
-        console.error("Error submitting contact form:", err);
-      }
+      console.error("Error submitting contact form:", err);
       setSuccessMsg("Failed to send your message. Please try again later.");
     } finally {
       setIsSubmitting(false);

@@ -17,10 +17,12 @@ export default function AboutUsPage() {
       <section
         className="relative h-[70vh] w-full bg-center bg-cover flex items-center justify-center"
         style={{
-          backgroundImage: "url('/images/about_1.png')",
+          backgroundImage: "url('/images/about-us-img1.png')",
+        
+              backgroundPosition: "center center", 
         }}
       >
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-black px-4">
           <h1 className="text-xl md:text-5xl font-semibold mb-3">About Us</h1>
           <p className="text-md md:text-lg font-medium max-w-2xl mx-auto">
             We are a passionate VoIP solutions startup focused on delivering
@@ -55,11 +57,11 @@ export default function AboutUsPage() {
             className="md:w-1/2 text-center md:text-left"
           >
             <h2 className="text-3xl md:text-5xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-blue-700 to-blue-500 mb-12">
-              Our Startup Journey
+              Our Journey
             </h2>
 
             <p className="text-gray-700 text-[17px] leading-relaxed mb-5">
-              Driansh Softtech was founded in 2023 with a bold vision — to
+              Driansh Sofftech was founded in 2025 with a bold vision — to
               democratize enterprise-grade VoIP technology for businesses of all
               sizes. As a young startup, we identified the gap between complex,
               expensive telephony systems and the growing need for accessible,

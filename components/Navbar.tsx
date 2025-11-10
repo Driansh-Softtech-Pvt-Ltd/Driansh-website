@@ -8,46 +8,33 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* 🔹 Services Dropdown */
 function ServicesDropdown({ dropdown }: { dropdown: any[] }) {
-  const col1 = dropdown.filter((d) => d.title === "VOIP DEVELOPMENT");
-  const col2 = dropdown.filter((d) => d.title === "OPEN SOURCE");
-  const col3 = dropdown.filter((d) =>
-    ["PLATFORM", "DEVOPS SERVICES", "PRODUCT ENGINEERING", "VOIP TESTING"].includes(d.title)
-  );
-  const col4 = dropdown.filter((d) =>
-    ["MOBILE APP DEVELOPMENT", "WEB DEVELOPMENT"].includes(d.title)
-  );
-  const columns = [col1, col2, col3, col4];
-
   return (
-    <div className="container mx-auto px-10 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-      {columns.map((col, i) => (
-        <div key={i} className="space-y-6">
-          {col.map((section: any, idx: number) => (
-            <div key={idx}>
-              {section.path ? (
-                <Link
-                  href={section.path}
-                  className="font-bold text-gray-900 mb-3 block text-[18px] hover:text-blue-600"
-                >
-                  {section.title}
-                </Link>
-              ) : (
-                <h4 className="font-bold text-gray-900 mb-3 text-[18px]">
-                  {section.title}
-                </h4>
-              )}
-              {section.items.length > 0 &&
-                section.items.map((item: any, i: number) => (
-                  <Link
-                    key={i}
-                    href={item.path}
-                    className="block text-[17px] text-black hover:text-blue-600 py-1"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-            </div>
-          ))}
+    <div className="container mx-auto px-10 py-8">
+      {dropdown.map((section: any, idx: number) => (
+        <div key={idx}>
+          {section.path ? (
+            <Link
+              href={section.path}
+              className="font-bold text-gray-900 mb-4 block text-[18px] hover:text-blue-600"
+            >
+              {section.title}
+            </Link>
+          ) : (
+            <h4 className="font-bold text-gray-900 mb-4 text-[18px]">
+              {section.title}
+            </h4>
+          )}
+          <div className="flex flex-wrap gap-x-10 gap-y-3">
+            {section.items.map((item: any, i: number) => (
+              <Link
+                key={i}
+                href={item.path}
+                className="text-[17px] text-black hover:text-blue-600"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       ))}
     </div>
@@ -57,28 +44,23 @@ function ServicesDropdown({ dropdown }: { dropdown: any[] }) {
 /* 🔹 Solutions Dropdown */
 function SolutionsDropdown({ dropdown }: { dropdown: any[] }) {
   const all = dropdown[0].items;
-  const col1 = all.slice(0, 5);
-  const col2 = all.slice(5, 10);
-  const col3 = all.slice(10);
 
   return (
-    <div className="container mx-auto px-10 py-10">
-      <h4 className="font-bold text-gray-900 mb-5 text-[18px] uppercase">
+    <div className="container mx-auto px-10 py-8">
+      <h4 className="font-bold text-gray-900 mb-4 text-[18px] uppercase">
         {dropdown[0].title}
       </h4>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {[col1, col2, col3].map((col, i) => (
-          <div key={i}>
-            {col.map((item: any, idx: number) => (
-              <Link
-                key={idx}
-                href={item.path}
-                className="block text-[17px] text-black hover:text-blue-600 py-1"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+
+      {/* Items in a row */}
+      <div className="flex flex-wrap gap-x-10 gap-y-3">
+        {all.map((item: any, idx: number) => (
+          <Link
+            key={idx}
+            href={item.path}
+            className="text-[17px] text-black hover:text-blue-600"
+          >
+            {item.label}
+          </Link>
         ))}
       </div>
     </div>
@@ -192,7 +174,10 @@ export default function Navbar() {
           </div>
 
           {/* 🔸 Desktop Logo */}
-          <Link href="/" className="hidden lg:flex items-center space-x-4 px-10 ml-32 overflow-hidden">
+          <Link
+            href="/"
+            className="hidden lg:flex items-center space-x-4 px-10 ml-32 overflow-hidden"
+          >
             <img
               rel="preload"
               src="/logo.png"

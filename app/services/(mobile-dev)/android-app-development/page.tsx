@@ -164,9 +164,9 @@ export default function AndroidDevelopmentPage() {
             {/* Image */}
             <div className="flex justify-center items-center">
               <img
-                src="/images/services/mobile-devlopment-service/android-devlopment-service/Cross-Platform-Development-1.webp"
+                src="/images/services/mobile-devlopment-service/android-devlopment-service/CrossPlatform-img.png"
                 alt="Cross Platform Development"
-                className="w-full max-w-md h-auto"
+                className="w-full max-w-md rounded-2xl h-auto"
               />
             </div>
           </div>

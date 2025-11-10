@@ -72,9 +72,9 @@ export default function MTIpPbxPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 flex text-center  md:justify-center">
             <Image
-              src="/images/solutions/multi-tenant/image-02.webp"
+              src="/images/solutions/multi-tenant/multi-tenante-img.jpeg"
               alt="Multi Tenant IP PBX"
-              width={500}
+              width={550}
               height={400}
               className="object-contain rounded-xl"
             />

@@ -138,9 +138,9 @@ export default function FlutterDevelopmentPage() {
             {/* Image */}
             <div className="flex justify-center items-center">
               <img
-                src="/images/services/mobile-devlopment-service/reactNative-devlopment-service/Cross-Platform-Development-1.webp"
+              src="/images/services/mobile-devlopment-service/android-devlopment-service/Cross-Platform-img.png"
                 alt="Native Mobile App Development"
-                className="w-full max-w-md h-auto"
+                className="w-full max-w-md h-auto rounded-2xl"
               />
             </div>
           </div>

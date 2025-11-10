@@ -528,31 +528,31 @@ export const SERVICES_ASTERISK_CARDS = [
             "Let expert Asterisk developers build robust unified communication solutions using attributes of Asterisk.",
     },
     {
-        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-01.svg" alt="Asterisk Consultancy" />,
+        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-02.svg" alt="Asterisk Consultancy" />,
         title: "Asterisk Consultancy",
         description:
             "Take expert guidance to build, scale up, customize, or enhance your tools developed with the Asterisk platform.",
     },
     {
-        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-01.svg" alt="Asterisk Support & Maintenance" />,
+        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-03.svg" alt="Asterisk Support & Maintenance" />,
         title: "Asterisk Support & Maintenance",
         description:
             "Asterisk experts will handle the technicalities and bug fixing for your Asterisk platform. We will keep it upgraded and stable.",
     },
     {
-        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-01.svg" alt="AGI Development" />,
+        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-04.svg" alt="AGI Development" />,
         title: "AGI Development",
         description:
             "Get the first party call control to enjoy administered use of the system with our AGI development services.",
     },
     {
-        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-01.svg" alt="Dialplan Development" />,
+        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-05.svg" alt="Dialplan Development" />,
         title: "Dialplan Development",
         description:
             "Take control of calls and their routing methods algorithmically with an essential dialplan script developed by experts.",
     },
     {
-        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-01.svg" alt="Asterisk High Availability & Cluster Setup" />,
+        icon: <ServiceIcon src="/images/services/Asterisk-Development/icon-06.svg" alt="Asterisk High Availability & Cluster Setup" />,
         title: "Asterisk High Availability & Cluster Setup",
         description:
             "Asterisk engineers will set up a cluster architecture to ensure the high availability of your solutions for uninterrupted operations.",
@@ -2273,7 +2273,7 @@ export const SERVICES_VOIP_TESTING_PROTOCOLTEST = [
     },
     {
         title: "WebRTC Testing",
-        description: "It is the most important process where the proper evaluation is done based on browser-based calls using SIP.js, WebRTC libraries."
+        description: "It based on browser-based calls using SIP.js, WebRTC libraries."
     },
     {
         title: "NAT Traversal & Firewall Handling",

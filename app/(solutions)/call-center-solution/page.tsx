@@ -70,7 +70,7 @@ export default function CallCenterPage() {
       <section className="py-8 px-6 sm:px-10 md:px-16 flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-[40%] flex justify-center">
           <Image
-            src="/images/solutions/call-center/image-02.webp"
+            src="/images/solutions/call-center/call-center-img.png"
             alt="Contact Center Solution"
             width={600}
             height={400}

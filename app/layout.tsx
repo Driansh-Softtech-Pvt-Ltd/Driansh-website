@@ -16,11 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Driansh Softtech",
+  title: "Driansh Softech",
   description: "Driansh-Softech",
-  icons: {
-    icon: "/site-icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -48,7 +45,7 @@ export default function RootLayout({
               s.parentNode.insertBefore(g,s);
               g.onload=function(){
                 window.chatwootSDK.run({
-                  websiteToken: 'm9f7YuLFY8bd5hfLJdhZ4XjH',
+                  websiteToken: 'vZP83N7wqQCq9yxEKM4MCq4E',
                   baseUrl: BASE_URL
                 })
               }
@@ -59,3 +56,17 @@ export default function RootLayout({
     </html>
   );
 }
+
+// (function(d,t) {
+//   var BASE_URL="https://app.chatwoot.com";
+//   var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+//   g.src=BASE_URL+"/packs/js/sdk.js";
+//   g.async = true;
+//   s.parentNode.insertBefore(g,s);
+//   g.onload=function(){
+//     window.chatwootSDK.run({
+//       websiteToken: 'yiiHYFbbf4pjyM2W2XVer1hc',
+//       baseUrl: BASE_URL
+//     })
+//   }
+// })(document,"script");

@@ -110,9 +110,9 @@ export default function ReactNativeDevelopmentPage() {
             {/* Image */}
             <div className="flex justify-center items-center">
               <img
-                src="/images/services/mobile-devlopment-service/reactNative-devlopment-service/Cross-Platform-Development-1.webp"
+               src="/images/services/mobile-devlopment-service/android-devlopment-service/Cross Platform-img.png"
                 alt="Native App Development"
-                className="w-full max-w-md h-auto"
+                className="w-full max-w-md rounded-2xl h-auto"
               />
             </div>
 

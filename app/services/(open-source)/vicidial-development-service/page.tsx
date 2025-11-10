@@ -103,9 +103,9 @@ export default function VICIdialDevelopmentPage() {
           {/* Image */}
           <div className="flex justify-center items-center">
             <img
-              src="/images/services/open-source-service/vicidial-devlopment-service/Call-Center-Solution-04.webp"
+              src="/images/services/open-source-service/vicidial-devlopment-service/vicidial-img.png"
               alt="Call Center Solution"
-              className="w-full max-w-md h-auto"
+              className="w-full max-w-md h-auto rounded-2xl"
             />
           </div>
           {/* Content right */}

@@ -41,15 +41,11 @@ export function ContactForm() {
       await sendMail(data);
       setSuccessMsg("Thank you! We'll contact you soon.");
       reset();
-      saveContact(data).catch((err) => {
-        if (process.env.NODE_ENV !== "production") {
-          console.error("Failed to save contact in DB:", err);
-        }
-      });
+      saveContact(data).catch((err) =>
+        console.error("Failed to save contact in DB:", err)
+      );
     } catch (err) {
-      if (process.env.NODE_ENV !== "production") {
-        console.error("Error submitting contact form:", err);
-      }
+      console.error("Error submitting contact form:", err);
       setSuccessMsg("Failed to send your message. Please try again later.");
     } finally {
       setIsSubmitting(false);
@@ -161,7 +157,7 @@ export function ContactForm() {
               />
               <span className="text-lg text-gray-600">
                 By submitting the form, you will be eligible for receiving the
-                newsletter, and product & services update from Driansh Softtech.
+                newsletter, and product & services update from Driansh Softech.
               </span>
             </div>
           )}
