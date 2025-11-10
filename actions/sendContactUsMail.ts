@@ -42,7 +42,9 @@ export const sendMail = async (formData: ContactFormData) => {
       html,
     });
   } catch (error) {
-    console.error("Error while sending mail:", error);
+    if (process.env.NODE_ENV !== "production") {
+      console.error("Error while sending mail:", error);
+    }
     throw new Error("Failed to send contact form email.");
   }
 };

@@ -10,3 +10,10 @@ export const contactSchema = z.object({
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;
+
+
+export const newsletterSchema = z.object({
+  email: z.email("Please enter a valid email"),
+});
+
+export type NewsletterFormData = z.infer<typeof newsletterSchema>;
