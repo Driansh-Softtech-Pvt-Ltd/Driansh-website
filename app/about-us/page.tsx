@@ -59,7 +59,7 @@ export default function AboutUsPage() {
             </h2>
 
             <p className="text-gray-700 text-[17px] leading-relaxed mb-5">
-              Driansh Softech was founded in 2023 with a bold vision — to
+              Driansh Softtech was founded in 2023 with a bold vision — to
               democratize enterprise-grade VoIP technology for businesses of all
               sizes. As a young startup, we identified the gap between complex,
               expensive telephony systems and the growing need for accessible,

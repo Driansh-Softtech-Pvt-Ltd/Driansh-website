@@ -52,7 +52,7 @@ export default function OpenSIPsDevelopment() {
             OpenSIPS: High performing SIP based telecommunication solution built with a multi-functionality SIP server
           </h2>
           <p className="mt-4 text-base md:text-lg text-gray-700 leading-relaxed max-w-5xl">
-            OpenSIPS is a multipurpose SIP proxy server solution that can be used to build robust and reliable platforms for video, voice, instant messaging, and all other SIP elements. A team of experienced OpenSIPS developers at Driansh Softech has proficiency in using this SIP proxy server at its optimal capacity.
+            OpenSIPS is a multipurpose SIP proxy server solution that can be used to build robust and reliable platforms for video, voice, instant messaging, and all other SIP elements. A team of experienced OpenSIPS developers at Driansh Softtech has proficiency in using this SIP proxy server at its optimal capacity.
           </p>
         </div>
       </section>

@@ -16,8 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Driansh Softech",
+  title: "Driansh Softtech",
   description: "Driansh-Softech",
+  icons: {
+    icon: "/site-icon.png",
+  },
 };
 
 export default function RootLayout({

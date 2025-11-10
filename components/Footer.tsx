@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1.3fr_1fr_1fr] gap-8 lg:gap-12">
           <div>
             <div className="mb-4">
-              <h3 className="text-2xl font-bold">Driansh Softech Pvt. Ltd.</h3>
+              <h3 className="text-2xl font-bold">Driansh Softtech Pvt. Ltd.</h3>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Premier software and VoIP solutions provider, delivering innovative technology solutions to businesses worldwide. Transforming ideas into powerful digital experiences.
@@ -52,14 +52,14 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-500 mt-1" />
                 <p className="text-sm text-gray-400">
-                  C/104, Riverfront,<br />
-                  GIFT City, Gandhinagar – 382426
+                  C/104, Riverfront, GIFT City,<br />
+                  Gandhinagar – 382426, Gujarat, India
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-500" />
                 <a href="https://driansh.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                  driansh.com
+                  www.driansh.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -156,7 +156,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm">© {currentYear} Driansh Softech Pvt. Ltd. All rights reserved.</p>
+            <p className="text-sm">© {currentYear} Driansh Softtech Pvt. Ltd. All rights reserved.</p>
             <div className="flex items-center space-x-4">
               {FOOTER_SOCIAL_LINKS.map(social => {
                 const Icon = social.icon;
