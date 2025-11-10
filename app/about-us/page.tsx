@@ -24,7 +24,7 @@ export default function AboutUsPage() {
       >
         <div className="relative z-10 text-center text-black px-4">
           <h1 className="text-xl md:text-5xl font-semibold mb-3">About Us</h1>
-          <p className="text-md md:text-lg font-medium max-w-2xl mx-auto">
+          <p className="text-md md:text-lg font-medium max-w-2xl mx-auto ">
             We are a passionate VoIP solutions startup focused on delivering
             innovative and scalable communication systems.
           </p>

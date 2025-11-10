@@ -8,19 +8,30 @@ export const saveContact = async (formData: ContactFormData) => {
   try {
     await dbConnect();
 
-    await ContactModel.create(formData);
+    const existing = await ContactModel.findOne({ email: formData.email });
+
+    if (existing) {
+      existing.name = formData.name;
+      existing.phone = formData.phone;
+      existing.company = formData.company;
+      existing.message = formData.message;
+      await existing.save();
+    } else {
+      await ContactModel.create(formData);
+    }
 
     return {
       success: true,
       message: "Your message has been submitted successfully.",
     };
   } catch (error: any) {
-    console.error("❌ Error while saving contact:", error);
+    if (process.env.NODE_ENV !== "production") {
+      console.error("❌ Error while saving contact:", error);
+    }
 
     return {
       success: false,
-      message:
-        "Something went wrong while submitting the form. Please try again later.",
+      message: "Something went wrong while submitting the form. Please try again later.",
     };
   }
 };
