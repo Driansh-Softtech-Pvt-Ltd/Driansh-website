@@ -796,7 +796,7 @@ export const UNIFIED_COMMUNICATION_FAQ = [
     answer: "The “best” language for developing unified communications solutions largely depends on the required features, scalability, and other project specific demands. Languages such as React, Node, and Python are commonly chosen for their robust libraries and support for real time communication protocols.",
   },
   {
-    question: "Why should I consider Inextrix for unified communications solutions?",
+    question: "Why should I consider Driansh for unified communications solutions?",
     answer: `Definitely! Whether it’s productivity tools, ERP, or CRM systems, integrating your existing business applications with a UCaaS platform is entirely feasible. \n
     You can easily incorporate business tools into your UCaaS solution to combine its familiar functionalities with the enhanced communication capabilities of unified communications. Similarly, your existing CRM applications can be seamlessly integrated into the UCaaS environment, empowering users to effectively manage customer interactions and providing instant access to vital information, thereby significantly boosting productivity.`,
   },
@@ -1473,8 +1473,8 @@ export const VOIP_BUSINESS_FAQ = [
     • Real time analytics `
   },
   {
-    question: "How can Inextrix help me get a tailored business VoIP solution?",
-    answer: "We, at Inextrix, develop business VoIP solutions that assure business-specific functionalities and features. Moreover, we offer expert support throughout the process to ensure your communication systems grow as your business evolves. "
+    question: "How can Driansh help me get a tailored business VoIP solution?",
+    answer: "We, at Driansh, develop business VoIP solutions that assure business-specific functionalities and features. Moreover, we offer expert support throughout the process to ensure your communication systems grow as your business evolves. "
   },
   {
     question: "How do cloud-based VoIP solutions improve business communication?",

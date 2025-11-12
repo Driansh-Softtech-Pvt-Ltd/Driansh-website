@@ -186,7 +186,7 @@ export const ABOUT_PAGE_FEATURES = [
     desc: "Setting high standards, continuously raising the bar, and striving for excellence in all endeavours.",
   },
   {
-    
+
     icon: <Users className="w-8 h-8 text-blue-600" />,
     title: "CLIENT FOCUS",
     desc: "Your success is our priority. We build lasting partnerships with our clients.",
@@ -236,16 +236,16 @@ export const OUR_PRODUCTS = [
 
 export const FOOTER_LINKS = {
   services: [
-    { name: "VoIP Development", href: "/services/voip" },
-    { name: "Mobile App Development", href: "/services/mobile" },
-    { name: "Web Development", href: "/services/web" },
-    { name: "DevOps Services", href: "/services/devops" },
+    { name: "VoIP Development", href: "/services/voip-devlopment-service" },
+    { name: "WebRTC Development", href: "/services/webrtc-development-service" },
+    { name: "FreeSWITCH Development", href: "/services/freeswitch-devlopment-service" },
+    { name: "Asterisk Development", href: "/services/asterisk-devlopment-service" },
   ],
   solution: [
-    { name: "Multi Tenant IP PBX Solution", href: "/multi-tenant-ip-pbx-solution"},
-    { name: "Call Center Solution", href: "/call-center-solution"},
-    { name: "Class 5 Softswitch", href: "/class-5-softswitch-solution"},
-    { name: "Class 4 Softswitch", href: "/class-4-softswitch-solution"},
+    { name: "Multi Tenant IP PBX Solution", href: "/multi-tenant-ip-pbx-solution" },
+    { name: "Call Center Solution", href: "/call-center-solution" },
+    { name: "Voice Broadcasting Solution", href: "//voice-broadcasting-solution" },
+    { name: "Unified Communications", href: "/unified-communications-solution" }
   ],
 
   products: [

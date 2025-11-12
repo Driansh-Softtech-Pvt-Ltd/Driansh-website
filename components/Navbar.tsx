@@ -149,7 +149,7 @@ export default function Navbar() {
   const activeItem = navItems.find((i) => i.name === activeDropdown);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100">
+    <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 relative">
         <div className="flex justify-between items-center h-20 lg:h-24">
           {/* 🔸 Mobile Header */}
@@ -164,11 +164,11 @@ export default function Navbar() {
                 <Menu className="w-6 h-6 text-gray-800" />
               )}
             </button>
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2  ">
               <img
                 src="/logo.png"
                 alt="Driansh Softtech"
-                className="h-10 w-auto rounded-sm"
+                className="h-30 w-auto rounded-sm"
               />
             </Link>
           </div>

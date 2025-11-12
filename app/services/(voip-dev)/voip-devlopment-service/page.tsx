@@ -168,7 +168,7 @@ export default function VoIPServicePage() {
         {/* Right Section - Text */}
         <div className="max-w-2xl">
 
-          <h2 className="text-3xl lg:text-4xl font-bold text-indigo-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
             Asterisk Development
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">

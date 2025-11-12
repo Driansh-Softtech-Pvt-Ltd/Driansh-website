@@ -157,7 +157,7 @@ export function ContactForm() {
               />
               <span className="text-lg text-gray-600">
                 By submitting the form, you will be eligible for receiving the
-                newsletter, and product & services update from Driansh Softech.
+                newsletter, and product & services update from Driansh Softtech.
               </span>
             </div>
           )}
