@@ -287,9 +287,6 @@ export default function VoIPServicePage() {
       <section className="flex flex-col lg:flex-row items-center justify-center gap-10 py-16 px-8 bg-gray-150">
         {/* Left Section - Image */}
         <div className="relative max-w-md w-full flex justify-center">
-          <div className="absolute -z-10 top-10 left-0 right-0 mx-auto w-80 h-60 bg-orange-500 rounded-3xl"></div>
-          <div className="absolute top-4 left-6 w-3 h-3 bg-orange-400 rounded-full"></div>
-          <div className="absolute top-4 right-6 w-3 h-3 bg-orange-300 rounded-full"></div>
           <Image
             src="/images/services/voip-devlopment-service/kamailio-devlopment-service/kamailio-img.png"
             alt="kamailio Developer"

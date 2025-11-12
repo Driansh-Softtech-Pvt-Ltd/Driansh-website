@@ -151,9 +151,9 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 relative">
-        <div className="flex justify-between items-center h-20 lg:h-24">
+        <div className="flex justify-between items-center h-20 lg:h-24 overflow-hidden">
           {/* 🔸 Mobile Header */}
-          <div className="flex lg:hidden w-full justify-between items-center">
+          <div className="flex lg:hidden w-full justify-between items-center ">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
