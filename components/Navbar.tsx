@@ -149,7 +149,7 @@ export default function Navbar() {
   const activeItem = navItems.find((i) => i.name === activeDropdown);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100 overflow-hidden">
+    <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b border-gray-100">
       <div className="container mx-auto px-6 relative">
         <div className="flex justify-between items-center h-20 lg:h-24 overflow-hidden">
           {/* 🔸 Mobile Header */}
