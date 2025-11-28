@@ -1,4 +1,4 @@
-"user server";
+"use server";
 
 import mongoose, { Schema, Document, Model } from "mongoose";
 import type { ContactFormData } from "@/validations/contact-schema";
