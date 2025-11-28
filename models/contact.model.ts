@@ -1,3 +1,5 @@
+"user server";
+
 import mongoose, { Schema, Document, Model } from "mongoose";
 import type { ContactFormData } from "@/validations/contact-schema";
 
@@ -26,7 +28,6 @@ const ContactSchema: Schema<Contact> = new Schema(
     company: {
       type: String,
       trim: true,
-      match: [/^https?:\/\/.+\..+$/, "Invalid website URL"],
     },
     message: {
       type: String,
