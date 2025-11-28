@@ -40,19 +40,19 @@ export default function RootLayout({
         {/* Chatwoot Script */}
         <Script id="chatwoot-script" strategy="afterInteractive">
           {`
-            (function(d,t) {
-              var BASE_URL="https://app.chatwoot.com";
-              var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-              g.src=BASE_URL+"/packs/js/sdk.js";
-              g.async = true;
-              s.parentNode.insertBefore(g,s);
-              g.onload=function(){
-                window.chatwootSDK.run({
-                  websiteToken: 'm9f7YuLFY8bd5hfLJdhZ4XjH',
-                  baseUrl: BASE_URL
-                })
-              }
-            })(document,"script");
+             (function(d,t) {
+                var BASE_URL="https://app.chatwoot.com";
+                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=BASE_URL+"/packs/js/sdk.js";
+                g.async = true;
+                s.parentNode.insertBefore(g,s);
+                g.onload=function(){
+                  window.chatwootSDK.run({
+                    websiteToken: 'fH82UpTnGwBCwYjT6Crur85N',
+                    baseUrl: BASE_URL
+                  })
+                }
+              })(document,"script");
           `}
         </Script>
       </body>
