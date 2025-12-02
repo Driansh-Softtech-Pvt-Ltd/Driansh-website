@@ -22,6 +22,16 @@ const nextConfig: NextConfig = {
     // Enables faster static rendering (App Router only)
   },
 
+  // ✅ Rewrite /logo → /logo.png (keeps URL as /logo)
+  async rewrites() {
+    return [
+      {
+        source: "/logo",
+        destination: "/logo.png",
+      },
+    ];
+  },
+
   // Security + performance headers
   async headers() {
     return [
