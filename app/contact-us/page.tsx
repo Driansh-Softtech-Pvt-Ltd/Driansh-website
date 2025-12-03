@@ -15,7 +15,7 @@ export default function ContactPage() {
           <div className="relative w-full h-[400px] md:h-[600px]">
             <Image
               rel="preload"
-              src="/logo.png"
+              src="/images/logo.png"
               alt="Contact Us"
               fill
               style={{ objectFit: "contain" }}

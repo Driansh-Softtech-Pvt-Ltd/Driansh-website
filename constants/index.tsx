@@ -219,7 +219,7 @@ export const ABOUT_PAGE_TECH_ADVANTAGES = [
 export const OUR_PRODUCTS = [
   {
     id: "contactCenter",
-    logo: "/logo.png",
+    logo: "/images/logo.png",
     image: "/images/our-products-2.webp",
     title: "Driansh Contact Center Solution",
     description:
