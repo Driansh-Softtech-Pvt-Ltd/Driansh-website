@@ -37,7 +37,7 @@ export default function RootLayout({
         {children}
         <Footer />
 
-        {/* Chatwoot Script */}
+        {/* Driansh OmniConnect Script */}
         <Script id="chatwoot-script" strategy="afterInteractive">
           {`
             (function(d,t) {

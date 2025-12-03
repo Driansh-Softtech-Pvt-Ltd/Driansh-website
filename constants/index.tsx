@@ -97,7 +97,24 @@ export const navItems = [
       },
     ],
   },
-  { name: "OUR PRODUCTS", path: "/our-products" },
+  {
+    name: "OUR PRODUCTS",
+    dropdown: [
+      {
+        title: "OUR PRODUCTS",
+        items: [
+          {
+            label: "Driansh Contact Center Solution",
+            path: "/our-products#contactCenter",
+          },
+          {
+            label: "Driansh OmniConnect",
+            path: "/omniconnect",
+          },
+        ],
+      },
+    ],
+  },
   { name: "ABOUT", path: "/about-us" },
 ];
 
@@ -229,8 +246,22 @@ export const OUR_PRODUCTS = [
       "Real-time analytics and performance dashboards",
       "Smart automation for faster response and resolution",
     ],
-    // buttonText: "Visit Conatact Center",
+    // buttonText: "Visit Contact Center",
     reverse: false,
+  },
+  {
+    id: "omniConnect",
+    logo: "/logo.png",
+    image: "/images/our-products-1.webp",
+    title: "Driansh OmniConnect",
+    description:
+      "Driansh OmniConnect is a unified communication hub that brings voice, video, messaging, and collaboration into a single, seamless platform. Designed for modern, distributed teams, it enhances productivity, simplifies IT management, and delivers a consistent experience across devices and channels.",
+    points: [
+      "Unified voice, video, and messaging for internal and external teams",
+      "Seamless integration with existing business tools and workflows",
+      "Scalable, secure architecture for growing enterprises",
+    ],
+    reverse: true,
   },
 ];
 
@@ -249,7 +280,8 @@ export const FOOTER_LINKS = {
   ],
 
   products: [
-    { name: "Contact center solution", href: "/our-products#contactCenter" },
+    { name: "Driansh Contact Center Solution", href: "/our-products#contactCenter" },
+    { name: "Driansh OmniConnect", href: "/omniconnect" },
   ],
   company: [
     { name: "About Us", href: "/about-us" },

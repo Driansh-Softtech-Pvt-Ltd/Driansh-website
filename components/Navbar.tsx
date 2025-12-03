@@ -234,6 +234,9 @@ export default function Navbar() {
             {activeItem.name === "SOLUTIONS" && (
               <SolutionsDropdown dropdown={activeItem.dropdown} />
             )}
+            {activeItem.name === "OUR PRODUCTS" && (
+              <SolutionsDropdown dropdown={activeItem.dropdown} />
+            )}
           </motion.div>
         )}
       </AnimatePresence>
