@@ -61,7 +61,6 @@ const productCards = [
   {
     title: "Integrations",
     description: "Super charge your workflow with integrations.",
-    href: "/our-products/omniconnect/integrations",
   },
   {
     title: "Pre-Chat Form",
