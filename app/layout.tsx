@@ -17,7 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Driansh Softtech",
-  description: "Driansh-Softech",
+  description: "Driansh-Softtech",
+  openGraph: {
+    title: "Driansh Softtech",
+    description: "", // ✅ Hidden in link previews
+    images: ["/site-icon.png"],
+  },
   icons: {
     icon: "/site-icon.png",
   },
