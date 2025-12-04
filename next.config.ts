@@ -21,7 +21,6 @@ const nextConfig: NextConfig = {
     scrollRestoration: true,
     // Enables faster static rendering (App Router only)
   },
-
   // Redirects for old omniconnect paths
   async redirects() {
     return [
@@ -34,6 +33,7 @@ const nextConfig: NextConfig = {
         source: "/omniconnect/:path*",
         destination: "/our-products/omniconnect/:path*",
         permanent: true,
+
       },
     ];
   },

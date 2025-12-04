@@ -166,7 +166,7 @@ export default function Navbar() {
             </button>
             <Link href="/" className="flex items-center space-x-2  ">
               <img
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="Driansh Softtech"
                 className="h-30 w-auto rounded-sm"
               />
@@ -180,7 +180,7 @@ export default function Navbar() {
           >
             <img
               rel="preload"
-              src="/logo.png"
+              src="/images/logo.png"
               alt="Driansh Softtech"
               className="scale-400 h-10 w-20 object-contain"
             />
