@@ -60,7 +60,7 @@ const productCards = [
   },
   {
     title: "Integrations",
-    description: "Super charge your workflow with integrations temp change.",
+    description: "Super charge your workflow with integrations.",
   },
   {
     title: "Pre-Chat Form",
