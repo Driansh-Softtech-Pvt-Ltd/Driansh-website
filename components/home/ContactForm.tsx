@@ -56,6 +56,7 @@ export default function ContactForm() {
           </label>
           <input
             {...register("name")}
+            suppressHydrationWarning
             className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
           />
           {errors.name && (
@@ -68,6 +69,7 @@ export default function ContactForm() {
           </label>
           <input
             {...register("email")}
+            suppressHydrationWarning
             className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
           />
           {errors.email && (
@@ -83,6 +85,7 @@ export default function ContactForm() {
           </label>
           <input
             {...register("phone")}
+            suppressHydrationWarning
             className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
           />
         </div>
@@ -92,6 +95,7 @@ export default function ContactForm() {
           </label>
           <input
             {...register("company")}
+            suppressHydrationWarning
             className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
           />
         </div>
@@ -103,6 +107,7 @@ export default function ContactForm() {
         </label>
         <textarea
           {...register("message")}
+          suppressHydrationWarning
           rows={3}
           className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none resize-none focus:ring-0"
         />

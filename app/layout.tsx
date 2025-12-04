@@ -4,25 +4,30 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
+ 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+ 
 export const metadata: Metadata = {
   title: "Driansh Softtech",
-  description: "Driansh-Softech",
+  description: "Driansh-Softtech",
+  openGraph: {
+    title: "Driansh Softtech",
+    description: "",
+    images: ["/Driansh-thumbnail.svg"],
+  },
   icons: {
-    icon: "/site-icon.png",
+    icon: "/Driansh-thumbnail.svg",
   },
 };
-
+ 
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,7 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-
+ 
         {/* Driansh OmniConnect Script */}
         <Script id="chatwoot-script" strategy="afterInteractive">
           {`
@@ -59,3 +64,5 @@ export default function RootLayout({
     </html>
   );
 }
+ 
+ 

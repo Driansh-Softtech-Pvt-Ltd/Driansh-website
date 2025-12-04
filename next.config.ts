@@ -22,6 +22,22 @@ const nextConfig: NextConfig = {
     // Enables faster static rendering (App Router only)
   },
 
+  // Redirects for old omniconnect paths
+  async redirects() {
+    return [
+      {
+        source: "/omniconnect",
+        destination: "/our-products/omniconnect",
+        permanent: true,
+      },
+      {
+        source: "/omniconnect/:path*",
+        destination: "/our-products/omniconnect/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   // Security + performance headers
   async headers() {
     return [
