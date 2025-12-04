@@ -87,8 +87,8 @@ export default function TeamCollaborationPage() {
       </section>
 
       {/* Canned Responses section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 grid gap-10 md:grid-cols-2 items-start">
-        <div>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 grid gap-10 lg:gap-16 md:grid-cols-2 items-center">
+        <div className="order-2 md:order-1">
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
             Canned Responses
           </h2>
@@ -98,8 +98,8 @@ export default function TeamCollaborationPage() {
             keeping your messaging consistent.
           </p>
         </div>
-        <div className="h-64 sm:h-72 flex items-center justify-center">
-          <div className="relative w-full h-full">
+        <div className="order-1 md:order-2">
+          <div className="relative h-80 sm:h-96 lg:h-[520px] w-full flex items-center justify-center">
             <Image
               src="/images/team_collaboration/canned-responses.png"
               alt="Agent using canned responses in a conversation"

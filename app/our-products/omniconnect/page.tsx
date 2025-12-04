@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
-  CheckCircle2,
   Zap,
   MessageCircle,
   Layers,
@@ -30,50 +28,50 @@ const productCards = [
   {
     title: "Website Live Chat",
     description: "Simple and elegant live chat for your website.",
-    href: "/omniconnect/website-live-chat",
+    href: "/our-products/omniconnect/website-live-chat",
   },
   {
     title: "Omnichannel inbox",
     description: "Connect any channel and engage your customers from one place.",
-    href: "/omniconnect/omnichannel-inbox",
+    href: "/our-products/omniconnect/omnichannel-inbox",
   },
   {
     title: "Team collaboration",
     description: "Collaborate and manage conversations using a shared inbox.",
-    href: "/omniconnect/team-collaboration",
+    href: "/our-products/omniconnect/team-collaboration",
   },
   {
     title: "Chatbots",
     description:
       "Easily integrate with chatbot platforms like Rasa or Dialogflow to reduce the workload of your agents.",
-    href: "/omniconnect/chatbots",
+    href: "/our-products/omniconnect/chatbots",
   },
   {
     title: "Automations",
     description:
       "Avoid repetitive tasks by automating your workflows and run your business on auto-pilot.",
-    href: "/omniconnect/automations",
+    href: "/our-products/omniconnect/automations",
   },
   {
     title: "Mobile apps",
     description:
       "Don't miss out on the new customers, download our mobile apps and talk to your customers easily.",
-    href: "/omniconnect/mobile-apps",
+    href: "/our-products/omniconnect/mobile-apps",
   },
   {
     title: "Integrations",
     description: "Super charge your workflow with integrations.",
-    href: "/omniconnect/integrations",
+    href: "/our-products/omniconnect/integrations",
   },
   {
     title: "Pre-Chat Form",
     description: "Add a customisable chat form before a user initiates a chat.",
-    href: "/omniconnect/pre-chat-forms",
+    href: "/our-products/omniconnect/pre-chat-forms",
   },
   {
     title: "Help Center",
     description: "Build knowledge base for happier agents and customers.",
-    href: "/omniconnect/help-center",
+    href: "/our-products/omniconnect/help-center",
   },
 ];
 
@@ -81,37 +79,37 @@ const manageCards = [
   {
     title: "Labels",
     description: "Add labels to your chats and keep them well-organized.",
-    href: "/omniconnect/manage/labels",
+    href: "/our-products/omniconnect/manage/labels",
   },
   {
     title: "Teams",
     description: "Create internal teams for efficient collaboration.",
-    href: "/omniconnect/manage/teams",
+    href: "/our-products/omniconnect/manage/teams",
   },
   {
     title: "Contact Notes",
     description: "Add notes to contacts.",
-    href: "/omniconnect/manage/contact-notes",
+    href: "/our-products/omniconnect/manage/contact-notes",
   },
   {
     title: "Private Notes",
     description: "Privately discuss customer queries with your teammates.",
-    href: "/omniconnect/manage/private-notes",
+    href: "/our-products/omniconnect/manage/private-notes",
   },
   {
     title: "Contact Segments",
     description: "Filter and group your contacts into segments.",
-    href: "/omniconnect/manage/contact-segments",
+    href: "/our-products/omniconnect/manage/contact-segments",
   },
   {
     title: "Business Hours",
     description: "Let customers know you’re not available to answer their questions.",
-    href: "/omniconnect/manage/business-hours",
+    href: "/our-products/omniconnect/manage/business-hours",
   },
   {
     title: "Audit Logs",
     description: "Track and trace account activities with ease.",
-    href: "/omniconnect/manage/audit-logs",
+    href: "/our-products/omniconnect/manage/audit-logs",
   },
 ];
 
@@ -119,38 +117,38 @@ const analyseCards = [
   {
     title: "Live view",
     description: "Get realtimes insights about your support operations.",
-    href: "/omniconnect/analyse/live-view",
+    href: "/our-products/omniconnect/analyse/live-view",
   },
   {
     title: "Conversation Report",
     description: "Get details insights on your conversations.",
-    href: "/omniconnect/analyse/conversation-report",
+    href: "/our-products/omniconnect/analyse/conversation-report",
   },
   {
     title: "Agent Report",
     description: "Track your agents’ performance, with auto-updating reports.",
-    href: "/omniconnect/analyse/agent-report",
+    href: "/our-products/omniconnect/analyse/agent-report",
   },
   {
     title: "Label Reports",
     description:
       "See which labels get the most conversations, and how long it takes to resolve them.",
-    href: "/omniconnect/analyse/label-reports",
+    href: "/our-products/omniconnect/analyse/label-reports",
   },
   {
     title: "CSAT Reports",
     description: "Get reports on how customers respond to your chat.",
-    href: "/omniconnect/analyse/csat-reports",
+    href: "/our-products/omniconnect/analyse/csat-reports",
   },
   {
     title: "Inbox Reports",
     description: "Get insights into your inboxes.",
-    href: "/omniconnect/analyse/inbox-reports",
+    href: "/our-products/omniconnect/analyse/inbox-reports",
   },
   {
     title: "Team Reports",
     description: "Analyse how each of your teams is performing.",
-    href: "/omniconnect/analyse/team-reports",
+    href: "/our-products/omniconnect/analyse/team-reports",
   },
 ];
 
@@ -158,27 +156,27 @@ const productivityCards = [
   {
     title: "Keyboard Shortcuts",
     description: "Master Driansh OmniConnect with keyboard shortcuts.",
-    href: "/omniconnect/productivity/keyboard-shortcuts",
+    href: "/our-products/omniconnect/productivity/keyboard-shortcuts",
   },
   {
     title: "Command Bar",
     description: "Use the command bar to perform actions.",
-    href: "/omniconnect/productivity/command-bar",
+    href: "/our-products/omniconnect/productivity/command-bar",
   },
   {
     title: "Bulk Actions",
     description: "Update multiple conversations at once.",
-    href: "/omniconnect/productivity/bulk-actions",
+    href: "/our-products/omniconnect/productivity/bulk-actions",
   },
   {
     title: "Canned Responses",
     description: "Save frequently sent messages as templates.",
-    href: "/omniconnect/productivity/canned-responses",
+    href: "/our-products/omniconnect/productivity/canned-responses",
   },
   {
     title: "Agent Capacity",
     description: "Set limits to auto-assigning conversations to your agents.",
-    href: "/omniconnect/productivity/agent-capacity",
+    href: "/our-products/omniconnect/productivity/agent-capacity",
   },
 ];
 
@@ -186,42 +184,42 @@ const integrationCards = [
   {
     title: "WhatsApp",
     description: "Manage your WhatsApp business interactions from OmniConnect.",
-    href: "/omniconnect/integrations/whatsapp",
+    href: "/our-products/omniconnect/integrations/whatsapp",
   },
   {
     title: "Facebook",
     description: "Stay connected with your customers on Facebook.",
-    href: "/omniconnect/integrations/facebook",
+    href: "/our-products/omniconnect/integrations/facebook",
   },
   {
     title: "Instagram",
     description: "Stay connected with your customers on Instagram.",
-    href: "/omniconnect/integrations/instagram",
+    href: "/our-products/omniconnect/integrations/instagram",
   },
   {
     title: "Telegram",
     description: "Manage your Telegram customer interactions from OmniConnect.",
-    href: "/omniconnect/integrations/telegram",
+    href: "/our-products/omniconnect/integrations/telegram",
   },
   {
     title: "Line",
     description: "Manage your Line customer interactions from OmniConnect.",
-    href: "/omniconnect/integrations/line",
+    href: "/our-products/omniconnect/integrations/line",
   },
   {
     title: "SMS",
     description: "Manage your SMS customer interactions from OmniConnect.",
-    href: "/omniconnect/integrations/sms",
+    href: "/our-products/omniconnect/integrations/sms",
   },
   {
     title: "Email",
     description: "Manage your email customer interactions from OmniConnect.",
-    href: "/omniconnect/integrations/email",
+    href: "/our-products/omniconnect/integrations/email",
   },
   {
     title: "Slack",
     description: "Answer your customer queries from Slack.",
-    href: "/omniconnect/integrations/slack",
+    href: "/our-products/omniconnect/integrations/slack",
   },
 ];
 
@@ -232,7 +230,7 @@ export default function OmniConnectFeaturesPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mb-6">
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Product
+            Driansh OmniConnect Features
           </h2>
         </div>
 

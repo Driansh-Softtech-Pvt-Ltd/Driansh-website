@@ -5,70 +5,66 @@ import { OUR_PRODUCTS } from "@/constants";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function OurProductsPage() {
-  function ProductSection({
-    product,
-  }: {
-    product: (typeof OUR_PRODUCTS)[0];
-  }) {
-    return (
+export default function ContactCenterPage() {
+  const contactCenterProduct = OUR_PRODUCTS.find(
+    (product) => product.id === "contactCenter"
+  );
+
+  if (!contactCenterProduct) return null;
+
+  return (
+    <main className="min-h-screen bg-white pt-16 pb-16">
       <motion.section
-        id={product.id}
         initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-        className={`flex flex-col md:flex-row bg-white items-center justify-between gap-10 py-10 md:py-16 px-4 sm:px-8 md:px-16 ${
-          product.reverse ? "md:flex-row-reverse" : ""
-        }`}
+        className="flex flex-col md:flex-row bg-white items-center justify-between gap-10 py-10 md:py-16 px-4 sm:px-8 md:px-16 max-w-7xl mx-auto"
       >
         <motion.div
-          initial={{ opacity: 0, x: product.reverse ? 100 : -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
           className="w-full md:w-1/2 flex justify-center"
         >
-          <div className="w-[90%] sm:w-[80%] md:w-[70%]">
+          <div className="w-full sm:w-[95%] md:w-[90%]">
             <Image
-              src={product.image}
-              alt={product.title}
-              width={550}
-              height={350}
+              src={contactCenterProduct.image}
+              alt={contactCenterProduct.title}
+              width={700}
+              height={450}
               className="rounded-none w-full h-auto object-contain"
-              priority={product.id === "contactCenter"}
+              priority
             />
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: product.reverse ? -100 : 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
           className="w-full md:w-1/2 space-y-5 text-center md:text-left"
         >
           <div className="flex justify-center md:justify-start">
             <Image
               rel="preload"
-              src={product.logo}
-              alt={product.title}
+              src={contactCenterProduct.logo}
+              alt={contactCenterProduct.title}
               width={200}
               height={70}
               className="w-[150px] sm:w-[180px] md:w-[200px] h-auto -mb-20 -ml-4"
             />
           </div>
 
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
-            {product.title}
-          </h2>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
+            {contactCenterProduct.title}
+          </h1>
 
           <p className="text-black text-base sm:text-lg leading-relaxed">
-            {product.description}
+            {contactCenterProduct.description}
           </p>
 
           <ul className="space-y-2 text-black text-base sm:text-lg">
-            {product.points.map((point, idx) => (
+            {contactCenterProduct.points.map((point, idx) => (
               <li
                 key={idx}
                 className="flex items-start sm:items-center justify-start gap-2"
@@ -80,14 +76,7 @@ export default function OurProductsPage() {
           </ul>
         </motion.div>
       </motion.section>
-    );
-  }
-
-  return (
-    <section className="w-full">
-      {OUR_PRODUCTS.map((product) => (
-        <ProductSection key={product.id} product={product} />
-      ))}
-    </section>
+    </main>
   );
 }
+

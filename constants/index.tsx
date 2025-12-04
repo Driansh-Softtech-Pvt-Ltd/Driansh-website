@@ -105,11 +105,11 @@ export const navItems = [
         items: [
           {
             label: "Driansh Contact Center Solution",
-            path: "/our-products#contactCenter",
+            path: "/our-products/contactcenter",
           },
           {
             label: "Driansh OmniConnect",
-            path: "/omniconnect",
+            path: "/our-products/omniconnect",
           },
         ],
       },
@@ -142,6 +142,13 @@ export const HOME_PAGE_SERVICES = [
     desc: "We design customized, highly scalable, robust mobile applications to match your business requirements. Expand your digital reach and simplify communication with end-to-end mobile app development services.",
     image: "/images/mobile-development.svg",
     href: "/services/mobile-app-development",
+  },
+  {
+    title: "Driansh OmniConnect",
+    desc: "A unified communication hub that brings voice, video, messaging, and collaboration into a single, seamless platform. Designed for modern, distributed teams, it enhances productivity, simplifies IT management, and delivers a consistent experience across devices and channels.",
+    image: "/images/driansh-omniconnect.png",
+    href: "/our-products/omniconnect",
+    isProduct: true,
   },
 ];
 
@@ -280,8 +287,8 @@ export const FOOTER_LINKS = {
   ],
 
   products: [
-    { name: "Driansh Contact Center Solution", href: "/our-products#contactCenter" },
-    { name: "Driansh OmniConnect", href: "/omniconnect" },
+    { name: "Driansh Contact Center Solution", href: "/our-products/contactcenter" },
+    { name: "Driansh OmniConnect", href: "/our-products/omniconnect" },
   ],
   company: [
     { name: "About Us", href: "/about-us" },

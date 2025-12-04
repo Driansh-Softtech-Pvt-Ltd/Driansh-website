@@ -21,13 +21,19 @@ const nextConfig: NextConfig = {
     scrollRestoration: true,
     // Enables faster static rendering (App Router only)
   },
-
-  // ✅ Rewrite /logo → /logo.png (keeps URL as /logo)
-  async rewrites() {
+  // Redirects for old omniconnect paths
+  async redirects() {
     return [
       {
-        source: "/logo",
-        destination: "/logo.png",
+        source: "/omniconnect",
+        destination: "/our-products/omniconnect",
+        permanent: true,
+      },
+      {
+        source: "/omniconnect/:path*",
+        destination: "/our-products/omniconnect/:path*",
+        permanent: true,
+
       },
     ];
   },
