@@ -21,10 +21,6 @@ export default function OmnichannelInboxPage() {
             place. Driansh OmniConnect brings all of your customer touchpoints
             into a single, unified experience.
           </p>
-
-          <button className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors">
-            Create a free account
-          </button>
         </div>
 
         {/* Right: avatar / conversation graphic */}
