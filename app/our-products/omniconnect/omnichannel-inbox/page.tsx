@@ -115,7 +115,7 @@ export default function OmnichannelInboxPage() {
         <div className="h-56 sm:h-64 flex items-center justify-center">
           <div className="relative w-full h-full">
             <Image
-              src="/images/omnichannel/api-diagram.webp"
+              src="/images/omnichannel/api-diagram.png"
               alt="API and webhooks integration diagram"
               fill
               className="object-contain"
