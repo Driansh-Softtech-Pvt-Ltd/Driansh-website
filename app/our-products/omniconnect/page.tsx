@@ -58,7 +58,6 @@ const productCards = [
       "Don't miss out on the new customers, download our mobile apps and talk to your customers easily.",
     href: "/our-products/omniconnect/mobile-apps",
   },
-
   {
     title: "Pre-Chat Form",
     description: "Add a customisable chat form before a user initiates a chat.",

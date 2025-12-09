@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WebsiteLiveChatPage() {
   return (
@@ -23,9 +24,12 @@ export default function WebsiteLiveChatPage() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors">
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
+              >
               Request a demo
-            </button>
+            </Link>
             <button className="inline-flex items-center justify-center rounded-md border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
               Try live chat
             </button>

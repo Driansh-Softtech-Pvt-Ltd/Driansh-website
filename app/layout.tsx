@@ -41,7 +41,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
- 
+
         {/* Driansh OmniConnect Script */}
         <Script id="chatwoot-script" strategy="afterInteractive">
           {`
@@ -53,7 +53,7 @@ export default function RootLayout({
               s.parentNode.insertBefore(g,s);
               g.onload=function(){
                 window.chatwootSDK.run({
-                  websiteToken: 'LawvQ2s84XoF7RPsMTkUHuZv',
+                  websiteToken: 'Bz8h5rkfpJDPHnk4prRNSksr',
                   baseUrl: BASE_URL
                 })
               }
