@@ -24,7 +24,7 @@ export default function Footer() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      const res = await saveNewsletter(data.email);
+      const res = await saveNewsletter(data);
       setSuccessMsg(res.message);
       if (res.success) reset();
     } catch (err) {
@@ -137,6 +137,15 @@ export default function Footer() {
               Subscribe to our newsletter for the latest updates and insights.
             </p>
             <form onSubmit={handleSubmit(onSubmit)} className="flex gap-2">
+              {/* Honeypot field for bots — hidden from users */}
+              <input
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+                {...register("website")}
+              />
               <Input
                 type="email"
                 placeholder="Enter your email"

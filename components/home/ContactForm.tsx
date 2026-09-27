@@ -6,8 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/validations/contact-schema";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
-import { sendMail } from "@/actions/sendContactUsMail";
-import { saveContact } from "@/actions/saveContact";
+import { submitContact } from "@/actions/submitContact";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,12 +32,9 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      await sendMail(data);
-      setSuccessMsg("Thank you! We'll contact you soon.");
-      reset();
-      saveContact(data).catch((err) =>
-        console.error("Failed to save contact in DB:", err)
-      );
+      const res = await submitContact(data);
+      setSuccessMsg(res.message);
+      if (res.success) reset();
     } catch (err) {
       console.error("Error submitting contact form:", err);
       setSuccessMsg("Failed to send your message. Please try again later.");
@@ -49,6 +45,15 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+        {/* Honeypot field for bots — hidden from users */}
+        <input
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="hidden"
+          {...register("website")}
+        />
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <label className="block text-base font-medium text-gray-800 mb-2">
@@ -130,7 +135,7 @@ export default function ContactForm() {
       {successMsg && (
         <p
           className={`text-center text-sm font-medium mt-2 ${
-            successMsg.includes("Failed") ? "text-red-500" : "text-green-600"
+            successMsg.startsWith("Thank you") ? "text-green-600" : "text-red-500"
           }`}
         >
           {successMsg}

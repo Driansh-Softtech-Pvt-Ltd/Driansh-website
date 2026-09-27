@@ -11,8 +11,9 @@ const nextConfig: NextConfig = {
   },
 
   compiler: {
-    // Remove all console.logs and debuggers in production
-    removeConsole: process.env.NODE_ENV === "production",
+    // Remove console.logs in production, but keep errors for server logs
+    removeConsole:
+      process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
   },
 
   experimental: {
@@ -44,11 +45,20 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        ],
+      },
+      {
+        // Public assets are not content-hashed, so cache them for a day
+        // instead of marking them immutable. Next.js already serves
+        // /_next/static with long-lived immutable caching.
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
         ],
       },
     ];

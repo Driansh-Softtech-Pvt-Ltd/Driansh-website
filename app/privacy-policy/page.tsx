@@ -1,8 +1,6 @@
-export const metadata = {
-  title: "Privacy Policy | Driansh",
-  description:
-    "How Driansh collects, uses, protects, and manages your personal information when you visit or interact with our website.",
-};
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("/privacy-policy");
 
 export default function PrivacyPolicyPage() {
   return (

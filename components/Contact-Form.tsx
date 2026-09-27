@@ -9,8 +9,7 @@ import { Button } from "@/components/ui/button";
 import { UserRound, AtSign, Phone } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/validations/contact-schema";
-import { sendMail } from "@/actions/sendContactUsMail";
-import { saveContact } from "@/actions/saveContact";
+import { submitContact } from "@/actions/submitContact";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,12 +37,9 @@ export function ContactForm() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      await sendMail(data);
-      setSuccessMsg("Thank you! We'll contact you soon.");
-      reset();
-      saveContact(data).catch((err) =>
-        console.error("Failed to save contact in DB:", err)
-      );
+      const res = await submitContact(data);
+      setSuccessMsg(res.message);
+      if (res.success) reset();
     } catch (err) {
       console.error("Error submitting contact form:", err);
       setSuccessMsg("Failed to send your message. Please try again later.");
@@ -59,6 +55,15 @@ export function ContactForm() {
       </h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
+        {/* Honeypot field for bots — hidden from users */}
+        <input
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="hidden"
+          {...register("website")}
+        />
         {/* Row 1: Name + Phone */}
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
