@@ -10,6 +10,7 @@ import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { FOOTER_LINKS, FOOTER_SOCIAL_LINKS } from "@/constants/index";
 import { newsletterSchema, NewsletterFormData } from "@/validations/contact-schema";
 import { saveNewsletter } from "@/actions/saveNewsletter";
+import { getAttribution } from "@/lib/analytics/attribution";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +25,7 @@ export default function Footer() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      const res = await saveNewsletter(data);
+      const res = await saveNewsletter({ ...data, attribution: getAttribution() });
       setSuccessMsg(res.message);
       if (res.success) reset();
     } catch (err) {

@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { PageHero, Section, SectionHeader, CardGrid, FeatureCard, CTABanner, CtaLink } from "@/components/site";
 import { OUR_PRODUCTS } from "@/constants";
+import OmniInboxVisual from "@/components/visuals/OmniInboxVisual";
 
 const productCards = [
   {
@@ -309,8 +310,7 @@ export default function OmniConnectFeaturesPage() {
         eyebrow="OmniConnect"
         title={omniConnect?.title ?? "Driansh OmniConnect"}
         description={omniConnect?.description}
-        image={omniConnect?.image}
-        imageAlt={omniConnect?.title}
+        visual={<OmniInboxVisual />}
         primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
         secondaryCta={{ label: "Explore Features", href: "#features" }}
       />

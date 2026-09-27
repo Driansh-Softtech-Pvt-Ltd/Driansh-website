@@ -259,7 +259,8 @@ export const OUR_PRODUCTS = [
   {
     id: "omniConnect",
     logo: "/logo.png",
-    image: "/images/our-products-1.webp",
+    // Rendered with <OmniInboxVisual /> (original illustration) instead of a screenshot.
+    image: "",
     title: "Driansh OmniConnect",
     description:
       "Driansh OmniConnect is a unified communication hub that brings voice, video, messaging, and collaboration into a single, seamless platform. Designed for modern, distributed teams, it enhances productivity, simplifies IT management, and delivers a consistent experience across devices and channels.",

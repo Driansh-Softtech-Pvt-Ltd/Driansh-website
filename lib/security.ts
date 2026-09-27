@@ -1,4 +1,12 @@
+import { createHash, timingSafeEqual } from "crypto";
 import { headers } from "next/headers";
+
+/** Constant-time string comparison for secrets. */
+export function safeEqual(a: string, b: string): boolean {
+  const ha = createHash("sha256").update(a).digest();
+  const hb = createHash("sha256").update(b).digest();
+  return timingSafeEqual(ha, hb) && a.length === b.length;
+}
 
 /** Escape user input before interpolating it into HTML (e.g. emails). */
 export function escapeHtml(value: string = ""): string {
@@ -8,6 +16,12 @@ export function escapeHtml(value: string = ""): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+/** Best-effort client IP from proxy headers (Vercel sets x-forwarded-for). */
+export async function getClientIp(): Promise<string> {
+  const h = await headers();
+  return h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || "unknown";
 }
 
 type Bucket = { count: number; resetAt: number };
@@ -23,12 +37,7 @@ export async function isRateLimited(
   limit = 5,
   windowMs = 10 * 60 * 1000
 ): Promise<boolean> {
-  const h = await headers();
-  const ip =
-    h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    h.get("x-real-ip") ||
-    "unknown";
-  const key = `${scope}:${ip}`;
+  const key = `${scope}:${await getClientIp()}`;
   const now = Date.now();
 
   const bucket = buckets.get(key);

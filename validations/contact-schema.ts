@@ -1,5 +1,25 @@
 import { z } from "zod";
 
+const shortText = z.string().trim().max(300).optional();
+
+/** Where a visitor came from — captured in the browser, attached to every lead. */
+export const attributionSchema = z
+  .object({
+    page: shortText,
+    landingPage: shortText,
+    referrer: shortText,
+    utmSource: shortText,
+    utmMedium: shortText,
+    utmCampaign: shortText,
+    utmTerm: shortText,
+    utmContent: shortText,
+    gclid: shortText,
+    firstSeen: shortText,
+  })
+  .optional();
+
+export type Attribution = z.infer<typeof attributionSchema>;
+
 export const contactSchema = z.object({
   name: z.string().trim().min(3, "Please enter your name").max(100),
   email: z.email("Please enter a valid email").max(254),
@@ -18,6 +38,7 @@ export const contactSchema = z.object({
   consent: z.boolean().optional(),
   // Honeypot: hidden from real users, bots tend to fill it in.
   website: z.string().optional(),
+  attribution: attributionSchema,
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;
@@ -26,6 +47,7 @@ export type ContactFormData = z.infer<typeof contactSchema>;
 export const newsletterSchema = z.object({
   email: z.email("Please enter a valid email").max(254),
   website: z.string().optional(),
+  attribution: attributionSchema,
 });
 
 export type NewsletterFormData = z.infer<typeof newsletterSchema>;

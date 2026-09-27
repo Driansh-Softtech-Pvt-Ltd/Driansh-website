@@ -1,8 +1,7 @@
 "use server";
 
-import dbConnect from "@/lib/db";
+import { saveLead } from "@/lib/leads";
 import { isRateLimited } from "@/lib/security";
-import NewsletterModel from "@/models/newsletter.model";
 import { newsletterSchema, type NewsletterFormData } from "@/validations/contact-schema";
 
 export const saveNewsletter = async (input: NewsletterFormData) => {
@@ -19,16 +18,10 @@ export const saveNewsletter = async (input: NewsletterFormData) => {
   }
 
   try {
-    await dbConnect();
-    await NewsletterModel.updateOne(
-      { email: parsed.data.email },
-      { $set: { subscribed: true }, $setOnInsert: { source: "footer" } },
-      { upsert: true }
-    );
-
+    await saveLead({ type: "newsletter", email: parsed.data.email, source: parsed.data.attribution });
     return { success: true, message: "Subscribed successfully" };
   } catch (error) {
     console.error("❌ Newsletter save error:", error);
-    return { success: false, message: "Something went wrong" };
+    return { success: false, message: "Something went wrong. Please try again later." };
   }
 };

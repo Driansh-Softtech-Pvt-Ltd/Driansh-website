@@ -4,6 +4,10 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import HideOnAdmin from "@/components/HideOnAdmin";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, PAGES, SITE_NAME, SITE_URL } from "@/lib/seo";
  
 const geistSans = Geist({
@@ -41,6 +45,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/Driansh-thumbnail.svg",
   },
+  // Google Search Console ownership check (Settings → Ownership verification → HTML tag).
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+    verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
+  }),
 };
 
 const organizationJsonLd = {
@@ -75,9 +83,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <Navbar />
+        <HideOnAdmin>
+          <Navbar />
+        </HideOnAdmin>
         {children}
-        <Footer />
+        <HideOnAdmin>
+          <Footer />
+        </HideOnAdmin>
+        <AnalyticsTracker />
+        <Analytics />
+        <SpeedInsights />
 
         {/* Driansh OmniConnect Script */}
         <Script id="chatwoot-script" strategy="lazyOnload">

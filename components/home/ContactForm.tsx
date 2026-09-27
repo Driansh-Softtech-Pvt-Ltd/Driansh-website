@@ -7,6 +7,7 @@ import { contactSchema, ContactFormData } from "@/validations/contact-schema";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import { submitContact } from "@/actions/submitContact";
+import { getAttribution } from "@/lib/analytics/attribution";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,7 +33,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      const res = await submitContact(data);
+      const res = await submitContact({ ...data, attribution: getAttribution() });
       setSuccessMsg(res.message);
       if (res.success) reset();
     } catch (err) {

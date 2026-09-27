@@ -13,6 +13,8 @@ export interface PageHeroProps {
   /** Illustration / screenshot shown beside the text on large screens. */
   image?: string;
   imageAlt?: string;
+  /** Custom illustration shown beside the text instead of an image. */
+  visual?: React.ReactNode;
   /** Extra classes for the side image wrapper, e.g. "max-w-sm". */
   imageClassName?: string;
   primaryCta?: Cta | null;
@@ -34,12 +36,13 @@ export default function PageHero({
   image,
   imageAlt = "",
   imageClassName,
+  visual,
   primaryCta = { label: "Get Started", href: "/contact-us" },
   secondaryCta,
   size = "lg",
   children,
 }: PageHeroProps) {
-  const split = Boolean(image);
+  const split = Boolean(image || visual);
   const centered = !split && !backgroundImage && size === "md";
 
   return (
@@ -95,7 +98,9 @@ export default function PageHero({
           {children}
         </div>
 
-        {image && (
+        {visual && <div className="relative">{visual}</div>}
+
+        {image && !visual && (
           <div className={cn("relative mx-auto w-full max-w-xl", imageClassName)}>
             <Image
               src={image}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { OUR_PRODUCTS } from "@/constants";
+import OmniInboxVisual from "@/components/visuals/OmniInboxVisual";
 import { PageHero, Section, SectionHeader, MediaSplit, CheckList, CtaLink, CTABanner } from "@/components/site";
 
 const PRODUCT_LINKS: Record<string, string> = {
@@ -19,7 +20,12 @@ export default function OurProductsPage() {
 
       {OUR_PRODUCTS.map((product, index) => (
         <Section key={product.id} id={product.id} tone={index % 2 === 0 ? "white" : "muted"}>
-          <MediaSplit image={product.image} imageAlt={product.title} reverse={product.reverse}>
+          <MediaSplit
+            image={product.image || undefined}
+            imageAlt={product.title}
+            visual={product.id === "omniConnect" ? <OmniInboxVisual /> : undefined}
+            reverse={product.reverse}
+          >
             <Image
               src={product.logo}
               alt={product.title}

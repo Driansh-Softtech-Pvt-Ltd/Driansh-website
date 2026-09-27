@@ -1,10 +1,8 @@
 "use server";
 
-import dbConnect from "@/lib/db";
 import { mailer } from "@/lib/mailer";
+import { saveLead } from "@/lib/leads";
 import { escapeHtml, isRateLimited } from "@/lib/security";
-import ContactModel from "@/models/contact.model";
-import NewsletterModel from "@/models/newsletter.model";
 import { contactSchema, type ContactFormData } from "@/validations/contact-schema";
 
 type SubmitResult = { success: boolean; message: string };
@@ -29,18 +27,24 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { website: _honeypot, ...contact } = data;
+  const { website: _honeypot, attribution, ...contact } = data;
 
+  let saved = false;
   try {
-    await dbConnect();
-    await ContactModel.create(contact);
+    await saveLead({
+      type: "contact",
+      name: contact.name,
+      email: contact.email,
+      phone: contact.phone,
+      company: contact.company,
+      message: contact.message,
+      newsletter: Boolean(contact.consent),
+      source: attribution,
+    });
     if (contact.consent) {
-      await NewsletterModel.updateOne(
-        { email: contact.email },
-        { $set: { subscribed: true }, $setOnInsert: { source: "contact-form" } },
-        { upsert: true }
-      );
+      await saveLead({ type: "newsletter", email: contact.email, source: attribution });
     }
+    saved = true;
   } catch (error) {
     // Still try to deliver the email so the lead isn't lost.
     console.error("Failed to save contact in DB:", error);
@@ -55,16 +59,19 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
     });
   } catch (error) {
     console.error("Error while sending mail:", error);
-    return {
-      success: false,
-      message: "Failed to send your message. Please try again later.",
-    };
+    // The lead is in the dashboard, so the visitor doesn't need to retry.
+    if (!saved) {
+      return {
+        success: false,
+        message: "Failed to send your message. Please try again later.",
+      };
+    }
   }
 
   return SUCCESS;
 };
 
-function buildContactEmail(data: Omit<ContactFormData, "website">): string {
+function buildContactEmail(data: Omit<ContactFormData, "website" | "attribution">): string {
   const name = escapeHtml(data.name);
   const email = escapeHtml(data.email);
   const phone = escapeHtml(data.phone);

@@ -10,6 +10,7 @@ import { UserRound, AtSign, Phone } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, ContactFormData } from "@/validations/contact-schema";
 import { submitContact } from "@/actions/submitContact";
+import { getAttribution } from "@/lib/analytics/attribution";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,7 +38,7 @@ export function ContactForm() {
     setIsSubmitting(true);
     setSuccessMsg(null);
     try {
-      const res = await submitContact(data);
+      const res = await submitContact({ ...data, attribution: getAttribution() });
       setSuccessMsg(res.message);
       if (res.success) reset();
     } catch (err) {

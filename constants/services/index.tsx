@@ -73,7 +73,7 @@ export const SERVICES_ASTERISK_FAQ = [
     },
     {
         question: "Why choose Driansh as your Asterisk development partner?",
-        answer: "Driansh has more than a decade long experience as an Asterisk development company. We have developed several Asterisk based solutions and we have also provided customization to businesses for their existing solution. Moreover, we have a team of highly experienced and skilled Asterisk developers. We will not only provide you the expert services, but we will also help you in multiple other ways to increase returns over investment.\n\nWe have developed the #1 open source VoIP platform based on FreeSWITCH that is ruling the industry, which is popularly known as ASTPP. We are closely associated with the FreeSWITCH community and Signalwire which constantly adds up to our experience and expertise."
+        answer: "Driansh has more than a decade long experience as an Asterisk development company. We have developed several Asterisk based solutions and we have also provided customization to businesses for their existing solution. Moreover, we have a team of highly experienced and skilled Asterisk developers. We will not only provide you the expert services, but we will also help you in multiple other ways to increase returns over investment."
     }
 ];
 
