@@ -49,9 +49,9 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md flex flex-col justify-center h-full">
-      <h2 className="text-xl font-bold text-center text-[#1D9863] my-6">
-        Let's Build the Future of Communication Together!
+    <div className="bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-center h-full">
+      <h2 className="text-xl font-bold text-center text-ink my-6">
+        Let’s Build the Future of Communication Together!
       </h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
@@ -173,7 +173,7 @@ export function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#1E4EC4] text-white py-3 px-6 rounded-md text-center hover:bg-[#1E4EC4] hover:-translate-y-1 hover:shadow-md transition-all duration-300 ease-out cursor-pointer active:translate-y-0"
+            className="bg-brand-gradient cursor-pointer rounded-full px-8 py-6 text-center text-base font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110"
           >
             {isSubmitting ? "Submitting..." : "Submit Your Requirements Now"}
           </Button>

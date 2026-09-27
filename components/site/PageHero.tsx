@@ -13,6 +13,8 @@ export interface PageHeroProps {
   /** Illustration / screenshot shown beside the text on large screens. */
   image?: string;
   imageAlt?: string;
+  /** Extra classes for the side image wrapper, e.g. "max-w-sm". */
+  imageClassName?: string;
   primaryCta?: Cta | null;
   secondaryCta?: Cta;
   /** "lg" for landing pages, "md" for feature/detail pages. */
@@ -31,6 +33,7 @@ export default function PageHero({
   backgroundImage,
   image,
   imageAlt = "",
+  imageClassName,
   primaryCta = { label: "Get Started", href: "/contact-us" },
   secondaryCta,
   size = "lg",
@@ -93,7 +96,7 @@ export default function PageHero({
         </div>
 
         {image && (
-          <div className="relative mx-auto w-full max-w-xl">
+          <div className={cn("relative mx-auto w-full max-w-xl", imageClassName)}>
             <Image
               src={image}
               alt={imageAlt}

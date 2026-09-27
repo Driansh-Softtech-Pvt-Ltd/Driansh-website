@@ -748,7 +748,7 @@ export const UNIFIED_COMMUNICATION_WHY_CHOOSE_US = [
     features: [
       "Reduced time to market",
       "Gain a competitive edge",
-      "Enjoy first mover advantage h",
+      "Enjoy first mover advantage",
     ]
   },
   {

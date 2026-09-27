@@ -1,143 +1,92 @@
-"use client";
-
 import Image from "next/image";
+import { PageHero, Section, SectionHeader, MediaSplit, CheckList, CTABanner } from "@/components/site";
+
+const FEATURES = [
+  {
+    title: "Manage your Facebook page & Instagram DM",
+    description:
+      "Connect your Facebook page & Instagram DM with OmniConnect and see all the conversations from Messenger in one place.",
+    points: [
+      "Receive and reply to DMs in a single shared inbox.",
+      "Manage your inbox with simple rules without providing page access.",
+      "Label conversations and mute spam conversations.",
+    ],
+    image: "/images/omnichannel/messenger-voice.png",
+    imageAlt: "Sample live chat and voice messages",
+  },
+  {
+    title: "WhatsApp Business Accounts",
+    description:
+      "Create a business account for WhatsApp, connect it with OmniConnect and start engaging your customers instantly.",
+    points: [
+      "Send and receive messages from multiple WhatsApp numbers.",
+      "Centralize all WhatsApp conversations alongside other channels.",
+      "Provide rich support with quick replies and media attachments.",
+    ],
+    image: "/images/omnichannel/whatsapp-chat.png",
+    imageAlt: "Sample WhatsApp business conversation",
+  },
+  {
+    title: "Build custom channels using API",
+    description:
+      "Use API channels to create custom sources. OmniConnect provides flexibility to integrate with any third-party system so you can bring every conversation into one inbox.",
+    points: [
+      "Send messages using the OmniConnect API.",
+      "Receive webhooks when customers reply to your messages.",
+    ],
+    image: "/images/omnichannel/api-diagram.png",
+    imageAlt: "API and webhooks integration diagram",
+  },
+];
 
 export default function OmnichannelInboxPage() {
   return (
-    <main className="min-h-screen bg-white pt-28 pb-20">
-      {/* Hero: Delight your customers wherever they are */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10 lg:gap-16 mb-20">
-        <div className="w-full md:w-1/2">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-500 mb-3">
-            OMNICHANNEL SUPPORT
-          </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-4">
-            Delight your customers
-            <br />
-            wherever they are
-          </h1>
-          <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl">
-            Connect any conversation channel and engage your customers from one
-            place. Driansh OmniConnect brings all of your customer touchpoints
-            into a single, unified experience.
-          </p>
-        </div>
+    <>
+      <PageHero
+        size="md"
+        eyebrow="OmniConnect"
+        title="Delight your customers wherever they are"
+        description="Connect any conversation channel and engage your customers from one place. Driansh OmniConnect brings all of your customer touchpoints into a single, unified experience."
+        image="/images/omnichannel/omni-hero.png"
+        imageAlt="Customers chatting with your business across channels"
+        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+      />
 
-        {/* Right: avatar / conversation graphic */}
-        <div className="w-full md:w-1/2">
-          <div className="relative h-64 sm:h-72 lg:h-80">
-            <Image
-              src="/images/omnichannel/omni-hero.png"
-              alt="Customers chatting with your business across channels"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Channel icons strip */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <p className="text-sm sm:text-base text-gray-700 mb-4">
+      <Section size="sm">
+        <p className="text-lead text-center text-slate-600">
           Connect with your customers through more than one channel.
         </p>
-        <div className="mx-auto max-w-4xl">
-          <div className="relative w-full h-16 sm:h-20 lg:h-24">
-            <Image
-              src="/images/omnichannel/channel-icons.png"
-              alt="Omnichannel icons like Facebook, Instagram, WhatsApp and more"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </section>
+        <Image
+          src="/images/omnichannel/channel-icons.png"
+          alt="Omnichannel icons like Facebook, Instagram, WhatsApp and more"
+          width={4086}
+          height={530}
+          sizes="(min-width: 1024px) 56rem, 90vw"
+          className="mx-auto mt-6 h-auto w-full max-w-4xl"
+        />
+      </Section>
 
-      {/* Facebook & Instagram DM section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 grid gap-10 lg:gap-16 md:grid-cols-2 items-center">
-        <div className="h-64 sm:h-72 flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/omnichannel/messenger-voice.png"
-              alt="Sample live chat and voice messages"
-              fill
-              className="object-contain"
+      {FEATURES.map((feature, index) => (
+        <Section key={feature.title} tone={index % 2 === 0 ? "muted" : "white"}>
+          <MediaSplit image={feature.image} imageAlt={feature.imageAlt} reverse={index % 2 === 1} framed>
+            <SectionHeader
+              title={feature.title}
+              description={feature.description}
+              align="left"
+              className="mb-6 md:mb-8"
             />
-          </div>
-        </div>
-        <div>
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
-            Manage your Facebook page &amp; Instagram DM
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-4">
-            Connect your Facebook page &amp; Instagram DM with OmniConnect and see
-            all the conversations from Messenger in one place.
-          </p>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>Receive and reply to DMs in a single shared inbox.</li>
-            <li>Manage your inbox with simple rules without providing page access.</li>
-            <li>Label conversations and mute spam conversations.</li>
-          </ul>
-        </div>
-      </section>
+            <CheckList items={feature.points} />
+          </MediaSplit>
+        </Section>
+      ))}
 
-      {/* WhatsApp Business Accounts section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 grid gap-10 lg:gap-16 md:grid-cols-2 items-center">
-        <div>
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
-            WhatsApp Business Accounts
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-4">
-            Create a business account for WhatsApp, connect it with OmniConnect
-            and start engaging your customers instantly.
-          </p>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>Send and receive messages from multiple WhatsApp numbers.</li>
-            <li>Centralize all WhatsApp conversations alongside other channels.</li>
-            <li>Provide rich support with quick replies and media attachments.</li>
-          </ul>
-        </div>
-        <div className="h-64 sm:h-72 flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/omnichannel/whatsapp-chat.png"
-              alt="Sample WhatsApp business conversation"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Build custom channels using API */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 grid gap-10 lg:gap-16 md:grid-cols-2 items-center">
-        <div className="h-56 sm:h-64 flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/omnichannel/api-diagram.png"
-              alt="API and webhooks integration diagram"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-        <div>
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
-            Build custom channels using API
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-4">
-            Use API channels to create custom sources. OmniConnect provides
-            flexibility to integrate with any third-party system so you can bring
-            every conversation into one inbox.
-          </p>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>Send messages using the OmniConnect API.</li>
-            <li>Receive webhooks when customers reply to your messages.</li>
-          </ul>
-        </div>
-      </section>
-    </main>
+      <Section size="sm">
+        <CTABanner
+          title="Every channel, one inbox"
+          description="See how Driansh OmniConnect brings all your customer conversations together with a personalised demo."
+          cta={{ label: "Book a Demo", href: "/contact-us" }}
+        />
+      </Section>
+    </>
   );
 }
-

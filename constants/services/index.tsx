@@ -3,8 +3,8 @@ import Image from "next/image";
 
 // Common Service Icon Component with gradient background
 const ServiceIcon = ({ src, alt }: { src: string; alt: string }) => (
-    <div className="w-16 h-16 rounded-full bg-linear-to-r from-[#FF73A1] via-[#6C63FF] to-[#00C3FF] shadow-sm flex items-center justify-center p-2.5">
-        <Image src={src} alt={alt} width={44} height={44} className="object-contain" unoptimized style={{ aspectRatio: '1/1' }} />
+    <div className="bg-brand-gradient flex h-12 w-12 shrink-0 items-center justify-center rounded-xl p-2">
+        <Image src={src} alt={alt} width={32} height={32} className="h-8 w-8 object-contain" unoptimized />
     </div>
 );
 export const SERVICES_VOIP_FAQ = [
@@ -677,21 +677,21 @@ export const SERVICES_FREESWITCH_EXPERT_CARDS = [
 
 export const SERVICES_KAZOO_CARDS = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-07.svg" alt="KAZOO Installation" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-07.webp" alt="KAZOO Installation" />,
         title: "KAZOO Installation",
         description:
             "Our KAZOO experts will help you turn the first stepping stone by installing this powerful open source VoIP Softswitch on your cloud or in-house server with the right configurations.",
 
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-08.svg" alt="KAZOO Customization" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-08.webp" alt="KAZOO Customization" />,
         title: "KAZOO Customization",
         description:
             "Bring in the power of unique features to stand out in vicious competition with our customization services or simply enhance the performance or customize an existing module or API.",
 
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-09.svg" alt="KAZOO Cluster Setup" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-09.webp" alt="KAZOO Cluster Setup" />,
         title: "KAZOO Cluster Setup",
         description:
             "We help you keep your KAZOO based VoIP telephony solutions scalable, robust, plus, up and running with cluster setup on the cloud or servers to build a unique business brand.",
@@ -1091,17 +1091,17 @@ export const SERVICES_SIPJS_CARDS = [
 
 export const SERVICES_SIPJS_EXPERT_CARDS = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-10.svg" alt="Web Softphone" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-10.webp" alt="Web Softphone" />,
         title: "Web Softphone",
         description: "Production‑grade in‑browser phone with registration, hold/transfer, DTMF, call history."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-11.svg" alt="WebRTC Video Calling" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-11.webp" alt="WebRTC Video Calling" />,
         title: "WebRTC Video Calling",
         description: "1:1 and group video with media controls, device selection, network resilience and stats."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-12.svg" alt="Call Center Agent UI" />,
+        icon: <ServiceIcon src="/images/services/VoIP-Development/icon-12.webp" alt="Call Center Agent UI" />,
         title: "Call Center Agent UI",
         description: "Queue/agent states, wrap‑up codes, whisper/barge, and supervisor views using SIP.js."
     },
@@ -1352,32 +1352,32 @@ export const SERVICES_PRODUCT_CARDS4 = [
 
 export const SERVICES_VOIPTESTING_CARD = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-01.svg" alt="Multi Tenant PBX" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-01.svg" alt="Multi Tenant PBX" />,
         title: "Multi Tenant PBX",
         description: "Tailor your telephony solutions with custom features that augment the communication experience of the participants with our custom SIP.js development services."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-02.svg" alt="Call Center" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-02.svg" alt="Call Center" />,
         title: "Call Center",
         description: "SIP.js experts will help you choose the right libraries and integrate them into your existing VoIP products and solutions to let you use the blended power of SIP and WebRTC."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-03.svg" alt="Class 4 Softswitch" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-03.svg" alt="Class 4 Softswitch" />,
         title: "Class 4 Softswitch",
         description: "Our SIP.js consultants provide consulting services to help you push the limits of your existing manpower and resources and use SIP.js libraries at their full potential."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-04.svg" alt="Class 5 Softswitch" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-04.svg" alt="Class 5 Softswitch" />,
         title: "Class 5 Softswitch",
         description: "Tailor your telephony solutions with custom features that augment the communication experience of the participants with our custom SIP.js development services."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-05.svg" alt="UCaaS Platform" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-05.svg" alt="UCaaS Platform" />,
         title: "UCaaS Platform",
         description: "SIP.js experts will help you choose the right libraries and integrate them into your existing VoIP products and solutions to let you use the blended power of SIP and WebRTC."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-06.svg" alt="Mobile Softphone" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-06.svg" alt="Mobile Softphone" />,
         title: "Mobile Softphone",
         description: "Our SIP.js consultants provide consulting services to help you push the limits of your existing manpower and resources and use SIP.js libraries at their full potential."
     }
@@ -1385,32 +1385,32 @@ export const SERVICES_VOIPTESTING_CARD = [
 
 export const SERVICES_VOIPTESTING_CARD1 = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-25.svg" alt="Proven VoIP Expertise" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-25.svg" alt="Proven VoIP Expertise" />,
         title: "Proven VoIP Expertise",
         description: "With 15+ years in VoIP development and testing, our team understands the intricacies of SIP, RTP, WebRTC, and complex VoIP protocols across platforms like FreeSWITCH, Asterisk, OpenSIPS, Kamailio, and more."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-26.svg" alt="End-to-End Testing Coverage" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-26.svg" alt="End-to-End Testing Coverage" />,
         title: "End-to-End Testing Coverage",
         description: "From SIP signaling and media stream analysis to NAT traversal, failover testing, and QoS monitoring, we cover every layer of your VoIP environment—ensuring complete readiness for production."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-27.svg" alt="Real-World Simulation" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-27.svg" alt="Real-World Simulation" />,
         title: "Real-World Simulation",
         description: "We simulate real-world scenarios—packet loss, jitter, codec negotiation, security breaches, load stress, and device/browser compatibility—to validate performance under all conditions."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-28.svg" alt="Custom Test Frameworks" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-28.svg" alt="Custom Test Frameworks" />,
         title: "Custom Test Frameworks",
         description: "Our team builds tailored test cases and automation frameworks using tools like SIPp, Wireshark, JMeter, and custom scripts, aligned to your infrastructure and goals."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-29.svg" alt="Faster Time to Market" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-29.svg" alt="Faster Time to Market" />,
         title: "Faster Time to Market",
         description: "By detecting issues early and reducing back-and-forth QA cycles, our testing services help you launch faster with confidence and deliver crystal-clear calling experiences to your users."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-30.svg" alt="Transparent Reporting" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-30.svg" alt="Transparent Reporting" />,
         title: "Transparent Reporting",
         description: "We deliver detailed, actionable reports with insights on bugs, performance metrics, and compliance gaps—so you can optimize and scale your VoIP systems efficiently."
     }
@@ -1418,32 +1418,32 @@ export const SERVICES_VOIPTESTING_CARD1 = [
 
 export const SERVICES_VOIPTESTING_CARD2 = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-19.svg" alt="VoIP & UCaaS Providers" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-19.svg" alt="VoIP & UCaaS Providers" />,
         title: "VoIP & UCaaS Providers",
         description: "Ensure your multi-tenant VoIP or UCaaS platform delivers HD voice and scales under load without jitter, packet loss, or signaling issues."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-20.svg" alt="Call & Contact Centers" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-20.svg" alt="Call & Contact Centers" />,
         title: "Call & Contact Centers",
         description: "Maximize agent efficiency and customer satisfaction with consistent voice clarity, minimal call drops, and optimized routing."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-21.svg" alt="Telecom Product Vendors" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-21.svg" alt="Telecom Product Vendors" />,
         title: "Telecom Product Vendors",
         description: "Test and fine-tune your telecom solutions - softphones, PBX, SIP gateways, or SBCs under various environments and edge cases."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-22.svg" alt="Healthcare, Insurance, & BPOs" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-22.svg" alt="Healthcare, Insurance, & BPOs" />,
         title: "Healthcare, Insurance, & BPOs",
         description: "Maintain regulatory-grade voice reliability for critical conversations and ensure high uptime for remote agents or patient interactions."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-23.svg" alt="IT & MSPs Managing Voice Platforms" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-23.svg" alt="IT & MSPs Managing Voice Platforms" />,
         title: "IT & MSPs Managing Voice Platforms",
         description: "Gain deep visibility into voice performance, proactively detect issues, and reduce support escalations across client systems."
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-24.svg" alt="Remote & Hybrid Teams" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-24.svg" alt="Remote & Hybrid Teams" />,
         title: "Remote & Hybrid Teams",
         description: "Guarantee seamless communication for distributed teams using browser-based VoIP/WebRTC tools regardless of their network conditions."
     }
@@ -1541,32 +1541,32 @@ export const SERVICES_WEB_DEVELOPMENT_CARDS1 = [
 
 export const SERVICES_VOIP_TESTING_CARDS = [
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-07.svg" alt="Jitter" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-07.svg" alt="Jitter" />,
         title: "Jitter",
         description: "Fix distorted audio caused by uneven packet delivery"
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-08.svg" alt="Latency" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-08.svg" alt="Latency" />,
         title: "Latency",
         description: "Minimize delays in transmission"
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-09.svg" alt="Packet Loss" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-09.svg" alt="Packet Loss" />,
         title: "Packet Loss",
         description: "Eliminate audio gaps and voice cutouts"
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-10.svg" alt="MOS Score" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-10.svg" alt="MOS Score" />,
         title: "MOS Score",
         description: "Quantify user-perceived call clarity"
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-11.svg" alt="One-way Audio / Echo" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-11.svg" alt="One-way Audio / Echo" />,
         title: "One-way Audio / Echo",
         description: "Detect routing or codec mismatches"
     },
     {
-        icon: <ServiceIcon src="/images/services/VoIP-Services/icon-12.svg" alt="VoIP Bandwidth Testing" />,
+        icon: <ServiceIcon src="/images/services/voip-services/icon-12.svg" alt="VoIP Bandwidth Testing" />,
         title: "VoIP Bandwidth Testing",
         description: "Validate capacity under load"
     }

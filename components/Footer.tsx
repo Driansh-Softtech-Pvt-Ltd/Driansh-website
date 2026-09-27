@@ -38,7 +38,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1.3fr_1fr_1fr] gap-8 lg:gap-12">
           <div>
@@ -50,27 +50,27 @@ export default function Footer() {
             </p>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-500 mt-1" />
+                <MapPin className="w-5 h-5 text-violet-300 mt-1" />
                 <p className="text-sm text-gray-400">
                   C/104, Riverfront, GIFT City,<br />
                   Gandhinagar – 382426, Gujarat, India
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Globe className="w-5 h-5 text-blue-500" />
-                <a href="https://driansh.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Globe className="w-5 h-5 text-violet-300" />
+                <a href="https://driansh.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
                   www.driansh.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-500" />
-                <a href="tel:+917028764776" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Phone className="w-5 h-5 text-violet-300" />
+                <a href="tel:+917028764776" className="text-sm text-gray-400 hover:text-white transition-colors">
                   +91 70287 64776
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-500" />
-                <a href="mailto:support@driansh.com" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+                <Mail className="w-5 h-5 text-violet-300" />
+                <a href="mailto:support@driansh.com" className="text-sm text-gray-400 hover:text-white transition-colors">
                   support@driansh.com
                 </a>
               </div>
@@ -82,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.services.map(link => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.solution.map(link => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.products.map(link => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -121,7 +121,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {FOOTER_LINKS.company.map(link => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -130,7 +130,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        <div className="mt-12 pt-8 border-t border-white/10">
           <div className="max-w-md">
             <h4 className="font-semibold mb-3">Stay Updated</h4>
             <p className="text-gray-400 text-sm mb-4">
@@ -150,9 +150,9 @@ export default function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 {...register("email")}
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-l-lg text-white text-sm focus:outline-none focus:border-blue-500"
+                className="flex-1 rounded-full border border-white/15 bg-white/5 text-white text-sm focus:outline-none focus:border-violet-400"
               />
-              <Button type="submit" disabled={isSubmitting} className="bg-blue-600 px-6 py-2 rounded-r-lg hover:bg-blue-700 text-sm font-medium">
+              <Button type="submit" disabled={isSubmitting} className="bg-brand-gradient rounded-full px-6 py-2 text-sm font-semibold hover:brightness-110">
                 {isSubmitting ? "Submitting..." : "Subscribe"}
               </Button>
             </form>
@@ -162,7 +162,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm">© {currentYear} Driansh Softtech Pvt. Ltd. All rights reserved.</p>
@@ -170,15 +170,15 @@ export default function Footer() {
               {FOOTER_SOCIAL_LINKS.map(social => {
                 const Icon = social.icon;
                 return (
-                  <a key={social.label} href={social.href} aria-label={social.label} className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
+                  <a key={social.label} href={social.href} aria-label={social.label} className="rounded-full bg-white/10 p-2 transition-colors hover:bg-brand">
                     <Icon className="w-5 h-5" />
                   </a>
                 );
               })}
             </div>
             <div className="flex items-center space-x-6">
-              <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors text-sm">Privacy Policy</Link>
-              <Link href="/terms-of-use" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Terms of Use</Link>
+              <Link href="/privacy-policy" className="hover:text-white transition-colors text-sm">Privacy Policy</Link>
+              <Link href="/terms-of-use" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Use</Link>
             </div>
           </div>
         </div>

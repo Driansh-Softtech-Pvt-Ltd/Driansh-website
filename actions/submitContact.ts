@@ -28,6 +28,7 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
     return { success: false, message: "Too many requests. Please try again later." };
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { website: _honeypot, ...contact } = data;
 
   try {

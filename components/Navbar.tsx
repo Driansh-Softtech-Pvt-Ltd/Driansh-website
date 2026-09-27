@@ -6,16 +6,20 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+type NavLink = { label: string; path: string };
+type NavSection = { title: string; path?: string; items: NavLink[] };
+type NavItem = { name: string; path?: string; dropdown?: NavSection[] };
+
 /* 🔹 Services Dropdown */
-function ServicesDropdown({ dropdown }: { dropdown: any[] }) {
+function ServicesDropdown({ dropdown }: { dropdown: NavSection[] }) {
   return (
     <div className="container mx-auto px-10 py-8">
-      {dropdown.map((section: any, idx: number) => (
+      {dropdown.map((section, idx) => (
         <div key={idx}>
           {section.path ? (
             <Link
               href={section.path}
-              className="font-bold text-gray-900 mb-4 block text-[18px] hover:text-blue-600"
+              className="font-bold text-gray-900 mb-4 block text-[18px] hover:text-brand"
             >
               {section.title}
             </Link>
@@ -25,11 +29,11 @@ function ServicesDropdown({ dropdown }: { dropdown: any[] }) {
             </h4>
           )}
           <div className="flex flex-wrap gap-x-10 gap-y-3">
-            {section.items.map((item: any, i: number) => (
+            {section.items.map((item, i) => (
               <Link
                 key={i}
                 href={item.path}
-                className="text-[17px] text-black hover:text-blue-600"
+                className="text-[17px] text-black hover:text-brand"
               >
                 {item.label}
               </Link>
@@ -42,7 +46,7 @@ function ServicesDropdown({ dropdown }: { dropdown: any[] }) {
 }
 
 /* 🔹 Solutions Dropdown */
-function SolutionsDropdown({ dropdown }: { dropdown: any[] }) {
+function SolutionsDropdown({ dropdown }: { dropdown: NavSection[] }) {
   const all = dropdown[0].items;
 
   return (
@@ -53,11 +57,11 @@ function SolutionsDropdown({ dropdown }: { dropdown: any[] }) {
 
       {/* Items in a row */}
       <div className="flex flex-wrap gap-x-10 gap-y-3">
-        {all.map((item: any, idx: number) => (
+        {all.map((item, idx) => (
           <Link
             key={idx}
             href={item.path}
-            className="text-[17px] text-black hover:text-blue-600"
+            className="text-[17px] text-black hover:text-brand"
           >
             {item.label}
           </Link>
@@ -68,7 +72,13 @@ function SolutionsDropdown({ dropdown }: { dropdown: any[] }) {
 }
 
 /* 🔹 Mobile Nav Item */
-function MobileNavItem({ item, setIsMenuOpen }: any) {
+function MobileNavItem({
+  item,
+  setIsMenuOpen,
+}: {
+  item: NavItem;
+  setIsMenuOpen: (open: boolean) => void;
+}) {
   const [open, setOpen] = useState(false);
 
   if (item.dropdown) {
@@ -76,7 +86,7 @@ function MobileNavItem({ item, setIsMenuOpen }: any) {
       <div className="border-b border-gray-200 pb-2">
         <button
           onClick={() => setOpen(!open)}
-          className="w-full text-left font-medium text-gray-800 py-2 flex justify-between items-center hover:text-blue-600"
+          className="w-full text-left font-medium text-gray-800 py-2 flex justify-between items-center hover:text-brand"
         >
           {item.name}
           <ChevronDown
@@ -93,12 +103,12 @@ function MobileNavItem({ item, setIsMenuOpen }: any) {
               transition={{ duration: 0.2 }}
               className="ml-4 mt-2 space-y-3"
             >
-              {item.dropdown.map((section: any, idx: number) => (
+              {item.dropdown.map((section, idx) => (
                 <div key={idx}>
                   {section.path ? (
                     <Link
                       href={section.path}
-                      className="block font-semibold text-gray-900 text-[15px] hover:text-blue-600"
+                      className="block font-semibold text-gray-900 text-[15px] hover:text-brand"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {section.title}
@@ -110,11 +120,11 @@ function MobileNavItem({ item, setIsMenuOpen }: any) {
                   )}
                   {section.items.length > 0 && (
                     <div className="ml-3 mt-1 space-y-1">
-                      {section.items.map((dropItem: any, j: number) => (
+                      {section.items.map((dropItem, j) => (
                         <Link
                           key={j}
                           href={dropItem.path}
-                          className="block text-sm text-gray-600 hover:text-blue-600"
+                          className="block text-sm text-gray-600 hover:text-brand"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropItem.label}
@@ -134,7 +144,7 @@ function MobileNavItem({ item, setIsMenuOpen }: any) {
   return (
     <Link
       href={item.path || "#"}
-      className="block font-medium text-gray-700 py-2 hover:text-blue-600"
+      className="block font-medium text-gray-700 py-2 hover:text-brand"
       onClick={() => setIsMenuOpen(false)}
     >
       {item.name}
@@ -199,7 +209,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.path || "#"}
-                  className="flex items-center space-x-2 font-medium text-[16px] text-gray-800 hover:text-blue-600"
+                  className="flex items-center space-x-2 font-medium text-[16px] text-gray-800 hover:text-brand"
                 >
                   <span>{item.name}</span>
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
@@ -208,9 +218,9 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact-us"
-              className="bg-[#007bff] text-white px-6 py-3.5 rounded-sm font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-brand-gradient rounded-full px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110"
             >
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </nav>
         </div>
@@ -257,7 +267,7 @@ export default function Navbar() {
 
             <Link
               href="/contact-us"
-              className="block font-medium text-gray-800 py-2 hover:text-blue-600"
+              className="block font-medium text-gray-800 py-2 hover:text-brand"
               onClick={() => setIsMenuOpen(false)}
             >
               CONTACT&nbsp;US

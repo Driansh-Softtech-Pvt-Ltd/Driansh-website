@@ -9,6 +9,8 @@ export interface MediaSplitProps {
   reverse?: boolean;
   /** Frame screenshots with a border + shadow. */
   framed?: boolean;
+  /** Extra classes for the image wrapper, e.g. "max-w-sm" for tall screenshots. */
+  imageClassName?: string;
   className?: string;
 }
 
@@ -19,12 +21,13 @@ export default function MediaSplit({
   children,
   reverse = false,
   framed = false,
+  imageClassName,
   className,
 }: MediaSplitProps) {
   return (
     <div className={cn("grid items-center gap-10 lg:grid-cols-2 lg:gap-16", className)}>
       <div className={cn(reverse ? "lg:order-1" : "lg:order-2")}>{children}</div>
-      <div className={cn("relative mx-auto w-full max-w-xl", reverse ? "lg:order-2" : "lg:order-1")}>
+      <div className={cn("relative mx-auto w-full max-w-xl", reverse ? "lg:order-2" : "lg:order-1", imageClassName)}>
         <Image
           src={image}
           alt={imageAlt}

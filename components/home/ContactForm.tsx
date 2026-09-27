@@ -62,7 +62,7 @@ export default function ContactForm() {
           <input
             {...register("name")}
             suppressHydrationWarning
-            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
+            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:border-brand focus:ring-0"
           />
           {errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -75,7 +75,7 @@ export default function ContactForm() {
           <input
             {...register("email")}
             suppressHydrationWarning
-            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
+            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:border-brand focus:ring-0"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -91,7 +91,7 @@ export default function ContactForm() {
           <input
             {...register("phone")}
             suppressHydrationWarning
-            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
+            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:border-brand focus:ring-0"
           />
         </div>
         <div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
           <input
             {...register("company")}
             suppressHydrationWarning
-            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:ring-0"
+            className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none focus:border-brand focus:ring-0"
           />
         </div>
       </div>
@@ -114,7 +114,7 @@ export default function ContactForm() {
           {...register("message")}
           suppressHydrationWarning
           rows={3}
-          className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none resize-none focus:ring-0"
+          className="w-full border-b border-gray-300 bg-transparent px-0 py-2 text-base text-gray-700 outline-none resize-none focus:border-brand focus:ring-0"
         />
         {errors.message && (
           <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
@@ -125,7 +125,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-yellow-400 text-black text-lg font-semibold rounded-full px-14 py-6 flex items-center gap-2 shadow-none hover:bg-yellow-400"
+          className="bg-brand-gradient flex items-center gap-2 rounded-full px-10 py-6 text-base font-semibold text-white shadow-md hover:brightness-110"
         >
           {isSubmitting ? "Sending..." : "Send"}
           {!isSubmitting && <Send className="w-5 h-5" />}

@@ -1,34 +1,36 @@
 import Image from "next/image";
 import { ContactForm } from "@/components/Contact-Form";
+import { PageHero, Section } from "@/components/site";
 
 export default function ContactPage() {
   return (
-    <section className="min-h-screen py-16 flex flex-col items-center mt-20">
-      <div className="text-center mb-12 px-4">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="mt-2 text-gray-600">
-          We'd love to hear from you. Get in touch with our team for any inquiries or support.
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row w-full px-4 max-w-360 md:px-0 gap-12">
-        <div className="w-full md:[40%] flex justify-center">
-          <div className="relative w-full h-[400px] md:h-[600px]">
+    <>
+      <PageHero
+        size="md"
+        eyebrow="Contact"
+        title="Contact Us"
+        description="We'd love to hear from you. Get in touch with our team for any inquiries or support."
+        primaryCta={null}
+      />
+
+      <Section>
+        <div className="grid items-center gap-10 lg:grid-cols-5 lg:gap-16">
+          <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:col-span-2 lg:max-w-md">
             <Image
-              rel="preload"
               src="/images/logo.png"
               alt="Contact Us"
-              fill
-              style={{ objectFit: "contain" }}
+              width={1024}
+              height={1024}
               priority
+              sizes="(min-width: 1024px) 30vw, 80vw"
+              className="aspect-video w-full object-cover lg:aspect-square lg:object-contain"
             />
           </div>
-        </div>
-        <div className="w-full md:[60%] flex justify-center md:mr-4 md:-ml-5">
-          <div className="w-full">
+          <div className="w-full lg:col-span-3">
             <ContactForm />
           </div>
         </div>
-      </div>
-    </section>
+      </Section>
+    </>
   );
 }

@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import {
   Zap,
   MessageCircle,
@@ -22,7 +19,10 @@ import {
   Activity,
   UserCheck,
   Smile,
+  type LucideIcon,
 } from "lucide-react";
+import { PageHero, Section, SectionHeader, CardGrid, FeatureCard, CTABanner, CtaLink } from "@/components/site";
+import { OUR_PRODUCTS } from "@/constants";
 
 const productCards = [
   {
@@ -218,232 +218,140 @@ const integrationCards = [
   },
 ];
 
-export default function OmniConnectFeaturesPage() {
+const productIcons: Record<string, LucideIcon> = {
+  "Website Live Chat": MessageCircleMore,
+  "Omnichannel inbox": Inbox,
+  "Team collaboration": Layers,
+  "Chatbots": Bot,
+  "Automations": Rocket,
+  "Mobile apps": Smartphone,
+  "Integrations": Plug,
+  "Pre-Chat Form": MessageCircle,
+  "Help Center": BookOpenText,
+};
+
+const manageIcons: Record<string, LucideIcon> = {
+  "Labels": Tag,
+  "Teams": Users2,
+  "Contact Notes": FileText,
+  "Private Notes": Lock,
+  "Contact Segments": ListFilter,
+  "Business Hours": Clock3,
+  "Audit Logs": FileSearch,
+};
+
+const analyseIcons: Record<string, LucideIcon> = {
+  "Live view": Activity,
+  "Conversation Report": MessageCircle,
+  "Agent Report": UserCheck,
+  "Label Reports": Tag,
+  "CSAT Reports": Smile,
+  "Inbox Reports": Inbox,
+  "Team Reports": Users2,
+};
+
+const productivityIcons: Record<string, LucideIcon> = {
+  "Keyboard Shortcuts": Zap,
+  "Command Bar": Activity,
+  "Bulk Actions": FileSearch,
+  "Canned Responses": MessageCircle,
+  "Agent Capacity": Users2,
+};
+
+const integrationIcons: Record<string, LucideIcon> = {
+  "WhatsApp": Smartphone,
+  "Facebook": MessageCircle,
+  "Instagram": MessageCircle,
+  "Telegram": Smartphone,
+  "Line": Layers,
+  "SMS": Smartphone,
+  "Email": Inbox,
+  "Slack": MessageCircleMore,
+};
+
+type LinkCard = { title: string; description: string; href: string };
+
+function CardLinks({
+  cards,
+  icons,
+  fallback,
+}: {
+  cards: LinkCard[];
+  icons: Record<string, LucideIcon>;
+  fallback: LucideIcon;
+}) {
   return (
-    <main className="min-h-screen bg-white pt-28 pb-20">
-      {/* Product cards section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Driansh OmniConnect Features
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:gap-6 md:grid-cols-3">
-          {productCards.map((card) => {
-            let Icon = MessageCircleMore;
-
-            if (card.title === "Website Live Chat") Icon = MessageCircleMore;
-            else if (card.title === "Omnichannel inbox") Icon = Inbox;
-            else if (card.title === "Team collaboration") Icon = Layers;
-            else if (card.title === "Chatbots") Icon = Bot;
-            else if (card.title === "Automations") Icon = Rocket;
-            else if (card.title === "Mobile apps") Icon = Smartphone;
-            else if (card.title === "Integrations") Icon = Plug;
-            else if (card.title === "Pre-Chat Form") Icon = MessageCircle;
-            else if (card.title === "Help Center") Icon = BookOpenText;
-
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group block rounded-2xl border border-gray-200 bg-white px-5 py-6 shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-150"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  {card.description}
-                </p>
-                <span className="text-xs sm:text-sm font-semibold text-blue-600 group-hover:underline">
-                  Learn more
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Manage section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Manage
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:gap-6 md:grid-cols-3">
-          {manageCards.map((card) => {
-            let Icon = FileText;
-
-            if (card.title === "Labels") Icon = Tag;
-            else if (card.title === "Teams") Icon = Users2;
-            else if (card.title === "Contact Notes") Icon = FileText;
-            else if (card.title === "Private Notes") Icon = Lock;
-            else if (card.title === "Contact Segments") Icon = ListFilter;
-            else if (card.title === "Business Hours") Icon = Clock3;
-            else if (card.title === "Audit Logs") Icon = FileSearch;
-
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group block rounded-2xl border border-gray-200 bg-white px-5 py-6 shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-150"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  {card.description}
-                </p>
-                <span className="text-xs sm:text-sm font-semibold text-blue-600 group-hover:underline">
-                  Learn more
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Analyse section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Analyse
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:gap-6 md:grid-cols-3">
-          {analyseCards.map((card) => {
-            let Icon = Activity;
-
-            if (card.title === "Live view") Icon = Activity;
-            else if (card.title === "Conversation Report") Icon = MessageCircle;
-            else if (card.title === "Agent Report") Icon = UserCheck;
-            else if (card.title === "Label Reports") Icon = Tag;
-            else if (card.title === "CSAT Reports") Icon = Smile;
-            else if (card.title === "Inbox Reports") Icon = Inbox;
-            else if (card.title === "Team Reports") Icon = Users2;
-
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group block rounded-2xl border border-gray-200 bg-white px-5 py-6 shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-150"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  {card.description}
-                </p>
-                <span className="text-xs sm:text-sm font-semibold text-blue-600 group-hover:underline">
-                  Learn more
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Productivity section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Productivity
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:gap-6 md:grid-cols-3">
-          {productivityCards.map((card) => {
-            let Icon = Activity;
-
-            if (card.title === "Keyboard Shortcuts") Icon = Zap;
-            else if (card.title === "Command Bar") Icon = Activity;
-            else if (card.title === "Bulk Actions") Icon = FileSearch;
-            else if (card.title === "Canned Responses") Icon = MessageCircle;
-            else if (card.title === "Agent Capacity") Icon = Users2;
-
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group block rounded-2xl border border-gray-200 bg-white px-5 py-6 shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-150"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  {card.description}
-                </p>
-                <span className="text-xs sm:text-sm font-semibold text-blue-600 group-hover:underline">
-                  Learn more
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Integrations section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
-            Integrations
-          </h2>
-        </div>
-
-        <div className="grid gap-5 md:gap-6 md:grid-cols-3">
-          {integrationCards.map((card) => {
-            let Icon = Plug;
-
-            if (card.title === "WhatsApp") Icon = Smartphone;
-            else if (card.title === "Facebook") Icon = MessageCircle;
-            else if (card.title === "Instagram") Icon = MessageCircle;
-            else if (card.title === "Telegram") Icon = Smartphone;
-            else if (card.title === "Line") Icon = Layers;
-            else if (card.title === "SMS") Icon = Smartphone;
-            else if (card.title === "Email") Icon = Inbox;
-            else if (card.title === "Slack") Icon = MessageCircleMore;
-
-            return (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group block rounded-2xl border border-gray-200 bg-white px-5 py-6 shadow-sm hover:border-blue-500 hover:shadow-md transition-all duration-150"
-              >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-100">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mb-3">
-                  {card.description}
-                </p>
-                <span className="text-xs sm:text-sm font-semibold text-blue-600 group-hover:underline">
-                  Learn more
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-    </main>
+    <CardGrid>
+      {cards.map((card) => {
+        const Icon = icons[card.title] ?? fallback;
+        return (
+          <FeatureCard
+            key={card.title}
+            href={card.href}
+            title={card.title}
+            description={card.description}
+            icon={<Icon aria-hidden="true" />}
+          >
+            <span className="mt-4 inline-block text-sm font-semibold text-brand">Learn more</span>
+          </FeatureCard>
+        );
+      })}
+    </CardGrid>
   );
 }
 
+export default function OmniConnectFeaturesPage() {
+  const omniConnect = OUR_PRODUCTS.find((product) => product.id === "omniConnect");
 
+  return (
+    <>
+      <PageHero
+        eyebrow="OmniConnect"
+        title={omniConnect?.title ?? "Driansh OmniConnect"}
+        description={omniConnect?.description}
+        image={omniConnect?.image}
+        imageAlt={omniConnect?.title}
+        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        secondaryCta={{ label: "Explore Features", href: "#features" }}
+      />
+
+      <Section id="features" tone="white">
+        <SectionHeader title="Driansh OmniConnect Features" />
+        <CardLinks cards={productCards} icons={productIcons} fallback={MessageCircleMore} />
+      </Section>
+
+      <Section tone="muted">
+        <SectionHeader title="Manage" />
+        <CardLinks cards={manageCards} icons={manageIcons} fallback={FileText} />
+      </Section>
+
+      <Section tone="white">
+        <SectionHeader title="Analyse" />
+        <CardLinks cards={analyseCards} icons={analyseIcons} fallback={Activity} />
+      </Section>
+
+      <Section tone="muted">
+        <SectionHeader title="Productivity" />
+        <CardLinks cards={productivityCards} icons={productivityIcons} fallback={Activity} />
+      </Section>
+
+      <Section tone="white">
+        <SectionHeader title="Integrations" />
+        <CardLinks cards={integrationCards} icons={integrationIcons} fallback={Plug} />
+        <div className="mt-10 flex justify-center">
+          <CtaLink href="/our-products/omniconnect/integrations" variant="outline">
+            View all integrations
+          </CtaLink>
+        </div>
+      </Section>
+
+      <Section size="sm" tone="muted">
+        <CTABanner
+          title="See Driansh OmniConnect in action"
+          description="Book a demo and discover how one inbox can connect every customer conversation."
+          cta={{ label: "Book a Demo", href: "/contact-us" }}
+        />
+      </Section>
+    </>
+  );
+}

@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import {
   MT_IP_PBX_SOLUTION_FEATURES,
   MT_IP_PBX_SOLUTION_BENIFITS,
@@ -9,81 +6,66 @@ import {
 import SolutionFeatures from "@/components/Solutions-Features";
 import SolutionsBenifits from "@/components/Solutions-Benifits";
 import FAQ from "@/components/FAQ";
+import { PageHero, Section, SectionHeader, MediaSplit } from "@/components/site";
 
 export default function MTIpPbxPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
-        <Image
-          rel="preload"
-          src="/images/solutions/multi-tenant/image-01.webp"
-          alt="Multi Tenant IP PBX"
-          fill
-          className="object-cover object-center -z-10"
-          priority
+      <PageHero
+        eyebrow="Solutions"
+        title="Multi Tenant IP PBX Solution"
+        description={
+          <>
+            <p className="font-semibold text-white">
+              Future-Ready, AI-Driven VoIP and PBX Solutions for Smart
+              Communication
+            </p>
+            <p className="mt-3">
+              Deploy a ready-to-use contact center solution with features like
+              Auto Dialer, Predictive Dialer, WhatsApp Chat, IVR, call routing,
+              real-time analytics, and CRM integration.
+            </p>
+          </>
+        }
+        backgroundImage="/images/solutions/multi-tenant/image-01.webp"
+        primaryCta={{ label: "Get in Touch", href: "/contact-us" }}
+      />
+
+      <Section>
+        <SectionHeader
+          title="Generate added revenue or keep a close control over communication resource utilization by different business branches with our feature packed multi tenant IP PBX solution."
+          className="max-w-4xl [&_h2]:text-2xl sm:[&_h2]:text-3xl"
+          description={
+            <p>
+              Eradicate the hassle and cost associated with clunky and expensive
+              conventional telecommunication or PBX systems by adopting the best
+              and technology driven IP PBX solution. Augment business
+              communication benefits your customers that seek uninterruptible and
+              advanced communication and collaboration mechanisms at low
+              investment and low maintenance demands. Additionally, handle the
+              growing communication needs of your dispersed business branches
+              within a city, nation, or even at the world level. Complete control
+              of the processes would be under your command to lead your business
+              on the most profitable path with cautious use of telephony resources
+              and a well defined business model.
+            </p>
+          }
         />
+      </Section>
 
-        <div className="relative z-10 w-full md:w-[60%] p-6 sm:p-10 lg:p-16 text-white text-left flex flex-col gap-5 items-start">
-          <h2 className="text-6xl font-bold mb-4 leading-tight">
-            Multi Tenant IP PBX Solution
-          </h2>
-          <h2 className="font-bold mb-4 leading-tight">
-            Future-Ready, AI-Driven VoIP and PBX Solutions for Smart
-            Communication
-          </h2>
-          <p className="text-base sm:text-lg leading-relaxed max-w-3xl">
-            Deploy a ready-to-use contact center solution with features like
-            Auto Dialer, Predictive Dialer, WhatsApp Chat, IVR, call routing,
-            real-time analytics, and CRM integration.
-          </p>
-          <div className="flex justify-center md:justify-start mt-8">
-            <Link href="/contact-us">
-              <Button className="bg-white text-black text-base md:text-lg rounded-sm px-12 py-8 transform transition-transform duration-300 hover:bg-white hover:-translate-y-1">
-                Get in Touch
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="py-12 px-6 md:py-16 md:px-20 flex flex-col items-center text-center">
-        <div>
-          <h2 className="text-4xl font-semibold mb-6">
-            Generate added revenue or keep a close control over communication
-            resource utilization by different business branches with our feature
-            packed multi tenant IP PBX solution.
-          </h2>
-
-          <p className="text-lg leading-relaxed">
-            Eradicate the hassle and cost associated with clunky and expensive
-            conventional telecommunication or PBX systems by adopting the best
-            and technology driven IP PBX solution. Augment business
-            communication benefits your customers that seek uninterruptible and
-            advanced communication and collaboration mechanisms at low
-            investment and low maintenance demands. Additionally, handle the
-            growing communication needs of your dispersed business branches
-            within a city, nation, or even at the world level. Complete control
-            of the processes would be under your command to lead your business
-            on the most profitable path with cautious use of telephony resources
-            and a well defined business model.
-          </p>
-        </div>
-      </section>
-      <section className="bg-gray-100 py-12 px-6 md:px-14">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2 flex text-center  md:justify-center">
-            <Image
-              src="/images/solutions/multi-tenant/multi-tenante-img.jpeg"
-              alt="Multi Tenant IP PBX"
-              width={550}
-              height={400}
-              className="object-contain rounded-xl"
-            />
-          </div>
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-6">
-              Multi Tenant IP PBX Solution Provider Company
-            </h2>
-            <p className="text-lgleading-relaxed mb-4">
+      <Section tone="muted">
+        <MediaSplit
+          image="/images/solutions/multi-tenant/multi-tenante-img.jpeg"
+          imageAlt="Multi Tenant IP PBX"
+          className="[&_img]:rounded-2xl"
+        >
+          <SectionHeader
+            title="Multi Tenant IP PBX Solution Provider Company"
+            align="left"
+            className="mb-6 md:mb-6"
+          />
+          <div className="text-lead space-y-4">
+            <p>
               A multi tenant IP PBX signifies the concept of having multiple IP
               PBX solutions with a single software instance, which makes the
               management of the software so easy. The instinctive GUI based
@@ -94,7 +76,7 @@ export default function MTIpPbxPage() {
               anywhere, you can control your business communication tools and
               PBX service provider business.
             </p>
-            <p className="text-lg leading-relaxed">
+            <p>
               Run a business as a hosted PBX solution provider, business phone
               service provider, or simply administer the resourceful use of
               telephony infrastructure in your widespread business with this
@@ -106,23 +88,21 @@ export default function MTIpPbxPage() {
               ever increasing choices.
             </p>
           </div>
-        </div>
-      </section>
+        </MediaSplit>
+      </Section>
+
       <SolutionFeatures
         data={MT_IP_PBX_SOLUTION_FEATURES}
         title="Key Features Of Multi Tenant IP PBX"
-        description="A fully responsive and scalable multi tenant IP PBX system is
-          furnished with a whole gamut of standard and futuristic features to
-          meet universal and unique business communication needs."
+        description="A fully responsive and scalable multi tenant IP PBX system is furnished with a whole gamut of standard and futuristic features to meet universal and unique business communication needs."
       />
-      <section className="bg-gray-100">
-      <SolutionsBenifits 
+
+      <SolutionsBenifits
         data={MT_IP_PBX_SOLUTION_BENIFITS}
         title="Key Benefits of IP PBX"
-        description="Make your business stand out by gaining competitive advantages that
-          are bestowed by this painstakingly designed hosted PBX system."
+        description="Make your business stand out by gaining competitive advantages that are bestowed by this painstakingly designed hosted PBX system."
       />
-      </section>
+
       <FAQ
         data={MT_IP_PBX_SOLUTION_FAQ}
         sub_title="Each commonly asked question associated with a multi tenant IP PBX solution is answered for you to have a quick push to your decision of acquiring this best communication tool."

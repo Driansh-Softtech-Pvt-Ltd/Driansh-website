@@ -1,16 +1,19 @@
 import { pageMetadata } from "@/lib/seo";
+import { PageHero, Section } from "@/components/site";
 
 export const metadata = pageMetadata("/terms-of-use");
 
 export default function TermsOfUsePage() {
   return (
-    <main className="mt-20">
-      <section className="py-16">
-        <div className="mx-auto px-4 sm:px-20 lg:px-24">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
-            Terms of Use
-          </h1>
-          <p className="mt-6 text-xl text-gray-700">
+    <>
+      <PageHero
+        size="md"
+        eyebrow="Legal"
+        title="Terms of Use"
+        primaryCta={null}
+        description={
+          <>
+          <p className="mt-4 first:mt-0">
             Throughout the entire website www.driansh.com, the terms ‘we’, ‘us’
             or ‘our’ refer to Driansh Softtech Pvt. Ltd. Having its
             registered office in India, this company is registered under the
@@ -20,20 +23,22 @@ export default function TermsOfUsePage() {
             property laws. This website and whatever material found from this
             site are an absolute property of Driansh.
           </p>
-          <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+          <p className="mt-4 first:mt-0">
             Please note that by using this website, you agree all the terms
             mentioned in Terms of Services and Privacy Policy.
           </p>
-        </div>
-      </section>
+          </>
+        }
+      />
+      <Section containerClassName="max-w-4xl">
 
-      <section>
-        <div className="mx-auto px-4 sm:px-20 lg:px-24">
+      <section className="mt-12 first:mt-0">
+        <div>
           <div>
-            <h2 className="text-2xl md:text-4xl text-gray-800 font-bold">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
               Content
             </h2>
-            <p className="mt-6 text-xl text-gray-700">
+            <p className="text-lead mt-4 text-slate-600">
               You may not download, save, use, reproduce, modify, broadcast,
               sell, transmit or make the content of this website publicly
               available without the prior written approval from us. You may also
@@ -43,11 +48,11 @@ export default function TermsOfUsePage() {
             </p>
           </div>
 
-          <div className="py-8">
-            <h2 className="text-2xl md:text-4xl text-gray-800 font-bold">
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
               Copyrights
             </h2>
-            <p className="mt-6 text-xl text-gray-700">
+            <p className="text-lead mt-4 text-slate-600">
               The information, graphics, documentation and this entire website
               are protected under Indian and international copyright laws as
               well as the conventions of intellectual property. You may not
@@ -59,17 +64,17 @@ export default function TermsOfUsePage() {
             </p>
           </div>
 
-          <div className="py-8">
-            <h2 className="text-2xl md:text-4xl text-gray-800 font-bold">
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
               Limitations of Damages and Liabilities
             </h2>
-            <p className="mt-6 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               Driansh (and any of our offices, staff members, directors,
               partners, affiliates, providers or agents) shall not be liable for
               any kind of damage whatsoever arises from your use of our website,
               its services, and deliverables.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               For your general, indirect, incidental, special, exemplary,
               consequential or any other damage, including, profit, loss,
               business interruption, loss of business details, corruption of
@@ -77,13 +82,13 @@ export default function TermsOfUsePage() {
               staff members, directors, partners, affiliates, providers or
               agents) shall not be liable or responsible.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               Because you have initiated the use of our website with your own
               choice, you agree to assume all the liabilities of the actions.
               Any consequences of such actions shall not be our responsibility
               in any manner, whatsoever.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               We shall not be liable or responsible for any of your direct or
               indirect, consequential, special or other punitive damages arising
               any time out of your use of this website or inability to use this
@@ -93,11 +98,11 @@ export default function TermsOfUsePage() {
             </p>
           </div>
 
-          <div className="py-8">
-            <h2 className="text-2xl md:text-4xl text-gray-800 font-bold">
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
               Indemnity
             </h2>
-            <p className="mt-6 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               You shall indemnify and hold Driansh Softtech Pvt. Ltd., its
               Officers, Directors, Employees, Staff Members, Affiliates,
               Licensors, or Agents harmless with respect to any claim or suit
@@ -106,7 +111,7 @@ export default function TermsOfUsePage() {
               by you of the copyrights or other intellectual property rights of
               any third party. (b) Your use or misuse of our website.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               You shall indemnify Driansh Softtech Pvt. Ltd. and hold us
               harmless from any kind of damage to our business, services,
               network, clients, equipments, operations, goodwill and reputation
@@ -116,7 +121,7 @@ export default function TermsOfUsePage() {
               patent or copyrights or other intellectual property rights,
               privacy violation or other tort.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               As user authentication on the internet is not that easy, our
               website www.driansh.com and the company Driansh Softtech Pvt.
               Ltd. does not and cannot confirm that each and every user is and
@@ -134,11 +139,11 @@ export default function TermsOfUsePage() {
             </p>
           </div>
 
-          <div className="py-8">
-            <h2 className="text-2xl md:text-4xl text-gray-800 font-bold">
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
               Note
             </h2>
-            <p className="mt-6 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               You hereby, be assured that www.driansh.com endeavors to comply
               with all the essential copyright laws and other intellectual laws.
               Driansh Softtech Pvt. Ltd. shall reply to the notices issued
@@ -151,14 +156,14 @@ export default function TermsOfUsePage() {
               access to comply with the copyright laws, other intellectual laws
               and their provisions, then it shall be made for a good interest.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               Other than this, if you found to be in violation or breach of any
               or all the agreement currently in place and/or any of the grounds
               of our Terms of Services or Privacy Policy, then we keep the right
               with us to terminate your service permanently any time without any
               prior notice, refund or stating the reason.
             </p>
-            <p className="mt-4 text-xl text-gray-700 leading-relaxed">
+            <p className="text-lead mt-4 text-slate-600">
               Should you have any doubts, queries, complaints, concerns or
               questions regarding any or all the terms stated hereinabove,
               please e-mail it to us at support@Driansh.com. Our company and all
@@ -174,6 +179,7 @@ export default function TermsOfUsePage() {
           </div>
         </div>
       </section>
-    </main>
+      </Section>
+    </>
   );
 }

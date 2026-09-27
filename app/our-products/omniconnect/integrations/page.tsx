@@ -1,6 +1,17 @@
-"use client";
+import Image from "next/image";
+import { MessageCircle } from "lucide-react";
+import { PageHero, Section, SectionHeader, CardGrid, FeatureCard, CTABanner } from "@/components/site";
 
-const integrations = [
+type Integration = {
+  name: string;
+  logo: string;
+  description: string;
+  tags: string[];
+  /** Detail page, when one exists. */
+  href?: string;
+};
+
+const integrations: Integration[] = [
   {
     name: "HubSpot",
     logo: "/images/integrations/hubspot.png",
@@ -53,6 +64,7 @@ const integrations = [
   {
     name: "Slack",
     logo: "/images/integrations/slack.png",
+    href: "/our-products/omniconnect/integrations/slack",
     description:
       "Handle customer conversations directly within your Slack channels. Receive instant notifications for new messages and priority cases. Collaborate with team members without leaving Slack.",
     tags: ["Cloud", "Self Hosted", "Available"],
@@ -108,65 +120,89 @@ const integrations = [
   },
 ];
 
-const getTagColor = (tag: string) => {
-  if (tag === "Available") {
-    return "bg-green-50 text-green-700 border-green-200";
-  }
-  return "bg-cyan-50 text-cyan-700 border-cyan-200";
-};
+const CHANNELS = [
+  { name: "WhatsApp", href: "/our-products/omniconnect/integrations/whatsapp" },
+  { name: "Facebook", href: "/our-products/omniconnect/integrations/facebook" },
+  { name: "Instagram", href: "/our-products/omniconnect/integrations/instagram" },
+  { name: "Telegram", href: "/our-products/omniconnect/integrations/telegram" },
+  { name: "Line", href: "/our-products/omniconnect/integrations/line" },
+  { name: "SMS", href: "/our-products/omniconnect/integrations/sms" },
+  { name: "Email", href: "/our-products/omniconnect/integrations/email" },
+  { name: "Slack", href: "/our-products/omniconnect/integrations/slack" },
+];
+
+const getTagColor = (tag: string) =>
+  tag === "Available"
+    ? "bg-green-50 text-green-700 border-green-200"
+    : "bg-brand-soft text-brand border-brand/20";
 
 export default function IntegrationsPage() {
   return (
-    <main className="min-h-screen bg-white pt-28 pb-20">
-      {/* Header */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Integrations
-        </h1>
-        <p className="text-lg text-gray-500">
-          Driansh OmniConnect connects with your favourite apps
-        </p>
-      </section>
+    <>
+      <PageHero
+        size="md"
+        eyebrow="OmniConnect Integrations"
+        title="Integrations"
+        description="Driansh OmniConnect connects with your favourite apps"
+      />
 
-      {/* Integrations Grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {integrations.map((integration, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl border-2 border-gray-200 p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col"
+      <Section>
+        <CardGrid>
+          {integrations.map((integration) => (
+            <FeatureCard
+              key={integration.name}
+              href={integration.href}
+              className="flex flex-col"
+              icon={
+                <Image
+                  src={integration.logo}
+                  alt={`${integration.name} logo`}
+                  width={160}
+                  height={64}
+                  className="h-14 w-40 object-contain object-left"
+                />
+              }
+              iconClassName="h-14 w-40 justify-start rounded-none bg-transparent"
+              title={integration.name}
+              description={integration.description}
             >
-              {/* Logo */}
-              <div className="mb-4">
-                <div style={{ width: '80px', height: '80px' }}>
-                  <img
-                    src={integration.logo}
-                    alt={`${integration.name} logo`}
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-grow">
-                {integration.description}
-              </p>
-
-              {/* Availability Tags */}
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
-                {integration.tags.map((tag, tagIndex) => (
+              <div className="mt-auto flex flex-wrap gap-2 border-t border-slate-100 pt-5">
+                {integration.tags.map((tag) => (
                   <span
-                    key={tagIndex}
-                    className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold border ${getTagColor(tag)}`}
+                    key={tag}
+                    className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${getTagColor(tag)}`}
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-            </div>
+            </FeatureCard>
           ))}
-        </div>
-      </section>
-    </main>
+        </CardGrid>
+      </Section>
+
+      <Section tone="muted">
+        <SectionHeader title="Channels" />
+        <CardGrid columns={4}>
+          {CHANNELS.map((channel) => (
+            <FeatureCard
+              key={channel.href}
+              href={channel.href}
+              title={channel.name}
+              icon={<MessageCircle aria-hidden="true" />}
+            >
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more</span>
+            </FeatureCard>
+          ))}
+        </CardGrid>
+      </Section>
+
+      <Section size="sm">
+        <CTABanner
+          title="Need an integration we don't list?"
+          description="Talk to our team about connecting Driansh OmniConnect to your tools."
+        />
+      </Section>
+    </>
   );
 }

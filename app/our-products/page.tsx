@@ -1,93 +1,54 @@
-"use client";
-
 import Image from "next/image";
 import { OUR_PRODUCTS } from "@/constants";
-import { ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { PageHero, Section, SectionHeader, MediaSplit, CheckList, CtaLink, CTABanner } from "@/components/site";
+
+const PRODUCT_LINKS: Record<string, string> = {
+  contactCenter: "/our-products/contactcenter",
+  omniConnect: "/our-products/omniconnect",
+};
 
 export default function OurProductsPage() {
-  function ProductSection({
-    product,
-  }: {
-    product: (typeof OUR_PRODUCTS)[0];
-  }) {
-    return (
-      <motion.section
-        id={product.id}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-        className={`flex flex-col md:flex-row bg-white items-center justify-between gap-10 py-10 md:py-16 px-4 sm:px-8 md:px-16 ${
-          product.reverse ? "md:flex-row-reverse" : ""
-        }`}
-      >
-        <motion.div
-          initial={{ opacity: 0, x: product.reverse ? 100 : -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 flex justify-center"
-        >
-          <div className="w-[90%] sm:w-[80%] md:w-[70%]">
-            <Image
-              src={product.image}
-              alt={product.title}
-              width={550}
-              height={350}
-              className="rounded-none w-full h-auto object-contain"
-              priority={product.id === "contactCenter"}
-            />
-          </div>
-        </motion.div>
+  return (
+    <>
+      <PageHero
+        eyebrow="Our Products"
+        title="Driansh Products"
+        description="Explore Driansh Contact Center Solution and Driansh OmniConnect."
+        primaryCta={{ label: "Get Started", href: "/contact-us" }}
+      />
 
-        <motion.div
-          initial={{ opacity: 0, x: product.reverse ? -100 : 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 space-y-5 text-center md:text-left"
-        >
-          <div className="flex justify-center md:justify-start">
+      {OUR_PRODUCTS.map((product, index) => (
+        <Section key={product.id} id={product.id} tone={index % 2 === 0 ? "white" : "muted"}>
+          <MediaSplit image={product.image} imageAlt={product.title} reverse={product.reverse}>
             <Image
-              rel="preload"
               src={product.logo}
               alt={product.title}
               width={200}
               height={70}
-              className="w-[150px] sm:w-[180px] md:w-[200px] h-auto -mb-20 -ml-4"
+              className="mb-6 h-auto w-36 sm:w-44"
             />
-          </div>
-
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
-            {product.title}
-          </h2>
-
-          <p className="text-black text-base sm:text-lg leading-relaxed">
-            {product.description}
-          </p>
-
-          <ul className="space-y-2 text-black text-base sm:text-lg">
-            {product.points.map((point, idx) => (
-              <li
-                key={idx}
-                className="flex items-start sm:items-center justify-start gap-2"
-              >
-                <ChevronRight className="w-5 h-5 min-w-5 text-pink-500 shrink-0 mt-[3px] sm:mt-0" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      </motion.section>
-    );
-  }
-
-  return (
-    <section className="w-full">
-      {OUR_PRODUCTS.map((product) => (
-        <ProductSection key={product.id} product={product} />
+            <SectionHeader
+              title={product.title}
+              description={product.description}
+              align="left"
+              className="mb-8 md:mb-8"
+            />
+            <CheckList items={product.points} />
+            {PRODUCT_LINKS[product.id] && (
+              <CtaLink href={PRODUCT_LINKS[product.id]} className="mt-8">
+                Learn more
+              </CtaLink>
+            )}
+          </MediaSplit>
+        </Section>
       ))}
-    </section>
+
+      <Section size="sm" tone={OUR_PRODUCTS.length % 2 === 0 ? "white" : "muted"}>
+        <CTABanner
+          title="Find the right product for your business"
+          description="Talk to our team about Driansh Contact Center and Driansh OmniConnect."
+        />
+      </Section>
+    </>
   );
 }

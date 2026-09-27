@@ -29,7 +29,7 @@ export default function SolutionFeatures({
             key={index}
             className="flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
-            <div className="bg-brand-gradient rounded-full p-3 shadow-sm">
+            <div className="rounded-2xl bg-brand-soft p-3">
               <Image src={item.icon} alt="" width={40} height={40} className="object-contain" />
             </div>
             <h3 className="heading-3 text-ink">{item.feature}</h3>

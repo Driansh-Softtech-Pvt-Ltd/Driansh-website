@@ -200,23 +200,23 @@ export const ABOUT_PAGE_SECTIONS = [
 
 export const ABOUT_PAGE_FEATURES = [
   {
-    icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
+    icon: <BarChart3 className="w-8 h-8" />,
     title: "INNOVATION",
     desc: "We thrive on innovation, constantly pushing the boundaries of what's possible to create transformative solutions.",
   },
   {
-    icon: <Building2 className="w-8 h-8 text-blue-600" />,
+    icon: <Building2 className="w-8 h-8" />,
     title: "EXCELLENCE",
     desc: "Setting high standards, continuously raising the bar, and striving for excellence in all endeavours.",
   },
   {
 
-    icon: <Users className="w-8 h-8 text-blue-600" />,
+    icon: <Users className="w-8 h-8" />,
     title: "CLIENT FOCUS",
     desc: "Your success is our priority. We build lasting partnerships with our clients.",
   },
   {
-    icon: <Globe2 className="w-8 h-8 text-blue-600" />,
+    icon: <Globe2 className="w-8 h-8" />,
     title: "GLOBAL REACH",
     desc: "Serving clients worldwide with local expertise and global standards.",
   },
@@ -224,17 +224,17 @@ export const ABOUT_PAGE_FEATURES = [
 
 export const ABOUT_PAGE_TECH_ADVANTAGES = [
   {
-    icon: <PhoneCall className="w-8 h-8 text-blue-600" />,
+    icon: <PhoneCall className="w-8 h-8" />,
     title: "VoIP SPECIALISTS",
     desc: "Deep expertise in FreeSWITCH, FusionPBX, and Kamailio platforms.",
   },
   {
-    icon: <Zap className="w-8 h-8 text-blue-600" />,
+    icon: <Zap className="w-8 h-8" />,
     title: "STARTUP AGILITY",
     desc: "Fast decision-making and rapid deployment capabilities.",
   },
   {
-    icon: <DollarSign className="w-8 h-8 text-blue-600" />,
+    icon: <DollarSign className="w-8 h-8" />,
     title: "COST EFFECTIVE",
     desc: "Competitive pricing with no compromise on quality.",
   },

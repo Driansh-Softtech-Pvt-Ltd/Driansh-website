@@ -29,7 +29,7 @@ export default function SolutionsBenifits({
           <FeatureCard
             key={index}
             icon={<Image src={item.icon} alt="" width={28} height={28} className="object-contain" />}
-            iconClassName="bg-brand-gradient p-2.5"
+            iconClassName="p-2.5"
             title={item.title}
             description={item.desc}
           />
