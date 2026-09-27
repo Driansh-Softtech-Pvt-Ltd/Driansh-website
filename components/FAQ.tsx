@@ -7,6 +7,8 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Section, SectionHeader } from "@/components/site";
+import type { SectionTone } from "@/components/site/Section";
 
 interface FAQItem {
   question: string;
@@ -14,27 +16,28 @@ interface FAQItem {
 }
 
 interface FAQSectionProps {
+  title?: string;
   sub_title?: string;
   data: FAQItem[];
+  tone?: SectionTone;
 }
 
-export default function FAQ({ sub_title, data }: FAQSectionProps) {
+export default function FAQ({
+  title = "Frequently Asked Questions",
+  sub_title,
+  data,
+  tone = "white",
+}: FAQSectionProps) {
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
   return (
-    <section className="py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#1D1A4E]">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg mt-5 max-w-5xl mx-auto">{sub_title}</p>
-        </div>
+    <Section tone={tone} containerClassName="max-w-4xl">
+      <SectionHeader title={title} description={sub_title} />
 
         <Accordion
           type="single"
           collapsible
-          className="w-full space-y-4"
+          className="w-full space-y-3"
           onValueChange={(value) => setActiveItem(value)}
         >
           {data.map((faq, index) => {
@@ -45,26 +48,25 @@ export default function FAQ({ sub_title, data }: FAQSectionProps) {
               <AccordionItem
                 key={index}
                 value={value}
-                className="transition-all duration-300 border-none"
+                className="overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300"
               >
                 <AccordionTrigger
-                  className={`flex justify-between items-center w-full px-6 py-4 font-bold text-lg no-underline cursor-pointer hover:no-underline rounded-sm transition-all duration-200 ${
+                  className={`flex w-full cursor-pointer items-center justify-between rounded-none px-5 py-4 text-left text-base font-semibold no-underline transition-all duration-200 hover:no-underline sm:px-6 sm:text-lg ${
                     isActive
-                      ? "bg-[#1E4EC4] text-white"
-                      : "text-[#1D1A4E] bg-transparent hover:bg-gray-100"
+                      ? "bg-brand text-white [&_svg]:text-white"
+                      : "text-ink hover:bg-surface"
                   }`}
                 >
                   {faq.question}
                 </AccordionTrigger>
 
-                <AccordionContent className="text-lg px-6 pb-4 pt-2 bg-transparent text-gray-700 whitespace-pre-line shadow-none">
+                <AccordionContent className="whitespace-pre-line px-5 pb-5 pt-4 text-base leading-relaxed text-slate-600 sm:px-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             );
           })}
         </Accordion>
-      </div>
-    </section>
+    </Section>
   );
 }
