@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ServicePageContent, SolutionPageContent } from "@/content/types";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://driansh.com").replace(/\/$/, "");
 export const SITE_NAME = "Driansh Softtech";
@@ -244,19 +245,19 @@ export const PAGES: Record<string, PageSeo> = {
   },
 
   // Services
-  "/services/voip-devlopment-service": {
+  "/services/voip-development-service": {
     title: "VoIP Development Services",
     description: "Custom VoIP development — softswitches, IP PBX, SIP servers, WebRTC apps and billing systems built by experienced VoIP engineers.",
   },
-  "/services/asterisk-devlopment-service": {
+  "/services/asterisk-development-service": {
     title: "Asterisk Development Services",
     description: "Asterisk development and consulting: custom dialplans, AGI/AMI integrations, IVR, call center and PBX solutions.",
   },
-  "/services/freeswitch-devlopment-service": {
+  "/services/freeswitch-development-service": {
     title: "FreeSWITCH Development Services",
     description: "FreeSWITCH development for scalable VoIP platforms — custom modules, ESL integrations, conferencing and call center solutions.",
   },
-  "/services/kamailio-devlopment-service": {
+  "/services/kamailio-development-service": {
     title: "Kamailio Development Services",
     description: "Kamailio SIP server development: load balancing, routing, security and high-availability SIP infrastructure.",
   },
@@ -276,7 +277,7 @@ export const PAGES: Record<string, PageSeo> = {
     title: "Linphone App Development",
     description: "Custom Linphone-based SIP softphone development for Android, iOS and desktop.",
   },
-  "/services/sip-js-devlopment-service": {
+  "/services/sip-js-development-service": {
     title: "SIP.js Development Services",
     description: "SIP.js development for WebRTC softphones and browser calling integrated with your SIP infrastructure.",
   },
@@ -358,4 +359,63 @@ export function pageMetadata(path: string): Metadata {
       images: [DEFAULT_OG_IMAGE],
     },
   };
+}
+
+type TemplateContent = ServicePageContent | SolutionPageContent;
+
+const HUB = {
+  service: { name: "Services", href: "/services" },
+  solution: { name: "Solutions", href: "/solutions" },
+} as const;
+
+export function breadcrumbsFor(c: TemplateContent) {
+  return [{ name: "Home", href: "/" }, HUB[c.kind], { name: c.name, href: c.path }];
+}
+
+/** Metadata for a template page, built from its content file. */
+export function contentMetadata(c: TemplateContent): Metadata {
+  const { title, description } = c.seo;
+  return {
+    title,
+    description,
+    alternates: { canonical: c.path },
+    openGraph: { type: "website", siteName: SITE_NAME, url: c.path, title, description, images: [DEFAULT_OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_OG_IMAGE] },
+  };
+}
+
+/** Service + FAQPage + BreadcrumbList structured data for a template page. */
+export function contentJsonLd(c: TemplateContent) {
+  const url = `${SITE_URL}${c.path}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: c.hero.title,
+      serviceType: c.name,
+      description: c.seo.description,
+      url,
+      areaServed: "Worldwide",
+      provider: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: "Driansh Softtech Pvt. Ltd.", url: SITE_URL },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: c.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbsFor(c).map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.href === "/" ? "" : b.href}`,
+      })),
+    },
+  ];
 }

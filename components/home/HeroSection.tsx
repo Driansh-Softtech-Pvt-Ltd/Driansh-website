@@ -29,7 +29,7 @@ export default function HeroSection() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
             <CtaLink href="/contact-us">Let’s Talk More!</CtaLink>
-            <CtaLink href="/services/voip-devlopment-service" variant="outline-light" arrow={false}>
+            <CtaLink href="/services/voip-development-service" variant="outline-light" arrow={false}>
               Explore Services
             </CtaLink>
           </div>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} | ${PAGES["/"].title}`,
-    template: `%s | ${SITE_NAME}`,
+    template: "%s | Driansh",
   },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: "/" },
@@ -54,6 +54,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "Driansh Softtech Pvt. Ltd.",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,

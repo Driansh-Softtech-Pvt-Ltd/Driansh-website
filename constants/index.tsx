@@ -15,20 +15,20 @@ export const navItems = [
     dropdown: [
       {
         title: "VOIP DEVELOPMENT",
-        path: "/services/voip-devlopment-service",
+        path: "/services/voip-development-service",
         items: [
-          { label: "FreeSWITCH Development", path: "/services/freeswitch-devlopment-service" },
+          { label: "FreeSWITCH Development", path: "/services/freeswitch-development-service" },
           { label: "WebRTC Development", path: "/services/webrtc-development-service" },
-          { label: "Asterisk Development", path: "/services/asterisk-devlopment-service" },
+          { label: "Asterisk Development", path: "/services/asterisk-development-service" },
           { label: "OpenSIPs Development", path: "/services/opensips-development-service" },
-          { label: "Kamailio Development", path: "/services/kamailio-devlopment-service" },
+          { label: "Kamailio Development", path: "/services/kamailio-development-service" },
         ],
       },
       // {
       //   title: "OPEN SOURCE",
       //   path: "#",
       //   items: [
-      //     { label: "Sip.js Development", path: "/services/sip-js-devlopment-service" },
+      //     { label: "Sip.js Development", path: "/services/sip-js-development-service" },
       //     { label: "VICIdial Development", path: "/services/vicidial-development-service" },
       //     { label: "FusionPBX Development", path: "/services/fusionpbx-development-service" },
       //     { label: "Linphone Development", path: "/services/linphone-app-development" },
@@ -123,7 +123,7 @@ export const HOME_PAGE_SERVICES = [
     title: "VoIP Development",
     desc: "With extensive expertise in open-source telephony development, we offer innovative VoIP software development tailored to suit your telecom business needs. We modernize your network with customized solutions that are highly advanced and cost-effective.",
     image: "/images/voip-development.svg",
-    href: "/services/voip-devlopment-service",
+    href: "/services/voip-development-service",
   },
   {
     title: "DevOps",
@@ -275,10 +275,10 @@ export const OUR_PRODUCTS = [
 
 export const FOOTER_LINKS = {
   services: [
-    { name: "VoIP Development", href: "/services/voip-devlopment-service" },
+    { name: "VoIP Development", href: "/services/voip-development-service" },
     { name: "WebRTC Development", href: "/services/webrtc-development-service" },
-    { name: "FreeSWITCH Development", href: "/services/freeswitch-devlopment-service" },
-    { name: "Asterisk Development", href: "/services/asterisk-devlopment-service" },
+    { name: "FreeSWITCH Development", href: "/services/freeswitch-development-service" },
+    { name: "Asterisk Development", href: "/services/asterisk-development-service" },
   ],
   solution: [
     { name: "Multi Tenant IP PBX Solution", href: "/multi-tenant-ip-pbx-solution" },

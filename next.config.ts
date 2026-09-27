@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
   // Redirects for old omniconnect paths
   async redirects() {
     return [
+      // Old misspelled service URLs → corrected URLs (keeps search rankings).
+      ...["voip", "freeswitch", "asterisk", "kamailio", "sip-js"].map((slug) => ({
+        source: `/services/${slug}-devlopment-service`,
+        destination: `/services/${slug}-development-service`,
+        permanent: true,
+      })),
       {
         source: "/omniconnect",
         destination: "/our-products/omniconnect",
