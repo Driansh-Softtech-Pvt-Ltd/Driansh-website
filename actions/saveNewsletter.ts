@@ -1,27 +1,34 @@
 "use server";
 
 import dbConnect from "@/lib/db";
-import ContactModel from "@/models/contact.model";
+import { isRateLimited } from "@/lib/security";
+import NewsletterModel from "@/models/newsletter.model";
+import { newsletterSchema, type NewsletterFormData } from "@/validations/contact-schema";
 
-export const saveNewsletter = async (email: string) => {
+export const saveNewsletter = async (input: NewsletterFormData) => {
+  const parsed = newsletterSchema.safeParse(input);
+  if (!parsed.success) {
+    return { success: false, message: "Please enter a valid email" };
+  }
+
+  // Honeypot filled in: pretend it worked so bots don't retry.
+  if (parsed.data.website) return { success: true, message: "Subscribed successfully" };
+
+  if (await isRateLimited("newsletter")) {
+    return { success: false, message: "Too many requests. Please try again later." };
+  }
+
   try {
     await dbConnect();
-    const existing = await ContactModel.findOne({ email });
-
-    if (existing) {
-      // Update only consent
-      existing.consent = true;
-      await existing.save();
-    } else {
-      // Create new contact with only email and consent
-      await ContactModel.create({ email, consent: true, name: "", phone: "", company: "", message: "" });
-    }
+    await NewsletterModel.updateOne(
+      { email: parsed.data.email },
+      { $set: { subscribed: true }, $setOnInsert: { source: "footer" } },
+      { upsert: true }
+    );
 
     return { success: true, message: "Subscribed successfully" };
   } catch (error) {
-    if (process.env.NODE_ENV !== "production") {
-        console.error("❌ Newsletter save error:", error);
-    }
+    console.error("❌ Newsletter save error:", error);
     return { success: false, message: "Something went wrong" };
   }
 };

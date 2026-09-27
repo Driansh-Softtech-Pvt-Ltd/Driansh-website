@@ -1,5 +1,3 @@
-"use server";
-
 import mongoose from "mongoose";
 
 type ConnectionObject = {
@@ -9,22 +7,18 @@ type ConnectionObject = {
 const connection: ConnectionObject = {};
 
 const dbConnect = async (): Promise<void> => {
-  if (connection.isConnected) {
-    if (process.env.NODE_ENV !== "production") {
-      console.log("Already connected to the database");
-    }
-    return;
+  if (connection.isConnected) return;
+
+  const uri = process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error("MONGODB_URI is not configured");
   }
-  try {
-    const connect = await mongoose.connect(`${process.env.MONGODB_URI}/${process.env.DB_NAME}` || "");
-    connection.isConnected = connect.connections[0].readyState;
-    if (process.env.NODE_ENV !== "production") {
-      console.log("Database connected successfully ✅");
-    }
-  } catch (error) {
-    if (process.env.NODE_ENV !== "production") {
-      console.error(error);
-    }
+
+  const connect = await mongoose.connect(uri, { dbName: process.env.DB_NAME });
+  connection.isConnected = connect.connections[0].readyState;
+
+  if (process.env.NODE_ENV !== "production") {
+    console.log("Database connected successfully ✅");
   }
 };
 

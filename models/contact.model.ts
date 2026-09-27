@@ -1,5 +1,3 @@
-"use server";
-
 import mongoose, { Schema, Document, Model } from "mongoose";
 import type { ContactFormData } from "@/validations/contact-schema";
 
@@ -23,7 +21,7 @@ const ContactSchema: Schema<Contact> = new Schema(
     phone: {
       type: String,
       trim: true,
-      match: [/^[0-9+\-\s]*$/, "Invalid phone number format"],
+      match: [/^[0-9+\-\s()]*$/, "Invalid phone number format"],
     },
     company: {
       type: String,

@@ -1,8 +1,6 @@
-export const metadata = {
-  title: "Terms of Use | Driansh",
-  description:
-    "Terms governing the use of the Driansh website, including content rights, limitations of liability, and user responsibilities.",
-};
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("/terms-of-use");
 
 export default function TermsOfUsePage() {
   return (

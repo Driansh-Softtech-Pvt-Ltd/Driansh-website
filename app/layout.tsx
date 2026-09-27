@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, PAGES, SITE_NAME, SITE_URL } from "@/lib/seo";
  
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,15 +17,47 @@ const geistMono = Geist_Mono({
 });
  
 export const metadata: Metadata = {
-  title: "Driansh Softtech",
-  description: "Driansh-Softtech",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | ${PAGES["/"].title}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Driansh Softtech",
-    description: "",
-    images: ["/Driansh-thumbnail.svg"],
+    type: "website",
+    siteName: SITE_NAME,
+    url: "/",
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
   },
   icons: {
     icon: "/Driansh-thumbnail.svg",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Driansh Softtech Pvt. Ltd.",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  email: "support@driansh.com",
+  telephone: "+91-7028764776",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "C/104, Riverfront, GIFT City",
+    addressLocality: "Gandhinagar",
+    postalCode: "382426",
+    addressRegion: "Gujarat",
+    addressCountry: "IN",
   },
 };
  
@@ -38,12 +71,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Navbar />
         {children}
         <Footer />
 
         {/* Driansh OmniConnect Script */}
-        <Script id="chatwoot-script" strategy="afterInteractive">
+        <Script id="chatwoot-script" strategy="lazyOnload">
           {`
             (function(d,t) {
               var BASE_URL="https://chat.driansh.com";
