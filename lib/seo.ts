@@ -32,6 +32,15 @@ export const PAGES: Record<string, PageSeo> = {
     description: "The terms and conditions that govern your use of the Driansh Softtech website and services.",
   },
 
+  "/services": {
+    title: "VoIP, Mobile & Web Development Services",
+    description: "Explore Driansh services: FreeSWITCH, Asterisk, Kamailio, OpenSIPS and WebRTC development, mobile and web apps, DevOps and VoIP testing.",
+  },
+  "/solutions": {
+    title: "VoIP Solutions: Softswitch, PBX & Call Center",
+    description: "VoIP solutions for providers and businesses: Class 4 and Class 5 softswitches, multi-tenant IP PBX, call center, billing and conferencing. Book a demo.",
+  },
+
   // Solutions
   "/audio-video-conferencing-solution": {
     title: "Audio & Video Conferencing Solution",

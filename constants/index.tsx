@@ -12,6 +12,7 @@ import {
 export const navItems = [
   {
     name: "SERVICES",
+    path: "/services",
     dropdown: [
       {
         title: "VOIP DEVELOPMENT",
@@ -76,6 +77,7 @@ export const navItems = [
   },
   {
     name: "SOLUTIONS",
+    path: "/solutions",
     dropdown: [
       {
         title: "TAILORCRAFT SOLUTIONS",
