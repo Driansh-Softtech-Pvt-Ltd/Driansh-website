@@ -29,6 +29,8 @@ Open **Reports** in the left sidebar. You'll find these reports:
 
 Open **Reports → Overview**. The top of the page updates live and shows the current state of your workspace.
 
+![The live Open Conversations and Agent status cards on the Overview report](/docs/images/reports/overview-and-live-view-1.jpg)
+
 ### Open conversations
 
 | Metric | Meaning |
@@ -56,6 +58,7 @@ The **Performance** section shows how your team handled conversations across all
 
 1. Choose a period: **Last 7 days**, **Last 30 days** or **Last 90 days**.
 2. Read the tiles. Each one compares the period with the previous period of the same length.
+   ![Performance tiles for the last 30 days and the Conversations created vs resolved chart](/docs/images/reports/overview-and-live-view-2.jpg)
 
 | Tile | Meaning |
 | --- | --- |

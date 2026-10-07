@@ -16,6 +16,7 @@ Only **administrators** can change account settings. Changes apply to everyone i
    - **Account name** – your company or brand name. Your team sees it in the dashboard and the account switcher.
    - **Site language** – the default language of the dashboard for everyone in the account. Each person can still choose their own language in their profile.
 3. Click **Update settings**.
+   ![General settings on the Account settings page: account name, site language and support email](/docs/images/account-setup/account-settings-1.jpg)
 
 > **Note:** If your installation supports custom email domains, this page also shows **Incoming Email Domain** and **Support Email**. These control the address customers reply to when you contact them by email. Ask Driansh to help you set them up.
 
@@ -33,6 +34,7 @@ Auto-resolve closes conversations that have had no activity for a set time, so y
 
 1. Go to **Settings → Conversation Workflow**.
 2. Turn on **Auto-resolve conversations**.
+   ![The Conversation Workflows page with the Auto-resolve conversations toggle](/docs/images/account-setup/account-settings-2.jpg)
 3. Set the **Inactivity duration** and choose minutes, hours or days. The value must be between 10 minutes and 999 days.
 4. Optionally write a **Custom auto-resolution message**. EngageOne sends it to the customer when it resolves the conversation, for example "We've closed this chat as we haven't heard back. Just reply to reopen it."
 5. Under **Preferences**, choose:

@@ -35,6 +35,7 @@ Calls connect directly between the agent's browser and Meta. You don't need any 
 1. Go to **Settings → Inboxes → Add Inbox → WhatsApp Call**.
 2. Enter the **Inbox Name**, **Phone number**, **Phone number ID**, **Business Account ID** and **API key** (your permanent access token from Meta).
 3. Select **Create WhatsApp Channel**. EngageOne creates the inbox and turns calling on.
+   ![The WhatsApp Call channel form with phone number, phone number ID, business account ID and API key](/docs/images/voice/whatsapp-calling-1.jpg)
 4. Pick your agents and select **Add agents**.
 
 > **Note:** If calling can't be turned on, the inbox is still created and works for messages. The number isn't enrolled in the WhatsApp Business Calling API yet. Ask Meta or your WhatsApp Business Solution Provider to enable it, then turn on calling in the **Calls** tab.

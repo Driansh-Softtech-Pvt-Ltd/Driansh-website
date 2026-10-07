@@ -16,11 +16,13 @@ Automation rules do routine work for you. Each rule waits for an event, checks y
 ## Create an automation
 
 1. Go to **Settings → Automation → Create Automation**.
+   ![The Automation page listing rules with the Create Automation button highlighted](/docs/images/features/automations-1.jpg)
 2. Enter a **Rule Name** and a **Description**.
 3. Choose an **Event**.
 4. Under **Conditions**, pick an attribute, an operator and a value. Click **Add Condition** to add more, and choose **AND** or **OR** between them.
 5. Under **Actions**, pick an action and fill in its details. Click **Add Action** to add more.
 6. Click **Create**.
+   ![The Add Automation Rule form with Rule Name, Event, Conditions and Actions](/docs/images/features/automations-2.jpg)
 
 New rules are active straight away. A rule needs at least one condition and one action.
 

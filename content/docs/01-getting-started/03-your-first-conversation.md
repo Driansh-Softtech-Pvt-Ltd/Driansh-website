@@ -15,6 +15,7 @@ This walkthrough takes you from an empty account to a resolved test conversation
 1. In the left sidebar, go to **Settings → Inboxes**.
 2. Click **Add Inbox**.
 3. Choose **Website**.
+   ![The Choose Channel step in EngageOne with the Website channel highlighted](/docs/images/getting-started/your-first-conversation-1.jpg)
 4. Fill in the form:
    - **Website Name** – the name customers see in the chat window, for example your company name.
    - **Website Domain** – your website address, for example `example.com`.
@@ -22,6 +23,7 @@ This walkthrough takes you from an empty account to a resolved test conversation
    - **Welcome Heading** and **Welcome Tagline** – the greeting visitors see when they open the chat.
    - **Enable channel greeting** – turn this on if you want an automatic first reply, then write the **Channel greeting message** (for example, "Thanks for your message! We usually reply within a few minutes.").
 5. Click **Create inbox**.
+   ![The Website channel form with Website Name, Website Domain, Widget Color and welcome text fields](/docs/images/getting-started/your-first-conversation-2.jpg)
 
 ## Step 2: Add agents to the inbox
 
@@ -69,6 +71,7 @@ If you turned on the channel greeting, the greeting appears straight away. The w
 2. Find the new conversation. New conversations that nobody owns appear in the **Unassigned** tab; conversations given to you appear in **Mine**.
 3. Click the conversation to open it.
 4. In the reply box at the bottom, make sure the **Reply** tab is selected, type your answer and press **Enter** (or click **Send**).
+   ![The reply box at the bottom of a conversation with the Reply tab selected](/docs/images/getting-started/your-first-conversation-3.jpg)
 5. Switch to the visitor's browser window. Your reply appears in the chat.
 
 > **Note:** If pressing **Enter** adds a new line instead of sending, your profile is set to send with **Cmd/Ctrl + Enter**. You can change this in [Profile and notifications](/docs/getting-started/profile-and-notifications).

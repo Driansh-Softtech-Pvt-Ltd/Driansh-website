@@ -20,6 +20,7 @@ The API channel lets your own app or backend send customer messages into EngageO
 1. Go to **Settings → Inboxes → Add Inbox → API**.
 2. Enter a **Channel Name** and the **Webhook URL** where your server will receive events.
 3. Select **Create API Channel**, then pick your agents and select **Add agents**.
+   ![The API channel form with Channel Name and Webhook URL](/docs/images/channels/api-channel-1.jpg)
 4. Open **Settings → Inboxes**, select the new inbox and go to the **Configuration** tab.
 5. Copy the **Inbox Identifier**. Your app uses it in every Client API call.
 6. On the same tab, note the **User Identity Validation** key. Turn on **Enforce User Identity Validation** if every contact must be verified.

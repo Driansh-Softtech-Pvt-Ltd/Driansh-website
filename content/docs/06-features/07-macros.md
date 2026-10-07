@@ -15,6 +15,7 @@ A macro is a saved set of actions that you run on a conversation with one click.
    - **Public**: every agent in the account can use it. Only administrators can create or edit public macros.
    - **Private**: only you can see and use it.
 6. Click **Save macro**.
+   ![The macro editor with an action, the Macro name field and Macro Visibility options](/docs/images/features/macros-1.jpg)
 
 Actions run in the order you add them. To change the order, drag an action by the handle beside it.
 
@@ -44,6 +45,7 @@ Actions run in the order you add them. To change the order, drag an action by th
 
 1. Open the conversation.
 2. In the right-hand details panel, open **Macros**.
+   ![The Macros section of the conversation details panel with preview and run buttons](/docs/images/features/macros-2.jpg)
 3. Optionally, click the preview icon (**Preview Macro**) to see the actions before you run them.
 4. Click the run icon (**Execute**) next to the macro.
 

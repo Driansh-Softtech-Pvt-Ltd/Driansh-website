@@ -10,24 +10,24 @@ Every website inbox in EngageOne has its own widget, and you can change how it l
 1. Go to **Settings → Inboxes**.
 2. Find your website inbox and open its settings.
 3. Use the tabs at the top of the page. Each tab controls a different part of the widget.
+   ![Website inbox settings with the tabs along the top and a live widget preview](/docs/images/website-live-chat/widget-settings-1.jpg)
 
 | Tab | What you change there |
 | --- | --- |
-| **Settings** | Inbox name, website domain, greeting message, widget features, email options |
+| **Settings** | Inbox name, website domain, colour, welcome text, reply time, launcher bubble, greeting message, widget features and email options, with a live preview and the install script on the right |
 | **Collaborators** | Which agents can see and reply in this inbox |
-| **Configuration** | The install script, allowed domains and identity validation |
+| **Configuration** | Allowed domains and identity validation |
 | **Business Hours** | When your team shows as available |
 | **CSAT** | Satisfaction surveys after a conversation is resolved |
 | **Pre Chat Form** | Questions visitors answer before they start chatting |
-| **Widget Builder** | Colour, welcome text, reply time and launcher bubble, with a live preview |
 
 > **Note:** Changes you save apply to the widget on your website straight away. You do not need to reinstall the script.
 
-## Change the look in Widget Builder
+## Change the look of the widget
 
-The **Widget Builder** tab shows a live preview next to the form, so you can see each change before you save it.
+The **Settings** tab shows a live preview of the widget on the right, so you can see each change before you save it.
 
-1. Open **Settings → Inboxes**, select your website inbox and click the **Widget Builder** tab.
+1. Open **Settings → Inboxes**, select your website inbox and stay on the **Settings** tab.
 2. Fill in the fields you want to change:
 
 | Field | What it does |
@@ -44,6 +44,7 @@ The **Widget Builder** tab shows a live preview next to the form, so you can see
 
 3. Switch between **Preview** and **Script** above the preview to see the widget or the matching settings code.
 4. Click **Update Widget Settings**.
+   ![Widget fields such as Welcome Heading, Welcome Tagline, Widget Color and Bubble, next to the live preview](/docs/images/website-live-chat/widget-settings-2.jpg)
 
 > **Tip:** Pick a widget colour with good contrast against white text. Visitors read the header and buttons on top of this colour.
 
@@ -103,6 +104,7 @@ By default, anyone who copies your script could load your widget on another site
 
 1. Open your website inbox and click the **Configuration** tab.
 2. In **Allowed Domains**, enter your domains separated by commas, for example `example.com, www.example.com, app.example.com`.
+   ![The Configuration tab with Allowed Domains and Enable widget in mobile apps](/docs/images/website-live-chat/widget-settings-3.jpg)
 3. If you also show the widget inside an iOS or Android app, turn on **Enable widget in mobile apps**. Mobile apps do not send domain information, so they would otherwise be blocked.
 4. Save your changes.
 

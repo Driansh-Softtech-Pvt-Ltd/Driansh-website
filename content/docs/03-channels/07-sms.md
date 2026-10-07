@@ -28,6 +28,7 @@ An SMS inbox lets your team send and receive text messages on your business numb
 5. Enter the **Phone Number** in E.164 format, for example `+919876543210`. Or tick **Use a Twilio Messaging Service** and enter the **Messaging Service SID**.
 6. Enter the **Account SID** and **Auth Token**. To use an API key, tick **Use API Key Authentication** and enter the **API Key SID** and **API Key Secret**.
 7. Select **Create Twilio Channel**. EngageOne checks the credentials with Twilio and sets up the webhook for you.
+   ![The SMS channel form with Twilio selected as the API provider](/docs/images/channels/sms-1.jpg)
 8. Pick the agents for this inbox and select **Add agents**.
 9. Scan the QR code on the last screen to send a test text from your phone.
 

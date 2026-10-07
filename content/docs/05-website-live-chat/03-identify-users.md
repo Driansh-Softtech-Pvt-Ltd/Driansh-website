@@ -136,6 +136,7 @@ Without validation, anyone who knows a user's ID could call `setUser` in their b
 1. Go to **Settings → Inboxes** and select your website inbox.
 2. Click the **Configuration** tab.
 3. Under **Identity Validation**, copy the **Secret Key**.
+   ![The Identity Validation section of the Configuration tab, with the secret key hidden](/docs/images/website-live-chat/identify-users-1.jpg)
 
 > **Important:** Keep this key on your server only. Never put it in your website's JavaScript or in a mobile app.
 

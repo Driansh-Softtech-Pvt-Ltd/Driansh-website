@@ -45,6 +45,7 @@ Use these rules of thumb:
 
 1. Go to **Settings → Inboxes**.
 2. Click **Add Inbox**.
+   ![The Inboxes page in settings with the Add Inbox button highlighted](/docs/images/account-setup/inboxes-and-channels-explained-1.jpg)
 3. Under **Choose a channel**, pick the channel you want to connect.
 4. Follow the steps for that channel. Most channels ask you to sign in to the other service (for example Facebook) or paste keys from it (for example Twilio).
 5. On the **Agents** step, pick who can work in this inbox and click **Add agents**.

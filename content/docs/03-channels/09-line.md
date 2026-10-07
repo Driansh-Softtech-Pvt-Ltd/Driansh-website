@@ -27,6 +27,7 @@ In the **LINE Developers Console**, open your Messaging API channel and copy:
 2. Enter a **Channel Name**.
 3. Enter the **LINE Channel ID**, **LINE Channel Secret** and **LINE Channel Token**.
 4. Select **Create LINE Channel**.
+   ![The LINE channel form with Channel Name, LINE Channel ID, Secret and Token](/docs/images/channels/line-1.jpg)
 5. Pick the agents for this inbox and select **Add agents**.
 6. Copy the webhook URL shown on the last screen. It looks like this:
 

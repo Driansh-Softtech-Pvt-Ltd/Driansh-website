@@ -84,6 +84,8 @@ Click your avatar at the bottom of the sidebar to:
 
 When you open **Conversations**, the main area splits into three panes.
 
+![The EngageOne conversation view with the conversation list, the message thread and the contact details panel](/docs/images/getting-started/dashboard-tour-1.jpg)
+
 ### 1. Conversation list (left)
 
 - **Tabs** at the top: **Mine** (assigned to you), **Unassigned** and **All**.

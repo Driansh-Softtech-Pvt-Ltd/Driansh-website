@@ -28,6 +28,8 @@ At the top of the conversation list, switch between:
 - **Unassigned**: conversations nobody owns yet.
 - **All**: every conversation in the current view.
 
+![The conversation list with the Mine, Unassigned and All tabs](/docs/images/features/conversation-filters-1.jpg)
+
 ## Filter by status and sort the list
 
 Open the sort and view options above the conversation list.
@@ -55,6 +57,7 @@ Open the sort and view options above the conversation list.
 
 1. Click the filter button above the conversation list (**Filter conversations**).
 2. Click **Add filter**.
+   ![The Filter conversations panel with a Status filter](/docs/images/features/conversation-filters-2.jpg)
 3. Choose an attribute, an operator and a value.
 4. Add more filters if you need them, and choose **AND** or **OR** between them.
 5. Click **Apply filters**.

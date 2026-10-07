@@ -18,6 +18,7 @@ When you create an attribute, you choose what it **Applies to**:
 ## Create a custom attribute
 
 1. Go to **Settings → Custom Attributes → Add Custom Attribute**.
+   ![The Custom Attributes page with Conversation and Contact tabs](/docs/images/features/custom-attributes-1.jpg)
 2. Fill in the form:
 
 | Field | What to enter |
@@ -29,6 +30,7 @@ When you create an attribute, you choose what it **Applies to**:
 | **Type** | The kind of value (see below). |
 
 3. Click **Create**.
+   ![The Add Custom Attribute dialog with Applies to, Display Name, Key, Description and Type](/docs/images/features/custom-attributes-2.jpg)
 
 > **Important:** Choose the key carefully. Your website code, pre-chat forms, automations and message variables all refer to the attribute by its key.
 

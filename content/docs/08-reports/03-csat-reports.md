@@ -14,6 +14,7 @@ CSAT results only appear after you turn on CSAT surveys for your inboxes and cus
 1. Go to **Reports → CSAT**.
 2. Choose a date range at the top of the page. The report shows the last 7 days by default.
 3. Optionally, click **Add filter** to narrow the results.
+   ![The CSAT Reports page with the date range, Add filter and summary metrics](/docs/images/reports/csat-reports-1.jpg)
 
 ## Summary metrics
 

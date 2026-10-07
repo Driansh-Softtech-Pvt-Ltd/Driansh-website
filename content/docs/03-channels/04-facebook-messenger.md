@@ -24,6 +24,7 @@ Replies sent from Meta's own tools, such as Meta Business Suite, also appear in 
 
 1. Go to **Settings → Inboxes → Add Inbox → Facebook**.
 2. Select the Facebook sign-in button and log in with an account that is an admin of the Page.
+   ![The Facebook channel step with the Continue with Facebook button](/docs/images/channels/facebook-messenger-1.jpg)
 3. Allow the permissions Meta asks for. EngageOne only gets access to your Page's messages, never your personal messages.
 4. Under **Choose Page**, pick the Page.
 5. Enter an **Inbox Name** and select **Create Inbox**.

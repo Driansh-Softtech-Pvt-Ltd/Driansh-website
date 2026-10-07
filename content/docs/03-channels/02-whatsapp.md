@@ -26,6 +26,7 @@ Use this for a new number, or for a number you already use in the WhatsApp Busin
 
 1. Go to **Settings → Inboxes → Add Inbox → WhatsApp**.
 2. Choose **WhatsApp Cloud** (Quick setup through Meta).
+   ![The WhatsApp provider step with the WhatsApp Cloud and Twilio options](/docs/images/channels/whatsapp-1.jpg)
 3. Select **Connect with WhatsApp Business**. A Meta window opens.
 4. Log in to Meta, pick your business portfolio and choose or add the phone number.
 5. Finish the steps in the Meta window. EngageOne creates the inbox and sets up the webhook and phone number for you.

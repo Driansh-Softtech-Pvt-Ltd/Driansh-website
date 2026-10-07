@@ -14,8 +14,10 @@ By default, your help center uses your EngageOne address, for example `https://<
 1. Go to **Help Center → Settings**.
 2. Open the **Domain** tab.
 3. Click **Add custom domain**.
+   ![The Domain tab of Help Center settings with Add custom domain highlighted](/docs/images/help-center/custom-domain-and-languages-1.jpg)
 4. Enter the full subdomain you want to use, for example `help.example.com`. Don't include `https://` or a path.
 5. Click **Add domain**.
+   ![The Add custom domain dialog](/docs/images/help-center/custom-domain-and-languages-2.jpg)
 
 EngageOne then shows the **DNS configuration** you need.
 
@@ -64,6 +66,7 @@ Each language is called a **locale**. A portal can have several locales, and eve
 
 1. Go to **Help Center → Locales**.
 2. Click **New locale**.
+   ![The Locales page with the New locale button highlighted](/docs/images/help-center/custom-domain-and-languages-3.jpg)
 3. Choose the language.
 4. Under **Status**, choose **Published** to show it to customers now, or **Draft** to prepare it first.
 5. Save.

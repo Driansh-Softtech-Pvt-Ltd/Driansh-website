@@ -25,6 +25,7 @@ The five ratings are **Poor**, **Fair**, **Average**, **Good** and **Excellent**
 5. In **Message**, write the text customers see with the survey, for example "How did we do today?".
 6. Optionally, set a **Survey rule** (see below).
 7. Click **Update**.
+   ![The CSAT tab of a website inbox with display type, message and survey rule](/docs/images/features/csat-surveys-1.jpg)
 
 ### How customers answer on each channel
 

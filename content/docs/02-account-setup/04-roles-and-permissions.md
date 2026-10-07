@@ -67,11 +67,13 @@ Custom roles sit between agent and administrator. Use them when someone needs on
 
 1. Go to **Settings → Custom Roles**.
 2. Click **Add custom role**.
+   ![The Custom Roles page listing roles and their permissions, with Add custom role highlighted](/docs/images/account-setup/roles-and-permissions-1.jpg)
 3. Fill in:
    - **Name** – for example "Team lead" or "Content editor".
    - **Description** – who this role is for.
    - **Permissions** – tick the permissions the role should have.
 4. Click **Submit**.
+   ![The Add custom role dialog with Name, Description and the permission checkboxes](/docs/images/account-setup/roles-and-permissions-2.jpg)
 
 ### Give someone a custom role
 

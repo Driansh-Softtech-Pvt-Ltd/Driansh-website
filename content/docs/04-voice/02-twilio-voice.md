@@ -27,6 +27,7 @@ A Twilio voice inbox is a Twilio SMS inbox with calling turned on. The same numb
 2. Enter the **Phone Number** in E.164 format, for example `+919876543210`.
 3. Enter the **Account SID**, **Auth Token**, **API Key SID** and **API Key Secret**. All are required.
 4. Select **Create Voice Channel**.
+   ![The Voice channel form with Phone Number, Account SID, Auth Token and API key fields](/docs/images/voice/twilio-voice-1.jpg)
 5. Pick the agents who should take calls and select **Add agents**.
 6. Optional: rename the inbox in its settings.
 

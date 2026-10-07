@@ -47,6 +47,11 @@ for (const [, articles] of categories) {
       const [route, anchor] = m[1].split("#");
       const parts = route.replace(/\/$/, "").split("/").slice(2); // drop "", "docs"
       const where = `${file}: ${m[1]}`;
+      if (route.startsWith("/docs/images/")) {
+        // Screenshot: must exist under public/.
+        if (!fs.existsSync(path.join(process.cwd(), "public", route))) errors.push(`${where} – image not found`);
+        continue;
+      }
       if (parts.length === 0) continue; // /docs hub
       const [cat, slug, ...rest] = parts;
       if (rest.length || !categories.has(cat)) {

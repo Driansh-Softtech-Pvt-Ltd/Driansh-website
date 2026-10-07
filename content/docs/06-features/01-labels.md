@@ -8,6 +8,7 @@ Labels are short tags you put on conversations and contacts, such as `billing`, 
 ## Create a label
 
 1. Go to **Settings → Labels → Add label**.
+   ![The Labels page with the Add label button highlighted](/docs/images/features/labels-1.jpg)
 2. Fill in the form:
 
 | Field | What to enter |
@@ -18,6 +19,7 @@ Labels are short tags you put on conversations and contacts, such as `billing`, 
 | **Show label on sidebar** | Tick to add a shortcut for this label in the left sidebar. |
 
 3. Click **Create**.
+   ![The Add label dialog with Label Name, Description, Color and Show label on sidebar](/docs/images/features/labels-2.jpg)
 
 ### Naming rules
 
@@ -40,6 +42,7 @@ Labels are short tags you put on conversations and contacts, such as `billing`, 
 1. Open the conversation.
 2. In the right-hand details panel, open **Conversation Labels**.
 3. Click to add a label, then choose one or more labels from the list.
+   ![Conversation Labels in the details panel with Add Labels highlighted](/docs/images/features/labels-3.jpg)
 
 To remove a label, click the small cross on it.
 

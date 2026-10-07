@@ -15,11 +15,13 @@ This article shows administrators how to invite colleagues to EngageOne and give
 
 1. Go to **Settings → Agents**.
 2. Click **Add Agent**.
+   ![The Agents page in EngageOne settings with the Add Agent button highlighted](/docs/images/getting-started/invite-your-team-1.jpg)
 3. Fill in the form:
    - **Agent Name** – the person's full name.
    - **Role** – **Administrator**, **Agent**, or a custom role if your account has them.
    - **Email Address** – the work email they will sign in with.
 4. Click **Add Agent**.
+   ![The Add agent dialog with Agent Name, Role and Email Address fields](/docs/images/getting-started/invite-your-team-2.jpg)
 
 EngageOne sends the person an invitation email. In the agent list, their status shows **Verification Pending** until they open the email, confirm their address and set a password. After that, the status changes to **Verified**.
 
@@ -33,6 +35,7 @@ New team members can't see any conversations until they are added to at least on
 2. Open the inbox you want to share, such as your website chat or WhatsApp inbox.
 3. Open the **Collaborators** tab.
 4. In **Agents**, select the people who should handle this inbox.
+   ![The Collaborators tab of a website inbox, where you pick the agents for the inbox](/docs/images/getting-started/invite-your-team-3.jpg)
 5. Click **Update**.
 
 Repeat this for each inbox the person needs.

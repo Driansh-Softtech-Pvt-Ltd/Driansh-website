@@ -26,6 +26,7 @@ These reports show how much work your team handles and how quickly, broken down 
 3. Choose how to **Group By**: **Day**, **Week**, **Month** or **Year**. The options depend on the length of the period.
 4. Turn on **Business Hours** if you want times calculated only during business hours.
 5. Click a metric card to see its chart.
+   ![The Conversations report with metric cards and the created vs resolved chart](/docs/images/reports/conversation-agent-team-reports-1.jpg)
 
 The **Conversations created vs resolved** chart shows whether your backlog grew or shrank during the period.
 
@@ -40,6 +41,7 @@ These four reports work the same way.
 1. Go to **Reports** and choose **Agents**, **Inbox**, **Team** or **Labels**.
 2. Choose a date range at the top of the page.
 3. Read the summary table. Each row shows:
+   ![The Agents Overview report table](/docs/images/reports/conversation-agent-team-reports-2.jpg)
 
 | Column | Meaning |
 | --- | --- |

@@ -16,6 +16,7 @@ If you don't see the AI options described below, ask your administrator.
 
 1. Open a conversation.
 2. In the reply box, click the sparkle icon above the text area.
+   ![The AI menu opened from the sparkle icon in the reply box](/docs/images/ai-assistant/copilot-for-agents-1.jpg)
 3. Choose an action:
 
 | Action | When it appears | What it does |
@@ -60,6 +61,7 @@ EngageOne can suggest labels for a conversation that has no labels yet.
 To turn label suggestions on:
 
 1. Go to **Settings → Integrations → OpenAI**.
+   ![The OpenAI integration page in EngageOne settings](/docs/images/ai-assistant/copilot-for-agents-2.jpg)
 2. Enter your **API Key** if it isn't already set.
 3. Tick **Show label suggestions** and save.
 

@@ -24,6 +24,7 @@ Messages you send from the Instagram app also appear in the EngageOne conversati
 
 1. Go to **Settings → Inboxes → Add Inbox → Instagram**.
 2. Select **Continue with Instagram**.
+   ![The Instagram channel step with the Continue with Instagram button](/docs/images/channels/instagram-1.jpg)
 3. Sign in to the Instagram profile you want to connect and allow the requested access.
 4. EngageOne creates the inbox and names it after your Instagram username. You can rename it later.
 5. Pick the agents for this inbox and select **Add agents**.

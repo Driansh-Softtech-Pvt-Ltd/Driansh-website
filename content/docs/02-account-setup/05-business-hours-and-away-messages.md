@@ -32,6 +32,7 @@ You need to be an **administrator**.
    - Turn the day on (**Enable availability for this day**) or leave it off for days you are closed. Closed days show as **Unavailable**.
    - Choose the opening and closing time, or tick **All-Day** to stay available for the whole day.
 8. Click **Update business hours settings**.
+   ![The Business Hours tab of a website inbox with business availability on, an away message and weekly hours](/docs/images/account-setup/business-hours-and-away-messages-1.jpg)
 
 > **Tip:** Set the time zone carefully. Business hours follow the time zone you choose, not the time zone of each agent or customer.
 

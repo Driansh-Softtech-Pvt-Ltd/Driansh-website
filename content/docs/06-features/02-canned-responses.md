@@ -8,6 +8,7 @@ Canned responses are saved replies for questions you answer often. Instead of ty
 ## Create a canned response
 
 1. Go to **Settings → Canned Responses → Add canned response**.
+   ![The Canned Responses page with the Add canned response button highlighted](/docs/images/features/canned-responses-1.jpg)
 2. Fill in the form:
 
 | Field | What to enter |
@@ -16,6 +17,7 @@ Canned responses are saved replies for questions you answer often. Instead of ty
 | **Message** | The full reply text. |
 
 3. Click **Submit**.
+   ![The Add canned response dialog with Short code and Message fields](/docs/images/features/canned-responses-2.jpg)
 
 Canned responses are shared across your account, so every agent can use them. Each short code must be unique.
 

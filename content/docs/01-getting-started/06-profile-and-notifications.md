@@ -20,6 +20,7 @@ Everything in this article is personal. Changes affect only you, not the rest of
    - **Display name** – the name customers see next to your replies. Many teams use a first name only.
    - **Your email address** – the address you sign in with.
 3. Click **Update Profile**.
+   ![Profile settings with the profile picture, full name, display name and email address](/docs/images/getting-started/profile-and-notifications-1.jpg)
 
 > **Note:** If you change your email address, EngageOne signs you out. Sign in again with the new address.
 
@@ -84,6 +85,8 @@ Under **Notification preferences**, a table lists each event and two columns, **
 | A conversation misses first response SLA | Push (if your account uses SLAs) |
 | A conversation misses next response SLA | Push (if your account uses SLAs) |
 | A conversation misses resolution SLA | Push (if your account uses SLAs) |
+
+![The Notification preferences table with Email and Push notification columns](/docs/images/getting-started/profile-and-notifications-2.jpg)
 
 Assignments, mentions and new messages also appear in **My Inbox** in the sidebar, whatever you tick here. New-conversation alerts appear in **My Inbox** only if you tick **Email** or **Push notification** for them.
 

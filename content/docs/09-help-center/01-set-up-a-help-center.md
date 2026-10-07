@@ -46,6 +46,7 @@ You can change the name and slug later in the portal settings.
 | **Brand color** | The main color used for links and buttons. |
 
 3. Click **Save changes**.
+   ![Help Center settings on the General tab with logo, name, header text, page title, home page link, slug and brand color](/docs/images/help-center/set-up-a-help-center-2.jpg)
 4. On the **Appearance** tab, choose a layout:
    - **Classic** – a home page with search and featured topics.
    - **Documentation** – a sidebar layout that keeps every guide one click away. You can also add **Social links** that appear in the footer.
@@ -55,6 +56,7 @@ You can change the name and slug later in the portal settings.
 
 1. Go to **Help Center → Categories**.
 2. Click **New category**.
+   ![The Categories page with the New category button highlighted](/docs/images/help-center/set-up-a-help-center-3.jpg)
 3. Enter a **Name**, a **Slug** and a short **Description**.
 4. Click **Create**.
 
@@ -66,10 +68,12 @@ Categories belong to one locale. If your help center has more than one language,
 
 1. Go to **Help Center → Articles**.
 2. Click **New article**.
+   ![The Articles list with the New article button highlighted](/docs/images/help-center/set-up-a-help-center-1.jpg)
 3. Type the article title at the top.
 4. Write the content below. Type `/` to see formatting options, such as headings, lists, images and code blocks.
 5. Choose a category for the article. Articles without one are listed as **Uncategorized**.
 6. Optionally, open **More properties** to add a **Meta title**, **Meta description** and **Meta tags** for search engines.
+   ![The article editor with the title, author, category and More properties](/docs/images/help-center/set-up-a-help-center-4.jpg)
 
 EngageOne saves your work automatically. New articles start as **Draft**, so customers can't see them yet.
 

@@ -36,6 +36,7 @@ When you create the inbox, EngageOne points your Twilio number (or Messaging Ser
 5. Enter your **Account SID**.
 6. Enter your **Auth Token**. To use an API key instead, tick **Use API Key Authentication** and enter the **API Key SID** and **API Key Secret**.
 7. Select **Create Twilio Channel**. EngageOne checks your credentials with Twilio.
+   ![The Twilio WhatsApp form with Inbox Name, Phone Number, Account SID and Auth Token](/docs/images/channels/whatsapp-twilio-1.jpg)
 8. Pick the agents for this inbox and select **Add agents**.
 9. The last screen shows a QR code. Scan it with your phone to send a test message.
 

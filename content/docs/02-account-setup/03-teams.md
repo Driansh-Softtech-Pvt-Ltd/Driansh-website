@@ -25,6 +25,7 @@ You need to be an **administrator**.
    - **Team Description** – a short note about what the team handles.
    - **Allow auto assign for this team.** – keep this ticked if EngageOne should pick a team member automatically when a conversation is assigned to the team (see below).
 4. Click **Create team**.
+   ![The Create a new team form with Team name, Team Description and Allow auto assign for this team](/docs/images/account-setup/teams-1.jpg)
 5. On the **Add agents to team** step, select the agents who belong to this team. You can use **select all agents** to add everyone.
 6. Click **Add agents**.
 7. When you see **Your team is ready!**, click **Finish**.
@@ -34,6 +35,7 @@ You need to be an **administrator**.
 1. Open the conversation.
 2. In the details panel on the right, open **Conversation Actions**.
 3. Under the team field, select the team.
+   ![Conversation Actions in the details panel with the Assigned Team field highlighted](/docs/images/account-setup/teams-2.jpg)
 
 Everyone in the team can now find the conversation under **Conversations → Teams → *team name*** in the sidebar, and team members are notified that the conversation was assigned to their team.
 

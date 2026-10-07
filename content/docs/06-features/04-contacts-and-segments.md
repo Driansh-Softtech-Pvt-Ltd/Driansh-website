@@ -16,6 +16,8 @@ Click **Contacts** in the left sidebar. You see these views:
 | **Segments** | Contact filters you have saved. |
 | **Tagged with** | Contacts that have a given label. |
 
+![The Contacts list in EngageOne](/docs/images/features/contacts-and-segments-1.jpg)
+
 Use the search box to find a contact by name, email, phone number or identifier.
 
 ## Add a contact
@@ -54,6 +56,8 @@ Click a contact to open their profile. The side panel has these tabs:
 | **Media** | Files shared in this contact's conversations. |
 | **Merge** | Combine this contact with a duplicate. |
 
+![A contact's profile with editable details and the Attributes, History, Notes, Media and Merge tabs](/docs/images/features/contacts-and-segments-2.jpg)
+
 You can also edit the contact's name, email, phone, company and social links, add contact labels, and start a new conversation with **Send message**.
 
 ## Merge duplicate contacts
@@ -77,6 +81,7 @@ If a contact sends spam or abuse, open their profile and choose **Block contact*
 
 1. Go to **Contacts** and click the filter button.
 2. Click **Add filter** and choose a field, an operator and a value.
+   ![The Filter contacts panel with a field, an operator and a value](/docs/images/features/contacts-and-segments-3.jpg)
 3. Add more filters if you need them, and choose **AND** or **OR** between them.
 4. Click **Apply filters**.
 

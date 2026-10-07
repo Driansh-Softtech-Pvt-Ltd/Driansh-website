@@ -28,6 +28,7 @@ This guide shows you how to create an assistant, shape how it talks, connect it 
    - **Capture key details as memories from customer interactions** – the assistant remembers useful details about a customer.
    - **Include source citations in responses** – replies can link to the source they came from.
 5. Click **Create**.
+   ![The Create an assistant dialog with Name, Description, Product Name and Features](/docs/images/ai-assistant/create-an-assistant-1.jpg)
 
 ## Step 2: Shape the persona and tone
 

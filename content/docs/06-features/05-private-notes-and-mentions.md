@@ -11,6 +11,7 @@ Private notes let your team talk inside a conversation without the customer seei
 2. Above the reply box, switch from **Reply** to **Private Note**.
 3. Type your note.
 4. Click **Add Note**.
+   ![The reply box switched to Private Note, with the note area highlighted in yellow](/docs/images/features/private-notes-and-mentions-1.jpg)
 
 The note appears in the conversation with a different background colour and the text "Private Note: Only visible to you and your team".
 

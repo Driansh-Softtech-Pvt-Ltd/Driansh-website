@@ -12,8 +12,10 @@ You need a website inbox. If you do not have one yet, create it first. See [Webs
 ## Copy your script
 
 1. Go to **Settings → Inboxes**.
-2. Select your website inbox and click the **Configuration** tab.
-3. Under **Messenger Script**, copy the full code block.
+2. Select your website inbox. On the **Settings** tab, the widget preview is on the right.
+3. Switch the preview to **Script** and copy the full code block.
+
+> **Tip:** The same script is also shown on the last screen when you first create the website inbox.
 
 The script looks like this. Your copy already contains your own values:
 
@@ -169,7 +171,7 @@ You can set a few extra options before the script runs by defining a settings ob
 </script>
 ```
 
-The **Script** view in the **Widget Builder** tab shows these options for the settings you choose there.
+The **Script** view in the preview panel on the **Settings** tab shows these options for the settings you choose there.
 
 ## Check that it works
 

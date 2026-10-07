@@ -43,6 +43,7 @@ Go to **Settings → Inboxes → Add Inbox → Email**. You'll see the providers
 ## Connect any other provider
 
 1. Go to **Settings → Inboxes → Add Inbox → Email → Other Providers**.
+   ![The email provider step showing the Other Providers option](/docs/images/channels/email-1.jpg)
 2. Enter a **Channel Name** and the **Email** address customers write to.
 3. Select **Create Email Channel**, then add your agents.
 4. Choose how EngageOne receives your email:
@@ -53,6 +54,7 @@ Go to **Settings → Inboxes → Add Inbox → Email**. You'll see the providers
 ### Add IMAP and SMTP
 
 1. Open **Settings → Inboxes**, select the email inbox and open the **Configuration** tab.
+   ![The Configuration tab of an email inbox with the IMAP and SMTP settings](/docs/images/channels/email-2.jpg)
 2. Under **IMAP**, turn on **Enable IMAP configuration for this inbox**. Fill in **Address**, **Port**, **Login** and **Password**, and set **Enable SSL**. Select **Update IMAP settings**.
 3. Under **SMTP**, turn on **Enable SMTP configuration for this inbox**. Fill in **Address**, **Port**, **Login**, **Password** and **Domain**, then choose the **Encryption** (SSL/TLS or STARTTLS), **Open SSL Verify Mode** and **Authentication**. Select **Update SMTP settings**.
 4. Send a test email to the address from another mailbox and check that it appears in the inbox.

@@ -10,6 +10,7 @@ A pre-chat form asks visitors a few questions before their first message. Your a
 1. Go to **Settings → Inboxes** and select your website inbox.
 2. Click the **Pre Chat Form** tab.
 3. Set **Enable pre chat form** to **Yes**.
+   ![The Pre Chat Form tab of a website inbox with the Enable pre chat form switch](/docs/images/website-live-chat/pre-chat-forms-1.jpg)
 4. In **Pre chat message**, write a short line that visitors see above the form, for example "Tell us a little about yourself and we'll be right with you."
 5. Choose your fields (see below).
 6. Click **Update Pre Chat Form Settings**.

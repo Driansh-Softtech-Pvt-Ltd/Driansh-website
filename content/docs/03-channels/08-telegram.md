@@ -19,6 +19,7 @@ A Telegram inbox connects your Telegram bot to EngageOne, so customers can messa
 3. Copy the bot token BotFather gives you.
 4. In EngageOne, go to **Settings → Inboxes → Add Inbox → Telegram**.
 5. Paste the token into **Bot Token** and select **Create Telegram Channel**.
+   ![The Telegram channel form with the Bot Token field](/docs/images/channels/telegram-1.jpg)
 6. Pick the agents for this inbox and select **Add agents**.
 7. Scan the QR code on the last screen, or open your bot in Telegram. Press **Start** and send a test message.
 8. Reply from EngageOne and check that the reply arrives in Telegram.

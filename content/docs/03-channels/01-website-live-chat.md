@@ -20,6 +20,7 @@ A Website inbox puts a chat bubble on your site so visitors can talk to your tea
 3. Pick a **Widget Color**, then write a **Welcome Heading** and **Welcome Tagline**.
 4. Optional: turn on **Enable channel greeting** and write a greeting, and choose a **Set Reply time** (for example "In a few minutes").
 5. Select **Create inbox**.
+   ![The Website channel form in EngageOne](/docs/images/channels/website-live-chat-1.jpg)
 6. Pick the agents who will answer chats and select **Add agents**.
 7. Copy the script shown on the last screen.
 8. Paste it just before the closing `</body>` tag on every page where the chat should appear.
