@@ -77,7 +77,7 @@ const frontEnd: ServicePageContent = {
     items: [
       { icon: LayoutDashboard, title: "SaaS dashboards", text: "Data-heavy screens with charts, filters, tables and role-based views.", href: "/services/product-engineering-service" },
       { icon: Headphones, title: "Agent consoles", text: "Real-time contact center screens for agents and supervisors.", href: "/our-products/contactcenter" },
-      { icon: MessagesSquare, title: "Omnichannel inboxes", text: "Unified chat and messaging interfaces for support teams.", href: "/our-products/omniconnect" },
+      { icon: MessagesSquare, title: "Omnichannel inboxes", text: "Unified chat and messaging interfaces for support teams.", href: "/our-products/engageone" },
       { icon: Video, title: "Browser calling apps", text: "Web phones and video call screens built on WebRTC.", href: "/services/webrtc-development-service" },
       { icon: Globe, title: "Full web applications", text: "Front ends paired with APIs and hosting as one project.", href: "/services/web-development" },
     ],

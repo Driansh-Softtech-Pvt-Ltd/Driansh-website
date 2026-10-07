@@ -13,7 +13,7 @@ type NavItem = { name: string; path?: string; dropdown?: NavSection[] };
 /* 🔹 Services Dropdown */
 function ServicesDropdown({ dropdown }: { dropdown: NavSection[] }) {
   return (
-    <div className="container mx-auto px-10 py-8">
+    <div className="container mx-auto space-y-6 px-10 py-8">
       {dropdown.map((section, idx) => (
         <div key={idx}>
           {section.path ? (
@@ -245,7 +245,7 @@ export default function Navbar() {
               <SolutionsDropdown dropdown={activeItem.dropdown} />
             )}
             {activeItem.name === "OUR PRODUCTS" && (
-              <SolutionsDropdown dropdown={activeItem.dropdown} />
+              <ServicesDropdown dropdown={activeItem.dropdown} />
             )}
           </motion.div>
         )}

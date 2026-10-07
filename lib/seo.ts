@@ -98,159 +98,211 @@ export const PAGES: Record<string, PageSeo> = {
   // Products
   "/our-products": {
     title: "Our Products",
-    description: "Explore Driansh Softtech products — OmniConnect omnichannel customer engagement and a full-featured Contact Center platform.",
+    description: "Explore Driansh Softtech products — EngageOne omnichannel customer engagement and a full-featured Contact Center platform.",
   },
   "/our-products/contactcenter": {
     title: "Contact Center Software",
     description: "Driansh Contact Center: predictive dialing, IVR, call recording, live monitoring, campaigns and reporting in one platform.",
   },
-  "/our-products/omniconnect": {
-    title: "OmniConnect — Omnichannel Customer Engagement",
-    description: "Driansh OmniConnect unifies live chat, email, WhatsApp, Facebook, Instagram, SMS and more into one shared inbox for your support team.",
+  "/our-products/engageone": {
+    title: "EngageOne — Omnichannel Customer Engagement",
+    description: "Driansh EngageOne brings chat, WhatsApp, email, social, SMS and calls into one inbox, with an AI Assistant, campaigns, help center and reports.",
   },
-  "/our-products/omniconnect/omnichannel-inbox": {
-    title: "Omnichannel Inbox — OmniConnect",
+  "/our-products/engageone/omnichannel-inbox": {
+    title: "Omnichannel Inbox — EngageOne",
     description: "Manage conversations from every channel in a single shared inbox with assignment, labels and collaboration.",
   },
-  "/our-products/omniconnect/website-live-chat": {
-    title: "Website Live Chat — OmniConnect",
+  "/our-products/engageone/website-live-chat": {
+    title: "Website Live Chat — EngageOne",
     description: "Add a customizable live chat widget to your website and talk to visitors in real time.",
   },
-  "/our-products/omniconnect/chatbots": {
-    title: "Chatbots — OmniConnect",
+  "/our-products/engageone/chatbots": {
+    title: "Chatbots — EngageOne",
     description: "Automate customer conversations with chatbots that answer questions and hand off to agents seamlessly.",
   },
-  "/our-products/omniconnect/automations": {
-    title: "Automations — OmniConnect",
+  "/our-products/engageone/automations": {
+    title: "Automations — EngageOne",
     description: "Create automation rules to assign, label and respond to conversations automatically.",
   },
-  "/our-products/omniconnect/team-collaboration": {
-    title: "Team Collaboration — OmniConnect",
+  "/our-products/engageone/team-collaboration": {
+    title: "Team Collaboration — EngageOne",
     description: "Collaborate on customer conversations with private notes, mentions and team assignments.",
   },
-  "/our-products/omniconnect/help-center": {
-    title: "Help Center — OmniConnect",
+  "/our-products/engageone/help-center": {
+    title: "Help Center — EngageOne",
     description: "Build a self-service help center and knowledge base so customers can find answers on their own.",
   },
-  "/our-products/omniconnect/mobile-apps": {
-    title: "Mobile Apps — OmniConnect",
-    description: "Reply to customers on the go with the OmniConnect mobile apps for iOS and Android.",
+  "/our-products/engageone/mobile-apps": {
+    title: "Mobile Apps — EngageOne",
+    description: "Reply to customers on the go with the EngageOne mobile apps for iOS and Android.",
   },
-  "/our-products/omniconnect/pre-chat-forms": {
-    title: "Pre-Chat Forms — OmniConnect",
+  "/our-products/engageone/pre-chat-forms": {
+    title: "Pre-Chat Forms — EngageOne",
     description: "Collect visitor details before a chat starts with configurable pre-chat forms.",
   },
-  "/our-products/omniconnect/integrations": {
-    title: "Integrations — OmniConnect",
-    description: "Connect OmniConnect with WhatsApp, Facebook, Instagram, Telegram, LINE, SMS, email and Slack.",
+  "/our-products/engageone/integrations": {
+    title: "Integrations — EngageOne",
+    description: "Connect EngageOne with WhatsApp, Facebook, Instagram, Telegram, LINE, SMS, email and Slack.",
   },
-  "/our-products/omniconnect/integrations/email": {
-    title: "Email Integration — OmniConnect",
-    description: "Bring customer emails into the OmniConnect inbox and reply alongside every other channel.",
+  "/our-products/engageone/integrations/email": {
+    title: "Email Integration — EngageOne",
+    description: "Bring customer emails into the EngageOne inbox and reply alongside every other channel.",
   },
-  "/our-products/omniconnect/integrations/facebook": {
-    title: "Facebook Messenger Integration — OmniConnect",
-    description: "Connect your Facebook page and answer Messenger conversations from OmniConnect.",
+  "/our-products/engageone/integrations/facebook": {
+    title: "Facebook Messenger Integration — EngageOne",
+    description: "Connect your Facebook page and answer Messenger conversations from EngageOne.",
   },
-  "/our-products/omniconnect/integrations/instagram": {
-    title: "Instagram Integration — OmniConnect",
-    description: "Manage Instagram direct messages from the OmniConnect shared inbox.",
+  "/our-products/engageone/integrations/instagram": {
+    title: "Instagram Integration — EngageOne",
+    description: "Manage Instagram direct messages from the EngageOne shared inbox.",
   },
-  "/our-products/omniconnect/integrations/line": {
-    title: "LINE Integration — OmniConnect",
-    description: "Connect your LINE channel and handle LINE conversations in OmniConnect.",
+  "/our-products/engageone/integrations/line": {
+    title: "LINE Integration — EngageOne",
+    description: "Connect your LINE channel and handle LINE conversations in EngageOne.",
   },
-  "/our-products/omniconnect/integrations/slack": {
-    title: "Slack Integration — OmniConnect",
-    description: "Receive and reply to OmniConnect conversations directly from Slack.",
+  "/our-products/engageone/integrations/slack": {
+    title: "Slack Integration — EngageOne",
+    description: "Receive and reply to EngageOne conversations directly from Slack.",
   },
-  "/our-products/omniconnect/integrations/sms": {
-    title: "SMS Integration — OmniConnect",
-    description: "Send and receive SMS messages with customers from the OmniConnect inbox.",
+  "/our-products/engageone/integrations/sms": {
+    title: "SMS Integration — EngageOne",
+    description: "Send and receive SMS messages with customers from the EngageOne inbox.",
   },
-  "/our-products/omniconnect/integrations/telegram": {
-    title: "Telegram Integration — OmniConnect",
-    description: "Connect a Telegram bot and support customers on Telegram through OmniConnect.",
+  "/our-products/engageone/integrations/telegram": {
+    title: "Telegram Integration — EngageOne",
+    description: "Connect a Telegram bot and support customers on Telegram through EngageOne.",
   },
-  "/our-products/omniconnect/integrations/whatsapp": {
-    title: "WhatsApp Integration — OmniConnect",
-    description: "Support customers on WhatsApp Business from the OmniConnect shared inbox.",
+  "/our-products/engageone/integrations/whatsapp": {
+    title: "WhatsApp Integration — EngageOne",
+    description: "Support customers on WhatsApp Business from the EngageOne shared inbox.",
   },
-  "/our-products/omniconnect/analyse/agent-report": {
-    title: "Agent Reports — OmniConnect",
+  "/our-products/engageone/analyse/agent-report": {
+    title: "Agent Reports — EngageOne",
     description: "Track agent performance with response times, resolution times and conversation volume.",
   },
-  "/our-products/omniconnect/analyse/conversation-report": {
-    title: "Conversation Reports — OmniConnect",
+  "/our-products/engageone/analyse/conversation-report": {
+    title: "Conversation Reports — EngageOne",
     description: "Analyse conversation trends, volumes and response metrics across all channels.",
   },
-  "/our-products/omniconnect/analyse/csat-reports": {
-    title: "CSAT Reports — OmniConnect",
+  "/our-products/engageone/analyse/csat-reports": {
+    title: "CSAT Reports — EngageOne",
     description: "Measure customer satisfaction with CSAT surveys and detailed reports.",
   },
-  "/our-products/omniconnect/analyse/inbox-reports": {
-    title: "Inbox Reports — OmniConnect",
+  "/our-products/engageone/analyse/inbox-reports": {
+    title: "Inbox Reports — EngageOne",
     description: "Compare performance across inboxes and channels with inbox-level reports.",
   },
-  "/our-products/omniconnect/analyse/label-reports": {
-    title: "Label Reports — OmniConnect",
+  "/our-products/engageone/analyse/label-reports": {
+    title: "Label Reports — EngageOne",
     description: "Understand conversation topics and trends with label-based reporting.",
   },
-  "/our-products/omniconnect/analyse/live-view": {
-    title: "Live View — OmniConnect",
+  "/our-products/engageone/analyse/live-view": {
+    title: "Live View — EngageOne",
     description: "See open conversations, agent status and workload in real time.",
   },
-  "/our-products/omniconnect/analyse/team-reports": {
-    title: "Team Reports — OmniConnect",
+  "/our-products/engageone/analyse/team-reports": {
+    title: "Team Reports — EngageOne",
     description: "Measure team performance with response and resolution metrics per team.",
   },
-  "/our-products/omniconnect/manage/audit-logs": {
-    title: "Audit Logs — OmniConnect",
+  "/our-products/engageone/manage/audit-logs": {
+    title: "Audit Logs — EngageOne",
     description: "Keep track of account activity and changes with detailed audit logs.",
   },
-  "/our-products/omniconnect/manage/business-hours": {
-    title: "Business Hours — OmniConnect",
+  "/our-products/engageone/manage/business-hours": {
+    title: "Business Hours — EngageOne",
     description: "Set business hours and out-of-office messages for each inbox.",
   },
-  "/our-products/omniconnect/manage/contact-notes": {
-    title: "Contact Notes — OmniConnect",
+  "/our-products/engageone/manage/contact-notes": {
+    title: "Contact Notes — EngageOne",
     description: "Add notes to contacts so your team has full customer context.",
   },
-  "/our-products/omniconnect/manage/contact-segments": {
-    title: "Contact Segments — OmniConnect",
+  "/our-products/engageone/manage/contact-segments": {
+    title: "Contact Segments — EngageOne",
     description: "Group contacts into segments using filters for targeted support and campaigns.",
   },
-  "/our-products/omniconnect/manage/labels": {
-    title: "Labels — OmniConnect",
+  "/our-products/engageone/manage/labels": {
+    title: "Labels — EngageOne",
     description: "Organise conversations and contacts with custom labels.",
   },
-  "/our-products/omniconnect/manage/private-notes": {
-    title: "Private Notes — OmniConnect",
+  "/our-products/engageone/manage/private-notes": {
+    title: "Private Notes — EngageOne",
     description: "Discuss conversations internally with private notes and @mentions.",
   },
-  "/our-products/omniconnect/manage/teams": {
-    title: "Teams — OmniConnect",
+  "/our-products/engageone/manage/teams": {
+    title: "Teams — EngageOne",
     description: "Organise agents into teams and route conversations to the right people.",
   },
-  "/our-products/omniconnect/productivity/agent-capacity": {
-    title: "Agent Capacity — OmniConnect",
+  "/our-products/engageone/productivity/agent-capacity": {
+    title: "Agent Capacity — EngageOne",
     description: "Control how many conversations each agent handles to balance workload.",
   },
-  "/our-products/omniconnect/productivity/bulk-actions": {
-    title: "Bulk Actions — OmniConnect",
+  "/our-products/engageone/productivity/bulk-actions": {
+    title: "Bulk Actions — EngageOne",
     description: "Assign, label, resolve or snooze many conversations at once with bulk actions.",
   },
-  "/our-products/omniconnect/productivity/canned-responses": {
-    title: "Canned Responses — OmniConnect",
+  "/our-products/engageone/productivity/canned-responses": {
+    title: "Canned Responses — EngageOne",
     description: "Reply faster with saved canned responses for common questions.",
   },
-  "/our-products/omniconnect/productivity/command-bar": {
-    title: "Command Bar — OmniConnect",
-    description: "Navigate and take actions instantly with the OmniConnect command bar.",
+  "/our-products/engageone/productivity/command-bar": {
+    title: "Command Bar — EngageOne",
+    description: "Navigate and take actions instantly with the EngageOne command bar.",
   },
-  "/our-products/omniconnect/productivity/keyboard-shortcuts": {
-    title: "Keyboard Shortcuts — OmniConnect",
-    description: "Work faster in OmniConnect with keyboard shortcuts for common actions.",
+  "/our-products/engageone/productivity/keyboard-shortcuts": {
+    title: "Keyboard Shortcuts — EngageOne",
+    description: "Work faster in EngageOne with keyboard shortcuts for common actions.",
+  },
+  "/our-products/engageone/integrations/api-channel": {
+    title: "API Channel — EngageOne",
+    description: "Build your own channel: send messages in with the Client API, get signed webhooks for every update, and reply from the EngageOne inbox.",
+  },
+  "/our-products/engageone/integrations/tiktok": {
+    title: "TikTok Integration — EngageOne",
+    description: "Receive and reply to TikTok direct messages from your business account in the EngageOne shared inbox, next to every other channel.",
+  },
+  "/our-products/engageone/integrations/twilio": {
+    title: "Twilio Integration — EngageOne",
+    description: "Use your Twilio numbers in EngageOne: handle Twilio SMS, WhatsApp through Twilio and voice calls from one shared inbox.",
+  },
+  "/our-products/engageone/ai-assistant": {
+    title: "AI Assistant — EngageOne",
+    description: "The EngageOne AI Assistant answers customers 24/7 from your FAQs and documents, then hands the chat to your team when a person is needed.",
+  },
+  "/our-products/engageone/calling": {
+    title: "WhatsApp & Phone Calling — EngageOne",
+    description: "Answer WhatsApp and phone calls in the browser from the EngageOne inbox. Every call is logged, with recordings and transcripts for review.",
+  },
+  "/our-products/engageone/campaigns": {
+    title: "Campaigns & WhatsApp Templates — EngageOne",
+    description: "Create WhatsApp templates, send personalised WhatsApp and SMS campaigns by label, and greet website visitors with live chat campaigns.",
+  },
+  "/our-products/engageone/security": {
+    title: "Security & Control — EngageOne",
+    description: "Run EngageOne in the Driansh cloud or on your own servers. Custom roles, audit logs, two-factor sign-in, SAML SSO and signed webhooks.",
+  },
+  "/our-products/engageone/pricing": {
+    title: "Plans & Pricing — EngageOne",
+    description: "EngageOne Cloud, Self-hosted and Enterprise plans. Pricing depends on your agents, channels and deployment. Contact Driansh for a quote.",
+  },
+  "/our-products/engageone/request-demo": {
+    title: "Request a Demo — EngageOne",
+    description: "Book a live EngageOne demo with Driansh. See the inbox, AI Assistant, calling and campaigns working for your own use case.",
+  },
+  "/our-products/engageone/industries": {
+    title: "EngageOne Industries",
+    description: "See how restaurants, online stores and contact centers use Driansh EngageOne for orders, support, calls and campaigns in one inbox.",
+  },
+  "/our-products/engageone/industries/restaurants": {
+    title: "EngageOne for Restaurants",
+    description: "A chat bot for menus, food orders, table bookings, payment links and GST invoices, with a kitchen dashboard that updates customers.",
+  },
+  "/our-products/engageone/industries/ecommerce": {
+    title: "EngageOne for E-commerce",
+    description: "Handle order questions in one inbox, see Shopify orders beside the chat, send WhatsApp offers and answer FAQs with the AI Assistant.",
+  },
+  "/our-products/engageone/industries/contact-centers": {
+    title: "EngageOne for Contact Centers",
+    description: "Omnichannel queues, auto-assignment, SLAs, phone and WhatsApp calling, macros, reports and CSAT in one contact center platform.",
   },
 
   // Services

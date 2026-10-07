@@ -78,7 +78,7 @@ const reactNative: ServicePageContent = {
     items: [
       { icon: AppWindow, title: "Web + mobile products", text: "Mobile apps that share logic and APIs with your React web app.", href: "/services/front-end-development" },
       { icon: PhoneCall, title: "VoIP calling apps", text: "SIP calling in React Native through native Swift and Kotlin modules.", href: "/services/sip-js-development-service" },
-      { icon: Headset, title: "Support & inbox apps", text: "Mobile access to omnichannel customer conversations for your team.", href: "/our-products/omniconnect" },
+      { icon: Headset, title: "Support & inbox apps", text: "Mobile access to omnichannel customer conversations for your team.", href: "/our-products/engageone" },
       { icon: MonitorSmartphone, title: "Video & chat apps", text: "Voice, video and messaging features built on WebRTC.", href: "/services/webrtc-development-service" },
       { icon: Briefcase, title: "Business apps", text: "Staff and customer apps connected to secure backends and APIs.", href: "/services/back-end-development" },
     ],

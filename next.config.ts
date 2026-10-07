@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
     scrollRestoration: true,
     // Enables faster static rendering (App Router only)
   },
-  // Redirects for old omniconnect paths
+  // Redirects for renamed and misspelled URLs
   async redirects() {
     return [
       // Old misspelled service URLs → corrected URLs (keeps search rankings).
@@ -31,17 +31,11 @@ const nextConfig: NextConfig = {
         destination: `/services/${slug}-development-service`,
         permanent: true,
       })),
-      {
-        source: "/omniconnect",
-        destination: "/our-products/omniconnect",
-        permanent: true,
-      },
-      {
-        source: "/omniconnect/:path*",
-        destination: "/our-products/omniconnect/:path*",
-        permanent: true,
-
-      },
+      // The product was renamed from OmniConnect to EngageOne; old links keep working.
+      ...["/omniconnect", "/our-products/omniconnect", "/engageone"].flatMap((source) => [
+        { source, destination: "/our-products/engageone", permanent: true },
+        { source: `${source}/:path*`, destination: "/our-products/engageone/:path*", permanent: true },
+      ]),
     ];
   },
 

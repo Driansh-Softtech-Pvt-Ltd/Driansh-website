@@ -100,7 +100,7 @@ const unifiedCommunications: SolutionPageContent = {
     items: [
       { icon: Video, title: "Audio & video conferencing", text: "Add larger meetings with recording and moderator controls.", href: "/audio-video-conferencing-solution" },
       { icon: Headphones, title: "Contact center", text: "Bring customer calls and agents into the same platform.", href: "/our-products/contactcenter" },
-      { icon: MessagesSquare, title: "OmniConnect", text: "Handle customer chat channels in one shared inbox.", href: "/our-products/omniconnect" },
+      { icon: MessagesSquare, title: "EngageOne", text: "Handle customer chat channels in one shared inbox.", href: "/our-products/engageone" },
       { icon: Network, title: "WebRTC development", text: "Browser calling and video built for your UC app.", href: "/services/webrtc-development-service" },
       { icon: Printer, title: "Faxing solution", text: "Add email and web faxing for every user.", href: "/faxing-solution" },
     ],

@@ -78,7 +78,7 @@ const webrtc: ServicePageContent = {
       { icon: Users, title: "Audio & video conferencing", text: "Browser meetings with dial-in, moderation and recording.", href: "/audio-video-conferencing-solution" },
       { icon: Headphones, title: "Call center agent apps", text: "Browser-based agent desktops with softphone and CRM data.", href: "/call-center-solution" },
       { icon: MessagesSquare, title: "Unified communications", text: "Calls, video, chat and presence in one web workspace.", href: "/unified-communications-solution" },
-      { icon: Monitor, title: "Omnichannel inbox", text: "Voice and chat conversations handled from a single inbox.", href: "/our-products/omniconnect" },
+      { icon: Monitor, title: "Omnichannel inbox", text: "Voice and chat conversations handled from a single inbox.", href: "/our-products/engageone" },
       { icon: Radio, title: "Live call monitoring", text: "Listen, whisper or barge into live calls from the browser.", href: "/live-call-monitoring-solution" },
     ],
   },

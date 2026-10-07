@@ -110,9 +110,23 @@ export const navItems = [
             path: "/our-products/contactcenter",
           },
           {
-            label: "Driansh OmniConnect",
-            path: "/our-products/omniconnect",
+            label: "Driansh EngageOne",
+            path: "/our-products/engageone",
           },
+        ],
+      },
+      {
+        title: "ENGAGEONE",
+        path: "/our-products/engageone",
+        items: [
+          { label: "AI Assistant", path: "/our-products/engageone/ai-assistant" },
+          { label: "WhatsApp & Phone Calling", path: "/our-products/engageone/calling" },
+          { label: "Campaigns & Templates", path: "/our-products/engageone/campaigns" },
+          { label: "Integrations", path: "/our-products/engageone/integrations" },
+          { label: "Industries", path: "/our-products/engageone/industries" },
+          { label: "Security", path: "/our-products/engageone/security" },
+          { label: "Pricing", path: "/our-products/engageone/pricing" },
+          { label: "Request a Demo", path: "/our-products/engageone/request-demo" },
         ],
       },
     ],
@@ -146,10 +160,10 @@ export const HOME_PAGE_SERVICES = [
     href: "/services/mobile-app-development",
   },
   {
-    title: "Driansh OmniConnect",
-    desc: "A unified communication hub that brings voice, video, messaging, and collaboration into a single, seamless platform. Designed for modern, distributed teams, it enhances productivity, simplifies IT management, and delivers a consistent experience across devices and channels.",
-    image: "/images/driansh-omniconnect.png",
-    href: "/our-products/omniconnect",
+    title: "Driansh EngageOne",
+    desc: "One shared inbox for WhatsApp, website chat, email, Messenger, Instagram, Telegram and SMS. EngageOne adds an AI assistant, WhatsApp and phone calling, campaigns, a help center and reports, so your team answers every customer from one place.",
+    image: "",
+    href: "/our-products/engageone",
     isProduct: true,
   },
 ];
@@ -259,17 +273,17 @@ export const OUR_PRODUCTS = [
     reverse: false,
   },
   {
-    id: "omniConnect",
+    id: "engageOne",
     logo: "/logo.png",
-    // Rendered with <OmniInboxVisual /> (original illustration) instead of a screenshot.
+    // Rendered with <EngageOneInboxVisual /> (original illustration) instead of a screenshot.
     image: "",
-    title: "Driansh OmniConnect",
+    title: "Driansh EngageOne",
     description:
-      "Driansh OmniConnect is a unified communication hub that brings voice, video, messaging, and collaboration into a single, seamless platform. Designed for modern, distributed teams, it enhances productivity, simplifies IT management, and delivers a consistent experience across devices and channels.",
+      "Driansh EngageOne brings every customer conversation into one shared inbox: WhatsApp, website chat, email, Messenger, Instagram, Telegram and SMS. An AI assistant answers common questions, and your team picks up the rest with full context.",
     points: [
-      "Unified voice, video, and messaging for internal and external teams",
-      "Seamless integration with existing business tools and workflows",
-      "Scalable, secure architecture for growing enterprises",
+      "One inbox for every messaging channel, plus WhatsApp and phone calling",
+      "AI assistant, automations and campaigns to save your team time",
+      "Help center, reports and customer ratings in the same product",
     ],
     reverse: true,
   },
@@ -291,7 +305,9 @@ export const FOOTER_LINKS = {
 
   products: [
     { name: "Driansh Contact Center Solution", href: "/our-products/contactcenter" },
-    { name: "Driansh OmniConnect", href: "/our-products/omniconnect" },
+    { name: "Driansh EngageOne", href: "/our-products/engageone" },
+    { name: "EngageOne Pricing", href: "/our-products/engageone/pricing" },
+    { name: "Request an EngageOne Demo", href: "/our-products/engageone/request-demo" },
   ],
   company: [
     { name: "About Us", href: "/about-us" },

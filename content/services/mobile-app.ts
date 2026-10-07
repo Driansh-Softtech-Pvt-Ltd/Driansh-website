@@ -78,7 +78,7 @@ const mobileApp: ServicePageContent = {
     items: [
       { icon: PhoneCall, title: "VoIP softphone apps", text: "SIP calling apps with push-based incoming calls, built on Linphone or custom stacks.", href: "/services/linphone-app-development" },
       { icon: MessagesSquare, title: "Video & chat apps", text: "In-app voice, video and messaging powered by WebRTC.", href: "/services/webrtc-development-service" },
-      { icon: Headset, title: "Customer support apps", text: "Mobile access to omnichannel conversations for support and sales teams.", href: "/our-products/omniconnect" },
+      { icon: Headset, title: "Customer support apps", text: "Mobile access to omnichannel conversations for support and sales teams.", href: "/our-products/engageone" },
       { icon: Briefcase, title: "Business & field apps", text: "Internal tools for staff, with offline data and secure logins.", href: "/services/back-end-development" },
       { icon: ShoppingCart, title: "Customer-facing apps", text: "Booking, ordering and loyalty apps shipped to both stores from one codebase.", href: "/services/flutter-app-development" },
       { icon: AppWindow, title: "Companion web apps", text: "Web dashboards and admin panels that sit alongside your mobile app.", href: "/services/web-development" },

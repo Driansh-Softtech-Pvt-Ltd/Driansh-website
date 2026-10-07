@@ -24,7 +24,7 @@ function pathOf(url?: string): string | undefined {
 }
 
 /**
- * Chatwoot (OmniConnect) webhook → lead.
+ * Chatwoot (EngageOne) webhook → lead.
  * Configure in Chatwoot: Settings → Integrations → Webhooks with URL
  *   https://<site>/api/webhooks/chatwoot?token=<CHATWOOT_WEBHOOK_TOKEN>
  * and enable "Conversation created" + "Contact created/updated".

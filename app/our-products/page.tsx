@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { OUR_PRODUCTS } from "@/constants";
-import OmniInboxVisual from "@/components/visuals/OmniInboxVisual";
+import EngageOneInboxVisual from "@/components/visuals/EngageOneInboxVisual";
 import { PageHero, Section, SectionHeader, MediaSplit, CheckList, CtaLink, CTABanner } from "@/components/site";
 
 const PRODUCT_LINKS: Record<string, string> = {
   contactCenter: "/our-products/contactcenter",
-  omniConnect: "/our-products/omniconnect",
+  engageOne: "/our-products/engageone",
 };
 
 export default function OurProductsPage() {
@@ -14,7 +14,7 @@ export default function OurProductsPage() {
       <PageHero
         eyebrow="Our Products"
         title="Driansh Products"
-        description="Explore Driansh Contact Center Solution and Driansh OmniConnect."
+        description="Explore Driansh Contact Center Solution and Driansh EngageOne."
         primaryCta={{ label: "Get Started", href: "/contact-us" }}
       />
 
@@ -23,7 +23,7 @@ export default function OurProductsPage() {
           <MediaSplit
             image={product.image || undefined}
             imageAlt={product.title}
-            visual={product.id === "omniConnect" ? <OmniInboxVisual /> : undefined}
+            visual={product.id === "engageOne" ? <EngageOneInboxVisual /> : undefined}
             reverse={product.reverse}
           >
             <Image
@@ -52,7 +52,7 @@ export default function OurProductsPage() {
       <Section size="sm" tone={OUR_PRODUCTS.length % 2 === 0 ? "white" : "muted"}>
         <CTABanner
           title="Find the right product for your business"
-          description="Talk to our team about Driansh Contact Center and Driansh OmniConnect."
+          description="Talk to our team about Driansh Contact Center and Driansh EngageOne."
         />
       </Section>
     </>

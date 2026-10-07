@@ -80,7 +80,7 @@ const webDevelopment: ServicePageContent = {
       { icon: Plug, title: "APIs & integrations", text: "REST and GraphQL APIs that connect your web app to payments, CRMs and partners.", href: "/services/back-end-development" },
       { icon: Blocks, title: "SaaS products", text: "Multi-tenant web products with sign-up, billing and account management.", href: "/services/product-engineering-service" },
       { icon: Headphones, title: "Contact center dashboards", text: "Agent and supervisor web interfaces like our own contact center product.", href: "/our-products/contactcenter" },
-      { icon: MessagesSquare, title: "Customer messaging portals", text: "Web inboxes that bring chat, email and social messages into one place.", href: "/our-products/omniconnect" },
+      { icon: MessagesSquare, title: "Customer messaging portals", text: "Web inboxes that bring chat, email and social messages into one place.", href: "/our-products/engageone" },
       { icon: Smartphone, title: "Companion mobile apps", text: "Mobile apps that share the same back end and accounts as your web app.", href: "/services/mobile-app-development" },
     ],
   },

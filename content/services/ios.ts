@@ -76,7 +76,7 @@ const ios: ServicePageContent = {
     items: [
       { icon: PhoneCall, title: "VoIP softphone apps", text: "Branded SIP dialers with CallKit, push wake-up and call history.", href: "/services/linphone-app-development" },
       { icon: MonitorSmartphone, title: "Video calling apps", text: "One-to-one and group video calls on iPhone and iPad using WebRTC.", href: "/services/webrtc-development-service" },
-      { icon: Headset, title: "Support team apps", text: "Mobile access to customer conversations for agents on the move.", href: "/our-products/omniconnect" },
+      { icon: Headset, title: "Support team apps", text: "Mobile access to customer conversations for agents on the move.", href: "/our-products/engageone" },
       { icon: Briefcase, title: "Business apps", text: "Secure staff and customer apps connected to your own backend and APIs.", href: "/services/back-end-development" },
       { icon: Layers, title: "Apps for Android too", text: "One React Native codebase when you need iPhone and Android together.", href: "/services/react-native-app-development" },
     ],

@@ -79,7 +79,7 @@ const productEngineering: ServicePageContent = {
       { icon: Globe, title: "SaaS web platforms", text: "Multi-tenant web products with accounts, billing and admin panels.", href: "/services/web-development" },
       { icon: Smartphone, title: "Mobile products", text: "Consumer and business apps for iOS and Android.", href: "/services/mobile-app-development" },
       { icon: Headphones, title: "Contact center software", text: "Our own contact center product shows the kind of platform we build.", href: "/our-products/contactcenter" },
-      { icon: MessagesSquare, title: "Omnichannel messaging", text: "Unified inboxes for chat, email and social support.", href: "/our-products/omniconnect" },
+      { icon: MessagesSquare, title: "Omnichannel messaging", text: "Unified inboxes for chat, email and social support.", href: "/our-products/engageone" },
       { icon: Network, title: "VoIP & UCaaS products", text: "Softswitches, hosted PBX and calling apps built for resale.", href: "/services/voip-development-service" },
       { icon: TestTube, title: "Product quality programs", text: "Functional, load and interoperability testing for voice products.", href: "/services/voip-testing" },
     ],

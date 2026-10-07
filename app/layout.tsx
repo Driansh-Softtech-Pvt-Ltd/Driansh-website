@@ -95,7 +95,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
 
-        {/* Driansh OmniConnect Script */}
+        {/* Driansh EngageOne Script */}
         <Script id="chatwoot-script" strategy="lazyOnload">
           {`
             (function(d,t) {
