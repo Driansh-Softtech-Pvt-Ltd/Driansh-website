@@ -9,7 +9,6 @@ import HelpCenterSection from '@/components/home/HelpCenterSection';
 import IndustriesSection from '@/components/home/IndustriesSection';
 import CustomerStoriesSection from '@/components/home/CustomerStoriesSection';
 import SecuritySection from '@/components/home/SecuritySection';
-import EngineeringSection from '@/components/home/EngineeringSection';
 import ContactSection from '@/components/home/ContactSection';
 import { DEMO_HREF } from '@/components/home/links';
 
@@ -33,7 +32,6 @@ export default function HomePage() {
           cta={{ label: 'Request a demo', href: DEMO_HREF }}
         />
       </Section>
-      <EngineeringSection />
       <ContactSection />
     </>
   );
