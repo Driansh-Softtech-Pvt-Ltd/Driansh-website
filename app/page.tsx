@@ -1,7 +1,6 @@
 import { CTABanner, Section } from '@/components/site';
 import HeroSection from '@/components/home/HeroSection';
 import ChannelStrip from '@/components/home/ChannelStrip';
-import FeatureTabsSection from '@/components/home/FeatureTabsSection';
 import AiAssistantSection from '@/components/home/AiAssistantSection';
 import AiOutcomesSection from '@/components/home/AiOutcomesSection';
 import OmnichannelSection from '@/components/home/OmnichannelSection';
@@ -19,7 +18,6 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ChannelStrip />
-      <FeatureTabsSection />
       <AiAssistantSection />
       <AiOutcomesSection />
       <OmnichannelSection />
