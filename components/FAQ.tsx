@@ -48,12 +48,12 @@ export default function FAQ({
               <AccordionItem
                 key={index}
                 value={value}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300"
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-card transition-all duration-300"
               >
                 <AccordionTrigger
                   className={`flex w-full cursor-pointer items-center justify-between rounded-none px-5 py-4 text-left text-base font-semibold no-underline transition-all duration-200 hover:no-underline sm:px-6 sm:text-lg ${
                     isActive
-                      ? "bg-brand text-white [&_svg]:text-white"
+                      ? "bg-brand-solid text-white [&_svg]:text-white"
                       : "text-ink hover:bg-surface"
                   }`}
                 >

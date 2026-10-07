@@ -7,7 +7,7 @@ import type { IconItem, LinkItem } from "@/content/types";
 /** Factual capability chips directly under the hero. */
 export function HighlightsStrip({ items }: { items: string[] }) {
   return (
-    <div className="border-b border-slate-200 bg-white">
+    <div className="border-b border-slate-200 bg-page">
       <ul className="container-site grid grid-cols-1 gap-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
           <li key={item} className="flex items-center gap-2.5 text-sm font-medium text-ink">
@@ -83,7 +83,7 @@ export function ProcessSteps({ tone = "white" as const }: { tone?: "white" | "mu
       <SectionHeader eyebrow="How we work" title="From idea to live platform in four steps" />
       <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {PROCESS.map((step, i) => (
-          <li key={step.title} className="relative rounded-2xl border border-slate-200 bg-white p-6">
+          <li key={step.title} className="relative rounded-2xl border border-slate-200 bg-card p-6">
             <span className="text-gradient text-4xl font-bold">{String(i + 1).padStart(2, "0")}</span>
             <h3 className="heading-3 mt-3 text-ink">{step.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.text}</p>
@@ -117,7 +117,7 @@ export function LeadFormSection({ title, text, id = "contact" }: { title: string
             </li>
           </ul>
         </div>
-        <div className="rounded-3xl bg-white p-6 text-slate-800 shadow-2xl sm:p-10">
+        <div className="dark-tokens rounded-3xl bg-card p-6 text-slate-800 shadow-2xl sm:p-10 dark:border dark:border-white/10">
           <h3 className="heading-3 text-ink">Tell us about your project</h3>
           <p className="mt-1 mb-8 text-slate-600">Share a few details and the right engineer will get back to you.</p>
           <ContactForm defaultInterest="custom-project" />
@@ -137,7 +137,7 @@ export function RelatedLinks({ title, items }: { title: string; items: { name: s
             <li key={r.href}>
               <Link
                 href={r.href}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-card px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
               >
                 {r.name} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
               </Link>

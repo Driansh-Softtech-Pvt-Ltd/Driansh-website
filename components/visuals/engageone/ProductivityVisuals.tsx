@@ -56,7 +56,7 @@ export function AgentCapacityLimitsVisual() {
                 </span>
               </div>
               <span className="mt-1.5 block h-1.5 rounded-full bg-surface">
-                <span className={cn("block h-1.5 rounded-full", used === limit ? "bg-rose-400" : "bg-brand", bar)} />
+                <span className={cn("block h-1.5 rounded-full", used === limit ? "bg-rose-400" : "bg-brand-solid", bar)} />
               </span>
             </li>
           ))}
@@ -92,7 +92,7 @@ export function InboxCapacityVisual() {
         ))}
       </ul>
       <div className="flex justify-end px-4 pb-4">
-        <span className="rounded-lg bg-brand px-3 py-1.5 text-[11px] font-semibold text-white">Save limits</span>
+        <span className="rounded-lg bg-brand-solid px-3 py-1.5 text-[11px] font-semibold text-white">Save limits</span>
       </div>
     </AppWindow>
   );
@@ -139,7 +139,7 @@ function ActionBar({ actions }: { actions: { label: string; icon: LucideIcon; pr
           key={label}
           className={cn(
             "flex items-center gap-1 rounded-lg px-2 py-1 font-medium",
-            primary ? "bg-brand text-white" : "border border-slate-200 bg-white text-ink"
+            primary ? "bg-brand-solid text-white" : "border border-slate-200 bg-card text-ink"
           )}
         >
           <Icon className="h-3 w-3" /> {label}
@@ -200,7 +200,7 @@ export function CannedResponsesListVisual() {
     <AppWindow title="EngageOne · Canned responses">
       <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3 text-xs">
         <span className="font-semibold text-ink">4 saved responses</span>
-        <span className="rounded-lg bg-brand px-2.5 py-1 text-[10px] font-semibold text-white">+ Add response</span>
+        <span className="rounded-lg bg-brand-solid px-2.5 py-1 text-[10px] font-semibold text-white">+ Add response</span>
       </div>
       <ul className="space-y-1.5 p-4">
         {CANNED.map(({ code, text }) => (
@@ -222,7 +222,7 @@ export function CannedResponsesInChatVisual() {
       </ChatThread>
       <div className="mx-4 mb-2 overflow-hidden rounded-xl border border-slate-200 text-xs shadow-lg">
         {CANNED.slice(1, 3).map(({ code, text }, i) => (
-          <div key={code} className={cn("px-3 py-2", i === 0 ? "bg-brand-soft" : "bg-white")}>
+          <div key={code} className={cn("px-3 py-2", i === 0 ? "bg-brand-soft" : "bg-card")}>
             <span className="font-mono text-[11px] font-semibold text-brand">{code}</span>
             <span className="block truncate text-[10px] text-slate-500">{text}</span>
           </div>
@@ -230,7 +230,7 @@ export function CannedResponsesInChatVisual() {
       </div>
       <div className="mx-4 mb-4 flex items-center gap-2 rounded-xl border border-brand/40 px-3 py-2 text-[11px] text-ink">
         <span className="font-mono">/re</span>
-        <span className="h-3.5 w-px animate-pulse bg-brand" />
+        <span className="h-3.5 w-px animate-pulse bg-brand-solid" />
         <span className="ml-auto rounded-md bg-brand-gradient px-2 py-0.5 text-[10px] font-semibold text-white">Send</span>
       </div>
     </AppWindow>

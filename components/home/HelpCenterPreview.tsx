@@ -14,7 +14,7 @@ import { AppWindow } from "@/components/visuals/engageone/primitives";
 export type HelpCenterFocus = "locales" | "domain" | "search" | "portals";
 
 const PORTALS = [
-  { name: "Guest help", domain: "help.example.com", articles: 42, band: "bg-brand-gradient", dot: "bg-brand" },
+  { name: "Guest help", domain: "help.example.com", articles: 42, band: "bg-brand-gradient", dot: "bg-brand-solid" },
   { name: "Delivery partners", domain: "partners.example.com", articles: 18, band: "bg-violet-600", dot: "bg-violet-500" },
   { name: "Franchise owners", domain: "franchise.example.com", articles: 27, band: "bg-emerald-600", dot: "bg-emerald-500" },
 ];
@@ -99,7 +99,7 @@ export default function HelpCenterPreview({ focus, progress }: { focus: HelpCent
           <div className="mt-1 truncate text-base font-semibold">{locale.heading}</div>
           <div
             className={cn(
-              "mt-3 flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-xs",
+              "mt-3 flex items-center gap-2 rounded-lg bg-card px-3 py-2 text-xs",
               focus === "search" ? "ring-2 ring-white/60" : ""
             )}
           >
@@ -119,7 +119,7 @@ export default function HelpCenterPreview({ focus, progress }: { focus: HelpCent
                 key={code}
                 className={cn(
                   "rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase transition-colors",
-                  code === locale.code ? "bg-white text-ink" : "bg-white/15 text-white"
+                  code === locale.code ? "bg-card text-ink" : "bg-white/15 text-white"
                 )}
               >
                 {code}
@@ -182,7 +182,7 @@ export default function HelpCenterPreview({ focus, progress }: { focus: HelpCent
       <div
         aria-hidden="true"
         className={cn(
-          "hidden select-none rounded-2xl border bg-white p-4 sm:block shadow-lg shadow-violet-900/10 transition-colors",
+          "hidden select-none rounded-2xl border bg-card p-4 sm:block shadow-lg shadow-violet-900/10 transition-colors",
           focus === "portals" ? "border-brand/30" : "border-slate-200"
         )}
       >

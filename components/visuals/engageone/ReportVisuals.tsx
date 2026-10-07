@@ -36,14 +36,14 @@ function FilterBar({ scope, groupBy = "Week" }: { scope?: string; groupBy?: stri
       </span>
       <span className="flex overflow-hidden rounded-lg border border-slate-200">
         {["Day", "Week", "Month"].map((option) => (
-          <span key={option} className={cn("px-2 py-1", option === groupBy ? "bg-brand text-white" : "text-slate-500")}>
+          <span key={option} className={cn("px-2 py-1", option === groupBy ? "bg-brand-solid text-white" : "text-slate-500")}>
             {option}
           </span>
         ))}
       </span>
       <span className="flex items-center gap-1.5 text-slate-500">
         Business hours
-        <span className="flex h-3.5 w-6 items-center rounded-full bg-brand p-0.5">
+        <span className="flex h-3.5 w-6 items-center rounded-full bg-brand-solid p-0.5">
           <span className="ml-auto h-2.5 w-2.5 rounded-full bg-white" />
         </span>
       </span>
@@ -99,7 +99,7 @@ function PillRow({ items, active = 0 }: { items: string[]; active?: number }) {
           key={item}
           className={cn(
             "rounded-full border px-2.5 py-1 font-medium",
-            i === active ? "border-brand bg-brand text-white" : "border-slate-200 text-slate-500"
+            i === active ? "border-brand bg-brand-solid text-white" : "border-slate-200 text-slate-500"
           )}
         >
           {item}
@@ -203,7 +203,7 @@ export function CsatSurveyVisual() {
           <Bubble from="customer">Thanks, my order is sorted now!</Bubble>
           <Bubble from="agent">Glad I could help, Rahul. Have a great day!</Bubble>
           <Bubble from="system">Conversation resolved by Priya</Bubble>
-          <div className="self-start rounded-2xl border border-slate-200 bg-white p-3 text-xs shadow-sm">
+          <div className="self-start rounded-2xl border border-slate-200 bg-card p-3 text-xs shadow-sm">
             <div className="font-semibold text-ink">How was your experience with us?</div>
             <div className="mt-2 flex gap-2 text-lg">
               {EMOJIS.map((emoji, i) => (
@@ -258,7 +258,7 @@ export function CsatReportVisual() {
           {RATING_SPLIT.map(({ stars, share, label }) => (
             <div key={stars} className="flex items-center gap-2 text-[10px] text-slate-500">
               <Stars count={stars} />
-              <span className="h-1.5 flex-1 rounded-full bg-white">
+              <span className="h-1.5 flex-1 rounded-full bg-card">
                 <span className={cn("block h-1.5 rounded-full bg-amber-400", share)} />
               </span>
               <span className="w-7 text-right">{label}</span>
@@ -432,7 +432,7 @@ export function TeamFiltersVisual() {
 
 /* ---------- Live view ---------- */
 
-const HEAT = ["bg-brand/10", "bg-brand/25", "bg-brand/45", "bg-brand/70", "bg-brand"];
+const HEAT = ["bg-brand/10", "bg-brand/25", "bg-brand-solid/45", "bg-brand-solid/70", "bg-brand-solid"];
 const HEATMAP = [
   [0, 1, 3, 4, 3, 2],
   [1, 2, 4, 4, 3, 1],
@@ -501,7 +501,7 @@ export function LiveAgentStatusVisual() {
           <li key={name} className="flex items-center gap-2.5 rounded-xl border border-slate-100 px-3 py-2 text-xs">
             <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-brand-soft text-[11px] font-semibold text-brand">
               {name[0]}
-              <span className={cn("absolute -right-0.5 -bottom-0.5 h-2.5 w-2.5 rounded-full ring-2 ring-white", color)} />
+              <span className={cn("absolute -right-0.5 -bottom-0.5 h-2.5 w-2.5 rounded-full ring-2 ring-card", color)} />
             </span>
             <span className="font-medium text-ink">{name}</span>
             <span className="ml-auto text-[10px] text-slate-500">{status}</span>

@@ -22,7 +22,7 @@ export default function DocFeedback({ path }: { path: string }) {
   };
 
   const button =
-    "inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-200 bg-white px-4 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand";
+    "inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-200 bg-card px-4 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand";
 
   return (
     <div className="flex flex-wrap items-center gap-3">

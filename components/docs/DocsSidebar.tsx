@@ -26,7 +26,7 @@ export default function DocsSidebar({
         aria-expanded={open}
         aria-controls="docs-sidebar-nav"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-ink shadow-sm lg:hidden"
+        className="flex w-full items-center justify-between rounded-xl border border-slate-200 bg-card px-4 py-3 text-sm font-semibold text-ink shadow-sm lg:hidden"
       >
         <span className="flex items-center gap-2">
           <Menu className="h-4 w-4 text-brand" aria-hidden="true" />

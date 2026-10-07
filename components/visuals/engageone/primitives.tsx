@@ -20,7 +20,7 @@ export function AppWindow({
   return (
     <div
       className={cn(
-        "relative mx-auto w-full max-w-xl select-none overflow-hidden rounded-2xl border border-slate-200 bg-white text-left text-slate-700 shadow-2xl shadow-violet-900/20",
+        "dark-tokens relative mx-auto w-full max-w-xl select-none overflow-hidden rounded-2xl border border-slate-200 bg-card text-left text-slate-700 shadow-2xl shadow-violet-900/20",
         className
       )}
       aria-hidden="true"
@@ -49,7 +49,7 @@ export function FloatingTag({
   return (
     <div
       className={cn(
-        "absolute -bottom-5 -left-4 hidden items-center gap-2 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-ink shadow-xl sm:flex",
+        "dark-tokens absolute -bottom-5 -left-4 hidden items-center gap-2 rounded-xl bg-card px-3 py-2 text-xs font-semibold text-ink shadow-xl sm:flex",
         className
       )}
       aria-hidden="true"
@@ -69,7 +69,7 @@ type BubbleKind = "customer" | "agent" | "bot" | "note" | "system";
 
 const BUBBLE_STYLES: Record<BubbleKind, string> = {
   customer: "max-w-[85%] self-start rounded-2xl rounded-tl-sm bg-slate-100",
-  agent: "max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-brand text-white",
+  agent: "max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-brand-solid text-white",
   bot: "max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-violet-100 text-violet-900",
   note: "max-w-[85%] self-end rounded-2xl rounded-tr-sm border border-amber-200 bg-amber-50 text-amber-900",
   system: "self-center rounded-full bg-slate-100 text-[10px] font-medium text-slate-500",
@@ -90,7 +90,7 @@ export function OptionChips({ options, className }: { options: string[]; classNa
   return (
     <div className={cn("flex flex-wrap justify-end gap-1.5", className)}>
       {options.map((option) => (
-        <span key={option} className="rounded-full border border-brand/30 bg-white px-2.5 py-1 text-[10px] font-medium text-brand">
+        <span key={option} className="rounded-full border border-brand/30 bg-card px-2.5 py-1 text-[10px] font-medium text-brand">
           {option}
         </span>
       ))}
@@ -131,7 +131,7 @@ export function BarChart({ values, labels, highlight }: { values: number[]; labe
         {values.map((value, i) => (
           <div
             key={i}
-            className={cn("flex-1 rounded-t", i === highlight ? "bg-brand" : "bg-brand/30")}
+            className={cn("flex-1 rounded-t", i === highlight ? "bg-brand-solid" : "bg-brand/30")}
             style={{ height: `${Math.max(6, Math.min(100, value))}%` }}
           />
         ))}
@@ -160,7 +160,7 @@ export function ListRows({ rows, className }: { rows: Row[]; className?: string 
           key={title}
           className={cn(
             "flex items-center gap-2.5 rounded-xl border px-3 py-2 text-xs",
-            active ? "border-brand/30 bg-brand-soft/60" : "border-slate-100 bg-white"
+            active ? "border-brand/30 bg-brand-soft/60" : "border-slate-100 bg-card"
           )}
         >
           {Icon && (
@@ -195,7 +195,7 @@ export function FormFields({
         <div key={label} className="flex items-center gap-3 text-xs">
           <span className="w-28 shrink-0 text-slate-500">{label}</span>
           {kind === "toggle" ? (
-            <span className="ml-auto flex h-4 w-7 items-center rounded-full bg-brand p-0.5">
+            <span className="ml-auto flex h-4 w-7 items-center rounded-full bg-brand-solid p-0.5">
               <span className="ml-auto h-3 w-3 rounded-full bg-white" />
             </span>
           ) : (
@@ -208,7 +208,7 @@ export function FormFields({
       ))}
       {button && (
         <div className="flex justify-end pt-1">
-          <span className="rounded-lg bg-brand px-3 py-1.5 text-[11px] font-semibold text-white">{button}</span>
+          <span className="rounded-lg bg-brand-solid px-3 py-1.5 text-[11px] font-semibold text-white">{button}</span>
         </div>
       )}
     </div>

@@ -18,7 +18,7 @@ export default function CTABanner({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white sm:px-10 md:py-12",
+        "light-tokens relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white sm:px-10 md:py-12",
         className
       )}
     >

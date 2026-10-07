@@ -10,6 +10,7 @@ import { FOOTER_COLUMNS, FOOTER_TAGLINE } from "@/constants/index";
 import { newsletterSchema, NewsletterFormData } from "@/validations/contact-schema";
 import { saveNewsletter } from "@/actions/saveNewsletter";
 import { getAttribution } from "@/lib/analytics/attribution";
+import { ThemeSegmented } from "@/components/theme/ThemeSwitcher";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -38,7 +39,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="light-tokens bg-navy text-white">
       <div className="container-site py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr_0.9fr] gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
@@ -130,6 +131,7 @@ export default function Footer() {
         <div className="container-site py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm">© {currentYear} Driansh Softtech Pvt. Ltd. All rights reserved.</p>
+            <ThemeSegmented compact />
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ function Delta({ now, before, label }: { now: number; before: number; label: str
 
 function StatTile({ label, value, children }: { label: string; value: string; children?: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5">
+    <div className="rounded-2xl border border-slate-200 bg-card p-5">
       <p className="text-sm text-slate-500">{label}</p>
       <p className="mt-1 text-3xl font-semibold text-ink tabular-nums">{value}</p>
       {children}
@@ -34,7 +34,7 @@ function StatTile({ label, value, children }: { label: string; value: string; ch
 function RankTable({ title, rows, empty }: { title: string; rows: { _id: string; count: number }[]; empty: string }) {
   const max = Math.max(1, ...rows.map((r) => r.count));
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5">
+    <div className="rounded-2xl border border-slate-200 bg-card p-5">
       <h2 className="mb-3 text-sm font-semibold text-ink">{title}</h2>
       {rows.length === 0 ? (
         <p className="text-sm text-slate-400">{empty}</p>
@@ -47,7 +47,7 @@ function RankTable({ title, rows, empty }: { title: string; rows: { _id: string;
                 <span className="tabular-nums text-slate-500">{r.count.toLocaleString()}</span>
               </div>
               <div className="mt-1 h-1.5 rounded-full bg-brand-soft">
-                <div className="h-1.5 rounded-full bg-brand" style={{ width: `${(r.count / max) * 100}%` }} />
+                <div className="h-1.5 rounded-full bg-brand-solid" style={{ width: `${(r.count / max) * 100}%` }} />
               </div>
             </li>
           ))}
@@ -92,13 +92,13 @@ export default async function AdminLeadsPage({
             <Link
               key={r}
               href={href(f, { days: r, page: 1 })}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium ${r === f.days ? "bg-ink text-white" : "border border-slate-200 bg-white hover:border-brand"}`}
+              className={`rounded-full px-4 py-1.5 text-sm font-medium ${r === f.days ? "bg-ink text-white" : "border border-slate-200 bg-card hover:border-brand"}`}
             >
               {r} days
             </Link>
           ))}
           <form action={logout}>
-            <button className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm hover:border-brand">Sign out</button>
+            <button className="rounded-full border border-slate-200 bg-card px-4 py-1.5 text-sm hover:border-brand">Sign out</button>
           </form>
         </nav>
       </header>
@@ -121,7 +121,7 @@ export default async function AdminLeadsPage({
         </StatTile>
       </section>
 
-      <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-5">
+      <section className="mt-4 rounded-2xl border border-slate-200 bg-card p-5">
         <h2 className="text-sm font-semibold text-ink">Unique visitors per day</h2>
         <p className="mb-2 text-xs text-slate-500">
           {d.range.from} → {d.range.to} (UTC). Search terms from Google are in Search Console.
@@ -146,28 +146,28 @@ export default async function AdminLeadsPage({
               name="q"
               defaultValue={f.q}
               placeholder="Search name, email, company…"
-              className="w-56 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm"
+              className="w-56 rounded-full border border-slate-200 bg-card px-4 py-1.5 text-sm"
             />
-            <select name="type" defaultValue={f.type ?? ""} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm">
+            <select name="type" defaultValue={f.type ?? ""} className="rounded-full border border-slate-200 bg-card px-3 py-1.5 text-sm">
               <option value="">All types</option>
               {LEAD_TYPES.map((t) => (
                 <option key={t} value={t}>{TYPE_LABEL[t]}</option>
               ))}
             </select>
-            <select name="status" defaultValue={f.status ?? ""} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm capitalize">
+            <select name="status" defaultValue={f.status ?? ""} className="rounded-full border border-slate-200 bg-card px-3 py-1.5 text-sm capitalize">
               <option value="">All statuses</option>
               {LEAD_STATUSES.map((s) => (
                 <option key={s} value={s}>{s}</option>
               ))}
             </select>
             <button className="rounded-full bg-ink px-4 py-1.5 text-sm font-medium text-white">Filter</button>
-            <a href={exportHref} className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm hover:border-brand">
+            <a href={exportHref} className="rounded-full border border-slate-200 bg-card px-4 py-1.5 text-sm hover:border-brand">
               Export CSV
             </a>
           </form>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-card">
           <table className="w-full min-w-[900px] text-left text-sm">
             <thead className="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-500">
               <tr>
@@ -225,9 +225,9 @@ export default async function AdminLeadsPage({
 
         {pages > 1 && (
           <nav className="mt-4 flex items-center justify-center gap-3 text-sm" aria-label="Pagination">
-            {f.page > 1 && <Link href={href(f, { page: f.page - 1 })} className="rounded-full border border-slate-200 bg-white px-4 py-1.5">Previous</Link>}
+            {f.page > 1 && <Link href={href(f, { page: f.page - 1 })} className="rounded-full border border-slate-200 bg-card px-4 py-1.5">Previous</Link>}
             <span className="text-slate-500">Page {f.page} of {pages}</span>
-            {f.page < pages && <Link href={href(f, { page: f.page + 1 })} className="rounded-full border border-slate-200 bg-white px-4 py-1.5">Next</Link>}
+            {f.page < pages && <Link href={href(f, { page: f.page + 1 })} className="rounded-full border border-slate-200 bg-card px-4 py-1.5">Next</Link>}
           </nav>
         )}
 

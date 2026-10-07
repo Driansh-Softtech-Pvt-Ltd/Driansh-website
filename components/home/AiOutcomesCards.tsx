@@ -72,7 +72,7 @@ function OutcomeFlow() {
           initial={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 6 }}
           animate={shown ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: reduceMotion ? 0 : 0.5 + i * 0.3, duration: 0.4 }}
-          className="absolute -translate-y-1/2 whitespace-nowrap rounded-lg border border-white bg-white px-2.5 py-1 text-[11px] font-medium text-ink shadow-sm sm:text-sm"
+          className="absolute -translate-y-1/2 whitespace-nowrap rounded-lg border border-white bg-card px-2.5 dark:border-slate-200 py-1 text-[11px] font-medium text-ink shadow-sm sm:text-sm"
           style={{ left: label.left, top: label.top }}
         >
           {label.text}
@@ -87,9 +87,9 @@ export function AiOutcomesBanner() {
     <div className="relative overflow-hidden rounded-3xl bg-violet-200/80">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.25)_1px,transparent_1px)] bg-size-[56px_100%]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.25)_1px,transparent_1px)] bg-size-[56px_100%] dark:opacity-25"
       />
-      <span className="absolute left-5 top-5 inline-flex -rotate-2 items-center gap-1.5 rounded-xl border-2 border-ink bg-white px-3 py-1 text-sm font-semibold text-ink shadow-[3px_3px_0_0_var(--color-ink)]">
+      <span className="absolute left-5 top-5 inline-flex -rotate-2 items-center gap-1.5 rounded-xl border-2 border-ink bg-card px-3 py-1 text-sm font-semibold text-ink shadow-[3px_3px_0_0_var(--color-ink)]">
         <Sparkles className="h-4 w-4 text-violet-600" /> EngageOne AI
       </span>
       <div className="relative grid items-center gap-8 px-6 pb-8 pt-20 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6 lg:py-14 lg:pt-20">
@@ -123,7 +123,7 @@ function FeatureCard({
   children: React.ReactNode;
 }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+    <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-card">
       <div className="flex items-stretch border-b border-slate-200">
         <h3 className="eyebrow flex-1 px-6 py-4 text-ink">{label}</h3>
         <Link
@@ -134,7 +134,7 @@ function FeatureCard({
           <ArrowUpRight className="h-4 w-4" />
         </Link>
       </div>
-      <div className="flex min-h-64 flex-col justify-center bg-surface bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[12px_12px] p-5">
+      <div className="flex min-h-64 flex-col justify-center bg-surface bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[12px_12px] p-5 dark:bg-[radial-gradient(var(--color-slate-200)_1px,transparent_1px)]">
         {children}
       </div>
       <div className="border-t border-slate-200 px-6 py-6">
@@ -172,7 +172,7 @@ function MonitorsCard() {
               initial={{ opacity: reduceMotion ? 1 : 0, x: reduceMotion ? 0 : -8 }}
               animate={shown ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: reduceMotion ? 0 : i * 0.15, duration: 0.35 }}
-              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm"
+              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-card px-3 py-2.5 text-sm"
             >
               <span className={cn("flex h-8 w-8 items-center justify-center rounded-lg border border-slate-200", tint)}>
                 <Icon className="h-4 w-4" />
@@ -210,7 +210,7 @@ function CopilotCard() {
       title="Get a reply draft in one click"
       description="Ask the AI for a reply written from your help content and the conversation. You review it and send."
     >
-      <div ref={ref} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm" aria-hidden="true">
+      <div ref={ref} className="rounded-xl border border-slate-200 bg-card p-4 shadow-sm" aria-hidden="true">
         <p className="flex items-center gap-1.5 text-sm font-semibold text-violet-700">
           <Sparkles className="h-4 w-4" /> Copilot draft
         </p>
@@ -253,7 +253,7 @@ function ScenariosCard() {
             initial={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 8 }}
             animate={shown ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: reduceMotion ? 0 : 0.2 + i * 0.35, duration: 0.35 }}
-            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm"
+            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-card px-3 py-2.5 text-sm"
           >
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
               {i + 1}

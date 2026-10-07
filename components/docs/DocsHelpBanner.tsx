@@ -3,7 +3,7 @@ import { CtaLink } from "@/components/site";
 /** "Can't find it?" band shown at the bottom of the docs hub and category pages. */
 export default function DocsHelpBanner() {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white sm:px-10 md:py-12">
+    <div className="light-tokens relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white sm:px-10 md:py-12">
       <div aria-hidden="true" className="bg-brand-gradient absolute inset-0 opacity-90" />
       <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <div className="max-w-2xl">

@@ -110,7 +110,7 @@ export default function ContactCenterPage() {
               width={800}
               height={800}
               sizes="(min-width: 1024px) 40vw, 90vw"
-              className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-xl"
+              className="h-auto w-full rounded-2xl border border-slate-200 bg-card shadow-xl dark:border-white/10 dark:brightness-90"
             />
           </div>
         </div>

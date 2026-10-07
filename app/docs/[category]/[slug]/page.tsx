@@ -54,7 +54,7 @@ export default async function DocArticlePage({ params }: Props) {
   };
 
   return (
-    <div className="bg-white pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <div className="bg-page pt-28 pb-16 lg:pt-36 lg:pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="container-site grid gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-10 xl:grid-cols-[16rem_minmax(0,1fr)_13rem] xl:gap-12">
         <aside className="min-w-0">

@@ -17,7 +17,7 @@ export default function LoginForm() {
           required
           autoFocus
           autoComplete="current-password"
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
+          className="w-full rounded-xl border border-slate-300 bg-card px-4 py-3 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
         />
       </label>
       {state?.error && <p className="text-sm text-rose-600">{state.error}</p>}

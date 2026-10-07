@@ -26,7 +26,7 @@ export default function AboutStoryVisual() {
     <div className="relative mx-auto w-full max-w-xl select-none py-6" aria-hidden="true">
       <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-brand-gradient opacity-10 blur-2xl" />
 
-      <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl shadow-violet-900/20 sm:p-8">
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-card p-6 shadow-2xl shadow-violet-900/20 sm:p-8">
         <div className="mb-6 flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient text-sm font-bold text-white">D</span>
           <div>
@@ -41,7 +41,7 @@ export default function AboutStoryVisual() {
             <li key={title} className="relative flex items-start gap-4">
               <span
                 className={cn(
-                  "relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full ring-4 ring-white",
+                  "relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full ring-4 ring-card",
                   i === MILESTONES.length - 1 ? "bg-brand-gradient text-white" : "bg-brand-soft text-brand"
                 )}
               >
@@ -61,7 +61,7 @@ export default function AboutStoryVisual() {
         <span
           key={label}
           className={cn(
-            "absolute hidden rounded-full border border-brand/20 bg-white px-3 py-1.5 text-xs font-semibold text-brand shadow-lg sm:inline-flex",
+            "absolute hidden rounded-full border border-brand/20 bg-card px-3 py-1.5 text-xs font-semibold text-brand shadow-lg sm:inline-flex",
             className
           )}
         >

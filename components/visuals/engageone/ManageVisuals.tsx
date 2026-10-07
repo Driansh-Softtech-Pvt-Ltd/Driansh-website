@@ -47,7 +47,7 @@ import {
 /** Small on/off switch. */
 function Toggle({ on }: { on: boolean }) {
   return (
-    <span className={cn("flex h-4 w-7 shrink-0 items-center rounded-full p-0.5", on ? "bg-brand" : "bg-slate-200")}>
+    <span className={cn("flex h-4 w-7 shrink-0 items-center rounded-full p-0.5", on ? "bg-brand-solid" : "bg-slate-200")}>
       <span className={cn("h-3 w-3 rounded-full bg-white", on && "ml-auto")} />
     </span>
   );
@@ -56,7 +56,7 @@ function Toggle({ on }: { on: boolean }) {
 /** Coloured label chip. */
 function LabelChip({ name, color }: { name: string; color: string }) {
   return (
-    <span className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[10px] font-medium text-ink">
+    <span className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-card px-2.5 py-1 text-[10px] font-medium text-ink">
       <span className={cn("h-2 w-2 rounded-full", color)} />
       {name}
     </span>
@@ -85,7 +85,7 @@ export function AuditLogCategoriesVisual() {
               key={label}
               className={cn(
                 "flex items-center gap-1 rounded-full border px-2.5 py-1 text-[10px] font-medium",
-                i === 2 ? "border-brand bg-brand text-white" : "border-slate-200 text-slate-500"
+                i === 2 ? "border-brand bg-brand-solid text-white" : "border-slate-200 text-slate-500"
               )}
             >
               <Icon className="h-3 w-3" /> {label}
@@ -271,7 +271,7 @@ export function ContactNoteAddVisual() {
         <div className="mx-4 mt-4 rounded-xl border border-brand/40 p-2.5 text-[11px]">
           <div className="text-ink">Asked for a callback after 5 pm on weekdays.</div>
           <div className="mt-2 flex justify-end">
-            <span className="rounded-md bg-brand px-2 py-0.5 text-[10px] font-semibold text-white">Add note</span>
+            <span className="rounded-md bg-brand-solid px-2 py-0.5 text-[10px] font-semibold text-white">Add note</span>
           </div>
         </div>
         <ul className="space-y-1.5 p-4">
@@ -292,7 +292,7 @@ export function ContactNoteFormatVisual() {
       <div className="m-4 overflow-hidden rounded-xl border border-slate-200 text-xs">
         <div className="flex items-center gap-1 border-b border-slate-100 bg-surface px-2 py-1.5 text-slate-500">
           {[Bold, Italic, List, Link].map((Icon, i) => (
-            <span key={i} className={cn("rounded-md p-1", i === 0 && "bg-white text-brand shadow-sm")}>
+            <span key={i} className={cn("rounded-md p-1", i === 0 && "bg-card text-brand shadow-sm")}>
               <Icon className="h-3.5 w-3.5" />
             </span>
           ))}
@@ -367,7 +367,7 @@ export function SegmentSidebarVisual() {
         <div className="space-y-1 border-r border-slate-100 bg-surface p-3 text-[11px]">
           <div className="px-2 pb-1 text-[9px] font-semibold uppercase tracking-wide text-slate-400">Segments</div>
           {["All contacts", "Premium · India", "New this month", "Inactive 90 days"].map((segment, i) => (
-            <div key={segment} className={cn("truncate rounded-lg px-2 py-1.5", i === 1 ? "bg-white font-medium text-brand shadow-sm" : "text-slate-600")}>
+            <div key={segment} className={cn("truncate rounded-lg px-2 py-1.5", i === 1 ? "bg-card font-medium text-brand shadow-sm" : "text-slate-600")}>
               {segment}
             </div>
           ))}
@@ -410,7 +410,7 @@ export function LabelCreateVisual() {
           </span>
         </div>
         <div className="flex justify-end p-4 pt-2">
-          <span className="rounded-lg bg-brand px-3 py-1.5 text-[11px] font-semibold text-white">Create label</span>
+          <span className="rounded-lg bg-brand-solid px-3 py-1.5 text-[11px] font-semibold text-white">Create label</span>
         </div>
       </AppWindow>
       <FloatingTag icon={Pencil}>Edit any time</FloatingTag>
@@ -434,7 +434,7 @@ export function LabelSidebarVisual() {
             <LabelChip name="billing" color="bg-sky-500" />
             <LabelChip name="priority" color="bg-rose-500" />
           </div>
-          <div className="mt-2 overflow-hidden rounded-lg border border-slate-200 bg-white text-[10px]">
+          <div className="mt-2 overflow-hidden rounded-lg border border-slate-200 bg-card text-[10px]">
             {[
               ["delivery", "bg-amber-500"],
               ["feedback", "bg-emerald-500"],
@@ -487,8 +487,8 @@ export function PrivateNoteMentionVisual() {
       </ChatThread>
       <div className="mx-4 mb-2 overflow-hidden rounded-xl border border-slate-200 text-xs shadow-lg">
         {["Vikram", "Meera"].map((name, i) => (
-          <div key={name} className={cn("flex items-center gap-2 px-3 py-1.5", i === 0 ? "bg-brand-soft" : "bg-white")}>
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[9px] font-semibold text-brand">{name[0]}</span>
+          <div key={name} className={cn("flex items-center gap-2 px-3 py-1.5", i === 0 ? "bg-brand-soft" : "bg-card")}>
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-card text-[9px] font-semibold text-brand">{name[0]}</span>
             {name}
             <span className="ml-auto text-[10px] text-slate-400">{i === 0 ? "Tech team" : "Support"}</span>
           </div>
@@ -524,7 +524,7 @@ export function TeamCreateVisual() {
           <div className="flex flex-wrap gap-1.5">
             {["Priya", "Rahul", "Anita"].map((name) => (
               <span key={name} className="flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand-soft px-2 py-1 text-[10px] font-medium text-ink">
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[9px] font-semibold text-brand">{name[0]}</span>
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-card text-[9px] font-semibold text-brand">{name[0]}</span>
                 {name}
               </span>
             ))}

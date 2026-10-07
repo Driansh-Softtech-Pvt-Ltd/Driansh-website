@@ -93,7 +93,7 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
   const on = (branch: Branch) => branch === active;
   const card = (branch: Branch) =>
     cn(
-      "flex h-full items-center gap-2 rounded-xl border bg-white px-3 text-[13px] text-ink shadow-sm transition-all duration-500",
+      "flex h-full items-center gap-2 rounded-xl border bg-card px-3 text-[13px] text-ink shadow-sm transition-all duration-500",
       on(branch) ? "border-violet-300 shadow-violet-200/60" : "border-slate-200 opacity-60"
     );
 
@@ -122,7 +122,7 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
 
       {/* AI node */}
       <Node x={262} y={36} width={76} height={76}>
-        <div className="flex h-full w-full items-center justify-center rounded-2xl border-4 border-white bg-brand-gradient text-white shadow-xl shadow-violet-500/30">
+        <div className="flex h-full w-full items-center justify-center rounded-2xl border-4 border-card bg-brand-gradient text-white shadow-xl shadow-violet-500/30">
           <Bot className="h-9 w-9" />
         </div>
       </Node>
@@ -134,7 +134,7 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
             <span
               className={cn(
                 "rounded-lg px-3 py-1 text-[13px] font-medium transition-colors duration-500",
-                on(branch) ? "bg-violet-700 text-white shadow-md" : "border border-slate-200 bg-slate-50 text-slate-600"
+                on(branch) ? "bg-violet-700 text-white shadow-md dark:bg-violet-600" : "border border-slate-200 bg-slate-50 text-slate-600"
               )}
             >
               {label}
@@ -166,7 +166,7 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
         <div
           className={cn(
             "flex h-full w-full items-center justify-center rounded-lg text-white transition-colors duration-500",
-            on("remembers") ? "bg-violet-700" : "bg-slate-300"
+            on("remembers") ? "bg-violet-700 dark:bg-violet-600" : "bg-slate-300"
           )}
         >
           <UserRound className="h-3.5 w-3.5" />
@@ -183,7 +183,7 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
               animate={on("responds") && !reduceMotion ? { x: [8, 0], opacity: [0, 1] } : { x: 0, opacity: 1 }}
               transition={{ delay: on("responds") ? 0.5 + i * 0.35 : 0, duration: 0.35 }}
               className={cn(
-                "flex h-full items-center gap-2 rounded-xl border bg-white px-2.5 text-[13px] text-ink shadow-sm transition-all duration-500",
+                "flex h-full items-center gap-2 rounded-xl border bg-card px-2.5 text-[13px] text-ink shadow-sm transition-all duration-500",
                 lit ? "border-violet-300" : "border-slate-200 opacity-60"
               )}
             >
@@ -308,11 +308,11 @@ export default function AiAssistantDiagram() {
         id="ai-diagram-panel"
         role="tabpanel"
         aria-labelledby={`ai-diagram-step-${index}`}
-        className="relative order-first rounded-3xl bg-white p-3 shadow-2xl shadow-violet-950/40 sm:p-6 lg:order-none"
+        className="dark-tokens relative order-first rounded-3xl bg-card p-3 shadow-2xl shadow-violet-950/40 sm:p-6 lg:order-none"
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(#ddd6fe_1px,transparent_1px)] bg-size-[16px_16px] opacity-60"
+          className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(#ddd6fe_1px,transparent_1px)] bg-size-[16px_16px] opacity-60 dark:opacity-15"
         />
         <div className="relative">
           <Diagram active={active} reduceMotion={reduceMotion} />
@@ -324,7 +324,7 @@ export default function AiAssistantDiagram() {
               animate={{ opacity: 1, y: 0, rotate: 2 }}
               exit={{ opacity: 0 }}
               transition={{ delay: reduceMotion ? 0 : 1.4 }}
-              className="absolute -top-4 right-3 flex items-center gap-2 rounded-xl border-2 border-ink bg-white px-3 py-2 shadow-[4px_4px_0_0_var(--color-ink)] sm:right-6"
+              className="absolute -top-4 right-3 flex items-center gap-2 rounded-xl border-2 border-ink bg-card px-3 py-2 shadow-[4px_4px_0_0_var(--color-ink)] sm:right-6"
             >
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-gradient text-white">
                 <Sparkles className="h-4 w-4" />

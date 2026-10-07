@@ -37,7 +37,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="rounded-3xl bg-white p-6 text-slate-800 shadow-2xl sm:p-10">
+        <div className="dark-tokens rounded-3xl bg-card p-6 text-slate-800 shadow-2xl sm:p-10 dark:border dark:border-white/10">
           <h3 className="heading-3 text-ink">How can we help?</h3>
           <p className="mb-8 mt-1 text-slate-600">Share a few details and we’ll get back to you.</p>
           <ContactForm />

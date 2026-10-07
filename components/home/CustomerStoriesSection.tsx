@@ -17,7 +17,7 @@ export default function CustomerStoriesSection({ items = TESTIMONIALS }: { items
       <ul className="grid gap-6 md:grid-cols-3">
         {items.map(({ quote, name, company, logo }) => (
           <li key={`${name}-${company}`}>
-            <figure className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <figure className="flex h-full flex-col rounded-2xl border border-slate-200 bg-card p-6 shadow-sm">
               <Quote className="h-6 w-6 text-brand" aria-hidden="true" />
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-slate-700">{quote}</blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-5">

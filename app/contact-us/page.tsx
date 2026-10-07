@@ -46,7 +46,7 @@ export default function ContactPage() {
                     <a
                       href={href}
                       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand/40 hover:bg-brand-soft/40"
+                      className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-card p-4 transition-colors hover:border-brand/40 hover:bg-brand-soft/40"
                     >
                       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
                         <Icon className="h-5 w-5" />
@@ -82,7 +82,7 @@ export default function ContactPage() {
           </div>
 
           <div className="order-first lg:order-none lg:col-span-3">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-10">
+            <div className="rounded-3xl border border-slate-200 bg-card p-6 shadow-xl shadow-slate-900/5 sm:p-10">
               <h2 className="heading-3 text-ink">Send us a message</h2>
               <p className="mt-1 mb-8 text-slate-600">Tell us a little about what you need and we&apos;ll get back to you.</p>
               <ContactForm />

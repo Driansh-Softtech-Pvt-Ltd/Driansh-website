@@ -125,7 +125,7 @@ function NavItem({
       {Icon && <Icon className="h-3.5 w-3.5 shrink-0" />}
       <span className="truncate">{label}</span>
       {count && (
-        <span className={cn("ms-auto rounded px-1.5 text-[10px] font-semibold", active ? "bg-white text-brand" : "bg-slate-200/70 text-slate-600")}>
+        <span className={cn("ms-auto rounded px-1.5 text-[10px] font-semibold", active ? "bg-card text-brand" : "bg-slate-200/70 text-slate-600")}>
           {count}
         </span>
       )}
@@ -140,7 +140,7 @@ function NavItem({
 
 function SearchBox({ placeholder, className, shortcut }: { placeholder: string; className?: string; shortcut?: boolean }) {
   return (
-    <div className={cn("flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-[12px] text-slate-400", className)}>
+    <div className={cn("flex items-center gap-2 rounded-lg border border-slate-200 bg-card px-2.5 py-1.5 text-[12px] text-slate-400", className)}>
       <Search className="h-3.5 w-3.5" />
       <span className="truncate">{placeholder}</span>
       {shortcut && <span className="ms-auto rounded border border-slate-200 px-1 text-[10px] text-slate-400">⌘K</span>}
@@ -256,7 +256,7 @@ function ConversationRow({ row }: { row: (typeof CONVERSATIONS)[number] }) {
     <div
       className={cn(
         "relative border-b border-slate-100 px-3 py-2.5",
-        row.active && "bg-brand-soft/70 before:absolute before:inset-y-0 before:start-0 before:w-0.5 before:bg-brand"
+        row.active && "bg-brand-soft/70 before:absolute before:inset-y-0 before:start-0 before:w-0.5 before:bg-brand-solid"
       )}
     >
       <div className="flex items-center gap-1 text-[10px] text-slate-400">
@@ -272,7 +272,7 @@ function ConversationRow({ row }: { row: (typeof CONVERSATIONS)[number] }) {
           <div className="flex items-center gap-1.5">
             <span className={cn("truncate text-[12px] text-ink", row.unread ? "font-bold" : "font-semibold")}>{row.name}</span>
             {row.unread && (
-              <span className="ms-auto flex h-4 min-w-4 items-center justify-center rounded-full bg-brand px-1 text-[9px] font-bold text-white">
+              <span className="ms-auto flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-solid px-1 text-[9px] font-bold text-white">
                 {row.unread}
               </span>
             )}
@@ -402,7 +402,7 @@ export function ConversationsScreen() {
           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-200 text-[9px] font-bold text-slate-600 ring-2 ring-white">
             NS
           </span>
-          <span className="flex shrink-0 items-center overflow-hidden rounded-md bg-brand text-[11px] font-semibold text-white">
+          <span className="flex shrink-0 items-center overflow-hidden rounded-md bg-brand-solid text-[11px] font-semibold text-white">
             <span className="flex items-center gap-1 px-2.5 py-1">
               <Check className="h-3 w-3" /> Resolve
             </span>
@@ -418,13 +418,13 @@ export function ConversationsScreen() {
         <div className="flex flex-1 flex-col gap-2.5 overflow-hidden bg-slate-50/60 px-5 py-3.5 text-[12px]">
           <div className="flex max-w-[82%] items-end gap-2 self-start">
             <Avatar initials="AR" tint="violet" className="h-6 w-6 text-[9px]" />
-            <div className="rounded-2xl rounded-bl-sm bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
+            <div className="rounded-2xl rounded-bl-sm bg-card px-3 py-2 shadow-sm ring-1 ring-slate-200">
               Hi, my order #DF-2841 was due at 12:30 and still hasn&apos;t arrived. Can you check where it is?
               <div className="mt-1 text-[9px] text-slate-400">12:41</div>
             </div>
           </div>
           <span className="self-center text-[10px] text-slate-400">Assigned to Nisha S. by auto-assignment</span>
-          <div className="max-w-[82%] self-end rounded-2xl rounded-br-sm bg-brand px-3 py-2 text-white">
+          <div className="max-w-[82%] self-end rounded-2xl rounded-br-sm bg-brand-solid px-3 py-2 text-white">
             Sorry about the wait, Ananya. I&apos;m checking with the delivery partner right now.
             <div className="mt-1 text-end text-[9px] text-white/70">12:43 · Nisha S.</div>
           </div>
@@ -434,7 +434,7 @@ export function ConversationsScreen() {
             </div>
             <span className="font-semibold">@Vikram</span> rider is held up near Satellite Road. OK to add a 20% voucher?
           </div>
-          <div className="max-w-[80%] self-end rounded-xl border border-violet-200 bg-white px-3 py-2 shadow-sm">
+          <div className="max-w-[80%] self-end rounded-xl border border-violet-200 bg-card px-3 py-2 shadow-sm">
             <div className="flex items-center gap-1 text-[10px] font-semibold text-violet-700">
               <Sparkles className="h-3 w-3" /> EngageOne AI Assistant · suggested reply
             </div>
@@ -531,14 +531,14 @@ export function AssistantScreen() {
           </span>
         </div>
         <div className="flex flex-1 flex-col gap-3 overflow-hidden bg-slate-50/60 px-6 py-4 text-[12px]">
-          <div className="max-w-[70%] self-end rounded-2xl rounded-br-sm bg-brand px-3 py-2 text-white">
+          <div className="max-w-[70%] self-end rounded-2xl rounded-br-sm bg-brand-solid px-3 py-2 text-white">
             Can I change my delivery address after placing an order?
           </div>
           <div className="flex max-w-[80%] items-start gap-2 self-start">
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-white">
               <Sparkles className="h-3 w-3" />
             </span>
-            <div className="rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
+            <div className="rounded-2xl rounded-tl-sm bg-card px-3 py-2 shadow-sm ring-1 ring-slate-200">
               Yes. Within 5 minutes of ordering, open <span className="font-semibold">Orders › Edit address</span> and save the
               new location. After that, reply here and an agent will try to reroute the rider.
               <div className="mt-2 flex flex-wrap gap-1.5">
@@ -551,14 +551,14 @@ export function AssistantScreen() {
               </div>
             </div>
           </div>
-          <div className="max-w-[70%] self-end rounded-2xl rounded-br-sm bg-brand px-3 py-2 text-white">
+          <div className="max-w-[70%] self-end rounded-2xl rounded-br-sm bg-brand-solid px-3 py-2 text-white">
             It&apos;s been 20 minutes and I want a refund of ₹2,400 instead.
           </div>
           <div className="flex max-w-[80%] items-start gap-2 self-start">
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-white">
               <Sparkles className="h-3 w-3" />
             </span>
-            <div className="rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
+            <div className="rounded-2xl rounded-tl-sm bg-card px-3 py-2 shadow-sm ring-1 ring-slate-200">
               I understand. Refunds above ₹2,000 are reviewed by our team, so I&apos;m passing this to an agent with your order
               details.
               <div className="mt-2 flex items-center gap-1 text-[10px] font-medium text-violet-700">
@@ -567,7 +567,7 @@ export function AssistantScreen() {
             </div>
           </div>
         </div>
-        <div className="border-t border-slate-200 bg-white px-5 py-3">
+        <div className="border-t border-slate-200 bg-card px-5 py-3">
           <div className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-[12px] text-slate-400">
             Ask the assistant a customer question…
             <span className="ms-auto flex items-center gap-1 rounded-md bg-brand-gradient px-2 py-1 text-[10px] font-semibold text-white">
@@ -706,7 +706,7 @@ export function ContactsScreen() {
           </span>
         </div>
         <div className={cn(CONTACT_COLUMNS, "border-b border-slate-200 bg-slate-50 px-5 py-2 text-[10px] font-semibold tracking-wide text-slate-500 uppercase")}>
-          <span className="h-3.5 w-3.5 rounded border border-slate-300 bg-white" />
+          <span className="h-3.5 w-3.5 rounded border border-slate-300 bg-card" />
           <span>Name</span>
           <span>Email</span>
           <span>Phone</span>
@@ -727,7 +727,7 @@ export function ContactsScreen() {
             <span
               className={cn(
                 "flex h-3.5 w-3.5 items-center justify-center rounded border",
-                contact.selected ? "border-brand bg-brand text-white" : "border-slate-300 bg-white"
+                contact.selected ? "border-brand bg-brand-solid text-white" : "border-slate-300 bg-card"
               )}
             >
               {contact.selected && <Check className="h-2.5 w-2.5" />}
@@ -824,7 +824,7 @@ export function HelpCenterScreen() {
               key={name as string}
               className={cn(
                 "flex items-center gap-2 rounded-lg px-2 py-1.5",
-                active ? "bg-white shadow-sm ring-1 ring-slate-200" : ""
+                active ? "bg-card shadow-sm ring-1 ring-slate-200" : ""
               )}
             >
               <span
@@ -855,7 +855,7 @@ export function HelpCenterScreen() {
           <span className="text-[14px] font-bold text-ink">Articles</span>
           <span className="ms-auto flex overflow-hidden rounded-md border border-slate-200 text-[10px] font-semibold">
             {["en", "hi", "gu"].map((locale, i) => (
-              <span key={locale} className={cn("px-2 py-0.5", i === 0 ? "bg-brand text-white" : "text-slate-500")}>
+              <span key={locale} className={cn("px-2 py-0.5", i === 0 ? "bg-brand-solid text-white" : "text-slate-500")}>
                 {locale}
               </span>
             ))}
@@ -904,7 +904,7 @@ export function HelpCenterScreen() {
           <span className="ms-auto flex items-center gap-1 rounded-md border border-slate-200 px-2 py-1 text-[11px] text-slate-600">
             <Eye className="h-3 w-3" /> Preview
           </span>
-          <span className="rounded-md bg-brand px-2.5 py-1 text-[11px] font-semibold text-white">Update</span>
+          <span className="rounded-md bg-brand-solid px-2.5 py-1 text-[11px] font-semibold text-white">Update</span>
         </div>
         <div className="flex items-center gap-1.5 border-b border-slate-200 px-5 py-2 text-[10px]">
           <span className="rounded-full bg-brand-soft px-2 py-0.5 font-semibold text-brand">English · Published</span>

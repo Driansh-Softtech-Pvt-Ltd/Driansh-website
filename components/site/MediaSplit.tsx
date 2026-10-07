@@ -40,7 +40,7 @@ export default function MediaSplit({
             sizes="(min-width: 1024px) 40vw, 90vw"
             className={cn(
               "h-auto w-full object-contain",
-              framed && "rounded-2xl border border-slate-200 bg-white shadow-xl"
+              framed && "rounded-2xl border border-slate-200 bg-card shadow-xl"
             )}
           />
         ))}

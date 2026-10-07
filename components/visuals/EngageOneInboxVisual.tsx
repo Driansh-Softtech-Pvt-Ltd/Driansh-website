@@ -13,7 +13,7 @@ const CHANNELS = [
 export default function EngageOneInboxVisual() {
   return (
     <div className="relative mx-auto w-full max-w-xl select-none" aria-hidden="true">
-      <div className="overflow-hidden rounded-2xl border border-white/10 bg-white text-left text-slate-700 shadow-2xl shadow-violet-900/40">
+      <div className="dark-tokens overflow-hidden rounded-2xl border border-white/10 bg-card text-left text-slate-700 shadow-2xl shadow-violet-900/40">
         <div className="flex items-center gap-2 border-b border-slate-100 px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
           <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
@@ -26,7 +26,7 @@ export default function EngageOneInboxVisual() {
             {CHANNELS.map(({ label, icon: Icon, tint, count }, i) => (
               <li
                 key={label}
-                className={`flex items-center gap-2 rounded-lg px-2 py-1.5 text-xs ${i === 0 ? "bg-white shadow-sm" : ""}`}
+                className={`flex items-center gap-2 rounded-lg px-2 py-1.5 text-xs ${i === 0 ? "bg-card shadow-sm" : ""}`}
               >
                 <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md ${tint}`}>
                   <Icon className="h-3.5 w-3.5" />
@@ -44,7 +44,7 @@ export default function EngageOneInboxVisual() {
             <div className="flex items-center gap-1.5 self-center rounded-full bg-violet-50 px-2.5 py-1 text-[10px] font-medium text-violet-700">
               <Bot className="h-3 w-3" /> Auto-assigned to Sales team
             </div>
-            <div className="max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-brand px-3 py-2 text-xs text-white">
+            <div className="max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-brand-solid px-3 py-2 text-xs text-white">
               Of course! Here are a few slots for tomorrow 📅
             </div>
             <div className="max-w-[70%] rounded-2xl rounded-tl-sm bg-slate-100 px-3 py-2 text-xs">
@@ -57,7 +57,7 @@ export default function EngageOneInboxVisual() {
         </div>
       </div>
 
-      <div className="absolute -bottom-5 -left-4 hidden items-center gap-2 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-ink shadow-xl sm:flex">
+      <div className="dark-tokens absolute -bottom-5 -left-4 hidden items-center gap-2 rounded-xl bg-card px-3 py-2 text-xs font-semibold text-ink shadow-xl sm:flex">
         <UserCheck className="h-4 w-4 text-emerald-500" /> Resolved in one inbox
       </div>
     </div>

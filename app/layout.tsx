@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import HideOnAdmin from "@/components/HideOnAdmin";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import { THEME_SCRIPT } from "@/components/theme/theme-script";
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, PAGES, SITE_NAME, SITE_URL } from "@/lib/seo";
  
 const geistSans = Geist({
@@ -76,7 +77,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Applies the saved light/dark preference before first paint, so there is no flash of the wrong theme. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

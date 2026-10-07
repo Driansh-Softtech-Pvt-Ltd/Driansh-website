@@ -91,7 +91,7 @@ function Ticks({ label = "Read" }: { label?: string }) {
 /** Monospace block for request / payload samples. */
 function CodeBlock({ lines, className }: { lines: string[]; className?: string }) {
   return (
-    <pre className={cn("overflow-hidden rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-violet-100", className)}>
+    <pre className={cn("light-tokens overflow-hidden rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-violet-100", className)}>
       {lines.join("\n")}
     </pre>
   );
@@ -176,7 +176,7 @@ export function ChannelBadges() {
   return (
     <ul className="mx-auto flex max-w-4xl flex-wrap justify-center gap-3" aria-hidden="true">
       {CHANNEL_BADGES.map(({ label, icon: Icon, tint }) => (
-        <li key={label} className="flex items-center gap-2 rounded-full border border-slate-200 bg-white py-1.5 pl-1.5 pr-4 text-sm font-medium text-ink shadow-sm">
+        <li key={label} className="flex items-center gap-2 rounded-full border border-slate-200 bg-card py-1.5 pl-1.5 pr-4 text-sm font-medium text-ink shadow-sm">
           <span className={cn("flex h-8 w-8 items-center justify-center rounded-full", tint)}>
             <Icon className="h-4 w-4" />
           </span>
@@ -289,7 +289,7 @@ export function WhatsAppMediaVisual() {
         <div className="flex h-20 w-40 items-center justify-center bg-linear-to-br from-violet-200 to-sky-200">
           <Play className="h-6 w-6 text-white" />
         </div>
-        <div className="bg-brand px-3 py-1.5 text-[10px] text-white">How to set up your device</div>
+        <div className="bg-brand-solid px-3 py-1.5 text-[10px] text-white">How to set up your device</div>
       </div>
       <Bubble from="agent">
         <span className="flex items-center gap-2">
@@ -457,7 +457,7 @@ export function EmailThreadVisual() {
           <div className="rounded-xl border border-brand/20 bg-brand-soft/50 p-3">
             <div className="mb-1 font-semibold text-brand">Rahul · Support</div>
             <p className="text-slate-700">Hi Meera, I’ve attached it below. Let us know if anything looks off.</p>
-            <span className="mt-2 inline-flex items-center gap-1.5 rounded-md border border-slate-200 bg-white px-2 py-1 text-[10px]">
+            <span className="mt-2 inline-flex items-center gap-1.5 rounded-md border border-slate-200 bg-card px-2 py-1 text-[10px]">
               <Paperclip className="h-3 w-3" /> invoice-march.pdf
             </span>
           </div>
@@ -738,7 +738,7 @@ function SlackMock({ children }: { children: React.ReactNode }) {
   return (
     <AppWindow title="Slack · #customer-support">
       <div className="grid grid-cols-[7rem_1fr]">
-        <ul className="space-y-1 bg-navy p-3 text-[11px] text-violet-200">
+        <ul className="light-tokens space-y-1 bg-navy p-3 text-[11px] text-violet-200">
           {["customer-support", "sales-leads", "general"].map((channel, i) => (
             <li key={channel} className={cn("flex items-center gap-1 truncate rounded px-1.5 py-1", i === 0 && "bg-white/15 text-white")}>
               <Hash className="h-3 w-3 shrink-0" /> {channel}
@@ -754,7 +754,7 @@ function SlackMock({ children }: { children: React.ReactNode }) {
 function SlackMessage({ name, children, app }: { name: string; children: React.ReactNode; app?: boolean }) {
   return (
     <div className="flex gap-2">
-      <span className={cn("flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[10px] font-bold", app ? "bg-brand text-white" : "bg-slate-200 text-slate-600")}>
+      <span className={cn("flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[10px] font-bold", app ? "bg-brand-solid text-white" : "bg-slate-200 text-slate-600")}>
         {app ? "E1" : name[0]}
       </span>
       <div className="min-w-0">

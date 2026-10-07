@@ -109,7 +109,7 @@ export default function HeroAppPreview() {
         if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
       }}
     >
-      <div className="overflow-hidden rounded-t-3xl border border-b-0 border-slate-200 bg-white/90 p-2 shadow-[0_-10px_60px_-20px_rgba(30,78,196,0.45)] backdrop-blur sm:p-3">
+      <div className="overflow-hidden rounded-t-3xl border border-b-0 border-slate-200 bg-card/90 p-2 shadow-[0_-10px_60px_-20px_rgba(30,78,196,0.45)] backdrop-blur sm:p-3">
         <div className="overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
           <div
             role="tablist"
@@ -135,7 +135,7 @@ export default function HeroAppPreview() {
                   onKeyDown={(e) => onKeyDown(e, i)}
                   className={cn(
                     "group relative flex shrink-0 items-center gap-3 border-r border-slate-200 px-5 py-4 text-left text-base font-semibold whitespace-nowrap transition-colors last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset sm:text-lg lg:px-6 lg:py-5",
-                    selected ? "bg-white text-ink" : "bg-surface text-slate-500 hover:bg-white hover:text-ink"
+                    selected ? "bg-card text-ink" : "bg-surface text-slate-500 hover:bg-card hover:text-ink"
                   )}
                 >
                   <span
@@ -143,7 +143,7 @@ export default function HeroAppPreview() {
                       "flex h-9 w-9 items-center justify-center rounded-xl transition-colors lg:h-11 lg:w-11",
                       selected
                         ? "bg-brand-gradient text-white shadow-md shadow-brand/30"
-                        : "border border-slate-200 bg-white text-slate-400 group-hover:text-brand"
+                        : "border border-slate-200 bg-card text-slate-400 group-hover:text-brand"
                     )}
                   >
                     <Icon className="h-4 w-4 lg:h-5 lg:w-5" aria-hidden="true" />
@@ -153,7 +153,7 @@ export default function HeroAppPreview() {
                     <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-0.5 overflow-hidden bg-brand/20">
                       <span
                         ref={progressRef}
-                        className="block h-full origin-left bg-brand"
+                        className="block h-full origin-left bg-brand-solid"
                         style={{ transform: `scaleX(${autoplay ? 0 : 1})` }}
                       />
                     </span>
@@ -164,7 +164,7 @@ export default function HeroAppPreview() {
           </div>
         </div>
 
-        <div className="relative mt-2 overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white sm:mt-3">
+        <div className="relative mt-2 overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-card sm:mt-3">
         {TABS.map((tab, i) => {
           const Screen = tab.screen;
           return (
@@ -197,7 +197,7 @@ export default function HeroAppPreview() {
 
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white via-white/70 to-transparent"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-page via-page/70 to-transparent"
           />
         </div>
       </div>

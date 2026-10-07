@@ -63,7 +63,7 @@ export default async function DocsCategoryPage({ params }: Props) {
                   <li key={article.slug}>
                     <Link
                       href={article.href}
-                      className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-brand/30 hover:shadow-md sm:p-6"
+                      className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-card p-5 shadow-sm transition-all hover:border-brand/30 hover:shadow-md sm:p-6"
                     >
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-sm font-semibold text-brand">
                         {i + 1}

@@ -155,7 +155,7 @@ function StageView({ stage, elapsed, animate }: { stage: StageId; elapsed: numbe
                   transition={{ duration: 0.3 }}
                   className={cn(
                     "max-w-[88%] rounded-xl px-3 py-2 text-xs",
-                    line.who === "Agent" ? "self-end bg-brand text-white" : "self-start bg-white/10 text-slate-200"
+                    line.who === "Agent" ? "self-end bg-brand-solid text-white" : "self-start bg-white/10 text-slate-200"
                   )}
                 >
                   <span className="block text-[10px] font-semibold opacity-70">{line.who}</span>
@@ -263,7 +263,7 @@ export default function VoiceCallWidget() {
               onKeyDown={(event) => onTabKey(event, i)}
               className={cn(
                 "relative flex min-h-10 items-center justify-center gap-1 overflow-hidden rounded-full px-1 py-2 text-[11px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-brand sm:text-xs",
-                isActive ? "bg-white text-ink shadow-sm" : "text-slate-500 hover:text-ink"
+                isActive ? "bg-card text-ink shadow-sm" : "text-slate-500 hover:text-ink"
               )}
             >
               <Icon className="hidden h-3.5 w-3.5 sm:block" aria-hidden="true" />
@@ -285,7 +285,7 @@ export default function VoiceCallWidget() {
         id="voice-panel"
         role="tabpanel"
         aria-labelledby={`voice-tab-${stage.id}`}
-        className="mt-4 overflow-hidden rounded-3xl bg-navy shadow-2xl shadow-violet-900/25"
+        className="light-tokens mt-4 overflow-hidden rounded-3xl bg-navy shadow-2xl shadow-violet-900/25"
       >
         <div aria-hidden="true" className="select-none">
           <div className="flex items-center gap-2 border-b border-white/10 px-5 py-3 text-xs text-slate-400">
@@ -310,7 +310,7 @@ export default function VoiceCallWidget() {
         </div>
       </div>
 
-      <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm" aria-hidden="true">
+      <div className="mt-3 rounded-2xl border border-slate-200 bg-card p-4 shadow-sm" aria-hidden="true">
         <div className="flex items-center gap-3">
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand">
             <Play className="h-3.5 w-3.5" />
@@ -324,7 +324,7 @@ export default function VoiceCallWidget() {
               {WAVE.map((height, i) => (
                 <span
                   key={i}
-                  className={cn("w-1 rounded-full", i / WAVE.length < recordingProgress ? "bg-brand" : "bg-slate-200")}
+                  className={cn("w-1 rounded-full", i / WAVE.length < recordingProgress ? "bg-brand-solid" : "bg-slate-200")}
                   style={{ height: `${height}%` }}
                 />
               ))}

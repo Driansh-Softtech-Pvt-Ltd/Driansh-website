@@ -37,7 +37,7 @@ export default function DocsHomePage() {
           {categories.map((category) => (
             <div
               key={category.slug}
-              className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg sm:p-8"
+              className="flex h-full flex-col rounded-2xl border border-slate-200 bg-card p-6 shadow-sm transition-shadow hover:shadow-lg sm:p-8"
             >
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">

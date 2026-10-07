@@ -28,7 +28,7 @@ function ProviderTabs({ tabs, active }: { tabs: { label: string; icon: typeof Ma
           key={label}
           className={cn(
             "flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-semibold",
-            i === active ? "bg-brand text-white" : "bg-surface text-slate-500"
+            i === active ? "bg-brand-solid text-white" : "bg-surface text-slate-500"
           )}
         >
           <Icon className="h-3 w-3" /> {label}
@@ -51,7 +51,7 @@ export function OmnichannelMetaVisual() {
       />
       <div className="flex h-80 flex-col gap-2 overflow-hidden p-4">
         <Bubble from="customer">Hi! Is my order #4821 on its way?</Bubble>
-        <div className="max-w-[85%] self-end overflow-hidden rounded-2xl rounded-tr-sm border border-slate-200 bg-white text-xs">
+        <div className="max-w-[85%] self-end overflow-hidden rounded-2xl rounded-tr-sm border border-slate-200 bg-card text-xs">
           <div className="flex h-12 items-center justify-center bg-brand-soft text-brand">
             <ImageIcon className="h-5 w-5" />
           </div>
@@ -118,7 +118,7 @@ export function OmnichannelEmailVisual() {
   );
 }
 
-const SWATCHES = ["bg-brand", "bg-accent", "bg-emerald-500", "bg-rose-500"];
+const SWATCHES = ["bg-brand-solid", "bg-accent", "bg-emerald-500", "bg-rose-500"];
 
 export function OmnichannelWidgetVisual() {
   return (
@@ -135,7 +135,7 @@ export function OmnichannelWidgetVisual() {
             <span key={swatch} className={cn("h-4 w-4 rounded-full", swatch, i === 0 && "ring-2 ring-brand/30 ring-offset-1")} />
           ))}
         </div>
-        <div className="absolute bottom-4 right-4 w-60 max-w-[calc(100%-2rem)] overflow-hidden rounded-2xl bg-white text-xs shadow-xl">
+        <div className="absolute bottom-4 right-4 w-60 max-w-[calc(100%-2rem)] overflow-hidden rounded-2xl bg-card text-xs shadow-xl">
           <div className="bg-brand-gradient p-3 text-white">
             <div className="font-semibold">Hi there 👋</div>
             <div className="text-[10px] text-white/80">We usually reply in a few minutes.</div>
@@ -147,7 +147,7 @@ export function OmnichannelWidgetVisual() {
                 {field}
               </div>
             ))}
-            <div className="rounded-lg bg-brand py-1.5 text-center text-[11px] font-semibold text-white">Start conversation</div>
+            <div className="rounded-lg bg-brand-solid py-1.5 text-center text-[11px] font-semibold text-white">Start conversation</div>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@ function FlowNode({ icon: Icon, title, detail, tone = "bg-brand-soft text-brand"
   tone?: string;
 }) {
   return (
-    <div className="flex items-center gap-2.5 rounded-xl border border-slate-100 bg-white px-3 py-2 text-xs">
+    <div className="flex items-center gap-2.5 rounded-xl border border-slate-100 bg-card px-3 py-2 text-xs">
       <span className={cn("flex h-7 w-7 shrink-0 items-center justify-center rounded-lg", tone)}>
         <Icon className="h-3.5 w-3.5" />
       </span>
@@ -184,10 +184,10 @@ export function OmnichannelApiVisual() {
       <div className="flex h-[22.75rem] flex-col gap-1.5 bg-surface p-4">
         <FlowNode icon={Code2} title="Your app or custom channel" detail="POST …/conversations/:id/messages" />
         <FlowArrow />
-        <FlowNode icon={Inbox} title="EngageOne inbox" detail="Agents reply like any other chat" tone="bg-brand text-white" />
+        <FlowNode icon={Inbox} title="EngageOne inbox" detail="Agents reply like any other chat" tone="bg-brand-solid text-white" />
         <FlowArrow />
         <FlowNode icon={Webhook} title="Webhook to your server" detail="event: message_created" tone="bg-violet-100 text-violet-700" />
-        <pre className="mt-auto overflow-hidden rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-slate-300">
+        <pre className="light-tokens mt-auto overflow-hidden rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-slate-300">
           {`{
   "event": "message_created",
   "message_type": "outgoing",

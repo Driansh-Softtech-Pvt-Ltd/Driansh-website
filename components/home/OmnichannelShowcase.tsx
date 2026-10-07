@@ -122,7 +122,7 @@ export default function OmnichannelShowcase() {
               key={item.title}
               className={cn(
                 "relative overflow-hidden rounded-2xl border transition-colors",
-                isActive ? "border-brand/20 bg-white shadow-lg shadow-violet-900/5" : "border-slate-200/70 bg-white/60 hover:bg-white"
+                isActive ? "border-brand/20 bg-card shadow-lg shadow-violet-900/5" : "border-slate-200/70 bg-card/60 hover:bg-card"
               )}
             >
               <button

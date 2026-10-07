@@ -31,7 +31,7 @@ export default function OurProductsPage() {
               alt={product.title}
               width={200}
               height={70}
-              className="mb-6 h-auto w-36 sm:w-44"
+              className="mb-6 h-auto w-36 sm:w-44 dark:mix-blend-screen dark:invert dark:hue-rotate-180"
             />
             <SectionHeader
               title={product.title}

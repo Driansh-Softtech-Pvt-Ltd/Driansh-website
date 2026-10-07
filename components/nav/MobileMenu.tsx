@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { NavLink, NavMenu } from "@/constants/index";
 import CtaLink from "@/components/site/CtaLink";
+import { ThemeSegmented } from "@/components/theme/ThemeSwitcher";
 
 function MobileAccordion({ menu, onNavigate }: { menu: NavMenu; onNavigate: () => void }) {
   const [open, setOpen] = useState(false);
@@ -40,7 +41,7 @@ function MobileAccordion({ menu, onNavigate }: { menu: NavMenu; onNavigate: () =
                   key={link.href}
                   href={link.href}
                   onClick={onNavigate}
-                  className="flex min-h-12 items-center rounded-xl bg-white p-3 font-semibold text-ink shadow-sm hover:text-brand"
+                  className="flex min-h-12 items-center rounded-xl bg-card p-3 font-semibold text-ink shadow-sm hover:text-brand"
                 >
                   {link.label}
                 </Link>
@@ -112,6 +113,10 @@ export default function MobileMenu({
             </Link>
           ),
         )}
+        <div className="border-b border-slate-200 py-4">
+          <p className="eyebrow mb-3 text-slate-500">Appearance</p>
+          <ThemeSegmented />
+        </div>
         <CtaLink href={cta.href} onClick={onNavigate} arrow={false} className="my-4 flex w-full">
           {cta.label}
         </CtaLink>

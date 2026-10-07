@@ -123,7 +123,7 @@ export default function DocsSearch({
           onFocus={() => setOpen(true)}
           onKeyDown={onKeyDown}
           className={cn(
-            "w-full rounded-xl border border-slate-200 bg-white text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 [&::-webkit-search-cancel-button]:hidden",
+            "w-full rounded-xl border border-slate-200 bg-card text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 [&::-webkit-search-cancel-button]:hidden",
             hero ? "h-14 pr-12 pl-12 text-base shadow-lg" : "h-10 pr-9 pl-9 text-sm"
           )}
         />
@@ -145,7 +145,7 @@ export default function DocsSearch({
       {showPanel && (
         <div
           className={cn(
-            "absolute inset-x-0 z-30 mt-2 overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-xl",
+            "absolute inset-x-0 z-30 mt-2 overflow-hidden rounded-xl border border-slate-200 bg-card text-left shadow-xl",
             !hero && "min-w-0"
           )}
         >

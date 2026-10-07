@@ -42,7 +42,7 @@ export function FeatureCard({
   );
 
   const classes = cn(
-    "block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-lg sm:p-8",
+    "block h-full rounded-2xl border border-slate-200 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-lg sm:p-8",
     className
   );
 

@@ -28,13 +28,13 @@ const CHANNELS: { label: string; href: string; icon: LucideIcon; tint: string }[
   { label: "SMS", href: `${INTEGRATIONS}/sms`, icon: Smartphone, tint: "bg-amber-100 text-amber-600" },
   { label: "Email", href: `${INTEGRATIONS}/email`, icon: Mail, tint: "bg-brand-soft text-brand" },
   { label: "Voice", href: `${INTEGRATIONS}/twilio`, icon: Phone, tint: "bg-rose-100 text-rose-600" },
-  { label: "API", href: `${INTEGRATIONS}/api-channel`, icon: Code2, tint: "bg-navy/10 text-navy" },
+  { label: "API", href: `${INTEGRATIONS}/api-channel`, icon: Code2, tint: "bg-navy/10 text-navy dark:bg-white/10 dark:text-white" },
 ];
 
 /** Channels EngageOne connects, shown where other sites show client logos. */
 export default function ChannelStrip() {
   return (
-    <section aria-labelledby="channel-strip-title" className="border-b border-slate-200 bg-white py-10 md:py-14">
+    <section aria-labelledby="channel-strip-title" className="border-b border-slate-200 bg-page py-10 md:py-14">
       <div className="container-site">
         <h2 id="channel-strip-title" className="eyebrow text-center text-slate-500">
           Connect the channels your customers already use
@@ -44,7 +44,7 @@ export default function ChannelStrip() {
             <li key={label}>
               <Link
                 href={href}
-                className="flex items-center gap-2 rounded-full border border-slate-200 bg-white py-1.5 pr-4 pl-1.5 text-sm font-medium text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                className="flex items-center gap-2 rounded-full border border-slate-200 bg-card py-1.5 pr-4 pl-1.5 text-sm font-medium text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
               >
                 <span className={`flex h-8 w-8 items-center justify-center rounded-full ${tint}`}>
                   <Icon className="h-4 w-4" aria-hidden="true" />

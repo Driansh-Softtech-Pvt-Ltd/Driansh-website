@@ -96,7 +96,7 @@ function Suggestion({ text, accepted }: { text: string; accepted: boolean }) {
         >
           {accepted ? "Draft added ✓" : "Use draft"}
         </span>
-        <span className="rounded-full border border-violet-200 bg-white px-2 py-0.5 text-[10px] font-medium text-violet-700">
+        <span className="rounded-full border border-violet-200 bg-card px-2 py-0.5 text-[10px] font-medium text-violet-700">
           Edit
         </span>
       </div>
@@ -228,13 +228,13 @@ export default function IndustryShowcase() {
                 onKeyDown={(event) => onTabKeyDown(event, i)}
                 className={cn(
                   "relative flex items-center gap-3 border-r border-slate-200 px-5 py-5 text-left transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand lg:px-6",
-                  isActive ? "bg-white" : "bg-surface hover:bg-white"
+                  isActive ? "bg-card" : "bg-surface hover:bg-card"
                 )}
               >
                 <span
                   className={cn(
                     "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-all",
-                    isActive ? "bg-brand-gradient text-white shadow-md shadow-violet-500/30" : "border border-slate-200 bg-white text-slate-400"
+                    isActive ? "bg-brand-gradient text-white shadow-md shadow-violet-500/30" : "border border-slate-200 bg-card text-slate-400"
                   )}
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
@@ -258,9 +258,9 @@ export default function IndustryShowcase() {
           })}
           <Link
             href={`${ENGAGEONE_BASE}/industries`}
-            className="group flex items-center gap-3 bg-surface px-5 py-5 font-semibold text-ink transition-colors hover:bg-white focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand lg:px-6"
+            className="group flex items-center gap-3 bg-surface px-5 py-5 font-semibold text-ink transition-colors hover:bg-card focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand lg:px-6"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-ink transition-colors group-hover:border-brand/40 group-hover:text-brand">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-card text-ink transition-colors group-hover:border-brand/40 group-hover:text-brand">
               <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
             </span>
             <span className="whitespace-nowrap">All industries</span>
@@ -319,7 +319,7 @@ export default function IndustryShowcase() {
             <div className="relative rounded-3xl bg-brand-soft p-4 sm:p-8">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(#c7d2fe_1.2px,transparent_1.2px)] bg-size-[14px_14px] opacity-70"
+                className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(#c7d2fe_1.2px,transparent_1.2px)] bg-size-[14px_14px] opacity-70 dark:bg-[radial-gradient(var(--color-slate-300)_1.2px,transparent_1.2px)]"
               />
               <div className="relative">
                 <Conversation scene={scene} at={shownAt} animate={!reduceMotion} />

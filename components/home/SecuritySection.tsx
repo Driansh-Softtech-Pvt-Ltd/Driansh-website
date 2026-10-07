@@ -21,7 +21,7 @@ export default function SecuritySection() {
         />
         <div className="mb-8 grid gap-4 sm:grid-cols-2">
           {DEPLOYMENT.map(({ title, description, icon: Icon }) => (
-            <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div key={title} className="rounded-2xl border border-slate-200 bg-card p-5 shadow-sm">
               <Icon className="h-6 w-6 text-brand" aria-hidden="true" />
               <h3 className="heading-4 mt-3 text-ink">{title}</h3>
               <p className="mt-1 text-sm text-slate-600">{description}</p>

@@ -80,7 +80,7 @@ export default function FlowDiagram({
         <span
           className={cn(
             "rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap sm:text-sm",
-            dark ? "bg-white/10 text-white backdrop-blur" : "bg-white text-ink shadow-sm"
+            dark ? "bg-white/10 text-white backdrop-blur" : "bg-card text-ink shadow-sm"
           )}
         >
           {center.label}
@@ -99,7 +99,7 @@ export default function FlowDiagram({
               "flex h-11 w-11 items-center justify-center rounded-2xl sm:h-14 sm:w-14",
               dark
                 ? "border border-white/15 bg-white/10 text-violet-200 backdrop-blur"
-                : "border border-slate-200 bg-white text-brand shadow-md"
+                : "border border-slate-200 bg-card text-brand shadow-md"
             )}
           >
             <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.8} />

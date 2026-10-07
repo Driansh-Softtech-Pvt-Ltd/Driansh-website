@@ -80,7 +80,7 @@ function PanelHeader({ title, icon: Icon, right }: { title: string; icon?: Lucid
 function AudioBar({ length }: { length: string }) {
   return (
     <div className="flex items-center gap-2 rounded-xl border border-slate-100 bg-surface px-3 py-2">
-      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand text-white">
+      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-solid text-white">
         <Play className="h-3 w-3" />
       </span>
       <span className="flex flex-1 items-end gap-0.5">
@@ -89,7 +89,7 @@ function AudioBar({ length }: { length: string }) {
             key={i}
             className={cn(
               "w-1 rounded-full",
-              i < 6 ? "bg-brand" : "bg-brand/30",
+              i < 6 ? "bg-brand-solid" : "bg-brand/30",
               h === 2 && "h-1.5",
               h === 3 && "h-2",
               h === 4 && "h-2.5",
@@ -112,7 +112,7 @@ function ToggleRows({ rows }: { rows: { label: string; on: boolean }[] }) {
       {rows.map(({ label, on }) => (
         <li key={label} className="flex items-center gap-3 rounded-xl border border-slate-100 px-3 py-2 text-xs">
           <span className="text-ink">{label}</span>
-          <span className={cn("ml-auto flex h-4 w-7 items-center rounded-full p-0.5", on ? "bg-brand" : "bg-slate-200")}>
+          <span className={cn("ml-auto flex h-4 w-7 items-center rounded-full p-0.5", on ? "bg-brand-solid" : "bg-slate-200")}>
             <span className={cn("h-3 w-3 rounded-full bg-white", on && "ml-auto")} />
           </span>
         </li>
@@ -137,7 +137,7 @@ function PlanCard({
     <div
       className={cn(
         "flex flex-col rounded-xl border p-3",
-        highlight ? "border-brand/40 bg-brand-soft/60" : "border-slate-100 bg-white"
+        highlight ? "border-brand/40 bg-brand-soft/60" : "border-slate-100 bg-card"
       )}
     >
       <span className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
@@ -152,7 +152,7 @@ function PlanCard({
           </li>
         ))}
       </ul>
-      <span className="mt-3 rounded-md bg-brand px-2 py-1 text-center text-[10px] font-semibold text-white">Talk to sales</span>
+      <span className="mt-3 rounded-md bg-brand-solid px-2 py-1 text-center text-[10px] font-semibold text-white">Talk to sales</span>
     </div>
   );
 }
@@ -222,7 +222,7 @@ export function AiFaqSuggestionsVisual() {
       <AppWindow title="AI Assistant · Suggested FAQs">
         <div className="space-y-2.5 p-4">
           {items.map((item) => (
-            <div key={item.q} className="rounded-xl border border-slate-100 bg-white p-3">
+            <div key={item.q} className="rounded-xl border border-slate-100 bg-card p-3">
               <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide text-violet-600">
                 <Lightbulb className="h-3 w-3" /> Suggestion
               </div>
@@ -259,7 +259,7 @@ export function AiReplyHelpVisual() {
         <ChatThread className="pb-2">
           <Bubble>My order came with the wrong size. What now?</Bubble>
         </ChatThread>
-        <div className="mx-4 rounded-xl border border-brand/30 bg-white p-3 shadow-sm">
+        <div className="mx-4 rounded-xl border border-brand/30 bg-card p-3 shadow-sm">
           <div className="text-[11px] text-slate-600">sorry about that, we will send the right size, pls send a photo</div>
           <div className="mt-2 grid grid-cols-2 gap-1.5">
             {actions.map(({ label, icon: Icon }) => (
@@ -301,7 +301,7 @@ export function CallingHeroVisual() {
             ]}
           />
           <div className="p-4">
-            <div className="rounded-2xl bg-navy p-4 text-center text-white">
+            <div className="light-tokens rounded-2xl bg-navy p-4 text-center text-white">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
                 <PhoneIncoming className="h-6 w-6" />
               </div>
@@ -334,7 +334,7 @@ export function CallLogVisual() {
       <AppWindow title="Conversation · Daniel">
         <ChatThread>
           <Bubble>Can you call me about the invoice?</Bubble>
-          <div className="self-end w-[85%] rounded-2xl rounded-tr-sm border border-slate-100 bg-white p-3 shadow-sm">
+          <div className="self-end w-[85%] rounded-2xl rounded-tr-sm border border-slate-100 bg-card p-3 shadow-sm">
             <div className="flex items-center gap-2 text-xs font-semibold text-ink">
               <PhoneOutgoing className="h-3.5 w-3.5 text-brand" /> Outgoing call
               <Pill className="ml-auto bg-emerald-100 text-emerald-700">Completed</Pill>
@@ -381,7 +381,7 @@ export function CallsListVisual() {
 function TemplatePreview() {
   return (
     <div className="rounded-2xl bg-emerald-50 p-4">
-      <div className="max-w-[90%] overflow-hidden rounded-xl bg-white shadow-sm">
+      <div className="max-w-[90%] overflow-hidden rounded-xl bg-card shadow-sm">
         <div className="flex h-20 items-center justify-center bg-brand-gradient text-white">
           <Megaphone className="h-7 w-7" />
         </div>
@@ -494,7 +494,7 @@ export function LiveChatCampaignVisual() {
             </div>
           </div>
           <div className="flex flex-col items-end gap-2">
-            <div className="rounded-2xl rounded-br-sm bg-white p-3 text-[11px] text-ink shadow-lg ring-1 ring-slate-100">
+            <div className="rounded-2xl rounded-br-sm bg-card p-3 text-[11px] text-ink shadow-lg ring-1 ring-slate-100">
               Comparing plans? Ask us anything, we reply in minutes.
             </div>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gradient text-white shadow-lg">

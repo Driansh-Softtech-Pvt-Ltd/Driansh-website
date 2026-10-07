@@ -14,7 +14,7 @@ function ToolCard({ eyebrow, icon: Icon, title, description, children }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col rounded-2xl border border-slate-200/70 bg-white p-6">
+    <div className="flex flex-col rounded-2xl border border-slate-200/70 bg-card p-6">
       <p className="eyebrow flex items-center gap-1.5 text-brand">
         <Icon className="h-3.5 w-3.5" /> {eyebrow}
       </p>
@@ -48,7 +48,7 @@ export default function OmnichannelToolCards() {
         title="Run a playbook in one click"
         description="Save the steps you repeat as a macro and run them on any conversation."
       >
-        <div className="rounded-lg border border-slate-200 bg-white p-3">
+        <div className="rounded-lg border border-slate-200 bg-card p-3">
           <div className="flex items-center justify-between gap-2">
             <span className="font-semibold text-ink">Order delayed</span>
             <span className="flex items-center gap-1 rounded-md bg-brand-gradient px-2 py-0.5 text-[10px] font-semibold text-white">
@@ -76,7 +76,7 @@ export default function OmnichannelToolCards() {
       >
         <div className="space-y-1.5">
           {RULE.map(({ when, detail }) => (
-            <div key={when} className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2">
+            <div key={when} className="flex items-center gap-2 rounded-lg border border-slate-200 bg-card px-3 py-2">
               <span className="w-10 shrink-0 text-[10px] font-bold uppercase tracking-wide text-brand">{when}</span>
               <span className="text-ink">{detail}</span>
             </div>
@@ -98,7 +98,7 @@ export default function OmnichannelToolCards() {
             { original: "Olá! Meu pedido ainda não chegou.", english: "Hello! My order still hasn't arrived." },
             { original: "क्या मैं डिलीवरी का पता बदल सकता हूँ?", english: "Can I change the delivery address?" },
           ].map(({ original, english }) => (
-            <div key={original} className="rounded-lg rounded-tl-sm bg-white p-3">
+            <div key={original} className="rounded-lg rounded-tl-sm bg-card p-3">
               <p className="text-ink">{original}</p>
               <p className="mt-1.5 border-t border-slate-100 pt-1.5 text-slate-500">{english}</p>
             </div>

@@ -218,7 +218,7 @@ export function RestaurantKitchenVisual() {
         />
         <ul className="space-y-1.5 px-4 pb-4">
           {KITCHEN_ORDERS.map((o) => (
-            <li key={o.id} className="flex items-center gap-2.5 rounded-xl border border-slate-100 bg-white px-3 py-2 text-xs">
+            <li key={o.id} className="flex items-center gap-2.5 rounded-xl border border-slate-100 bg-card px-3 py-2 text-xs">
               <span className="w-10 shrink-0 font-semibold text-ink">{o.id}</span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate font-medium text-ink">{o.name}</span>
@@ -226,7 +226,7 @@ export function RestaurantKitchenVisual() {
                   {o.type} · {o.status}
                 </span>
               </span>
-              <span className="shrink-0 rounded-lg bg-brand px-2 py-1 text-[10px] font-semibold text-white">{o.next}</span>
+              <span className="shrink-0 rounded-lg bg-brand-solid px-2 py-1 text-[10px] font-semibold text-white">{o.next}</span>
             </li>
           ))}
         </ul>
@@ -282,7 +282,7 @@ export function EcommerceInboxVisual() {
                 { id: "#5521", status: "Shipped", total: "₹2,499" },
                 { id: "#5378", status: "Delivered", total: "₹899" },
               ].map((o) => (
-                <li key={o.id} className="rounded-lg border border-slate-100 bg-white px-2 py-1.5">
+                <li key={o.id} className="rounded-lg border border-slate-100 bg-card px-2 py-1.5">
                   <div className="flex justify-between font-semibold text-ink">
                     <span>{o.id}</span>
                     <span>{o.total}</span>

@@ -204,7 +204,7 @@ export default function IntegrationsPage() {
                     alt={`${integration.name} logo`}
                     width={160}
                     height={64}
-                    className="h-14 w-40 object-contain object-left"
+                    className="h-14 w-40 object-contain object-left dark:rounded-xl dark:bg-white/90 dark:p-2"
                   />
                 ) : (
                   integration.icon && <integration.icon aria-hidden="true" />

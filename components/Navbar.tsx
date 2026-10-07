@@ -8,6 +8,7 @@ import { NAV_CTA, NAV_MENUS, type NavMenu } from "@/constants/index";
 import MegaMenuPanel from "@/components/nav/MegaMenuPanel";
 import MobileMenu from "@/components/nav/MobileMenu";
 import CtaLink from "@/components/site/CtaLink";
+import { ThemeMenu } from "@/components/theme/ThemeSwitcher";
 
 const HOVER_CLOSE_DELAY_MS = 150;
 const MOBILE_MENU_ID = "mobile-menu";
@@ -20,7 +21,7 @@ function Logo() {
       <img
         src="/images/logo.png"
         alt="Driansh Softtech"
-        className="absolute left-1/2 top-1/2 w-52 max-w-none -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 w-52 max-w-none -translate-x-1/2 -translate-y-1/2 dark:mix-blend-screen dark:invert dark:hue-rotate-180"
       />
     </Link>
   );
@@ -46,7 +47,7 @@ function DesktopNavItem({
     return (
       <Link
         href={menu.href ?? "/"}
-        className="flex h-full items-center px-2 text-base font-medium text-slate-800 hover:text-brand xl:px-3"
+        className="flex h-full items-center px-1.5 text-base font-medium text-slate-800 hover:text-brand xl:px-3"
       >
         {menu.label}
       </Link>
@@ -74,7 +75,7 @@ function DesktopNavItem({
         aria-expanded={isOpen}
         aria-controls={panelId}
         onClick={() => (isOpen ? onClose() : onOpen())}
-        className={`flex h-full items-center gap-1 px-2 text-base font-medium hover:text-brand xl:gap-1.5 xl:px-3 ${
+        className={`flex h-full items-center gap-1 px-1.5 text-base font-medium hover:text-brand xl:gap-1.5 xl:px-3 ${
           isOpen ? "text-brand" : "text-slate-800"
         }`}
       >
@@ -90,7 +91,7 @@ function DesktopNavItem({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="absolute inset-x-0 top-full z-40 border-t border-slate-100 bg-white shadow-xl"
+            className="absolute inset-x-0 top-full z-40 border-t border-slate-100 bg-card shadow-xl"
           >
             <MegaMenuPanel menu={menu} onNavigate={onClose} />
           </motion.div>
@@ -142,7 +143,7 @@ export default function Navbar() {
   }, [openMenu, isMenuOpen]);
 
   return (
-    <header ref={headerRef} className="fixed top-0 z-50 w-full border-b border-slate-100 bg-white shadow-md">
+    <header ref={headerRef} className="fixed top-0 z-50 w-full border-b border-slate-100 bg-card shadow-md dark:shadow-black/30">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6 lg:h-24 lg:gap-2 lg:px-4 xl:gap-4 xl:px-8">
         <Logo />
 
@@ -159,9 +160,12 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <CtaLink href={NAV_CTA.href} arrow={false} className="hidden shrink-0 lg:inline-flex lg:px-5 xl:px-7">
-          {NAV_CTA.label}
-        </CtaLink>
+        <div className="hidden shrink-0 items-center gap-1 lg:flex xl:gap-2">
+          <ThemeMenu />
+          <CtaLink href={NAV_CTA.href} arrow={false} className="lg:px-5 xl:px-7">
+            {NAV_CTA.label}
+          </CtaLink>
+        </div>
 
         <button
           type="button"

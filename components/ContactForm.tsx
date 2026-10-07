@@ -22,7 +22,7 @@ import {
 type Status = { kind: "idle" } | { kind: "success"; name: string } | { kind: "error"; message: string; data: ContactFormData };
 
 const FIELD =
-  "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink placeholder:text-slate-400 transition-colors focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15 aria-[invalid=true]:border-rose-400";
+  "w-full rounded-xl border border-slate-300 bg-card px-4 py-3 text-base text-ink placeholder:text-slate-400 transition-colors focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15 aria-[invalid=true]:border-rose-400";
 
 function Field({
   id,
@@ -247,7 +247,7 @@ export default function ContactForm({
           <div className="mt-3 flex flex-wrap gap-2">
             <a
               href={mailtoFor(status.data)}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
+              className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
             >
               <Mail className="h-4 w-4" /> Email this message
             </a>
@@ -255,13 +255,13 @@ export default function ContactForm({
               href={CONTACT_WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
+              className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp us
             </a>
             <a
               href={`tel:${CONTACT_PHONE.tel}`}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
+              className="inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1.5 font-medium text-ink shadow-sm hover:text-brand"
             >
               <Phone className="h-4 w-4" /> {CONTACT_PHONE.display}
             </a>

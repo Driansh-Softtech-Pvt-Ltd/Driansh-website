@@ -99,7 +99,7 @@ export default function AboutUsPage() {
       <Section size="sm">
         <dl className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {FACTS.map(({ value, label }) => (
-            <div key={value} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
+            <div key={value} className="flex flex-col rounded-2xl border border-slate-200 bg-card p-5 text-center shadow-sm">
               <dt className="text-sm text-slate-500">{label}</dt>
               <dd className="order-first text-2xl font-bold text-ink">{value}</dd>
             </div>
@@ -143,7 +143,7 @@ export default function AboutUsPage() {
         <SectionHeader title="How we work" description="A simple, open process, so you always know where your project stands." />
         <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {HOW_WE_WORK.map(({ step, title, description, icon: Icon }) => (
-            <li key={step} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <li key={step} className="rounded-2xl border border-slate-200 bg-card p-6 shadow-sm">
               <div className="flex items-center justify-between">
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft text-brand">
                   <Icon className="h-6 w-6" aria-hidden="true" />
@@ -162,7 +162,7 @@ export default function AboutUsPage() {
           {MISSION_VISION.map(({ title, image, text }) => (
             <FeatureCard
               key={title}
-              icon={<Image src={image} alt="" width={40} height={40} className="h-10 w-10 object-contain" />}
+              icon={<Image src={image} alt="" width={40} height={40} className="h-10 w-10 object-contain dark:brightness-0 dark:invert" />}
               iconClassName="h-16 w-16"
               title={title}
               description={text}

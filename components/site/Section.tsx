@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 export type SectionTone = "white" | "muted" | "navy";
 
 const TONES: Record<SectionTone, string> = {
-  white: "bg-white text-slate-600",
+  white: "bg-page text-slate-600",
   muted: "bg-surface text-slate-600",
-  navy: "bg-navy text-slate-300",
+  navy: "light-tokens bg-navy text-slate-300",
 };
 
 export interface SectionProps {

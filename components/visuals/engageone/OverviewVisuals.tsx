@@ -140,7 +140,7 @@ export function TeamInboxVisual() {
           <Bubble from="note">@Priya can you check the billing account?</Bubble>
           <Bubble from="agent">Sure! I have sent the invoice to your registered email.</Bubble>
         </ChatThread>
-        <div className="mx-4 mb-2 rounded-xl border border-slate-200 bg-white p-2 text-[11px] shadow-sm">
+        <div className="mx-4 mb-2 rounded-xl border border-slate-200 bg-card p-2 text-[11px] shadow-sm">
           <div className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-slate-400">Canned responses</div>
           <div className="rounded-lg bg-brand-soft px-2 py-1 text-ink">/invoice · Sure! I have sent the invoice…</div>
           <div className="px-2 py-1 text-slate-500">/refund · Your refund has been started…</div>
@@ -162,7 +162,7 @@ export function HelpCenterVisual() {
       <AppWindow title="help.yourcompany.com">
         <div className="bg-brand-gradient px-4 py-5 text-white">
           <div className="text-sm font-semibold">How can we help?</div>
-          <div className="mt-2 flex items-center gap-2 rounded-lg bg-white px-3 py-1.5 text-[11px] text-slate-400">
+          <div className="mt-2 flex items-center gap-2 rounded-lg bg-card px-3 py-1.5 text-[11px] text-slate-400">
             <Search className="h-3.5 w-3.5" /> Search articles
           </div>
         </div>

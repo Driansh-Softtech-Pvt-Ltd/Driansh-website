@@ -55,7 +55,7 @@ export default function PageHero({
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-navy text-white",
+        "light-tokens relative isolate overflow-hidden bg-navy text-white",
         size === "lg" ? "pt-32 pb-20 lg:pt-44 lg:pb-28" : "pt-28 pb-14 lg:pt-36 lg:pb-20"
       )}
     >

@@ -59,7 +59,7 @@ import {
 function WidgetFrame({ children, footer, className }: { children: React.ReactNode; footer?: React.ReactNode; className?: string }) {
   return (
     <div
-      className={cn("flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-left text-slate-700 shadow-xl", className)}
+      className={cn("dark-tokens flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-card text-left text-slate-700 shadow-xl", className)}
       aria-hidden="true"
     >
       <div className="bg-brand-gradient px-4 py-3 text-white">
@@ -91,7 +91,7 @@ function TypingDots() {
 /** Small icon + title tile, used inside mini card illustrations. */
 function MiniTile({ icon: Icon, children, className }: { icon: LucideIcon; children: React.ReactNode; className?: string }) {
   return (
-    <div className={cn("flex items-center gap-2 rounded-xl border border-slate-100 bg-white px-3 py-2 text-xs text-ink shadow-sm", className)}>
+    <div className={cn("flex items-center gap-2 rounded-xl border border-slate-100 bg-card px-3 py-2 text-xs text-ink shadow-sm", className)}>
       <Icon className="h-4 w-4 shrink-0 text-brand" />
       <span className="truncate">{children}</span>
     </div>
@@ -106,7 +106,7 @@ export function LiveChatWidgetsVisual() {
     <div className="grid grid-cols-2 gap-4 sm:gap-6">
       <WidgetFrame
         footer={
-          <div className="m-3 rounded-xl bg-brand px-3 py-2 text-center text-[11px] font-semibold text-white">Start a conversation</div>
+          <div className="m-3 rounded-xl bg-brand-solid px-3 py-2 text-center text-[11px] font-semibold text-white">Start a conversation</div>
         }
       >
         <div className="space-y-2 p-4 text-xs">
@@ -272,7 +272,7 @@ export function PreChatFormVisual() {
   return (
     <div className="mx-auto w-full max-w-xs">
       <WidgetFrame
-        footer={<div className="m-3 rounded-xl bg-brand px-3 py-2 text-center text-[11px] font-semibold text-white">Start conversation</div>}
+        footer={<div className="m-3 rounded-xl bg-brand-solid px-3 py-2 text-center text-[11px] font-semibold text-white">Start conversation</div>}
       >
         <div className="space-y-2.5 p-4 text-xs">
           <p className="text-slate-600">Tell us a little about you so we can help faster.</p>
@@ -364,7 +364,7 @@ export function HelpCenterHeroVisual() {
       <AppWindow title="help.yourcompany.com">
         <div className="bg-brand-soft/60 px-4 py-5 text-center">
           <div className="text-sm font-semibold text-ink">How can we help?</div>
-          <div className="mx-auto mt-2 flex max-w-xs items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-[11px] text-slate-400">
+          <div className="mx-auto mt-2 flex max-w-xs items-center gap-2 rounded-lg border border-slate-200 bg-card px-3 py-1.5 text-[11px] text-slate-400">
             <Search className="h-3.5 w-3.5" /> Search articles…
           </div>
         </div>
@@ -471,7 +471,7 @@ export function HelpCenterCardVisual({ kind }: { kind: HelpCardKind }) {
       </>
     ),
     api: (
-      <pre className="w-full rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-violet-100">
+      <pre className="light-tokens w-full rounded-xl bg-navy p-3 font-mono text-[10px] leading-relaxed text-violet-100">
         {"GET …/portals/{slug}/articles\n{ \"title\": \"Track your order\" }"}
       </pre>
     ),
@@ -539,13 +539,13 @@ export function RichMessagesVisual() {
             <div className="space-y-1 p-3 text-xs">
               <div className="font-semibold text-ink">Running shoes</div>
               <div className="text-[10px] text-slate-500">Light, breathable, all sizes</div>
-              <div className="rounded-md bg-brand px-2 py-1 text-center text-[10px] font-semibold text-white">View product</div>
+              <div className="rounded-md bg-brand-solid px-2 py-1 text-center text-[10px] font-semibold text-white">View product</div>
             </div>
           </div>
           <div className="space-y-2 rounded-xl border border-slate-100 p-3 text-xs">
             <div className="font-semibold text-ink">Leave your email</div>
             <div className="rounded-md border border-slate-200 px-2 py-1 text-[10px] text-slate-400">you@example.com</div>
-            <div className="rounded-md bg-brand px-2 py-1 text-center text-[10px] font-semibold text-white">Submit</div>
+            <div className="rounded-md bg-brand-solid px-2 py-1 text-center text-[10px] font-semibold text-white">Submit</div>
           </div>
         </div>
         <ChatThread className="pt-0">
@@ -647,7 +647,7 @@ export function AutomationActionsVisual() {
 export function MobileAppVisual() {
   return (
     <div className="relative mx-auto w-64 select-none" aria-hidden="true">
-      <div className="overflow-hidden rounded-[2.5rem] border-[6px] border-slate-800 bg-white text-left text-slate-700 shadow-2xl shadow-violet-900/40">
+      <div className="dark-tokens overflow-hidden rounded-[2.5rem] border-[6px] border-slate-800 bg-card text-left text-slate-700 shadow-2xl shadow-violet-900/40">
         <div className="mx-auto mt-2 h-4 w-20 rounded-full bg-slate-800" />
         <div className="flex items-center justify-between px-4 pb-2 pt-3">
           <span className="text-sm font-semibold text-ink">Conversations</span>
@@ -669,7 +669,7 @@ export function MobileAppVisual() {
         />
         <div className="h-6" />
       </div>
-      <div className="absolute -right-10 top-16 hidden w-52 items-start gap-2 rounded-xl bg-white p-3 text-xs shadow-xl sm:flex">
+      <div className="dark-tokens absolute -right-10 top-16 hidden w-52 items-start gap-2 rounded-xl bg-card p-3 text-xs shadow-xl sm:flex">
         <Bell className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
         <span>
           <span className="block font-semibold text-ink">New message from Priya</span>
