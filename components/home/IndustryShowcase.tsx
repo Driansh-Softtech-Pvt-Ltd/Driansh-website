@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Clock3, Pause, Play, Sparkles, Tag } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { ArrowUpRight, Check, Clock3, Landmark, Pause, Play, ShoppingBag, Sparkles, Store, Tag, Truck } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CtaLink } from "@/components/site";
 import { AppWindow, Bubble, Composer } from "@/components/visuals/engageone/primitives";
@@ -19,6 +20,10 @@ const TICK = 100;
 /** When each step of a scene appears, in milliseconds. */
 const STEPS = { customer: 900, drafting: 2100, suggestion: 3600, accepted: 5300, sent: 6000, system: 7300 };
 const SCENE_LENGTH = 10000;
+/** Tab icons, in the same order as INDUSTRY_SCENES. */
+const SCENE_ICONS: LucideIcon[] = [ShoppingBag, Store, Truck, Landmark];
+/** Short tab labels, in the same order as INDUSTRY_SCENES. */
+const TAB_LABELS = ["E-commerce", "Local businesses", "Logistics & delivery", "Fintech & insurance"];
 
 function SceneHeader({ scene }: { scene: IndustryScene }) {
   const initials = scene.contact.name
@@ -200,16 +205,13 @@ export default function IndustryShowcase() {
   };
 
   return (
-    <div
-      ref={rootRef}
-      className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-12"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div>
-        <div role="tablist" aria-label="Industries" aria-orientation="vertical" className="grid gap-2">
+    <div ref={rootRef} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      {/* Horizontal industry tabs */}
+      <div className="-mx-4 overflow-x-auto border-y border-slate-200 sm:mx-0 sm:rounded-2xl sm:border">
+        <div role="tablist" aria-label="Industries" className="flex min-w-max lg:grid lg:min-w-0 lg:grid-cols-5">
           {INDUSTRY_SCENES.map((item, i) => {
             const isActive = i === active;
+            const Icon = SCENE_ICONS[i];
             return (
               <button
                 key={item.name}
@@ -225,58 +227,48 @@ export default function IndustryShowcase() {
                 onClick={() => select(i)}
                 onKeyDown={(event) => onTabKeyDown(event, i)}
                 className={cn(
-                  "relative flex items-center gap-4 overflow-hidden rounded-2xl border px-5 py-4 text-left transition-colors focus-visible:outline-2 focus-visible:outline-brand",
-                  isActive ? "border-brand/30 bg-brand-soft/60" : "border-slate-200 bg-white hover:bg-surface"
+                  "relative flex items-center gap-3 border-r border-slate-200 px-5 py-5 text-left transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand lg:px-6",
+                  isActive ? "bg-white" : "bg-surface hover:bg-white"
                 )}
               >
                 <span
-                  className={cn("shrink-0 text-xl font-bold tabular-nums", isActive ? "text-gradient" : "text-slate-300")}
-                  aria-hidden="true"
+                  className={cn(
+                    "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-all",
+                    isActive ? "bg-brand-gradient text-white shadow-md shadow-violet-500/30" : "border border-slate-200 bg-white text-slate-400"
+                  )}
                 >
-                  {String(i + 1).padStart(2, "0")}
+                  <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <span className={cn("font-semibold", isActive ? "text-ink" : "text-slate-600")}>{item.name}</span>
-                {isActive && !reduceMotion && (
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand/10">
+                <span className="min-w-0">
+                  <span className="block text-xs tabular-nums text-slate-400">{String(i + 1).padStart(2, "0")}</span>
+                  <span className={cn("block whitespace-nowrap font-semibold xl:whitespace-normal", isActive ? "text-ink" : "text-slate-600")}>
+                    {TAB_LABELS[i]}
+                  </span>
+                </span>
+                {isActive && (
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brand/15">
                     <span
                       className="block h-full bg-brand-gradient transition-[width] duration-100 ease-linear"
-                      style={{ width: `${(elapsed / SCENE_LENGTH) * 100}%` }}
+                      style={{ width: reduceMotion ? "100%" : `${(elapsed / SCENE_LENGTH) * 100}%` }}
                     />
                   </span>
                 )}
               </button>
             );
           })}
-        </div>
-
-        <div className="mt-5 flex items-center justify-between gap-3 px-1">
           <Link
             href={`${ENGAGEONE_BASE}/industries`}
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-brand focus-visible:outline-2 focus-visible:outline-brand"
+            className="group flex items-center gap-3 bg-surface px-5 py-5 font-semibold text-ink transition-colors hover:bg-white focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand lg:px-6"
           >
-            All industries
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-ink transition-colors group-hover:border-brand/40 group-hover:text-brand">
+              <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <span className="whitespace-nowrap">All industries</span>
           </Link>
-          {!reduceMotion && (
-            <button
-              type="button"
-              onClick={() => setPlaying((value) => !value)}
-              aria-label={playing ? "Pause the industry demo" : "Play the industry demo"}
-              className="flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-brand"
-            >
-              {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
-              {playing ? "Pause" : "Play"}
-            </button>
-          )}
         </div>
       </div>
 
-      <div
-        id="industry-panel"
-        role="tabpanel"
-        aria-labelledby={`industry-tab-${active}`}
-        className="rounded-3xl border border-slate-200 bg-surface p-5 sm:p-8"
-      >
+      <div id="industry-panel" role="tabpanel" aria-labelledby={`industry-tab-${active}`} className="mt-10 lg:mt-14">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={active}
@@ -284,34 +276,55 @@ export default function IndustryShowcase() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="grid items-center gap-8 xl:grid-cols-2"
+            className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14"
           >
             <div>
-              <p className="eyebrow text-brand">
+              <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+                <span className="h-2 w-2 rounded-sm bg-brand-gradient" aria-hidden="true" />
                 {String(active + 1).padStart(2, "0")} / {scene.name}
               </p>
-              <h3 className="heading-3 mt-3 text-ink">{scene.heading}</h3>
-              <p className="mt-2 text-slate-600">{scene.line}</p>
-              <ul className="mt-5 grid gap-2.5">
+              <h3 className="heading-2 mt-4 text-ink">{scene.heading}</h3>
+              <p className="text-lead mt-4 text-slate-600">{scene.line}</p>
+              <ul className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
                 {scene.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                  <li key={bullet} className="flex items-center gap-4 py-4 text-ink">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                      <Check className="h-4 w-4" aria-hidden="true" />
+                    </span>
                     {bullet}
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap items-center gap-3">
                 <CtaLink href={DEMO_HREF} className="px-5 py-2.5 text-sm">
                   Request a demo
                 </CtaLink>
                 <CtaLink href={scene.href} variant="outline" className="px-5 py-2.5 text-sm">
                   Explore {scene.name}
                 </CtaLink>
+                {!reduceMotion && (
+                  <button
+                    type="button"
+                    onClick={() => setPlaying((value) => !value)}
+                    aria-label={playing ? "Pause the industry demo" : "Play the industry demo"}
+                    className="ml-auto flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-brand"
+                  >
+                    {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
+                    {playing ? "Pause" : "Play"}
+                  </button>
+                )}
               </div>
             </div>
-            <div>
-              <Conversation scene={scene} at={shownAt} animate={!reduceMotion} />
-              <p className="mt-3 text-center text-[11px] text-slate-400">Sample conversation</p>
+
+            <div className="relative rounded-3xl bg-brand-soft p-4 sm:p-8">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(#c7d2fe_1.2px,transparent_1.2px)] bg-size-[14px_14px] opacity-70"
+              />
+              <div className="relative">
+                <Conversation scene={scene} at={shownAt} animate={!reduceMotion} />
+                <p className="mt-3 text-center text-[11px] text-slate-500">Sample conversation</p>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
