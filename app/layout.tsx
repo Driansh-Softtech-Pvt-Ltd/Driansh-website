@@ -99,14 +99,14 @@ export default function RootLayout({
         <Script id="chatwoot-script" strategy="lazyOnload">
           {`
             (function(d,t) {
-              var BASE_URL="https://chat.driansh.com";
+              var BASE_URL="https://store-ingredients-west-efficiently.trycloudflare.com";
               var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
               g.src=BASE_URL+"/packs/js/sdk.js";
               g.async = true;
               s.parentNode.insertBefore(g,s);
               g.onload=function(){
                 window.chatwootSDK.run({
-                  websiteToken: 'MzWCsdsZrCfmo5cRm83cVkM1',
+                  websiteToken: 'bW4KDU6pL9x5X9wW6RC233ep',
                   baseUrl: BASE_URL
                 })
               }
