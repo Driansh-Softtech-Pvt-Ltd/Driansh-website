@@ -1,5 +1,5 @@
 import { CtaLink, Section, SectionHeader } from "@/components/site";
-import AiAssistantPlayer from "./AiAssistantPlayer";
+import AiAssistantDiagram from "./AiAssistantDiagram";
 import { ENGAGEONE_BASE } from "./links";
 
 export default function AiAssistantSection() {
@@ -23,7 +23,7 @@ export default function AiAssistantSection() {
         </CtaLink>
       </div>
       <div className="mt-10 md:mt-14">
-        <AiAssistantPlayer />
+        <AiAssistantDiagram />
       </div>
     </Section>
   );
