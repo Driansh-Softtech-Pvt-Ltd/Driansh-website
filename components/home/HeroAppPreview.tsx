@@ -109,72 +109,62 @@ export default function HeroAppPreview() {
         if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
       }}
     >
-      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
-        <div
-          role="tablist"
-          aria-label="EngageOne product preview"
-          className="mx-auto flex w-max min-w-full justify-start border-b border-slate-200 sm:justify-center"
-        >
-          {TABS.map((tab, i) => {
-            const selected = active === i;
-            const Icon = tab.icon;
-            return (
-              <button
-                key={tab.id}
-                ref={(el) => {
-                  tabRefs.current[i] = el;
-                }}
-                id={`${baseId}-tab-${tab.id}`}
-                type="button"
-                role="tab"
-                aria-selected={selected}
-                aria-controls={`${baseId}-panel-${tab.id}`}
-                tabIndex={selected ? 0 : -1}
-                onClick={() => select(i)}
-                onKeyDown={(e) => onKeyDown(e, i)}
-                className={cn(
-                  "group relative flex shrink-0 items-center gap-2.5 px-4 pt-2 pb-4 text-sm font-semibold whitespace-nowrap transition-colors focus-visible:rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand sm:px-6 sm:text-[0.9375rem]",
-                  selected ? "text-ink" : "text-slate-500 hover:text-ink"
-                )}
-              >
-                <span
+      <div className="overflow-hidden rounded-t-3xl border border-b-0 border-slate-200 bg-white/90 p-2 shadow-[0_-10px_60px_-20px_rgba(30,78,196,0.45)] backdrop-blur sm:p-3">
+        <div className="overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div
+            role="tablist"
+            aria-label="EngageOne product preview"
+            className="flex min-w-max overflow-hidden rounded-xl border border-slate-200 md:grid md:min-w-0 md:grid-cols-4"
+          >
+            {TABS.map((tab, i) => {
+              const selected = active === i;
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  ref={(el) => {
+                    tabRefs.current[i] = el;
+                  }}
+                  id={`${baseId}-tab-${tab.id}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={selected}
+                  aria-controls={`${baseId}-panel-${tab.id}`}
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => select(i)}
+                  onKeyDown={(e) => onKeyDown(e, i)}
                   className={cn(
-                    "flex h-8 w-8 items-center justify-center rounded-lg transition-colors sm:h-9 sm:w-9",
-                    selected
-                      ? "bg-brand-gradient text-white shadow-md shadow-brand/30"
-                      : "bg-slate-100 text-slate-500 group-hover:bg-brand-soft group-hover:text-brand"
+                    "group relative flex shrink-0 items-center gap-3 border-r border-slate-200 px-5 py-4 text-left text-base font-semibold whitespace-nowrap transition-colors last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset sm:text-lg lg:px-6 lg:py-5",
+                    selected ? "bg-white text-ink" : "bg-surface text-slate-500 hover:bg-white hover:text-ink"
                   )}
                 >
-                  <Icon className="h-4 w-4" aria-hidden="true" />
-                </span>
-                {tab.label}
-                {selected && (
-                  <span aria-hidden="true" className="absolute inset-x-3 -bottom-px h-0.5 overflow-hidden rounded-full bg-brand/20">
-                    <span
-                      ref={progressRef}
-                      className="block h-full origin-left bg-brand"
-                      style={{ transform: `scaleX(${autoplay ? 0 : 1})` }}
-                    />
+                  <span
+                    className={cn(
+                      "flex h-9 w-9 items-center justify-center rounded-xl transition-colors lg:h-11 lg:w-11",
+                      selected
+                        ? "bg-brand-gradient text-white shadow-md shadow-brand/30"
+                        : "border border-slate-200 bg-white text-slate-400 group-hover:text-brand"
+                    )}
+                  >
+                    <Icon className="h-4 w-4 lg:h-5 lg:w-5" aria-hidden="true" />
                   </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="relative mt-8 overflow-hidden rounded-t-2xl border border-b-0 border-slate-200 bg-white shadow-[0_-10px_50px_-18px_rgba(30,78,196,0.35)] lg:mt-10">
-        <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-2.5" aria-hidden="true">
-          <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          <span className="mx-auto flex min-w-0 items-center gap-1.5 truncate rounded-md border border-slate-200 bg-white px-3 py-0.5 text-[11px] whitespace-nowrap text-slate-500">
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-            <span className="truncate">Driansh EngageOne · {TABS[active].label}</span>
-          </span>
-          <span className="hidden w-12 sm:block" />
+                  {tab.label}
+                  {selected && (
+                    <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-0.5 overflow-hidden bg-brand/20">
+                      <span
+                        ref={progressRef}
+                        className="block h-full origin-left bg-brand"
+                        style={{ transform: `scaleX(${autoplay ? 0 : 1})` }}
+                      />
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
+        <div className="relative mt-2 overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white sm:mt-3">
         {TABS.map((tab, i) => {
           const Screen = tab.screen;
           return (
@@ -193,7 +183,7 @@ export default function HeroAppPreview() {
                   initial={reduceMotion ? false : { opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="h-[26rem] overflow-x-auto overflow-y-hidden lg:h-[30rem] [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+                  className="h-[28rem] overflow-x-auto overflow-y-hidden lg:h-[38rem] [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
                   aria-hidden="true"
                 >
                   <div className="h-full min-w-[54rem] select-none md:min-w-[66rem]">
@@ -205,10 +195,11 @@ export default function HeroAppPreview() {
           );
         })}
 
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-white via-white/70 to-transparent"
-        />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white via-white/70 to-transparent"
+          />
+        </div>
       </div>
     </div>
   );

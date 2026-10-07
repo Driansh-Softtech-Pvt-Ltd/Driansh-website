@@ -33,14 +33,14 @@ const MOSAIC_CELLS = Array.from({ length: MOSAIC_COLS * MOSAIC_ROWS }, (_, i) =>
   };
 }).filter((cell) => cell !== null);
 
-function PixelMosaic() {
+function PixelMosaic({ className }: { className: string }) {
   return (
     <svg
       aria-hidden="true"
       focusable="false"
       viewBox={`0 0 ${MOSAIC_COLS * MOSAIC_STEP} ${MOSAIC_ROWS * MOSAIC_STEP}`}
       preserveAspectRatio="xMaxYMin slice"
-      className="pointer-events-none absolute top-0 right-0 -z-10 h-[34rem] w-full opacity-40 sm:opacity-60 lg:h-[40rem] lg:w-[60%] lg:opacity-100"
+      className={cn("pointer-events-none absolute -z-10", className)}
     >
       {MOSAIC_CELLS.map((cell) => (
         <rect
@@ -97,7 +97,9 @@ function Sticker({ kicker, title, icon: Icon, tile, tilt }: (typeof STICKERS)[nu
 export default function HeroSection() {
   return (
     <section className="relative isolate overflow-hidden bg-white pt-32 lg:pt-44">
-      <PixelMosaic />
+      <PixelMosaic className="top-0 right-0 h-[34rem] w-full opacity-40 sm:opacity-60 lg:h-full lg:w-[60%] lg:opacity-100" />
+      {/* Mirrored copy so the pattern also frames the app preview on the left. */}
+      <PixelMosaic className="bottom-0 left-0 hidden h-[60%] w-[40%] -scale-x-100 opacity-70 lg:block" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-[26rem] -z-10 h-[30rem] bg-linear-to-b from-transparent via-brand-soft/60 to-transparent lg:top-[30rem]"
