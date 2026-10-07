@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { CtaLink } from "@/components/site";
+import HeroVisual from "@/components/home/HeroVisual";
 
 export default function HeroSection() {
   return (
@@ -37,20 +37,11 @@ export default function HeroSection() {
 
         <div className="relative flex justify-center">
           <motion.div
-            animate={{
-              x: [0, 12, 8, -10, -12, -8, 10, 12, 0],
-              y: [0, -8, 12, 10, 0, -10, -12, 8, 0],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <Image
-              src="/images/Home_Card.svg"
-              alt="VoIP Solutions illustration"
-              width={520}
-              height={520}
-              className="pointer-events-none h-auto w-full max-w-sm select-none sm:max-w-lg"
-              priority
-            />
+            <HeroVisual />
           </motion.div>
         </div>
       </div>
