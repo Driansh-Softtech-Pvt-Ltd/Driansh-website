@@ -34,11 +34,11 @@ const unifiedCommunications: SolutionPageContent = {
       "White-label unified communications solution joining calling, video, chat, presence and voicemail in one app for providers and teams. Book a free demo.",
   },
   hero: {
-    title: "Unified Communications Solution for Connected Teams",
+    title: "Unified communications solution for connected teams",
     subtitle:
       "We build white-label UCaaS platforms that put calling, video meetings, chat, presence and voicemail into one app, connected to your email, calendar and business tools.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: ["Voice, video & chat in one app", "Presence & unified inbox", "Email & calendar sync", "White-label ready"],
   diagram: {

@@ -32,11 +32,11 @@ const kamailio: ServicePageContent = {
       "Kamailio development for SIP proxies, load balancers, registrars and edge security, built to scale with your traffic. Talk to a Kamailio engineer today.",
   },
   hero: {
-    title: "Kamailio Development Services for High-Capacity SIP Networks",
+    title: "Kamailio development services for high-capacity SIP networks",
     subtitle:
       "We build Kamailio SIP proxies, load balancers and registrars that route, secure and scale your voice traffic, for carriers, VoIP providers and platform teams.",
-    primaryCta: "Talk to a Kamailio Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a Kamailio engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "SIP routing & load balancing",

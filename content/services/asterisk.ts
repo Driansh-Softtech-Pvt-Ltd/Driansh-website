@@ -30,11 +30,11 @@ const asterisk: ServicePageContent = {
       "Asterisk development services: AGI and AMI apps, dialplans, IP PBX, IVR and call centers. Talk to an Asterisk engineer for a free consultation.",
   },
   hero: {
-    title: "Asterisk Development Services for Business Phone Systems",
+    title: "Asterisk development services for business phone systems",
     subtitle:
       "We build and customize Asterisk systems for businesses and VoIP providers, from dialplans and AGI apps to IP PBX and call centers you fully control.",
-    primaryCta: "Talk to an Asterisk Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to an Asterisk engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "AGI, AMI & ARI development",

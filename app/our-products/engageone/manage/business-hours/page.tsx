@@ -3,21 +3,21 @@ import { BusinessHoursScheduleVisual, BusinessHoursPerInboxVisual, BusinessHours
 
 const FEATURES = [
   {
-    title: "Set your daily working hours and Unavailability message",
+    title: "Set your daily working hours and an unavailable message",
     description:
       "Set your working hours defined by time zone, and let your visitors know that you or your team is currently not working.",
     visual: <BusinessHoursScheduleVisual />,
   },
   {
-    title: "Set Business Hours for every inbox separately",
+    title: "Set business hours for each inbox",
     description:
-      "Your Business Hours settings are not account-wide. Select custom Business Hours for every inbox (and hence, the agents associated with that inbox) configured on your Driansh EngageOne account, separately.",
+      "Business hours are not account-wide. Choose custom business hours for every inbox (and hence, the agents associated with that inbox) configured on your Driansh EngageOne account, separately.",
     visual: <BusinessHoursPerInboxVisual />,
   },
   {
-    title: "Adjust your performance reports for Business Hours",
+    title: "Adjust your performance reports for business hours",
     description:
-      "Get the correct sense of your account's performance and metrics. View your Conversation, Agent, Inbox, Label and Team Reports - with or without data adjusted for Business Hours.",
+      "Get the correct sense of your account's performance and metrics. View your conversation, agent, inbox, label and team reports, with or without data adjusted for business hours.",
     visual: <BusinessHoursReportsVisual />,
   },
 ];
@@ -29,8 +29,8 @@ export default function BusinessHoursPage() {
         size="md"
         eyebrow="EngageOne"
         title="Let customers know you're not available to answer their questions"
-        description="Set office hours for your inbox channels, and display a custom Unavailable Message to your visitors."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        description="Set office hours for your inbox channels, and display a custom unavailable message to your visitors."
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -50,7 +50,7 @@ export default function BusinessHoursPage() {
         <CTABanner
           title="Set expectations, even when you’re away"
           description="See Driansh EngageOne business hours in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

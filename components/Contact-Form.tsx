@@ -52,7 +52,7 @@ export function ContactForm() {
   return (
     <div className="bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-center h-full">
       <h2 className="text-xl font-bold text-center text-ink my-6">
-        Let’s Build the Future of Communication Together!
+        Tell us about your project
       </h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
@@ -71,7 +71,7 @@ export function ContactForm() {
             <div className="flex items-center border-b border-gray-300">
               <UserRound className="text-gray-400" />
               <Input
-                placeholder="Full Name*"
+                placeholder="Full name*"
                 {...register("name")}
                 className="flex-1 border-none bg-transparent text-gray-600 placeholder-gray-400 p-6 outline-none shadow-none focus-visible:ring-0 focus-visible:outline-none focus-visible:shadow-none"
               />
@@ -120,7 +120,7 @@ export function ContactForm() {
           <div className="flex-1">
             <div className="border-b border-gray-300">
               <Input
-                placeholder="Company Name"
+                placeholder="Company name"
                 {...register("company")}
                 className="flex-1 border-none bg-transparent text-gray-600 placeholder-gray-400 p-6 outline-none shadow-none focus-visible:ring-0 focus-visible:outline-none focus-visible:shadow-none"
               />
@@ -137,7 +137,7 @@ export function ContactForm() {
         <div>
           <div className="border-b border-gray-300">
             <Textarea
-              placeholder="Any Requirements*"
+              placeholder="Your requirements*"
               rows={3}
               {...register("message")}
               className="border-none bg-transparent text-gray-600 placeholder-gray-400 p-6 resize-none overflow-y-auto h-30 outline-none shadow-none focus-visible:ring-0 focus-visible:outline-none focus-visible:shadow-none"
@@ -162,8 +162,8 @@ export function ContactForm() {
                 className="mt-2"
               />
               <span className="text-lg text-gray-600">
-                By submitting the form, you will be eligible for receiving the
-                newsletter, and product & services update from Driansh Softtech.
+                I agree to receive the newsletter and product and service updates
+                from Driansh Softtech.
               </span>
             </div>
           )}
@@ -176,7 +176,7 @@ export function ContactForm() {
             disabled={isSubmitting}
             className="bg-brand-gradient cursor-pointer rounded-full px-8 py-6 text-center text-base font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110"
           >
-            {isSubmitting ? "Submitting..." : "Submit Your Requirements Now"}
+            {isSubmitting ? "Submitting..." : "Send your requirements"}
           </Button>
         </div>
 

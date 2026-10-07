@@ -24,7 +24,7 @@ export default function InboxReportsPage() {
         eyebrow="EngageOne"
         title="Get insights into your inboxes, with auto-updating reports"
         description="See which of your inboxes get the most activity, and what the resolution times look like."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function InboxReportsPage() {
         <CTABanner
           title="See which inboxes need your attention"
           description="See Driansh EngageOne inbox reports in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

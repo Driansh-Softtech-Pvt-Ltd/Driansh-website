@@ -29,11 +29,11 @@ const callingCard: SolutionPageContent = {
       "Calling card solution for VoIP providers: PIN and PINless cards, callback, access numbers, recharge and prepaid billing for global calling. Book a demo.",
   },
   hero: {
-    title: "Calling Card Solution for International VoIP Providers",
+    title: "Calling card solution for international VoIP providers",
     subtitle:
       "Sell prepaid international calling with PIN, PINless and callback access. Your customers dial from any phone, and billing, recharge and reporting run automatically.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "PIN & PINless cards",

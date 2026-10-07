@@ -31,7 +31,7 @@ export default function LabelsPage() {
         eyebrow="EngageOne"
         title="Easily organize your conversations with labels"
         description="Be better organized about conversations by labelling them for future reference."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -51,7 +51,7 @@ export default function LabelsPage() {
         <CTABanner
           title="Bring order to every conversation"
           description="See Driansh EngageOne labels in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

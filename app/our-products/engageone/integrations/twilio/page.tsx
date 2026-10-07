@@ -37,8 +37,9 @@ export default function TwilioIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Use your Twilio numbers with Driansh EngageOne"
         description="Bring Twilio SMS, WhatsApp and voice calls into one shared inbox, alongside every other channel."
       />
@@ -60,7 +61,7 @@ export default function TwilioIntegrationPage() {
         <CTABanner
           title="Bring Twilio into Driansh EngageOne"
           description="Talk to our team to connect your Twilio numbers to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

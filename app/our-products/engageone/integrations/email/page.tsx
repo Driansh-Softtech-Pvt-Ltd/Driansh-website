@@ -32,8 +32,9 @@ export default function EmailIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Manage your email customer interactions from Driansh EngageOne"
         description="Connect your email with Driansh EngageOne to manage threads without leaving the dashboard."
       />
@@ -53,9 +54,9 @@ export default function EmailIntegrationPage() {
 
       <Section size="sm" tone={emailHighlights.length % 2 === 0 ? "white" : "muted"}>
         <CTABanner
-          title="Bring Email into Driansh EngageOne"
-          description="Talk to our team to connect Email and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          title="Bring email into Driansh EngageOne"
+          description="Talk to our team to connect email and every other channel to one shared inbox."
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

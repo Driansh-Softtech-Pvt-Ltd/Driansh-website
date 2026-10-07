@@ -24,7 +24,7 @@ export default function TeamReportsPage() {
         eyebrow="EngageOne"
         title="Track how each of your teams is performing, with auto-updating reports"
         description="Get insight into your teams—see which ones get the most conversations, what the resolution times look like, and more."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function TeamReportsPage() {
         <CTABanner
           title="Give every team the support it needs"
           description="See Driansh EngageOne team reports in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

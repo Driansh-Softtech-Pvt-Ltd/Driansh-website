@@ -33,11 +33,11 @@ const callCenter: SolutionPageContent = {
       "Call center solution with ACD, predictive and progressive dialers, IVR, live monitoring and omnichannel chat for inbound and outbound teams. Book a demo.",
   },
   hero: {
-    title: "Call Center Solution for Inbound and Outbound Teams",
+    title: "Call center solution for inbound and outbound teams",
     subtitle:
       "Run inbound queues, outbound campaigns and chat channels from one FreeSWITCH-based contact center platform, with single or multi-tenant setups and source code you own.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Inbound, outbound & blended",

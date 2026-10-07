@@ -30,11 +30,11 @@ const vicidial: ServicePageContent = {
       "VICIdial development for call centers: setup, clustering, CRM integration, custom themes and AI agent add-ons. Talk to a VICIdial engineer today.",
   },
   hero: {
-    title: "VICIdial Development Services for Busy Call Centers",
+    title: "VICIdial development services for busy call centers",
     subtitle:
       "We install, customize and scale VICIdial for inbound and outbound call centers, adding CRM links, branded agent screens and AI features the stock system lacks.",
-    primaryCta: "Talk to a VICIdial Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a VICIdial engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Installation & cluster setup",

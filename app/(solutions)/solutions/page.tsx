@@ -11,9 +11,9 @@ export default function SolutionsHubPage() {
         size="md"
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Solutions", href: "/solutions" }]}
         eyebrow="Solutions"
-        title="VoIP Solutions for Providers, Contact Centers & Businesses"
+        title="VoIP solutions for providers, contact centers and businesses"
         description="Ready-to-customise platforms for switching, PBX hosting, billing, contact centers and collaboration. Choose a solution to see its features."
-        primaryCta={{ label: "Book a Free Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Talk to our team", href: "/contact-us" }}
       />
       {SOLUTION_GROUPS.map((group, i) => (
         <Section key={group.title} tone={i % 2 === 0 ? "white" : "muted"}>
@@ -27,7 +27,7 @@ export default function SolutionsHubPage() {
         </Section>
       ))}
       <Section size="sm">
-        <CTABanner title="Need something in between?" description="Most of our solutions can be combined or customised. Tell us what you need." cta={{ label: "Book a Free Demo", href: "/contact-us" }} />
+        <CTABanner title="Need something in between?" description="Most of our solutions can be combined or customised. Tell us what you need." cta={{ label: "Talk to our team", href: "/contact-us" }} />
       </Section>
     </>
   );

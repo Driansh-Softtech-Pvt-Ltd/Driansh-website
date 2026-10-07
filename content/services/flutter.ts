@@ -31,11 +31,11 @@ const flutter: ServicePageContent = {
       "Flutter app development for iOS, Android and web from one Dart codebase: MVPs, custom apps and API integration. Talk to a Flutter engineer for a free call.",
   },
   hero: {
-    title: "Flutter App Development Services for Faster Launches",
+    title: "Flutter app development services for faster launches",
     subtitle:
       "We build Flutter apps for iOS, Android and the web from one codebase, for startups and businesses that want to launch sooner and maintain less.",
-    primaryCta: "Talk to a Flutter Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a Flutter engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "One codebase for iOS & Android",

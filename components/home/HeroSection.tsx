@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { CtaLink } from "@/components/site";
-import HeroVisual from "@/components/home/HeroVisual";
+import EngageOneInboxVisual from "@/components/visuals/EngageOneInboxVisual";
+import { DEMO_HREF, ENGAGEONE_BASE } from "./links";
 
 export default function HeroSection() {
   return (
@@ -11,28 +12,32 @@ export default function HeroSection() {
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 right-0 -z-10 h-[32rem] w-[32rem] rounded-full bg-violet-600/25 blur-3xl"
       />
-      <div className="container-site grid items-center gap-12 lg:grid-cols-2">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-48 -left-24 -z-10 h-[26rem] w-[26rem] rounded-full bg-blue-600/20 blur-3xl"
+      />
+      <div className="container-site grid items-center gap-14 lg:grid-cols-2">
         <div className="text-center lg:text-left">
+          <p className="eyebrow mb-4 text-violet-300">Customer engagement for growing businesses and enterprises</p>
           <h1 className="heading-1">
-            Scalable, Secure,
-            <br />
-            <span className="text-gradient">AI-Powered Custom VoIP</span>
-            <br />
-            Software Development
+            Connect with every customer, <span className="text-gradient">at enterprise scale</span>
           </h1>
 
           <p className="text-lead mx-auto mt-6 max-w-xl text-slate-300 lg:mx-0">
-            Tap into the future of Real-Time Communication via custom VoIP
-            software, Web &amp; Mobile solutions enhanced by our DevOps and QA
-            Services.
+            Driansh EngageOne unites website chat, WhatsApp, social, email, SMS and voice in one secure workspace. AI
+            answers routine questions around the clock, and your teams resolve the rest with the full customer story in
+            front of them.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <CtaLink href="/contact-us">Let’s Talk More!</CtaLink>
-            <CtaLink href="/services/voip-development-service" variant="outline-light" arrow={false}>
-              Explore Services
+            <CtaLink href={DEMO_HREF}>Request a demo</CtaLink>
+            <CtaLink href={ENGAGEONE_BASE} variant="outline-light" arrow={false}>
+              Explore EngageOne
             </CtaLink>
           </div>
+          <p className="mt-5 text-sm text-slate-400">
+            Role-based access · Audit logs · Single sign-on · Driansh cloud or your own servers
+          </p>
         </div>
 
         <div className="relative flex justify-center">
@@ -41,7 +46,7 @@ export default function HeroSection() {
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <HeroVisual />
+            <EngageOneInboxVisual />
           </motion.div>
         </div>
       </div>

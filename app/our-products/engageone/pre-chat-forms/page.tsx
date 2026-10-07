@@ -9,7 +9,7 @@ const FEATURES = [
   {
     title: "Easy and quick set-up",
     description:
-      "Enable your pre-chat form, enable the fields you want to show in the form, add helpful text and you are ready to publish!",
+      "Enable your pre-chat form, enable the fields you want to show in the form, add helpful text and you are ready to publish.",
     visual: <PreChatSettingsVisual />,
   },
   {
@@ -26,10 +26,10 @@ export default function PreChatFormsPage() {
       <PageHero
         size="md"
         eyebrow="EngageOne"
-        title="User context on your fingertips, faster resolutions"
-        description="Collect Info about a contact/conversation before entering into a conversation with them, with pre-chat forms."
+        title="Customer context at your fingertips, for faster resolutions"
+        description="Collect information about a contact before the conversation starts, with pre-chat forms."
         visual={<PreChatFormVisual />}
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -49,7 +49,7 @@ export default function PreChatFormsPage() {
         <CTABanner
           title="Know your visitors before you say hello"
           description="See Driansh EngageOne pre-chat forms in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

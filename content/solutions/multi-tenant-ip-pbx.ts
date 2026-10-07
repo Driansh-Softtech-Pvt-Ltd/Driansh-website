@@ -32,11 +32,11 @@ const multiTenantPbx: SolutionPageContent = {
       "Multi-tenant IP PBX for hosted PBX providers and multi-branch companies: separate tenants, IVR, queues, recording, resellers and billing. Book a free demo.",
   },
   hero: {
-    title: "Multi-Tenant IP PBX for Hosted PBX Providers",
+    title: "Multi-tenant IP PBX for hosted PBX providers",
     subtitle:
       "Host phone systems for many companies or branches on one platform. Each tenant gets its own extensions, numbers and portal, while you manage everything centrally.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Isolated tenants on one server",

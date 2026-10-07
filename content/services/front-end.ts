@@ -15,7 +15,6 @@ import {
   RefreshCw,
   Server,
   ShieldCheck,
-  Smartphone,
   Video,
 } from "lucide-react";
 import type { ServicePageContent } from "@/content/types";
@@ -31,11 +30,11 @@ const frontEnd: ServicePageContent = {
       "Front-end development services in React, Next.js, Angular, Vue: responsive UIs, SPAs and design systems. Talk to a front-end engineer about your project.",
   },
   hero: {
-    title: "Front-End Development Services for Fast, Usable Interfaces",
+    title: "Front-end development services for fast, usable interfaces",
     subtitle:
       "We turn designs into fast, accessible React, Next.js and Angular interfaces for web apps, dashboards and SaaS products, with reusable components your team can extend.",
-    primaryCta: "Talk to a Front-End Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a front-end engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "React, Next.js, Angular & Vue",

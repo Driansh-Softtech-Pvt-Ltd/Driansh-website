@@ -63,11 +63,11 @@ export default function SecurityPage() {
     <>
       <PageHero
         size="md"
-        eyebrow="EngageOne Security"
+        eyebrow="EngageOne security"
         title="Your data, your rules"
         description="Run EngageOne in the Driansh cloud or on your own servers. Control who sees what, and keep a record of every important change."
         primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
-        secondaryCta={{ label: "Talk to us", href: "/contact-us" }}
+        secondaryCta={{ label: "Talk to our team", href: "/contact-us" }}
         visual={<SecurityHeroVisual />}
       />
 

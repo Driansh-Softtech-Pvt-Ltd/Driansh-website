@@ -29,11 +29,11 @@ const voipTesting: ServicePageContent = {
       "VoIP testing services for SIP and WebRTC platforms: call quality, load, interoperability and failover tests with clear reports. Talk to a VoIP QA engineer.",
   },
   hero: {
-    title: "VoIP Testing Services for SIP and WebRTC Platforms",
+    title: "VoIP testing services for SIP and WebRTC platforms",
     subtitle:
       "We test call quality, signaling, load and failover on your VoIP platform, find what breaks under real conditions and report exactly how to fix it.",
-    primaryCta: "Talk to a VoIP QA Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a VoIP QA engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Call quality: MOS, jitter, loss",

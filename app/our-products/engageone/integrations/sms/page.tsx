@@ -20,8 +20,9 @@ export default function SMSIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Manage your SMS customer interactions from Driansh EngageOne"
         description="Connect your phone number with Driansh EngageOne and manage business SMS without leaving the dashboard."
       />
@@ -43,7 +44,7 @@ export default function SMSIntegrationPage() {
         <CTABanner
           title="Bring SMS into Driansh EngageOne"
           description="Talk to our team to connect SMS and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

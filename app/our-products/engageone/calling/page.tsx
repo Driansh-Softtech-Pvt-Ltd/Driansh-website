@@ -43,11 +43,11 @@ export default function CallingPage() {
     <>
       <PageHero
         size="md"
-        eyebrow="EngageOne Calling"
+        eyebrow="EngageOne calling"
         title="Take WhatsApp and phone calls from your inbox"
         description="Answer customer calls in the browser, next to their chats. Every call is logged, so your team always knows what was said."
         primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
-        secondaryCta={{ label: "Talk to us", href: "/contact-us" }}
+        secondaryCta={{ label: "Talk to our team", href: "/contact-us" }}
         visual={<CallingHeroVisual />}
       />
 

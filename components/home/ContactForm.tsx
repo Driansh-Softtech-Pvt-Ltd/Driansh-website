@@ -58,7 +58,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <label className="block text-base font-medium text-gray-800 mb-2">
-            <span className="text-red-500 mr-1">*</span>Your Name
+            <span className="text-red-500 mr-1">*</span>Your name
           </label>
           <input
             {...register("name")}
@@ -87,7 +87,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <label className="block text-base font-medium text-gray-800 mb-2">
-            Phone Number
+            Phone number
           </label>
           <input
             {...register("phone")}
@@ -97,7 +97,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className="block text-base font-medium text-gray-800 mb-2">
-            Company Name
+            Company name
           </label>
           <input
             {...register("company")}
@@ -109,7 +109,7 @@ export default function ContactForm() {
 
       <div>
         <label className="block text-base font-medium text-gray-800 mb-2">
-          <span className="text-red-500 mr-1">*</span>Any Requirements
+          <span className="text-red-500 mr-1">*</span>Your requirements
         </label>
         <textarea
           {...register("message")}

@@ -11,7 +11,7 @@ const slackHighlights = [
   {
     title: "Create private notes from Slack",
     description:
-      "Need to collaborate with teammates before replying? Pinch your message with /note in Slack and create a private note back in Driansh EngageOne.",
+      "Need to collaborate with teammates before replying? Start your message with /note in Slack and create a private note back in Driansh EngageOne.",
     visual: <SlackNoteVisual />,
   },
   {
@@ -26,9 +26,10 @@ export default function SlackIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
-        title="Slack x Driansh EngageOne: for a super productive you."
+        eyebrow="EngageOne integrations"
+        title="Answer Driansh EngageOne conversations from Slack"
         description="Use Slack to answer your customer queries coming into Driansh EngageOne."
       />
 
@@ -47,9 +48,9 @@ export default function SlackIntegrationPage() {
 
       <Section size="sm" tone={slackHighlights.length % 2 === 0 ? "white" : "muted"}>
         <CTABanner
-          title="Bring Slack into Driansh EngageOne"
-          description="Talk to our team to connect Slack and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          title="Connect Slack to Driansh EngageOne"
+          description="Talk to our team about connecting Slack to your shared inbox."
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

@@ -31,11 +31,11 @@ const productEngineering: ServicePageContent = {
       "Product engineering services from idea to launch: MVPs, UI/UX, web and mobile apps, QA and DevOps for SaaS and VoIP products. Talk to our product team.",
   },
   hero: {
-    title: "Product Engineering Services from Idea to Launch",
+    title: "Product engineering services from idea to launch",
     subtitle:
       "We take software products from concept to MVP to scale for startups and growing companies. Design, development, testing and DevOps sit in one team.",
-    primaryCta: "Talk to Our Product Team",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to our product team",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Discovery, MVP & scale-up",

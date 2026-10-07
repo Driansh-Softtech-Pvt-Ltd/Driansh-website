@@ -31,11 +31,11 @@ const webDevelopment: ServicePageContent = {
       "Custom web development services: web apps, portals, dashboards and SaaS in React, Next.js and Node.js. Talk to a web engineer for a free consultation.",
   },
   hero: {
-    title: "Web Development Services for Custom Web Apps",
+    title: "Web development services for custom web apps",
     subtitle:
       "We build web applications, customer portals and SaaS products end to end, from interface to API to deployment, for startups and growing businesses.",
-    primaryCta: "Talk to a Web Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a web engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Front end, back end & full stack",

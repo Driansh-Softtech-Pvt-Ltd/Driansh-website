@@ -31,11 +31,11 @@ const freeswitch: ServicePageContent = {
       "Custom FreeSWITCH development: modules, ESL and API integrations, softswitches, IP PBX and call centers. Talk to a FreeSWITCH engineer for a free consultation.",
   },
   hero: {
-    title: "FreeSWITCH Development Services for Scalable Voice Platforms",
+    title: "FreeSWITCH development services for scalable voice platforms",
     subtitle:
       "We design, build and scale FreeSWITCH platforms, from custom modules and ESL integrations to softswitches and call centers, for telecom providers and product teams.",
-    primaryCta: "Talk to a FreeSWITCH Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a FreeSWITCH engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Custom modules & dialplans",

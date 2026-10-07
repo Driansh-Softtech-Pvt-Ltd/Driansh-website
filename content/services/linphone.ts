@@ -30,11 +30,11 @@ const linphone: ServicePageContent = {
       "Linphone app development: white-label SIP softphones for Android, iOS and desktop, with PBX integration and push calling. Talk to a Linphone engineer.",
   },
   hero: {
-    title: "Linphone App Development for Branded SIP Softphones",
+    title: "Linphone app development for branded SIP softphones",
     subtitle:
       "We turn the open-source Linphone SDK into your own softphone for Android, iOS and desktop, connected to your PBX or softswitch and published under your brand.",
-    primaryCta: "Talk to a Linphone Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a Linphone engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Android, iOS & desktop apps",

@@ -44,7 +44,7 @@ const FEATURE_CARDS: { title: string; description: string; icon: typeof Shield; 
   },
   {
     title: "Full API support",
-    description: "Build innovative custom apps with our advanced, powerful API.",
+    description: "Build custom apps and workflows on top of the help center API.",
     icon: Heart,
     kind: "api",
   },
@@ -62,11 +62,11 @@ export default function HelpCenterPage() {
     <>
       <PageHero
         size="md"
-        eyebrow="EngageOne Help Center"
+        eyebrow="EngageOne help center"
         title="Delight customers. Empower teams."
         description="Build your personalized help center with our intuitive knowledge base software. Streamline queries, enhance agent efficiency, and elevate customer support."
         visual={<HelpCenterHeroVisual />}
-        primaryCta={{ label: "Create a free account", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {/* Manage multiple portals */}
@@ -111,7 +111,7 @@ export default function HelpCenterPage() {
               >
                 {card.comingSoon && (
                   <span className="absolute right-4 top-4 inline-flex items-center rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">
-                    Coming Soon
+                    Coming soon
                   </span>
                 )}
                 <div className="mt-6 flex h-40 items-center justify-center overflow-hidden rounded-xl bg-surface px-4">
@@ -127,7 +127,7 @@ export default function HelpCenterPage() {
         <CTABanner
           title="Build your help center with Driansh EngageOne"
           description="Give customers answers faster and free up your agents."
-          cta={{ label: "Create a free account", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

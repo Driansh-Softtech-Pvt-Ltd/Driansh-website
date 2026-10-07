@@ -11,9 +11,9 @@ export default function ServicesHubPage() {
         size="md"
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]}
         eyebrow="Services"
-        title="VoIP, Mobile & Web Development Services"
+        title="VoIP, mobile and web development services"
         description="One team for telephony platforms, the apps on top of them and the cloud they run on. Pick a service to see what we build."
-        primaryCta={{ label: "Talk to an Engineer", href: "/contact-us" }}
+        primaryCta={{ label: "Talk to our team", href: "/contact-us" }}
       />
       {SERVICE_GROUPS.map((group, i) => (
         <Section key={group.title} tone={i % 2 === 0 ? "white" : "muted"}>

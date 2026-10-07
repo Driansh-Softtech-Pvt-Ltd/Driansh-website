@@ -32,11 +32,11 @@ const reactNative: ServicePageContent = {
       "React Native app development for iOS and Android: custom apps, MVPs, app migration and native modules. Talk to a React Native engineer for a free call.",
   },
   hero: {
-    title: "React Native App Development Services for iOS and Android",
+    title: "React Native app development services for iOS and Android",
     subtitle:
       "We build React Native apps for iOS and Android from one JavaScript codebase, for teams that want native feel, shared web skills and faster releases.",
-    primaryCta: "Talk to a React Native Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a React Native engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "TypeScript & React Native",

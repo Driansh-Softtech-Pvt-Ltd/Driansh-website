@@ -3,7 +3,7 @@ import { MessengerChatVisual, MessengerSetupVisual } from "@/components/visuals/
 
 const facebookHighlights = [
   {
-    title: "No need to provide FB page access to your agents",
+    title: "No need to give agents access to your Facebook page",
     description:
       "Never miss out on any leads. Manage all your customer queries coming from Facebook pages inside Driansh EngageOne, without giving your team direct access to the Facebook page.",
     visual: <MessengerChatVisual />,
@@ -20,8 +20,9 @@ export default function FacebookIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Stay connected with your customers on Facebook"
         description="Connect your Facebook account with Driansh EngageOne, manage your Messenger DMs without leaving the dashboard."
       />
@@ -43,7 +44,7 @@ export default function FacebookIntegrationPage() {
         <CTABanner
           title="Bring Facebook into Driansh EngageOne"
           description="Talk to our team to connect Facebook and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

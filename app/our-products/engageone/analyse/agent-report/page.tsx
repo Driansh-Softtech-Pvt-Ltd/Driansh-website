@@ -24,7 +24,7 @@ export default function AgentReportPage() {
         eyebrow="EngageOne"
         title="Track your agents’ performance, with auto-updating reports"
         description="View important KPIs about your agents, right from your Driansh EngageOne dashboard."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function AgentReportPage() {
         <CTABanner
           title="Know how every agent is performing"
           description="See Driansh EngageOne agent reports in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

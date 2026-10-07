@@ -26,7 +26,7 @@ const PLANS = [
       "Help with upgrades",
       "Support from the Driansh team",
     ],
-    cta: { label: "Talk to sales", href: "/contact-us" },
+    cta: { label: "Talk to our team", href: "/contact-us" },
   },
   {
     name: "Enterprise",
@@ -38,7 +38,7 @@ const PLANS = [
       "Dedicated support contact",
       "Service levels agreed in your contract",
     ],
-    cta: { label: "Talk to sales", href: "/contact-us" },
+    cta: { label: "Talk to our team", href: "/contact-us" },
   },
 ];
 
@@ -75,11 +75,11 @@ export default function PricingPage() {
     <>
       <PageHero
         size="md"
-        eyebrow="EngageOne Plans"
+        eyebrow="EngageOne plans"
         title="Plans that fit how you work"
         description="Choose the Driansh cloud, your own servers, or an enterprise setup. We will shape a plan around your team and send you a quote."
         primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
-        secondaryCta={{ label: "Talk to sales", href: "/contact-us" }}
+        secondaryCta={{ label: "Talk to our team", href: "/contact-us" }}
         visual={<PricingHeroVisual />}
       />
 

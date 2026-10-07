@@ -44,7 +44,7 @@ export default function PageHero({
   imageAlt = "",
   imageClassName,
   visual,
-  primaryCta = { label: "Get Started", href: "/contact-us" },
+  primaryCta = { label: "Talk to our team", href: "/contact-us" },
   secondaryCta,
   size = "lg",
   children,

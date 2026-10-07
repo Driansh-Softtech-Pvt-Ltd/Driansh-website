@@ -20,10 +20,11 @@ export default function WhatsAppIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
-        title="Communicate with your customers on WhatsApp, hassle-free."
-        description="Join your customers on the world’s most-used messaging app with Driansh EngageOne’s official WhatsApp integration."
+        eyebrow="EngageOne integrations"
+        title="Talk to your customers on WhatsApp, without the hassle"
+        description="Meet your customers on WhatsApp with Driansh EngageOne’s WhatsApp Business integration."
       />
 
       {whatsappHighlights.map((highlight, index) => (
@@ -43,7 +44,7 @@ export default function WhatsAppIntegrationPage() {
         <CTABanner
           title="Bring WhatsApp into Driansh EngageOne"
           description="Talk to our team to connect WhatsApp and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

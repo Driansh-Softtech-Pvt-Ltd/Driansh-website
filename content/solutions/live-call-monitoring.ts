@@ -31,11 +31,11 @@ const liveCallMonitoring: SolutionPageContent = {
       "Live call monitoring solution for call centers and support teams: real-time dashboards, listen, whisper, barge-in, system health and reports. Book a demo.",
   },
   hero: {
-    title: "Live Call Monitoring Solution for Supervisors and QA",
+    title: "Live call monitoring solution for supervisors and QA",
     subtitle:
       "See every ringing, active and conference call in real time. Listen in, coach agents quietly or take over, from a dashboard that fits your VoIP system.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Real-time call dashboard",

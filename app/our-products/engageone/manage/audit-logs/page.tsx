@@ -5,7 +5,7 @@ const FEATURES = [
   {
     title: "Comprehensive tracking: who, what, when, and where",
     description:
-      "Get a close look at the actions taken within your account. Audit Logs reveal the specifics of what's been happening, when it occurred, and the originating IP addresses.",
+      "Get a close look at the actions taken within your account. Audit logs show the specifics of what's been happening, when it occurred, and the originating IP addresses.",
     visual: <AuditLogCategoriesVisual />,
   },
   {
@@ -23,8 +23,8 @@ export default function AuditLogsPage() {
         size="md"
         eyebrow="EngageOne"
         title="Track and trace account activities with ease"
-        description="Conduct audits, stay secure, and stay compliant with detailed audit logs"
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        description="Conduct audits, stay secure, and stay compliant with detailed audit logs."
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function AuditLogsPage() {
         <CTABanner
           title="Stay secure and compliant"
           description="See Driansh EngageOne audit logs in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

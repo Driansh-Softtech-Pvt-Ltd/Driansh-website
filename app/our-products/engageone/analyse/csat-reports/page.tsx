@@ -22,9 +22,9 @@ export default function CSATReportsPage() {
       <PageHero
         size="md"
         eyebrow="EngageOne"
-        title="Send and track Customer Satisfaction surveys on autopilot"
-        description="Put your customers first with Driansh EngageOne's support suite and CSAT integration. Collect feedback and improve your service for transformative customer satisfaction."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        title="Send and track customer satisfaction (CSAT) surveys automatically"
+        description="Ask customers to rate their conversation when it ends, then use the ratings and feedback to improve your service."
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function CSATReportsPage() {
         <CTABanner
           title="Know exactly how your customers feel"
           description="See Driansh EngageOne CSAT surveys and reports in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

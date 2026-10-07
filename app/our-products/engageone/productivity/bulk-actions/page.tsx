@@ -24,7 +24,7 @@ export default function BulkActionsPage() {
         eyebrow="EngageOne"
         title="Perform key actions on multiple conversations at once"
         description="Enhance your productivity by bulk updating your conversations right from the Driansh EngageOne dashboard."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function BulkActionsPage() {
         <CTABanner
           title="Do more in fewer clicks"
           description="See Driansh EngageOne bulk actions in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

@@ -8,8 +8,8 @@ export default function ContactPage() {
       <PageHero
         size="md"
         eyebrow="Contact"
-        title="Contact Us"
-        description="We'd love to hear from you. Get in touch with our team for any inquiries or support."
+        title="Contact us"
+        description="Questions about Driansh EngageOne, Driansh Contact Center or a VoIP or software project? Send us a message and our team will get back to you."
         primaryCta={null}
       />
 
@@ -18,7 +18,7 @@ export default function ContactPage() {
           <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:col-span-2 lg:max-w-md">
             <Image
               src="/images/logo.png"
-              alt="Contact Us"
+              alt="Contact Driansh Softtech"
               width={1024}
               height={1024}
               priority

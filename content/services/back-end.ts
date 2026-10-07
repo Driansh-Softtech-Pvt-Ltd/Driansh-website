@@ -12,7 +12,6 @@ import {
   Network,
   Plug,
   RefreshCw,
-  Server,
   ServerCog,
   ShieldCheck,
   Smartphone,
@@ -31,11 +30,11 @@ const backEnd: ServicePageContent = {
       "Back-end development services: APIs, databases, microservices and integrations in Node.js, Python and Go. Talk to a back-end engineer about your project.",
   },
   hero: {
-    title: "Back-End Development Services for Reliable APIs",
+    title: "Back-end development services for reliable APIs",
     subtitle:
       "We design and build APIs, databases and server logic in Node.js, Python and Go. Our back ends power web apps, mobile apps and growing platforms.",
-    primaryCta: "Talk to a Back-End Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a back-end engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "REST & GraphQL APIs",

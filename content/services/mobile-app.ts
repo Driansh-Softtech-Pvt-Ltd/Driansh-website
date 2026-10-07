@@ -31,11 +31,11 @@ const mobileApp: ServicePageContent = {
       "Mobile app development for iOS and Android: native, Flutter and React Native apps with backends and VoIP calling. Talk to our mobile team for a free call.",
   },
   hero: {
-    title: "Mobile App Development Services for iOS and Android",
+    title: "Mobile app development services for iOS and Android",
     subtitle:
       "We design and build native and cross-platform mobile apps, including VoIP calling apps, for startups and businesses, with the backend and APIs to run them.",
-    primaryCta: "Talk to Our Mobile Team",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to our mobile team",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Native & cross-platform apps",

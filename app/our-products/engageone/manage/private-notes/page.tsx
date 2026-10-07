@@ -24,7 +24,7 @@ export default function PrivateNotesPage() {
         eyebrow="EngageOne"
         title="Collaborate on conversations with private notes"
         description="Add notes that only your team can see, mention teammates, and solve tricky questions together."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function PrivateNotesPage() {
         <CTABanner
           title="Collaborate without leaving the conversation"
           description="See Driansh EngageOne in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

@@ -5,7 +5,7 @@ const FEATURES = [
   {
     title: "Integrate with tools you love",
     description:
-      "Driansh EngageOne Integrates with your favourite tools to provide a seamless agent experience. Leverage the capabilities of trusted platforms to deliver exceptional customer experiences without any compromise.",
+      "Connect the bot platform you already use, such as Dialogflow or your own bot through the API, and let it answer customers inside Driansh EngageOne.",
     visual: <BotPlatformsVisual />,
   },
   {
@@ -41,7 +41,7 @@ export default function ChatbotsPage() {
         eyebrow="EngageOne"
         title="Add a chatbot to your support squad"
         description="Scale up your customer service with chatbots. Provide quick, personalized, and efficient support and improve customer satisfaction and loyalty."
-        primaryCta={{ label: "Request a demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -61,7 +61,7 @@ export default function ChatbotsPage() {
         <CTABanner
           title="Scale your support with chatbots"
           description="See how Driansh EngageOne chatbots and agents work together with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

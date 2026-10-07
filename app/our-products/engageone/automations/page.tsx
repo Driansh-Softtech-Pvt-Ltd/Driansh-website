@@ -39,9 +39,9 @@ export default function AutomationsPage() {
       <PageHero
         size="md"
         eyebrow="EngageOne"
-        title="Work smarter with Automations"
-        description="Save time by automating your repetitive tasks streamlining your workflows."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        title="Work smarter with automations"
+        description="Save time by automating repetitive tasks and streamlining your workflows."
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -60,8 +60,8 @@ export default function AutomationsPage() {
       <Section size="sm">
         <CTABanner
           title="Put your support on auto-pilot"
-          description="See how Driansh EngageOne automations can save your team hours every week."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          description="See how Driansh EngageOne automations can take repetitive work off your team."
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

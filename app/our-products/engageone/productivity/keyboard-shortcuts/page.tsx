@@ -5,7 +5,7 @@ const FEATURES = [
   {
     title: "Remember one shortcut to see all others",
     description:
-      "Press CMD + / or Win + / to display the list of available keyboard shortcuts, or pick “Keyboard Shortcuts” from your profile menu. You only need to remember this one shortcut.",
+      "Press Cmd + / or Ctrl + / to display the list of available keyboard shortcuts, or pick “Keyboard Shortcuts” from your profile menu. You only need to remember this one shortcut.",
     visual: <ShortcutsMenuVisual />,
   },
   {
@@ -22,9 +22,9 @@ export default function KeyboardShortcutsPage() {
       <PageHero
         size="md"
         eyebrow="EngageOne"
-        title="Master Driansh EngageOne with Keyboard Shortcuts"
+        title="Master Driansh EngageOne with keyboard shortcuts"
         description="Work faster, better, and improve your productivity with shortcuts for every routine action."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function KeyboardShortcutsPage() {
         <CTABanner
           title="Keep your hands on the keyboard"
           description="See Driansh EngageOne keyboard shortcuts in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

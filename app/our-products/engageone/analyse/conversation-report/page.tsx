@@ -5,7 +5,7 @@ const FEATURES = [
   {
     title: "Easy-to-understand data presentation",
     description:
-      "Driansh EngageOne constantly calculates and updates your metrics in the background, and gives you exact figures to look at. If you want to see your performance over time, there’s a bar graph too!",
+      "Driansh EngageOne updates conversation metrics in the background, such as conversations opened, first response time and resolution time, and shows how they change over time in a bar graph.",
     visual: <ConversationOverviewVisual />,
   },
   {
@@ -24,7 +24,7 @@ export default function ConversationReportPage() {
         eyebrow="EngageOne"
         title="Get detailed insights into your conversations"
         description="Track important metrics and KPIs about your conversations."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function ConversationReportPage() {
         <CTABanner
           title="Turn conversations into insights"
           description="See Driansh EngageOne conversation reports in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

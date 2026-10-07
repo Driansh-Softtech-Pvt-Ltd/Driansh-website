@@ -30,7 +30,7 @@ export default function CannedResponsesPage() {
         eyebrow="EngageOne"
         title="Super quick responses to customer conversations. Super productive agents."
         description="Canned responses cut down repetitive typing and save replies to simple, single-answer questions."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -50,7 +50,7 @@ export default function CannedResponsesPage() {
         <CTABanner
           title="Answer common questions in seconds"
           description="See Driansh EngageOne canned responses in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

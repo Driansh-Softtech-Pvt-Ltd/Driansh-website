@@ -11,7 +11,6 @@ import {
   Lock,
   Network,
   Rocket,
-  ServerCog,
   ShieldCheck,
   TestTube,
   Users,
@@ -31,11 +30,11 @@ const devops: ServicePageContent = {
       "DevOps services: CI/CD pipelines, Docker and Kubernetes, infrastructure as code, monitoring and cloud migration. Talk to a DevOps engineer today.",
   },
   hero: {
-    title: "DevOps Services for Faster, Safer Releases",
+    title: "DevOps services for faster, safer releases",
     subtitle:
       "We set up CI/CD pipelines, containers, infrastructure as code and monitoring, so your team ships more often with fewer failed deployments and less manual work.",
-    primaryCta: "Talk to a DevOps Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a DevOps engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "CI/CD pipeline setup",

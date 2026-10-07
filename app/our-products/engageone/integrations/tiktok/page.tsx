@@ -26,8 +26,9 @@ export default function TikTokIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Reply to TikTok messages from Driansh EngageOne"
         description="Connect your TikTok business account and manage its direct messages in the same inbox as every other channel."
       />
@@ -49,7 +50,7 @@ export default function TikTokIntegrationPage() {
         <CTABanner
           title="Bring TikTok into Driansh EngageOne"
           description="Talk to our team to connect TikTok and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

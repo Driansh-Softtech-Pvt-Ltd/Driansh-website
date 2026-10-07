@@ -32,11 +32,11 @@ const voipBusiness: SolutionPageContent = {
       "VoIP business solutions for SMBs and enterprises: IP PBX, softswitches, SIP trunking, billing, number porting and STIR/SHAKEN. Book a free demo.",
   },
   hero: {
-    title: "VoIP Business Solutions for SMBs and Enterprises",
+    title: "VoIP business solutions for SMBs and enterprises",
     subtitle:
       "We build business VoIP systems from proven building blocks, including IP PBX, softswitches, SIP trunking and billing, and shape them around how your company calls.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: ["IP PBX & softswitches", "SIP trunking & DIDs", "STIR/SHAKEN caller ID", "Custom features on request"],
   diagram: {

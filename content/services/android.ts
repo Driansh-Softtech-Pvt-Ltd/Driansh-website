@@ -30,11 +30,11 @@ const android: ServicePageContent = {
       "Android app development in Kotlin and Java: custom apps, SIP calling, wearables and Play Store release. Talk to an Android engineer for a free call.",
   },
   hero: {
-    title: "Android App Development Services for Phones and Wearables",
+    title: "Android app development services for phones and wearables",
     subtitle:
       "We build native Android apps in Kotlin for businesses and product teams, from customer apps to SIP calling apps that stay reliable in the background.",
-    primaryCta: "Talk to an Android Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to an Android engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Kotlin & Jetpack Compose",

@@ -30,11 +30,11 @@ const class4: SolutionPageContent = {
       "Class 4 softswitch for carriers and wholesale VoIP providers: least-cost routing, real-time rating, fraud controls and high availability. Book a free demo.",
   },
   hero: {
-    title: "Class 4 Softswitch for Wholesale VoIP Carriers",
+    title: "Class 4 softswitch for wholesale VoIP carriers",
     subtitle:
       "Route high volumes of wholesale traffic between carriers with least-cost routing, real-time rating and failover, on a platform you can brand and run as your own.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Least-cost & quality routing",

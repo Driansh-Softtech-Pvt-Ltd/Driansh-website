@@ -30,11 +30,11 @@ const signalwire: ServicePageContent = {
       "SignalWire API integration for voice, video, messaging and fax apps, plus Twilio migration and call flows. Talk to a SignalWire engineer today.",
   },
   hero: {
-    title: "SignalWire API Integration for Voice and Video Apps",
+    title: "SignalWire API integration for voice and video apps",
     subtitle:
       "We build voice, video and messaging features on SignalWire APIs and SDKs, and connect them to your existing VoIP platform, CRM or web app.",
-    primaryCta: "Talk to a SignalWire Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a SignalWire engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Voice, video, SMS & fax APIs",

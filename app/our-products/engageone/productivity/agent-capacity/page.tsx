@@ -24,7 +24,7 @@ export default function AgentCapacityPage() {
         eyebrow="EngageOne"
         title="Let Driansh EngageOne manage your agents’ workload"
         description="Set limits for auto-assigning conversations to your agents and keep every channel running smoothly."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function AgentCapacityPage() {
         <CTABanner
           title="Keep workloads balanced"
           description="See Driansh EngageOne agent capacity in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

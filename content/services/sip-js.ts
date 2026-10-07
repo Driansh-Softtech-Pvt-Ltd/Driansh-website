@@ -29,11 +29,11 @@ const sipJs: ServicePageContent = {
       "SIP.js development for browser softphones, click-to-call, video calls and agent panels that connect to your SIP server. Talk to a SIP.js engineer today.",
   },
   hero: {
-    title: "SIP.js Development Services for Browser Calling Apps",
+    title: "SIP.js development services for browser calling apps",
     subtitle:
       "We build SIP.js web phones, click-to-call widgets and video features that register to your SIP server, so your users call straight from the browser.",
-    primaryCta: "Talk to a SIP.js Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a SIP.js engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Browser softphones & widgets",

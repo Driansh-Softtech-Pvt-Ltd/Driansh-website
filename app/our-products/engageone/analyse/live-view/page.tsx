@@ -5,19 +5,19 @@ const FEATURES = [
   {
     title: "See how many conversations are currently open",
     description:
-      "On your Reports Overview page, you can see the exact number of conversations that are currently open, unattended, and unassigned. It’s really that simple.",
+      "On the reports overview page, you can see the exact number of conversations that are currently open, unattended, and unassigned.",
     visual: <LiveConversationsVisual />,
   },
   {
-    title: "See how many Agents are currently online",
+    title: "See how many agents are currently online",
     description:
-      "You can see the exact number of Agents added to your Driansh EngageOne account who are currently online, busy, and offline. This helps you judge your organization’s requests-routing capacity at the moment.",
+      "You can see the exact number of agents added to your Driansh EngageOne account who are currently online, busy, and offline. This helps you judge your organization’s requests-routing capacity at the moment.",
     visual: <LiveAgentStatusVisual />,
   },
   {
     title: "See who is attending how many conversations currently",
     description:
-      "You can see exactly which agent has how many number of open or unattended conversations at the moment. By default, you’ll see your busiest agents on the top of the list.",
+      "You can see exactly how many open or unattended conversations at the moment. By default, you’ll see your busiest agents on the top of the list.",
     visual: <LiveAgentLoadVisual />,
   },
 ];
@@ -30,7 +30,7 @@ export default function LiveViewPage() {
         eyebrow="EngageOne"
         title="View the status of your conversations and agents in real-time"
         description="See the live view of your available agents, open conversations, and more — on one screen."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -50,7 +50,7 @@ export default function LiveViewPage() {
         <CTABanner
           title="Know what’s happening, right now"
           description="See the Driansh EngageOne live view in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

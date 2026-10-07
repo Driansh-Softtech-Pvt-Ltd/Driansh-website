@@ -29,8 +29,8 @@ export default function MediaSplit({
 }: MediaSplitProps) {
   return (
     <div className={cn("grid items-center gap-10 lg:grid-cols-2 lg:gap-16", className)}>
-      <div className={cn(reverse ? "lg:order-1" : "lg:order-2")}>{children}</div>
-      <div className={cn("relative mx-auto w-full max-w-xl", reverse ? "lg:order-2" : "lg:order-1", imageClassName)}>
+      <div className={cn("min-w-0", reverse ? "lg:order-1" : "lg:order-2")}>{children}</div>
+      <div className={cn("relative mx-auto w-full min-w-0 max-w-xl", reverse ? "lg:order-2" : "lg:order-1", imageClassName)}>
         {visual ?? (image && (
           <Image
             src={image}

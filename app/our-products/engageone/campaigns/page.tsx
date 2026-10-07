@@ -51,11 +51,11 @@ export default function CampaignsPage() {
     <>
       <PageHero
         size="md"
-        eyebrow="EngageOne Campaigns"
+        eyebrow="EngageOne campaigns"
         title="Reach customers first, on the channels they read"
         description="Build WhatsApp templates, send personal campaigns to the right people, and start conversations with website visitors. All from EngageOne."
         primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
-        secondaryCta={{ label: "Talk to us", href: "/contact-us" }}
+        secondaryCta={{ label: "Talk to our team", href: "/contact-us" }}
         visual={<CampaignsHeroVisual />}
       />
 

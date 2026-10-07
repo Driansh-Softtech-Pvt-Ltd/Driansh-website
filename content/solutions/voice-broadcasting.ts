@@ -32,11 +32,11 @@ const voiceBroadcasting: SolutionPageContent = {
       "Voice broadcasting solution that calls contact lists with recorded messages, IVR, DTMF surveys, answering machine detection and reports. Book a free demo.",
   },
   hero: {
-    title: "Voice Broadcasting Solution for Mass Call Campaigns",
+    title: "Voice broadcasting solution for mass call campaigns",
     subtitle:
       "We build voice broadcasting software that calls your contact lists with recorded messages, captures keypad responses and reports results, with multi-tenant support for providers.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: ["Scheduled call campaigns", "IVR & DTMF responses", "Answering machine detection", "Multi-tenant ready"],
   diagram: {

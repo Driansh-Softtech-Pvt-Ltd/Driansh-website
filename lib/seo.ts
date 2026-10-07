@@ -4,7 +4,7 @@ import type { ServicePageContent, SolutionPageContent } from "@/content/types";
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://driansh.com").replace(/\/$/, "");
 export const SITE_NAME = "Driansh Softtech";
 export const DEFAULT_DESCRIPTION =
-  "Driansh Softtech builds VoIP, WebRTC, contact center and custom software solutions — FreeSWITCH, Asterisk, Kamailio, OpenSIPS, mobile and web development for businesses worldwide.";
+  "Driansh Softtech makes Driansh EngageOne, the omnichannel customer engagement platform with an AI Assistant, and Driansh Contact Center, and engineers VoIP, WebRTC, web, mobile and DevOps solutions.";
 export const DEFAULT_OG_IMAGE = "/og";
 
 type PageSeo = { title: string; description: string };
@@ -12,8 +12,8 @@ type PageSeo = { title: string; description: string };
 /** Title + description for every public route. Also drives sitemap.xml. */
 export const PAGES: Record<string, PageSeo> = {
   "/": {
-    title: "VoIP & Custom Software Development Company",
-    description: DEFAULT_DESCRIPTION,
+    title: "EngageOne Omnichannel Customer Engagement Platform",
+    description: "One shared inbox for website chat, WhatsApp, social, email, SMS and calls, with the EngageOne AI Assistant. Run it in the Driansh cloud or self-host.",
   },
   "/about-us": {
     title: "About Us",
@@ -289,7 +289,7 @@ export const PAGES: Record<string, PageSeo> = {
     description: "Book a live EngageOne demo with Driansh. See the inbox, AI Assistant, calling and campaigns working for your own use case.",
   },
   "/our-products/engageone/industries": {
-    title: "EngageOne Industries",
+    title: "Industries — EngageOne",
     description: "See how restaurants, retailers, healthcare, finance, education, logistics, telecom and more use Driansh EngageOne to talk to customers.",
   },
   "/our-products/engageone/industries/restaurants": {
@@ -309,11 +309,11 @@ export const PAGES: Record<string, PageSeo> = {
     description: "Appointment requests, reports and patient questions handled by the right desk, with reminders on WhatsApp.",
   },
   "/our-products/engageone/industries/banking-insurance-fintech": {
-    title: "EngageOne for Banking, insurance & fintech",
+    title: "EngageOne for Banking, Insurance & Fintech",
     description: "Account, claim and payment questions on every channel, with strict roles, audit logs and the option to self-host.",
   },
   "/our-products/engageone/industries/marketplaces": {
-    title: "EngageOne for Marketplaces & platforms",
+    title: "EngageOne for Marketplaces & Platforms",
     description: "Buyers and sellers in separate inboxes, with bots for common questions and APIs to connect your platform.",
   },
   "/our-products/engageone/industries/saas": {
@@ -321,7 +321,7 @@ export const PAGES: Record<string, PageSeo> = {
     description: "In-app chat, help docs, bug reports to Linear and a clear view of each account's history.",
   },
   "/our-products/engageone/industries/government": {
-    title: "EngageOne for Public sector",
+    title: "EngageOne for Public Sector",
     description: "Citizen questions answered on WhatsApp and the web, routed by department, hosted on your own servers.",
   },
   "/our-products/engageone/industries/education": {
@@ -329,11 +329,11 @@ export const PAGES: Record<string, PageSeo> = {
     description: "Admissions, fees and student questions answered quickly, with WhatsApp updates for parents.",
   },
   "/our-products/engageone/industries/beauty-wellness": {
-    title: "EngageOne for Beauty & wellness",
+    title: "EngageOne for Beauty & Wellness",
     description: "Bookings over Instagram and WhatsApp, service menus with prices, and reminders that cut no-shows.",
   },
   "/our-products/engageone/industries/local-businesses": {
-    title: "EngageOne for Local businesses",
+    title: "EngageOne for Local Businesses",
     description: "One simple inbox for WhatsApp, Instagram, Facebook and website chat, on desktop and mobile.",
   },
   "/our-products/engageone/industries/automotive": {
@@ -353,15 +353,15 @@ export const PAGES: Record<string, PageSeo> = {
     description: "Store and online shoppers served in one inbox, with offers, order updates and loyalty campaigns.",
   },
   "/our-products/engageone/industries/travel-hospitality": {
-    title: "EngageOne for Travel & hospitality",
+    title: "EngageOne for Travel & Hospitality",
     description: "Bookings, changes and guest requests handled across time zones, with confirmations on WhatsApp.",
   },
   "/our-products/engageone/industries/real-estate": {
-    title: "EngageOne for Real estate",
+    title: "EngageOne for Real Estate",
     description: "Property enquiries from ads and portals captured, qualified and followed up from one inbox.",
   },
   "/our-products/engageone/industries/logistics": {
-    title: "EngageOne for Logistics & delivery",
+    title: "EngageOne for Logistics & Delivery",
     description: "Tracking, delivery changes and driver issues handled at volume, with updates over WhatsApp.",
   },
   "/our-products/engageone/industries/telecom-isp": {

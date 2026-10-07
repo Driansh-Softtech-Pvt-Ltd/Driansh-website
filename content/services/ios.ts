@@ -30,11 +30,11 @@ const ios: ServicePageContent = {
       "iOS app development in Swift for iPhone, iPad and Apple Watch, with CallKit VoIP apps and App Store release. Talk to an iOS engineer for a free call.",
   },
   hero: {
-    title: "iOS App Development Services for iPhone, iPad and Watch",
+    title: "iOS app development services for iPhone, iPad and Watch",
     subtitle:
       "We build native iOS apps in Swift for businesses and product teams, including VoIP calling apps that ring like regular phone calls through CallKit.",
-    primaryCta: "Talk to an iOS Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to an iOS engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Swift & SwiftUI",

@@ -14,13 +14,13 @@ const FEATURES = [
     visual: <SharedInboxListVisual />,
   },
   {
-    title: "Private Notes",
+    title: "Private notes",
     description:
       "Use private notes to communicate with your team. Use @mentions to share information and communicate efficiently within the team without exposing internal messages to customers.",
     visual: <PrivateNotesVisual />,
   },
   {
-    title: "Canned Responses",
+    title: "Canned responses",
     description:
       "Access the saved replies easily using slash commands in your reply box. Provide faster responses to frequently asked questions while keeping your messaging consistent.",
     visual: <CannedResponsesVisual />,
@@ -36,7 +36,7 @@ export default function TeamCollaborationPage() {
         title="A shared inbox for your team"
         description="Talk to your customers and your team from one place. Communicate internally and resolve customer queries efficiently with Driansh EngageOne."
         visual={<TeamInboxHeroVisual />}
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -56,7 +56,7 @@ export default function TeamCollaborationPage() {
         <CTABanner
           title="Resolve queries faster, together"
           description="See how Driansh EngageOne helps your team collaborate with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

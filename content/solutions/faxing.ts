@@ -31,11 +31,11 @@ const faxing: SolutionPageContent = {
       "Faxing solution for fax over IP: send and receive faxes by email or web, with T.38 support, fax rating and DID routing for providers. Book a free demo.",
   },
   hero: {
-    title: "Faxing Solution for Online Fax over IP",
+    title: "Faxing solution for online fax over IP",
     subtitle:
       "We build fax over IP (FoIP) platforms that let your users send and receive faxes from email or a web portal, with rating and reseller accounts for providers.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: ["Email to fax & fax to email", "Web to fax portal", "T.38 support", "Fax rating & reports"],
   diagram: {

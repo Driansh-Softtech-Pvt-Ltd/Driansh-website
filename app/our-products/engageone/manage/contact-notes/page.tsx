@@ -5,13 +5,13 @@ const FEATURES = [
   {
     title: "Add notes easily, anytime",
     description:
-      "Anytime you decide to add a note to a conversation, you can simply open their contact page through the Driansh EngageOne Dashboard and add it. Just like that!",
+      "Anytime you decide to add a note to a conversation, you can simply open their contact page in the Driansh EngageOne dashboard and add it.",
     visual: <ContactNoteAddVisual />,
   },
   {
     title: "Rich text formatting",
     description:
-      "Coz, why not? Format and highlight your notes the way you like.",
+      "Format and highlight your notes so the important details stand out.",
     visual: <ContactNoteFormatVisual />,
   },
   {
@@ -30,7 +30,7 @@ export default function ContactNotesPage() {
         eyebrow="EngageOne"
         title="Note down important info about your contacts"
         description="Never lose sight of your contacts, by simply adding notes to them."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -50,7 +50,7 @@ export default function ContactNotesPage() {
         <CTABanner
           title="Keep the full picture of every contact"
           description="See Driansh EngageOne contact notes in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

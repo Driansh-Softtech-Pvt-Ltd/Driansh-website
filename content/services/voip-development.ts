@@ -31,11 +31,11 @@ const voipDevelopment: ServicePageContent = {
       "VoIP software development company building softswitches, IP PBX, call centers and WebRTC apps. Talk to our VoIP team for a free consultation.",
   },
   hero: {
-    title: "VoIP Software Development Company for Custom Telecom Products",
+    title: "VoIP software development company for custom telecom products",
     subtitle:
       "We build custom VoIP platforms for telecom providers and businesses. Softswitches, hosted PBX, call centers and WebRTC apps, on open-source stacks you fully own.",
-    primaryCta: "Talk to Our VoIP Team",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to our VoIP team",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "FreeSWITCH, Asterisk & Kamailio",

@@ -31,11 +31,11 @@ const opensips: ServicePageContent = {
       "OpenSIPS development for SIP routing, load balancing, SBC and Class 4 softswitch platforms for carriers and ITSPs. Talk to an OpenSIPS engineer today.",
   },
   hero: {
-    title: "OpenSIPS Development Services for Carrier-Grade SIP Routing",
+    title: "OpenSIPS development services for carrier-grade SIP routing",
     subtitle:
       "We build OpenSIPS routing engines, load balancers and session border controllers for carriers, wholesale providers and ITSPs that need fast, controllable SIP traffic.",
-    primaryCta: "Talk to an OpenSIPS Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to an OpenSIPS engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Dynamic routing & LCR",

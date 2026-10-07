@@ -33,11 +33,11 @@ const class5: SolutionPageContent = {
       "Class 5 softswitch for retail VoIP providers: hosted PBX features, IVR, voicemail, call bundles, billing and reseller tools for end users. Book a free demo.",
   },
   hero: {
-    title: "Class 5 Softswitch for Retail VoIP Providers",
+    title: "Class 5 softswitch for retail VoIP providers",
     subtitle:
       "Serve homes and businesses from one retail softswitch with calling features, hosted PBX, bundles and built-in billing, on a white-label platform you control.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "End-user calling features",

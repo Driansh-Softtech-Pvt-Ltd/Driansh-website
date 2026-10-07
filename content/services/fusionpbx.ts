@@ -30,11 +30,11 @@ const fusionpbx: ServicePageContent = {
       "FusionPBX development for hosted PBX providers: setup, clustering, custom features, white-label themes and API integrations. Talk to a FusionPBX engineer.",
   },
   hero: {
-    title: "FusionPBX Development Services for Hosted PBX Providers",
+    title: "FusionPBX development services for hosted PBX providers",
     subtitle:
       "We install, customize and scale FusionPBX for providers and businesses, adding the features, branding and integrations your multi-tenant phone system is missing.",
-    primaryCta: "Talk to a FusionPBX Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a FusionPBX engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Setup, clustering & upgrades",

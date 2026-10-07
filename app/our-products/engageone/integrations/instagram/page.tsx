@@ -20,8 +20,9 @@ export default function InstagramIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Stay connected with your customers on Instagram"
         description="Connect your Instagram business account with Driansh EngageOne and manage DMs without leaving the dashboard."
       />
@@ -43,7 +44,7 @@ export default function InstagramIntegrationPage() {
         <CTABanner
           title="Bring Instagram into Driansh EngageOne"
           description="Talk to our team to connect Instagram and every other channel to one shared inbox."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

@@ -33,11 +33,11 @@ const enterpriseVoip: SolutionPageContent = {
       "Enterprise VoIP solution with call routing, video meetings, messaging, recording and fax, on your servers or cloud and on every device. Book a free demo.",
   },
   hero: {
-    title: "Enterprise VoIP Solution for Growing Organisations",
+    title: "Enterprise VoIP solution for growing organisations",
     subtitle:
       "We build enterprise VoIP phone systems that bring calling, meetings, messaging and fax onto one platform, deployed on your servers or cloud and shaped to how you work.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Calls, meetings & messaging",

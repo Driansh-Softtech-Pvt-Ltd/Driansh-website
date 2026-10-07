@@ -63,7 +63,7 @@ const channelCards: LinkCard[] = [
   { title: "Facebook", description: "Answer Messenger chats from your Facebook page.", href: `${BASE}/integrations/facebook`, icon: MessageCircle },
   { title: "Instagram", description: "Handle Instagram direct messages next to every other chat.", href: `${BASE}/integrations/instagram`, icon: MessageCircle },
   { title: "Telegram", description: "Connect a Telegram bot and reply from the shared inbox.", href: `${BASE}/integrations/telegram`, icon: Send },
-  { title: "Line", description: "Talk to customers who reach you on Line.", href: `${BASE}/integrations/line`, icon: Layers },
+  { title: "LINE", description: "Talk to customers who reach you on LINE.", href: `${BASE}/integrations/line`, icon: Layers },
   { title: "SMS", description: "Send and receive text messages from the same screen.", href: `${BASE}/integrations/sms`, icon: Smartphone },
   { title: "Email", description: "Turn support emails into conversations your team can share.", href: `${BASE}/integrations/email`, icon: Mail },
   { title: "Slack", description: "Get conversations in Slack and reply without switching tools.", href: `${BASE}/integrations/slack`, icon: MessageCircleMore },
@@ -166,7 +166,7 @@ export default function EngageOnePage() {
           title="Meet customers on the apps they already use"
           description="Connect your website, WhatsApp, email, social pages and phone line. Each one becomes an inbox, and every message shows up in the same list."
           points={[
-            "Website chat, WhatsApp, Messenger, Instagram, Telegram, Line, SMS and email",
+            "Website chat, WhatsApp, Messenger, Instagram, Telegram, LINE, SMS and email",
             "One customer profile with every past conversation",
             "Your own channels through the API",
           ]}

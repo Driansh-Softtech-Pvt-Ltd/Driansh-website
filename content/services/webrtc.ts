@@ -30,11 +30,11 @@ const webrtc: ServicePageContent = {
       "WebRTC development company building browser voice, video, screen sharing and web softphones linked to SIP networks. Talk to a WebRTC engineer today.",
   },
   hero: {
-    title: "WebRTC Development Company for Voice and Video Apps",
+    title: "WebRTC development company for voice and video apps",
     subtitle:
       "We build WebRTC apps for voice, video, chat and screen sharing. They run in the browser and on mobile, and connect to your SIP or VoIP platform.",
-    primaryCta: "Talk to a WebRTC Engineer",
-    secondaryCta: "See What We Build",
+    primaryCta: "Talk to a WebRTC engineer",
+    secondaryCta: "See what we build",
   },
   highlights: [
     "Browser softphones & dialers",

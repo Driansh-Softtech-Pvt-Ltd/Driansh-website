@@ -24,7 +24,7 @@ export default function ContactSegmentsPage() {
         eyebrow="EngageOne"
         title="Organize your contacts into segments"
         description="Group your contacts using filters and save them into segments."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -44,7 +44,7 @@ export default function ContactSegmentsPage() {
         <CTABanner
           title="Know your contacts, group by group"
           description="See Driansh EngageOne contact segments in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

@@ -167,7 +167,7 @@ const CHANNELS: { name: string; href: string; icon: LucideIcon }[] = [
   { name: "Instagram", href: "/our-products/engageone/integrations/instagram", icon: Instagram },
   { name: "TikTok", href: "/our-products/engageone/integrations/tiktok", icon: Music2 },
   { name: "Telegram", href: "/our-products/engageone/integrations/telegram", icon: Send },
-  { name: "Line", href: "/our-products/engageone/integrations/line", icon: MessageCircle },
+  { name: "LINE", href: "/our-products/engageone/integrations/line", icon: MessageCircle },
   { name: "SMS", href: "/our-products/engageone/integrations/sms", icon: Smartphone },
   { name: "Twilio", href: "/our-products/engageone/integrations/twilio", icon: Phone },
   { name: "Email", href: "/our-products/engageone/integrations/email", icon: Mail },
@@ -179,10 +179,11 @@ export default function IntegrationsPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Integrations"
-        description="Driansh EngageOne connects with your favourite apps"
+        description="Connect Driansh EngageOne to your messaging channels and the apps your team already uses."
       />
 
       <Section>
@@ -242,6 +243,7 @@ export default function IntegrationsPage() {
 
       <Section size="sm">
         <CTABanner
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
           title="Need an integration we don't list?"
           description="Talk to our team about connecting Driansh EngageOne to your tools."
         />

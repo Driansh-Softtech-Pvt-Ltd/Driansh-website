@@ -58,8 +58,9 @@ export default function ApiChannelIntegrationPage() {
   return (
     <>
       <PageHero
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         size="md"
-        eyebrow="EngageOne Integrations"
+        eyebrow="EngageOne integrations"
         title="Build your own channel on the EngageOne API"
         description="Bring conversations from any app into Driansh EngageOne. Your app sends messages in through the API, and webhooks send agent replies back."
         visual={<ApiChannelVisual />}
@@ -83,7 +84,7 @@ export default function ApiChannelIntegrationPage() {
         <CTABanner
           title="Plan your custom channel with us"
           description="Talk to our team about connecting your app to Driansh EngageOne through the API."
-          cta={{ label: "Get Started", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

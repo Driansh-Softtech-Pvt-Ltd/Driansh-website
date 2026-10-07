@@ -20,7 +20,7 @@ const FEATURES = [
     visual: <SocialInboxVisual />,
   },
   {
-    title: "WhatsApp Business Accounts",
+    title: "WhatsApp Business accounts",
     description:
       "Create a business account for WhatsApp, connect it with EngageOne and start engaging your customers instantly.",
     points: [
@@ -51,7 +51,7 @@ export default function OmnichannelInboxPage() {
         title="Delight your customers wherever they are"
         description="Connect any conversation channel and engage your customers from one place. Driansh EngageOne brings all of your customer touchpoints into a single, unified experience."
         visual={<EngageOneInboxVisual />}
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       <Section size="sm">
@@ -81,7 +81,7 @@ export default function OmnichannelInboxPage() {
         <CTABanner
           title="Every channel, one inbox"
           description="See how Driansh EngageOne brings all your customer conversations together with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

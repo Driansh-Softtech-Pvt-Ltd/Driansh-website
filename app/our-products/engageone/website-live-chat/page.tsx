@@ -30,8 +30,8 @@ export default function WebsiteLiveChatPage() {
         eyebrow="EngageOne"
         title="Simple live chat software for businesses"
         description="Improve your customer experience using a live chat on your website. Engage visitors the moment they land on your site and convert conversations into lasting relationships."
-        primaryCta={{ label: "Request a demo", href: "/contact-us" }}
-        secondaryCta={{ label: "Try live chat", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
+        secondaryCta={{ label: "Talk to our team", href: "/contact-us" }}
       />
 
       <Section>
@@ -62,7 +62,7 @@ export default function WebsiteLiveChatPage() {
         <CTABanner
           title="Start talking to your website visitors"
           description="See Driansh EngageOne live chat in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

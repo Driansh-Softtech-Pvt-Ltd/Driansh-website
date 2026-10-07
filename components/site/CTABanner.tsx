@@ -12,7 +12,7 @@ export interface CTABannerProps {
 export default function CTABanner({
   title,
   description,
-  cta = { label: "Get in Touch", href: "/contact-us" },
+  cta = { label: "Talk to our team", href: "/contact-us" },
   className,
 }: CTABannerProps) {
   return (

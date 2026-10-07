@@ -14,7 +14,7 @@ import {
 
 const MODULES = [
   {
-    title: "Dashboard Overview",
+    title: "Dashboard overview",
     icon: LucideLayoutDashboard,
     description:
       "The Dashboard offers a quick view of your operational setup, displaying counts for active Campaigns and core Processes. It tracks team resources, showing the number of available Agents and Supervisors. Functionally, the Call Summary monitors performance, detailing Inbound and Outbound volumes. This allows administrators to immediately assess call efficiency using Connected and Not Connected metrics.",
@@ -73,7 +73,7 @@ export default function ContactCenterPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Products"
+        eyebrow="Our products"
         title={contactCenterProduct.title}
         description={contactCenterProduct.description}
         image={contactCenterProduct.image}
@@ -104,7 +104,7 @@ export default function ContactCenterPage() {
           <div className="lg:sticky lg:top-28">
             <Image
               src="/images/contactcenter/all-combine.png"
-              alt="Contact Center Overview"
+              alt="Driansh Contact Center overview"
               width={800}
               height={800}
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -117,8 +117,8 @@ export default function ContactCenterPage() {
       {/* Benefits */}
       <Section>
         <SectionHeader
-          title="What are the Benefits?"
-          description="Our Contact Center platform delivers enterprise-grade security with multi-tenant architecture, intelligent automation that reduces manual work, and comprehensive workforce management across 7 process types. It provides advanced lead management with flexible ingestion, compliance governance, and real-time analytics with live monitoring and dashboards for data-driven decision-making."
+          title="Benefits"
+          description="Driansh Contact Center combines role-based security with a multi-tenant architecture, intelligent automation that reduces manual work, and comprehensive workforce management across 7 process types. It provides advanced lead management with flexible ingestion, compliance governance, and real-time analytics with live monitoring and dashboards for data-driven decision-making."
         />
         <IconCards items={benefits} />
       </Section>
@@ -126,15 +126,15 @@ export default function ContactCenterPage() {
       {/* Key features */}
       <Section tone="muted">
         <SectionHeader
-          title="What are the Key Features?"
-          description="It offers a complete omnichannel contact center suite with calling, IVR, ACD, queue management, advanced dialers, reporting, and agent tools. It supports multi-tenant deployment, multi-lingual operations, CRM integrations, add-on modules, and real-time monitoring for efficient and scalable customer engagement."
+          title="Key features"
+          description="Driansh Contact Center includes calling, IVR, ACD, queue management, advanced dialers, reporting, and agent tools. It supports multi-tenant deployment, multi-lingual operations, CRM integrations, add-on modules, and real-time monitoring for efficient and scalable customer engagement."
         />
         <IconCards items={keyFeaturesWithDesc} />
 
         <details className="group mt-12">
           <summary className="mx-auto flex w-fit cursor-pointer list-none items-center gap-2 rounded-full bg-brand-gradient px-7 py-3 font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 [&::-webkit-details-marker]:hidden">
-            <span className="group-open:hidden">Show More Features</span>
-            <span className="hidden group-open:inline">Show Less Features</span>
+            <span className="group-open:hidden">Show more features</span>
+            <span className="hidden group-open:inline">Show fewer features</span>
             <ChevronDown className="h-5 w-5 transition-transform group-open:rotate-180" aria-hidden="true" />
           </summary>
           <div className="mt-12">
@@ -146,8 +146,8 @@ export default function ContactCenterPage() {
       {/* CRM */}
       <Section>
         <SectionHeader
-          title="What is CRM?"
-          description="CRM (Customer Relationship Management) is a software system that helps businesses manage customer interactions, leads, sales pipelines, support conversations, and customer data all in one place."
+          title="CRM integrations"
+          description="Connect Driansh Contact Center to the CRM and collaboration tools your team already uses, so leads, call outcomes and customer data stay in sync."
         />
         <IconCards items={crm} />
       </Section>

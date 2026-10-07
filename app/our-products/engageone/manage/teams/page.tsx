@@ -16,7 +16,7 @@ const FEATURES = [
     visual: <TeamAutoAssignVisual />,
   },
   {
-    title: "Team Analytics",
+    title: "Team analytics",
     description:
       "Easily see how each of your teams is performing. View metrics like conversations, incoming and outgoing messages, First Response Time, etc. filtered by your teams. Filter these reports by duration and business hours, and download them to your system.",
     visual: <TeamOverviewVisual />,
@@ -31,7 +31,7 @@ export default function TeamsPage() {
         eyebrow="EngageOne"
         title="Organize your agents into teams"
         description="Create internal teams in your account to assign them conversations when working collaboratively."
-        primaryCta={{ label: "Book a Demo", href: "/contact-us" }}
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {FEATURES.map((feature, index) => (
@@ -51,7 +51,7 @@ export default function TeamsPage() {
         <CTABanner
           title="Route every conversation to the right team"
           description="See Driansh EngageOne teams in action with a personalised demo."
-          cta={{ label: "Book a Demo", href: "/contact-us" }}
+          cta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
         />
       </Section>
     </>

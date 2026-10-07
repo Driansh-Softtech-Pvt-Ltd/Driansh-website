@@ -30,11 +30,11 @@ const voipBilling: SolutionPageContent = {
       "VoIP billing software with real-time rating, prepaid and postpaid accounts, invoicing, resellers, DIDs and payment gateways for VoIP providers. Book a demo.",
   },
   hero: {
-    title: "VoIP Billing Software for Telecom Service Providers",
+    title: "VoIP billing software for telecom service providers",
     subtitle:
       "Rate every call in real time, invoice prepaid and postpaid customers, and manage resellers from one billing platform that plugs into your softswitch or PBX.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Real-time call rating",

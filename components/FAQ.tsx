@@ -23,7 +23,7 @@ interface FAQSectionProps {
 }
 
 export default function FAQ({
-  title = "Frequently Asked Questions",
+  title = "Frequently asked questions",
   sub_title,
   data,
   tone = "white",

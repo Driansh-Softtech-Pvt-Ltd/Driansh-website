@@ -12,10 +12,10 @@ export default function OurProductsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Products"
-        title="Driansh Products"
-        description="Explore Driansh Contact Center Solution and Driansh EngageOne."
-        primaryCta={{ label: "Get Started", href: "/contact-us" }}
+        eyebrow="Our products"
+        title="Driansh products"
+        description="Explore Driansh EngageOne, our omnichannel customer engagement platform, and Driansh Contact Center for voice-first teams."
+        primaryCta={{ label: "Request a demo", href: "/our-products/engageone/request-demo" }}
       />
 
       {OUR_PRODUCTS.map((product, index) => (
@@ -52,7 +52,7 @@ export default function OurProductsPage() {
       <Section size="sm" tone={OUR_PRODUCTS.length % 2 === 0 ? "white" : "muted"}>
         <CTABanner
           title="Find the right product for your business"
-          description="Talk to our team about Driansh Contact Center and Driansh EngageOne."
+          description="Talk to our team about Driansh EngageOne and Driansh Contact Center."
         />
       </Section>
     </>

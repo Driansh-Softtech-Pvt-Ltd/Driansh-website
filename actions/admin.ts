@@ -53,8 +53,8 @@ export async function importLegacyLeads() {
         update: {
           $setOnInsert: {
             externalId: `legacy-contact:${c._id}`,
-            type: c.message ? "contact" : "newsletter",
-            status: "new",
+            type: c.message ? ("contact" as const) : ("newsletter" as const),
+            status: "new" as const,
             name: c.name || undefined,
             email: c.email,
             phone: c.phone || undefined,
@@ -73,8 +73,8 @@ export async function importLegacyLeads() {
         filter: { type: "newsletter", email: s.email },
         update: {
           $setOnInsert: {
-            type: "newsletter",
-            status: "new",
+            type: "newsletter" as const,
+            status: "new" as const,
             email: s.email,
             newsletter: true,
             source: {},

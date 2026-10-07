@@ -32,11 +32,11 @@ const audioVideoConferencing: SolutionPageContent = {
       "Audio and video conferencing solution with screen sharing, chat, recording and moderator controls, under your brand and on your servers. Book a free demo.",
   },
   hero: {
-    title: "Audio & Video Conferencing Solution for Remote Teams",
+    title: "Audio & video conferencing solution for remote teams",
     subtitle:
       "We build browser-based audio and video conferencing with screen sharing, chat and recording, branded as yours and hosted on your own servers or cloud.",
-    primaryCta: "Book a Free Demo",
-    secondaryCta: "View Features",
+    primaryCta: "Talk to our team",
+    secondaryCta: "View features",
   },
   highlights: [
     "Browser-based meetings",
