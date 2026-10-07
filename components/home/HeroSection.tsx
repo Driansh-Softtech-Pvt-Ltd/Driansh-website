@@ -108,10 +108,6 @@ export default function HeroSection() {
       <div className="container-site">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-4xl">
-            <p className="eyebrow mb-5 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/80 px-3.5 py-1.5 text-[0.75rem] text-brand backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true" />
-              Customer engagement for growing businesses and enterprises
-            </p>
             <h1 className="text-[2.5rem] leading-[1.05] font-bold tracking-[-0.03em] text-ink sm:text-6xl lg:text-[4.25rem]">
               <span className="lg:block">Connect with every customer, </span>
               <span className="text-gradient">at enterprise scale</span>
