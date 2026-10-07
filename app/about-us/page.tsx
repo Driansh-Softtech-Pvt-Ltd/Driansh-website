@@ -15,6 +15,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { PageHero, Section, SectionHeader, MediaSplit, CTABanner, FeatureCard, CardGrid } from "@/components/site";
+import AboutStoryVisual from "@/components/visuals/AboutStoryVisual";
 
 const FACTS = [
   { value: "2025", label: "Founded" },
@@ -107,7 +108,7 @@ export default function AboutUsPage() {
       </Section>
 
       <Section tone="muted">
-        <MediaSplit image="/images/about_2.svg" imageAlt="Illustration of the Driansh team building communication software">
+        <MediaSplit visual={<AboutStoryVisual />}>
           <SectionHeader eyebrow="Our story" title="Why we started Driansh" align="left" className="mb-6 md:mb-6" />
           <div className="text-lead space-y-4">
             <p>
