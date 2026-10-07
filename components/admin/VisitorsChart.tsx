@@ -44,7 +44,7 @@ export default function VisitorsChart({ data }: { data: Point[] }) {
       <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} className="block" role="img" aria-label="Unique visitors per day">
         {ticks.map((t) => (
           <g key={t}>
-            <line x1={padL} x2={W} y1={y(t)} y2={y(t)} stroke="#E2E8F0" strokeWidth={1} />
+            <line x1={padL} x2={W} y1={y(t)} y2={y(t)} className="stroke-slate-200" strokeWidth={1} />
             <text x={padL - 6} y={y(t) + 4} textAnchor="end" className="fill-slate-400 text-[11px]">
               {t.toLocaleString()}
             </text>
@@ -60,7 +60,7 @@ export default function VisitorsChart({ data }: { data: Point[] }) {
               {h > 0 && (
                 <path
                   d={`M${x},${H - padB} v${-(h - r)} q0,${-r} ${r},${-r} h${barW - 2 * r} q${r},0 ${r},${r} v${h - r} z`}
-                  fill={hover === null || hover === i ? "#1E4EC4" : "#9FB4EA"}
+                  className={hover === null || hover === i ? "fill-brand" : "fill-brand/45"}
                 />
               )}
               {i % labelEvery === 0 && (

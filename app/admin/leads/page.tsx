@@ -15,7 +15,7 @@ function Delta({ now, before, label }: { now: number; before: number; label: str
   const pct = ((now - before) / before) * 100;
   const up = pct >= 0;
   return (
-    <p className={`mt-1 text-xs font-medium ${up ? "text-emerald-700" : "text-red-700"}`}>
+    <p className={`mt-1 text-xs font-medium ${up ? "text-emerald-700" : "text-rose-700"}`}>
       {up ? "▲" : "▼"} {Math.abs(pct).toFixed(0)}% <span className="font-normal text-slate-500">vs previous {label}</span>
     </p>
   );

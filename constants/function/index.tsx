@@ -5,43 +5,37 @@ export const benefits = [
     id: 1,
     title: "Enterprise-grade security & multi-tenancy",
     description: "Multi-tenant architecture with SSO and dual authentication (password & SSO-based login) ensures secure, isolated environments for each organization with dynamic, role-based permission management.",
-    icon: Shield,
-    color: "bg-blue-500"
+    icon: Shield
   },
   {
     id: 2,
     title: "Intelligent call management & automation",
     description: "Advanced disposition management, auto-disposition on timeouts, and dynamic auto re-attempt configuration based on telecom outcomes and agent dispositions reduce manual workload and improve efficiency.",
-    icon: Zap,
-    color: "bg-orange-500"
+    icon: Zap
   },
   {
     id: 3,
     title: "Comprehensive workforce management",
     description: "Sophisticated agent lifecycle management with supervisor and team lead oversight, aux code management for breaks, business hours management, and real-time team monitoring ensure optimal resource utilization.",
-    icon: Users,
-    color: "bg-purple-500"
+    icon: Users
   },
   {
     id: 4,
     title: "Multi-channel campaign operations",
     description: "Support for 7 distinct process types—predictive, progressive, preview, manual outbound, inbound, IVR/Voice Blast, and voicebot—with flexible campaign and process management for diverse business needs.",
-    icon: Headphones,
-    color: "bg-green-500"
+    icon: Headphones
   },
   {
     id: 5,
     title: "Advanced lead & list management",
     description: "Flexible lead ingestion (Blob, SFTP, manual), comprehensive lead state controls (reset, flush, pause, resume), intelligent ordering, and governance rules (DND, daily attempt limits) ensure compliant, efficient campaigns.",
-    icon: BarChart3,
-    color: "bg-red-500"
+    icon: BarChart3
   },
   {
     id: 6,
     title: "Real-time intelligence & analytics",
     description: "Live call monitoring, comprehensive agent analytics, multi-view reporting (call details, recordings, productivity, audit logs), and real-time dashboard visibility enable data-driven decision-making.",
-    icon: Lock,
-    color: "bg-indigo-500"
+    icon: Lock
   }
 ];
 
@@ -253,22 +247,19 @@ export const crm = [
     id: 1,
     title: "Microsoft Teams integration",
     description: "Seamless integration with Microsoft Teams enables users to initiate calls, share data, and collaborate directly within Teams. Enhances productivity with unified communication, call logs, and synchronized customer interactions.",
-    icon: PanelsTopLeft,
-    color: "bg-purple-500"
+    icon: PanelsTopLeft
   },
   {
     id: 2,
     title: "LeadSquared integration",
     description: "Native LeadSquared integration that syncs contacts, captures lead activities, logs call recordings, and automates follow-ups. Boosts sales efficiency with real-time telephony updates inside LeadSquared CRM.",
-    icon: Contact,
-    color: "bg-orange-500"
+    icon: Contact
   },
   {
   id: 3,
   title: "Zoho CRM integration",
   description: "Seamless Zoho CRM integration enabling automatic call logs, contact sync, and real-time telephony updates to improve customer tracking, lead management, and workflow efficiency.",
-  icon: Contact2,
-  color: "bg-blue-500"
+  icon: Contact2
 }
 
 

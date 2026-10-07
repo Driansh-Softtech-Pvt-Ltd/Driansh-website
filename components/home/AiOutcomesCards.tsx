@@ -89,7 +89,7 @@ export function AiOutcomesBanner() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.25)_1px,transparent_1px)] bg-size-[56px_100%]"
       />
-      <span className="absolute left-5 top-5 inline-flex -rotate-2 items-center gap-1.5 rounded-xl border-2 border-ink bg-white px-3 py-1 text-sm font-semibold text-ink shadow-[3px_3px_0_0_#1D1A4E]">
+      <span className="absolute left-5 top-5 inline-flex -rotate-2 items-center gap-1.5 rounded-xl border-2 border-ink bg-white px-3 py-1 text-sm font-semibold text-ink shadow-[3px_3px_0_0_var(--color-ink)]">
         <Sparkles className="h-4 w-4 text-violet-600" /> EngageOne AI
       </span>
       <div className="relative grid items-center gap-8 px-6 pb-8 pt-20 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6 lg:py-14 lg:pt-20">
@@ -125,7 +125,7 @@ function FeatureCard({
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
       <div className="flex items-stretch border-b border-slate-200">
-        <h3 className="flex-1 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-ink">{label}</h3>
+        <h3 className="eyebrow flex-1 px-6 py-4 text-ink">{label}</h3>
         <Link
           href={href}
           aria-label={`Learn more about ${label.toLowerCase()}`}
@@ -138,7 +138,7 @@ function FeatureCard({
         {children}
       </div>
       <div className="border-t border-slate-200 px-6 py-6">
-        <p className="text-xl font-semibold text-ink">{title}</p>
+        <p className="heading-3 text-ink">{title}</p>
         <p className="mt-2 text-slate-600">{description}</p>
       </div>
     </article>

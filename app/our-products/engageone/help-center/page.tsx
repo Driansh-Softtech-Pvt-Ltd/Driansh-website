@@ -110,7 +110,7 @@ export default function HelpCenterPage() {
                 className="relative"
               >
                 {card.comingSoon && (
-                  <span className="absolute right-4 top-4 inline-flex items-center rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">
+                  <span className="absolute right-4 top-4 inline-flex items-center rounded-lg bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">
                     Coming soon
                   </span>
                 )}

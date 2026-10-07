@@ -39,7 +39,7 @@ export default function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-5 lg:gap-14">
           <div className="space-y-10 lg:col-span-2">
             <div>
-              <h2 className="text-xl font-semibold text-ink">Ways to reach us</h2>
+              <h2 className="heading-3 text-ink">Ways to reach us</h2>
               <ul className="mt-5 space-y-3">
                 {CHANNELS.map(({ icon: Icon, title, detail, value, href, external }) => (
                   <li key={title}>
@@ -64,7 +64,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-ink">What happens next</h2>
+              <h2 className="heading-3 text-ink">What happens next</h2>
               <ol className="mt-5 space-y-5">
                 {NEXT_STEPS.map(({ title, detail }, i) => (
                   <li key={title} className="flex gap-4">
@@ -83,7 +83,7 @@ export default function ContactPage() {
 
           <div className="order-first lg:order-none lg:col-span-3">
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-10">
-              <h2 className="text-2xl font-semibold text-ink">Send us a message</h2>
+              <h2 className="heading-3 text-ink">Send us a message</h2>
               <p className="mt-1 mb-8 text-slate-600">Tell us a little about what you need and we&apos;ll get back to you.</p>
               <ContactForm />
             </div>

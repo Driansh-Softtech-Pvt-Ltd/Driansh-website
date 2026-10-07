@@ -10,7 +10,9 @@ import {
   FeatureCard,
   CheckList,
   CTABanner,
+  ctaClasses,
 } from "@/components/site";
+import { cn } from "@/lib/utils";
 
 const MODULES = [
   {
@@ -132,7 +134,7 @@ export default function ContactCenterPage() {
         <IconCards items={keyFeaturesWithDesc} />
 
         <details className="group mt-12">
-          <summary className="mx-auto flex w-fit cursor-pointer list-none items-center gap-2 rounded-full bg-brand-gradient px-7 py-3 font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-110 [&::-webkit-details-marker]:hidden">
+          <summary className={cn(ctaClasses(), "mx-auto flex w-fit cursor-pointer list-none [&::-webkit-details-marker]:hidden")}>
             <span className="group-open:hidden">Show more features</span>
             <span className="hidden group-open:inline">Show fewer features</span>
             <ChevronDown className="h-5 w-5 transition-transform group-open:rotate-180" aria-hidden="true" />

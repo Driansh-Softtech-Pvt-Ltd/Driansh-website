@@ -35,7 +35,7 @@ export default function TermsOfUsePage() {
       <section className="mt-12 first:mt-0">
         <div>
           <div>
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Content
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -49,7 +49,7 @@ export default function TermsOfUsePage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Copyrights
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -65,7 +65,7 @@ export default function TermsOfUsePage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Limitations of Damages and Liabilities
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -99,7 +99,7 @@ export default function TermsOfUsePage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Indemnity
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -140,7 +140,7 @@ export default function TermsOfUsePage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Note
             </h2>
             <p className="text-lead mt-4 text-slate-600">

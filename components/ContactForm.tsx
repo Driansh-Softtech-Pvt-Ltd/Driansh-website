@@ -7,6 +7,7 @@ import { AlertCircle, ArrowRight, CheckCircle2, ChevronDown, Loader2, Mail, Mess
 import { submitContact } from "@/actions/submitContact";
 import { getAttribution } from "@/lib/analytics/attribution";
 import { cn } from "@/lib/utils";
+import { ctaClasses } from "@/components/site/CtaLink";
 import { contactSchema, type ContactFormData } from "@/validations/contact-schema";
 import {
   CONTACT_EMAIL,
@@ -108,7 +109,7 @@ export default function ContactForm({
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
           <CheckCircle2 className="h-9 w-9" />
         </span>
-        <h3 className="mt-5 text-2xl font-semibold text-ink">Thanks, {status.name}! Your message is with our team.</h3>
+        <h3 className="heading-3 mt-5 text-ink">Thanks, {status.name}! Your message is with our team.</h3>
         <p className="mt-2 max-w-md text-slate-600">
           We&apos;ll reply to the email address you gave us. If it&apos;s urgent, call us on{" "}
           <a href={`tel:${CONTACT_PHONE.tel}`} className="font-medium text-brand hover:underline">
@@ -119,7 +120,7 @@ export default function ContactForm({
         <button
           type="button"
           onClick={() => setStatus({ kind: "idle" })}
-          className="mt-6 text-sm font-semibold text-brand hover:underline"
+          className="mt-6 min-h-10 text-sm font-semibold text-brand hover:underline"
         >
           Send another message
         </button>
@@ -279,7 +280,7 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand-gradient px-7 py-3.5 font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110 disabled:translate-y-0 disabled:opacity-70"
+          className={cn(ctaClasses(), "shrink-0")}
         >
           {isSubmitting ? (
             <>

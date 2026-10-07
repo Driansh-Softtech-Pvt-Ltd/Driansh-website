@@ -25,7 +25,7 @@ export default function CTABanner({
       <div aria-hidden="true" className="bg-brand-gradient absolute inset-0 opacity-90" />
       <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold sm:text-3xl">{title}</h2>
+          <h2 className="heading-2 text-white">{title}</h2>
           {description && <div className="mt-3 text-white/85">{description}</div>}
         </div>
         <CtaLink href={cta.href} variant="light" className="shrink-0">

@@ -10,20 +10,20 @@ function FeaturedCard({ link, onNavigate }: { link: NavLink; onNavigate: () => v
     <Link
       href={link.href}
       onClick={onNavigate}
-      className="group block rounded-2xl border border-gray-100 bg-surface p-4 transition-colors hover:border-brand/30 hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-brand"
+      className="group block rounded-2xl border border-slate-100 bg-surface p-4 transition-colors hover:border-brand/30 hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-brand"
     >
       <span className="flex items-center justify-between gap-2 font-semibold text-ink group-hover:text-brand">
         {link.label}
         <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
       </span>
-      {link.description && <span className="mt-1 block text-sm leading-snug text-gray-600">{link.description}</span>}
+      {link.description && <span className="mt-1 block text-sm leading-snug text-slate-600">{link.description}</span>}
     </Link>
   );
 }
 
 function Group({ group, onNavigate }: { group: NavGroup; onNavigate: () => void }) {
   const columns = group.columns ?? 1;
-  const titleClass = "block text-xs font-semibold uppercase tracking-wider text-gray-500";
+  const titleClass = "eyebrow block text-slate-500";
 
   return (
     <div className={`min-w-0 ${GROUP_WIDTH[columns]}`}>
@@ -43,13 +43,13 @@ function Group({ group, onNavigate }: { group: NavGroup; onNavigate: () => void 
               className={
                 link.description
                   ? "group -mx-3 block rounded-xl p-3 transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-brand"
-                  : "block rounded-md py-1 text-sm text-gray-800 transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-brand"
+                  : "block rounded-lg py-1 text-sm text-slate-800 transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-brand"
               }
             >
               {link.description ? (
                 <>
                   <span className="font-semibold text-ink group-hover:text-brand">{link.label}</span>
-                  <span className="mt-1 block text-sm leading-snug text-gray-600">{link.description}</span>
+                  <span className="mt-1 block text-sm leading-snug text-slate-600">{link.description}</span>
                 </>
               ) : (
                 link.label

@@ -18,7 +18,7 @@ function ToolCard({ eyebrow, icon: Icon, title, description, children }: {
       <p className="eyebrow flex items-center gap-1.5 text-brand">
         <Icon className="h-3.5 w-3.5" /> {eyebrow}
       </p>
-      <h3 className="mt-2 text-lg font-semibold text-ink">{title}</h3>
+      <h3 className="heading-4 mt-2 text-ink">{title}</h3>
       <p className="mt-1 text-sm leading-relaxed text-slate-600">{description}</p>
       <div className="mt-5 flex-1 rounded-xl border border-slate-100 bg-surface p-4 text-xs" aria-hidden="true">
         {children}
@@ -41,7 +41,7 @@ const RULE = [
 
 export default function OmnichannelToolCards() {
   return (
-    <div className="mt-12 grid gap-5 md:mt-16 md:grid-cols-3">
+    <div className="mt-12 grid gap-5 md:mt-16 lg:grid-cols-3">
       <ToolCard
         eyebrow="Macros"
         icon={Play}

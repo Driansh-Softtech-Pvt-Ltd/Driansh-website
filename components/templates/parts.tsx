@@ -40,7 +40,7 @@ export function FeatureList({ items }: { items: IconItem[] }) {
             <Icon className="h-5 w-5" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-semibold text-ink">{title}</h3>
+            <h3 className="heading-4 text-ink">{title}</h3>
             <p className="mt-1 text-sm leading-relaxed text-slate-600">{text}</p>
           </div>
         </li>
@@ -131,13 +131,13 @@ export function RelatedLinks({ title, items }: { title: string; items: { name: s
   return (
     <Section size="sm" tone="muted">
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
-        <h2 className="shrink-0 text-lg font-semibold text-ink">{title}</h2>
+        <h2 className="heading-4 shrink-0 text-ink">{title}</h2>
         <ul className="flex flex-wrap gap-3">
           {items.map((r) => (
             <li key={r.href}>
               <Link
                 href={r.href}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand"
               >
                 {r.name} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
               </Link>

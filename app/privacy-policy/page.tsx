@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
       <section className="mt-12 first:mt-0">
         <div>
           <div>
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Information We Receive From You
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Information You Provide Through Interactions
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Protection Of Your Data
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Online Privacy Policy Only
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Changes and Amendments
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            <h2 className="heading-2 text-ink">
               Your Consent
             </h2>
             <p className="text-lead mt-4 text-slate-600">
@@ -118,7 +118,7 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-ink sm:text-3xl">Contact Us</h2>
+            <h2 className="heading-2 text-ink">Contact Us</h2>
             <p className="text-lead mt-4 text-slate-600">
               Should you have any query or question regarding this Privacy
               Policy or any of our dealings or practices, kindly contact us.

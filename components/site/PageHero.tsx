@@ -92,7 +92,7 @@ export default function PageHero({
                   <li key={b.href} className="flex items-center gap-1.5">
                     {i > 0 && <span aria-hidden="true">/</span>}
                     {i < breadcrumbs.length - 1 ? (
-                      <Link href={b.href} className="hover:text-white">{b.name}</Link>
+                      <Link href={b.href} className="-my-2.5 inline-block py-2.5 hover:text-white">{b.name}</Link>
                     ) : (
                       <span aria-current="page" className="text-slate-300">{b.name}</span>
                     )}

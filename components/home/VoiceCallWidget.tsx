@@ -262,7 +262,7 @@ export default function VoiceCallWidget() {
               onClick={() => select(i)}
               onKeyDown={(event) => onTabKey(event, i)}
               className={cn(
-                "relative flex items-center justify-center gap-1 overflow-hidden rounded-full px-1 py-2 text-[11px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-brand sm:text-xs",
+                "relative flex min-h-10 items-center justify-center gap-1 overflow-hidden rounded-full px-1 py-2 text-[11px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-brand sm:text-xs",
                 isActive ? "bg-white text-ink shadow-sm" : "text-slate-500 hover:text-ink"
               )}
             >
@@ -346,7 +346,7 @@ export default function VoiceCallWidget() {
             type="button"
             onClick={() => setPlaying((value) => !value)}
             aria-label={playing ? "Pause the call demo" : "Play the call demo"}
-            className="flex shrink-0 items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 font-medium text-ink transition-colors hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-brand"
+            className="flex min-h-10 shrink-0 items-center gap-1.5 rounded-full border border-slate-200 px-4 py-1.5 font-medium text-ink transition-colors hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-brand"
           >
             {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
             {playing ? "Pause" : "Play"}

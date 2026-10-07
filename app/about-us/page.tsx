@@ -97,7 +97,7 @@ export default function AboutUsPage() {
       />
 
       <Section size="sm">
-        <dl className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {FACTS.map(({ value, label }) => (
             <div key={value} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
               <dt className="text-sm text-slate-500">{label}</dt>
@@ -150,7 +150,7 @@ export default function AboutUsPage() {
                 </span>
                 <span className="text-3xl font-bold text-brand/20">{step}</span>
               </div>
-              <h3 className="mt-5 text-lg font-semibold text-ink">{title}</h3>
+              <h3 className="heading-4 mt-5 text-ink">{title}</h3>
               <p className="mt-2 text-slate-600">{description}</p>
             </li>
           ))}

@@ -279,7 +279,7 @@ export default function IndustryShowcase() {
             className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14"
           >
             <div>
-              <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+              <p className="eyebrow flex items-center gap-2 text-brand">
                 <span className="h-2 w-2 rounded-sm bg-brand-gradient" aria-hidden="true" />
                 {String(active + 1).padStart(2, "0")} / {scene.name}
               </p>
@@ -288,7 +288,7 @@ export default function IndustryShowcase() {
               <ul className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
                 {scene.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-center gap-4 py-4 text-ink">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
                       <Check className="h-4 w-4" aria-hidden="true" />
                     </span>
                     {bullet}
@@ -296,10 +296,10 @@ export default function IndustryShowcase() {
                 ))}
               </ul>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <CtaLink href={DEMO_HREF} className="px-5 py-2.5 text-sm">
+                <CtaLink href={DEMO_HREF} size="sm">
                   Request a demo
                 </CtaLink>
-                <CtaLink href={scene.href} variant="outline" className="px-5 py-2.5 text-sm">
+                <CtaLink href={scene.href} variant="outline" size="sm">
                   Explore {scene.name}
                 </CtaLink>
                 {!reduceMotion && (
@@ -307,7 +307,7 @@ export default function IndustryShowcase() {
                     type="button"
                     onClick={() => setPlaying((value) => !value)}
                     aria-label={playing ? "Pause the industry demo" : "Play the industry demo"}
-                    className="ml-auto flex items-center gap-1.5 rounded-full border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-brand"
+                    className="ml-auto flex min-h-10 items-center gap-1.5 rounded-full border border-slate-200 px-4 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-brand"
                   >
                     {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
                     {playing ? "Pause" : "Play"}

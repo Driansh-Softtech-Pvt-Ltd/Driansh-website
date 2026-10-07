@@ -106,7 +106,7 @@ export default function HelpCenterPlayer() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className={cn("font-semibold", isActive ? "text-ink" : "text-slate-600")}>{item.title}</h3>
+                    <h3 className={cn("heading-4", isActive ? "text-ink" : "text-slate-600")}>{item.title}</h3>
                     <AnimatePresence initial={false}>
                       {isActive && (
                         <motion.p
@@ -143,7 +143,7 @@ export default function HelpCenterPlayer() {
               type="button"
               onClick={() => setPlaying((value) => !value)}
               aria-label={playing ? "Pause the help center tour" : "Play the help center tour"}
-              className="flex shrink-0 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 font-medium text-ink transition-colors hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-brand"
+              className="flex min-h-10 shrink-0 items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-ink transition-colors hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-brand"
             >
               {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
               {playing ? "Pause" : "Play"}

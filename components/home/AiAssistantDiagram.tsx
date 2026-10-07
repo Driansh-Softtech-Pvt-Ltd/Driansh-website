@@ -103,12 +103,12 @@ function Diagram({ active, reduceMotion }: { active: Branch; reduceMotion: boole
       {(Object.keys(PATHS) as Branch[]).map((branch) =>
         PATHS[branch].map((d) => (
           <g key={d}>
-            <path d={d} fill="none" stroke="#E2E8F0" strokeWidth={2} />
+            <path d={d} fill="none" className="stroke-slate-200" strokeWidth={2} />
             {on(branch) && (
               <motion.path
                 d={d}
                 fill="none"
-                stroke="#7C3AED"
+                className="stroke-accent"
                 strokeWidth={2.5}
                 strokeLinecap="round"
                 initial={reduceMotion ? false : { pathLength: 0 }}
@@ -261,7 +261,7 @@ export default function AiAssistantDiagram() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className={cn("text-xl font-semibold sm:text-2xl", isActive ? "text-white" : "text-white/70")}>
+                  <h3 className={cn("heading-3 sm:text-2xl", isActive ? "text-white" : "text-white/70")}>
                     {step.title}
                   </h3>
                   <AnimatePresence initial={false}>
@@ -295,7 +295,7 @@ export default function AiAssistantDiagram() {
               type="button"
               onClick={() => setPlaying((value) => !value)}
               aria-label={playing ? "Pause the animation" : "Play the animation"}
-              className="flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-violet-300"
+              className="flex min-h-10 items-center gap-1.5 rounded-full border border-white/15 px-4 py-1.5 text-xs font-medium text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-violet-300"
             >
               {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
               {playing ? "Pause" : "Play"}
@@ -324,7 +324,7 @@ export default function AiAssistantDiagram() {
               animate={{ opacity: 1, y: 0, rotate: 2 }}
               exit={{ opacity: 0 }}
               transition={{ delay: reduceMotion ? 0 : 1.4 }}
-              className="absolute -top-4 right-3 flex items-center gap-2 rounded-xl border-2 border-ink bg-white px-3 py-2 shadow-[4px_4px_0_0_#1D1A4E] sm:right-6"
+              className="absolute -top-4 right-3 flex items-center gap-2 rounded-xl border-2 border-ink bg-white px-3 py-2 shadow-[4px_4px_0_0_var(--color-ink)] sm:right-6"
             >
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-gradient text-white">
                 <Sparkles className="h-4 w-4" />

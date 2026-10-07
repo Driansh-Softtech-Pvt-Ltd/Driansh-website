@@ -12,7 +12,7 @@ export default function ContactSection() {
     <Section tone="navy" className="relative isolate overflow-hidden">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-20 -z-10 h-[28rem] w-[28rem] rounded-full bg-blue-600/25 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 -left-20 -z-10 h-[28rem] w-[28rem] rounded-full bg-brand/25 blur-3xl"
       />
       <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <div>

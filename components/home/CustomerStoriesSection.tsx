@@ -22,7 +22,7 @@ export default function CustomerStoriesSection({ items = TESTIMONIALS }: { items
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-slate-700">{quote}</blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-5">
                 {logo && (
-                  <Image src={logo} alt="" width={40} height={40} className="h-10 w-10 shrink-0 rounded-lg object-contain" />
+                  <Image src={logo} alt="" width={40} height={40} className="h-10 w-10 shrink-0 rounded-xl object-contain" />
                 )}
                 <span className="min-w-0">
                   <span className="block font-semibold text-ink">{name}</span>

@@ -108,7 +108,7 @@ export default function HeroSection() {
       <div className="container-site">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-4xl">
-            <h1 className="text-[2.5rem] leading-[1.05] font-bold tracking-[-0.03em] text-ink sm:text-6xl lg:text-[4.25rem]">
+            <h1 className="heading-display text-ink">
               <span className="lg:block">Connect with every customer, </span>
               <span className="text-gradient">at enterprise scale</span>
             </h1>

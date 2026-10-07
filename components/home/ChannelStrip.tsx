@@ -22,13 +22,13 @@ const CHANNELS: { label: string; href: string; icon: LucideIcon; tint: string }[
   { label: "WhatsApp", href: `${INTEGRATIONS}/whatsapp`, icon: MessageCircle, tint: "bg-emerald-100 text-emerald-600" },
   { label: "Instagram", href: `${INTEGRATIONS}/instagram`, icon: Instagram, tint: "bg-pink-100 text-pink-600" },
   { label: "Messenger", href: `${INTEGRATIONS}/facebook`, icon: Facebook, tint: "bg-blue-100 text-blue-600" },
-  { label: "TikTok", href: `${INTEGRATIONS}/tiktok`, icon: Music2, tint: "bg-slate-200 text-slate-800" },
-  { label: "Telegram", href: `${INTEGRATIONS}/telegram`, icon: Send, tint: "bg-cyan-100 text-cyan-600" },
+  { label: "TikTok", href: `${INTEGRATIONS}/tiktok`, icon: Music2, tint: "bg-slate-200 text-ink" },
+  { label: "Telegram", href: `${INTEGRATIONS}/telegram`, icon: Send, tint: "bg-sky-100 text-sky-600" },
   { label: "LINE", href: `${INTEGRATIONS}/line`, icon: MessagesSquare, tint: "bg-green-100 text-green-600" },
   { label: "SMS", href: `${INTEGRATIONS}/sms`, icon: Smartphone, tint: "bg-amber-100 text-amber-600" },
-  { label: "Email", href: `${INTEGRATIONS}/email`, icon: Mail, tint: "bg-sky-100 text-sky-600" },
+  { label: "Email", href: `${INTEGRATIONS}/email`, icon: Mail, tint: "bg-brand-soft text-brand" },
   { label: "Voice", href: `${INTEGRATIONS}/twilio`, icon: Phone, tint: "bg-rose-100 text-rose-600" },
-  { label: "API", href: `${INTEGRATIONS}/api-channel`, icon: Code2, tint: "bg-indigo-100 text-indigo-600" },
+  { label: "API", href: `${INTEGRATIONS}/api-channel`, icon: Code2, tint: "bg-navy/10 text-navy" },
 ];
 
 /** Channels EngageOne connects, shown where other sites show client logos. */

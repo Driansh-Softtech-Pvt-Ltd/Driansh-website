@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { NAV_CTA, NAV_MENUS, type NavMenu } from "@/constants/index";
 import MegaMenuPanel from "@/components/nav/MegaMenuPanel";
 import MobileMenu from "@/components/nav/MobileMenu";
+import CtaLink from "@/components/site/CtaLink";
 
 const HOVER_CLOSE_DELAY_MS = 150;
 const MOBILE_MENU_ID = "mobile-menu";
@@ -45,7 +46,7 @@ function DesktopNavItem({
     return (
       <Link
         href={menu.href ?? "/"}
-        className="flex h-full items-center px-3 text-[16px] font-medium text-gray-800 hover:text-brand"
+        className="flex h-full items-center px-2 text-base font-medium text-slate-800 hover:text-brand xl:px-3"
       >
         {menu.label}
       </Link>
@@ -73,8 +74,8 @@ function DesktopNavItem({
         aria-expanded={isOpen}
         aria-controls={panelId}
         onClick={() => (isOpen ? onClose() : onOpen())}
-        className={`flex h-full items-center gap-1.5 px-3 text-[16px] font-medium hover:text-brand ${
-          isOpen ? "text-brand" : "text-gray-800"
+        className={`flex h-full items-center gap-1 px-2 text-base font-medium hover:text-brand xl:gap-1.5 xl:px-3 ${
+          isOpen ? "text-brand" : "text-slate-800"
         }`}
       >
         {menu.label}
@@ -89,7 +90,7 @@ function DesktopNavItem({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="absolute inset-x-0 top-full z-40 border-t border-gray-100 bg-white shadow-xl"
+            className="absolute inset-x-0 top-full z-40 border-t border-slate-100 bg-white shadow-xl"
           >
             <MegaMenuPanel menu={menu} onNavigate={onClose} />
           </motion.div>
@@ -141,8 +142,8 @@ export default function Navbar() {
   }, [openMenu, isMenuOpen]);
 
   return (
-    <header ref={headerRef} className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white shadow-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6 lg:h-24 xl:px-8">
+    <header ref={headerRef} className="fixed top-0 z-50 w-full border-b border-slate-100 bg-white shadow-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6 lg:h-24 lg:gap-2 lg:px-4 xl:gap-4 xl:px-8">
         <Logo />
 
         <nav aria-label="Main" className="hidden h-full items-center lg:flex">
@@ -158,12 +159,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <Link
-          href={NAV_CTA.href}
-          className="bg-brand-gradient hidden shrink-0 rounded-full px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110 lg:block"
-        >
+        <CtaLink href={NAV_CTA.href} arrow={false} className="hidden shrink-0 lg:inline-flex lg:px-5 xl:px-7">
           {NAV_CTA.label}
-        </Link>
+        </CtaLink>
 
         <button
           type="button"
@@ -171,9 +169,9 @@ export default function Navbar() {
           aria-controls={MOBILE_MENU_ID}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="rounded-lg p-2 transition-colors hover:bg-gray-100 lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-xl transition-colors hover:bg-slate-100 lg:hidden"
         >
-          {isMenuOpen ? <X className="h-6 w-6 text-gray-800" /> : <Menu className="h-6 w-6 text-gray-800" />}
+          {isMenuOpen ? <X className="h-6 w-6 text-slate-800" /> : <Menu className="h-6 w-6 text-slate-800" />}
         </button>
       </div>
 

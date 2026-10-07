@@ -145,7 +145,7 @@ export default function OmnichannelShowcase() {
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className={cn("font-semibold", isActive ? "text-ink" : "text-slate-600")}>{item.title}</h3>
+                <h3 className={cn("heading-4", isActive ? "text-ink" : "text-slate-600")}>{item.title}</h3>
               </button>
               <AnimatePresence initial={false}>
                 {isActive && (
@@ -162,7 +162,7 @@ export default function OmnichannelShowcase() {
                       <p className="text-sm leading-relaxed text-slate-600">{item.description}</p>
                       <Link
                         href={item.link.href}
-                        className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
+                        className="mt-1 inline-flex min-h-10 items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
                       >
                         {item.link.label} <ArrowRight className="h-4 w-4" />
                       </Link>
