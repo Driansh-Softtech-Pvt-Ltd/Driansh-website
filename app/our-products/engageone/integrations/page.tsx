@@ -110,6 +110,55 @@ const integrations: Integration[] = [
       "Embed your own web app inside the conversation screen to show orders, payments or account details next to the chat.",
     category: "Developers",
   },
+  // Planned integrations.
+  {
+    name: "HubSpot",
+    logo: "/images/integrations/hubspot.png",
+    description: "Keep HubSpot contacts and deals in step with your conversations, so sales and support see the same customer history.",
+    category: "Coming soon",
+  },
+  {
+    name: "Zoho CRM",
+    logo: "/images/integrations/zoho-crm.png",
+    description: "Create and update Zoho CRM leads and contacts from chats, and log each conversation against the right record.",
+    category: "Coming soon",
+  },
+  {
+    name: "Attio",
+    logo: "/images/integrations/attio.png",
+    description: "Save customer conversations to Attio records so your team has every interaction in one place.",
+    category: "Coming soon",
+  },
+  {
+    name: "WooCommerce",
+    logo: "/images/integrations/woocommerce.png",
+    description: "See a shopper’s WooCommerce orders and cart beside the chat to answer order questions faster.",
+    category: "Coming soon",
+  },
+  {
+    name: "GitHub",
+    logo: "/images/integrations/github.png",
+    description: "Open a GitHub issue from a conversation and keep the customer posted as the fix moves forward.",
+    category: "Coming soon",
+  },
+  {
+    name: "Calendly",
+    logo: "/images/integrations/calendly.png",
+    description: "Share your Calendly availability in the chat and let customers book a meeting without leaving the conversation.",
+    category: "Coming soon",
+  },
+  {
+    name: "Cal.com",
+    logo: "/images/integrations/calcom.png",
+    description: "Offer Cal.com booking links in conversations and keep appointments in sync with your calendar.",
+    category: "Coming soon",
+  },
+  {
+    name: "Stripe",
+    logo: "/images/integrations/stripe.png",
+    description: "Look up a customer’s Stripe payments and subscriptions from the chat to settle billing questions quickly.",
+    category: "Coming soon",
+  },
 ];
 
 const CHANNELS: { name: string; href: string; icon: LucideIcon }[] = [
