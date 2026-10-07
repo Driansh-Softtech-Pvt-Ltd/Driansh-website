@@ -48,27 +48,78 @@ const INDUSTRY_LINKS: NavLink[] = INDUSTRIES.map((industry) => ({
   href: `${ENGAGEONE}/industries/${industry.slug}`,
 }));
 
+const SERVICE_PRODUCTS: NavLink[] = [
+  {
+    label: "EngageOne — Omnichannel",
+    href: ENGAGEONE,
+    description: "One inbox for chat, WhatsApp, social, email and voice, with an AI assistant.",
+  },
+  {
+    label: "Voice Call Center",
+    href: "/our-products/contactcenter",
+    description: "Inbound and outbound calling with IVR, queues, dialers and live monitoring.",
+  },
+  {
+    label: "Unified Communications",
+    href: "/unified-communications-solution",
+    description: "Voice, video, chat and conferencing for your teams on one platform.",
+  },
+];
+
 const VOIP_DEVELOPMENT_LINKS: NavLink[] = [
-  { label: "FreeSWITCH development", href: "/services/freeswitch-development-service" },
-  { label: "WebRTC development", href: "/services/webrtc-development-service" },
-  { label: "Asterisk development", href: "/services/asterisk-development-service" },
-  { label: "OpenSIPS development", href: "/services/opensips-development-service" },
-  { label: "Kamailio development", href: "/services/kamailio-development-service" },
+  {
+    label: "FreeSWITCH development",
+    href: "/services/freeswitch-development-service",
+    description: "Add calling, IVR, conferencing and recording to your platform.",
+  },
+  {
+    label: "WebRTC development",
+    href: "/services/webrtc-development-service",
+    description: "In-browser and in-app voice and video calls for your users.",
+  },
+  {
+    label: "Asterisk development",
+    href: "/services/asterisk-development-service",
+    description: "PBX features and call routing built into your product.",
+  },
+  {
+    label: "OpenSIPS development",
+    href: "/services/opensips-development-service",
+    description: "SIP routing and load balancing that grows with your users.",
+  },
+  {
+    label: "Kamailio development",
+    href: "/services/kamailio-development-service",
+    description: "A carrier-grade SIP proxy for high call volumes and multi-tenant setups.",
+  },
 ];
 
 const ENGINEERING_LINKS: NavLink[] = [
-  { label: "DevOps services", href: "/services/devops-services" },
-  { label: "Web development", href: "/services/web-development" },
-  { label: "Mobile app development", href: "/services/mobile-app-development" },
-  { label: "VoIP testing & QA", href: "/services/voip-testing" },
-  { label: "Product engineering", href: "/services/product-engineering-service" },
-];
-
-const VOIP_SOLUTION_LINKS: NavLink[] = [
-  { label: "Multi-tenant IP PBX", href: "/multi-tenant-ip-pbx-solution" },
-  { label: "Call center", href: "/call-center-solution" },
-  { label: "Voice broadcasting", href: "/voice-broadcasting-solution" },
-  { label: "Unified communications", href: "/unified-communications-solution" },
+  {
+    label: "Product engineering",
+    href: "/services/product-engineering-service",
+    description: "Take your product from idea to launch with a dedicated team.",
+  },
+  {
+    label: "Web development",
+    href: "/services/web-development",
+    description: "Customer portals, admin dashboards and SaaS front ends.",
+  },
+  {
+    label: "Mobile app development",
+    href: "/services/mobile-app-development",
+    description: "iOS and Android apps with calling and chat built in.",
+  },
+  {
+    label: "DevOps services",
+    href: "/services/devops-services",
+    description: "Cloud setup, CI/CD, monitoring and scaling for your product.",
+  },
+  {
+    label: "VoIP testing & QA",
+    href: "/services/voip-testing",
+    description: "Call quality, load and regression testing before every release.",
+  },
 ];
 
 export const NAV_MENUS: NavMenu[] = [
@@ -181,22 +232,10 @@ export const NAV_MENUS: NavMenu[] = [
   { label: "Pricing", href: `${ENGAGEONE}/pricing` },
   {
     label: "Services",
-    featured: [
-      {
-        label: "All services",
-        href: "/services",
-        description: "VoIP, WebRTC, DevOps, web, mobile and QA engineering from the Driansh team.",
-      },
-      {
-        label: "All VoIP solutions",
-        href: "/solutions",
-        description: "Ready-to-deploy telephony platforms, customised for your business.",
-      },
-    ],
+    featured: SERVICE_PRODUCTS,
     groups: [
-      { title: "VoIP development", href: "/services/voip-development-service", links: VOIP_DEVELOPMENT_LINKS },
-      { title: "Engineering", links: ENGINEERING_LINKS },
-      { title: "VoIP solutions", href: "/solutions", links: VOIP_SOLUTION_LINKS },
+      { title: "VoIP development for your product", href: "/services/voip-development-service", links: VOIP_DEVELOPMENT_LINKS },
+      { title: "Engineering for product teams", href: "/services", links: ENGINEERING_LINKS },
     ],
   },
   {
@@ -288,8 +327,8 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
     links: [
       { label: "VoIP development", href: "/services/voip-development-service" },
       { label: "WebRTC development", href: "/services/webrtc-development-service" },
-      ...ENGINEERING_LINKS.slice(0, 4),
-      ...VOIP_SOLUTION_LINKS,
+      ...ENGINEERING_LINKS.map(({ label, href }) => ({ label, href })),
+      ...SERVICE_PRODUCTS.slice(1).map(({ label, href }) => ({ label, href })),
     ],
   },
   {
