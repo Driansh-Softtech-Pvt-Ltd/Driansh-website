@@ -17,7 +17,7 @@ export const PAGES: Record<string, PageSeo> = {
   },
   "/about-us": {
     title: "About Us",
-    description: "Learn about Driansh Softtech, a VoIP and software development company based in GIFT City, India, delivering scalable communication systems worldwide.",
+    description: "Driansh Softtech builds EngageOne and Contact Center, and engineers VoIP, WebRTC, cloud and app solutions from GIFT City, Gandhinagar, India.",
   },
   "/contact-us": {
     title: "Contact Us",
