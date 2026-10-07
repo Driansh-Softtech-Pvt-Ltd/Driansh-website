@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Written by `next dev` (Next.js agent hints)
+AGENTS.md
