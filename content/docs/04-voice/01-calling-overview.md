@@ -49,6 +49,8 @@ Select **Calls** in the sidebar to see every call across your voice inboxes.
 - Filter by **Inbox** and **Assignee**.
 - Each row shows who picked up or dialed the call, and links to the conversation.
 
+![The Calls page with the Missed, No reply and Other activity filters, Assignee and More filters, and a list of incoming, outgoing and missed calls](/docs/images/voice/calling-overview-1.jpg)
+
 ## Recordings and transcripts
 
 Each voice inbox has two settings that control what is saved:
