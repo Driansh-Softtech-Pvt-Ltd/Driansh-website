@@ -19,6 +19,10 @@ export const PAGES: Record<string, PageSeo> = {
     title: "About Us",
     description: "Driansh Softtech builds EngageOne and Contact Center, and engineers VoIP, WebRTC, cloud and app solutions from GIFT City, Gandhinagar, India.",
   },
+  "/docs": {
+    title: "EngageOne Documentation",
+    description: "Step-by-step guides for Driansh EngageOne: set up your account, connect channels, use the AI Assistant, run reports and publish a help center.",
+  },
   "/contact-us": {
     title: "Contact Us",
     description: "Get in touch with Driansh Softtech for VoIP, contact center, WebRTC, mobile and web development projects. Share your requirements and we'll respond quickly.",
@@ -487,6 +491,17 @@ export function pageMetadata(path: string): Metadata {
       description: page.description,
       images: [DEFAULT_OG_IMAGE],
     },
+  };
+}
+
+/** Metadata for a docs category or article page (these are not listed in PAGES). */
+export function docsMetadata(path: string, title: string, description: string): Metadata {
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: { type: "article", siteName: SITE_NAME, url: path, title, description, images: [DEFAULT_OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [DEFAULT_OG_IMAGE] },
   };
 }
 

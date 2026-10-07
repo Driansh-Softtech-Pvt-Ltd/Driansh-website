@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @layer base {
   html {
@@ -113,6 +114,81 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------
+   Documentation article body (/docs). Builds on the typography plugin's
+   .prose defaults; colours and code/table/callout styles follow the brand.
+------------------------------------------------------------------- */
+@utility docs-prose {
+  /* Doubled class (.docs-prose.prose) so these win over the plugin's .prose defaults. */
+  &.prose {
+    --tw-prose-body: var(--color-slate-700);
+    --tw-prose-headings: var(--color-ink);
+    --tw-prose-links: var(--color-brand);
+    --tw-prose-bold: var(--color-ink);
+    --tw-prose-counters: var(--color-brand);
+    --tw-prose-bullets: var(--color-slate-400);
+    --tw-prose-quotes: var(--color-slate-700);
+    --tw-prose-th-borders: var(--color-slate-200);
+    --tw-prose-td-borders: var(--color-slate-200);
+    max-width: none;
+    overflow-wrap: break-word;
+
+    & :where(h2, h3) { scroll-margin-top: 7rem; letter-spacing: -0.01em; }
+    & :where(h2) { font-size: 1.5rem; line-height: 1.3; margin-top: 2.5em; }
+    & :where(h3) { font-size: 1.1875rem; line-height: 1.4; }
+    & :where(h2:first-child) { margin-top: 0; }
+    & :where(a) { font-weight: 500; text-decoration-color: color-mix(in oklab, var(--color-brand) 35%, transparent); text-underline-offset: 3px; }
+    & :where(a:hover) { text-decoration-color: var(--color-brand); }
+
+    & :where(:not(pre) > code) {
+      border-radius: 0.375rem;
+      background-color: var(--color-brand-soft);
+      padding: 0.125rem 0.375rem;
+      font-weight: 500;
+      font-size: 0.875em;
+      color: var(--color-ink);
+    }
+    & :where(:not(pre) > code)::before,
+    & :where(:not(pre) > code)::after { content: none; }
+    & :where(pre) {
+      max-width: 100%;
+      overflow-x: auto;
+      border-radius: 0.875rem;
+      background-color: var(--color-navy);
+      color: #E2E8F0;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+
+    & :where(.docs-table) {
+      max-width: 100%;
+      overflow-x: auto;
+      margin-block: 1.75em;
+      border: 1px solid var(--color-slate-200);
+      border-radius: 0.875rem;
+    }
+    & :where(.docs-table table) { margin: 0; min-width: 32rem; font-size: 0.9375rem; }
+    & :where(.docs-table thead) { background-color: var(--color-surface); }
+    & :where(.docs-table th, .docs-table td) { padding: 0.625rem 1rem; vertical-align: top; }
+
+    & :where(blockquote) {
+      border-left: 4px solid var(--color-slate-300);
+      border-radius: 0 0.875rem 0.875rem 0;
+      background-color: var(--color-surface);
+      padding: 0.875rem 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+    & :where(blockquote p)::before,
+    & :where(blockquote p)::after { content: none; }
+    & :where(blockquote > :first-child) { margin-top: 0; }
+    & :where(blockquote > :last-child) { margin-bottom: 0; }
+    & :where(blockquote[data-callout="tip"]) { border-left-color: #10B981; background-color: #ECFDF5; }
+    & :where(blockquote[data-callout="note"]) { border-left-color: var(--color-brand); background-color: var(--color-brand-soft); }
+    & :where(blockquote[data-callout="important"], blockquote[data-callout="warning"]) { border-left-color: #F59E0B; background-color: #FFFBEB; }
+}
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -208,8 +208,13 @@ export const NAV_MENUS: NavMenu[] = [
     groups: [
       {
         title: "Build on EngageOne",
-        columns: 3,
+        columns: 2,
         links: [
+          {
+            label: "Documentation",
+            href: "/docs",
+            description: "Step-by-step guides for setting up and using EngageOne.",
+          },
           {
             label: "API channel",
             href: `${ENGAGEONE}/integrations/api-channel`,
@@ -310,6 +315,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
       { label: "Help center", href: `${ENGAGEONE}/help-center` },
       { label: "Integrations", href: `${ENGAGEONE}/integrations` },
       { label: "Security", href: `${ENGAGEONE}/security` },
+      { label: "Documentation", href: "/docs" },
       { label: "Pricing", href: `${ENGAGEONE}/pricing` },
       { label: "Request a demo", href: `${ENGAGEONE}/request-demo` },
     ],
