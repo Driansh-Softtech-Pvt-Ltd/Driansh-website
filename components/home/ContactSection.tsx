@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactForm from "./ContactForm";
+import ContactForm from "@/components/ContactForm";
 import { Section } from "@/components/site";
 
 const CONTACT_INFO = [

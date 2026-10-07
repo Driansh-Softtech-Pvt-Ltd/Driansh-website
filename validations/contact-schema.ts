@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { CONTACT_INTERESTS, TEAM_SIZES } from "@/constants/contact";
 
 const shortText = z.string().trim().max(300).optional();
 
@@ -30,6 +31,8 @@ export const contactSchema = z.object({
     .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format")
     .optional(),
   company: z.string().trim().max(150).optional(),
+  interest: z.enum(CONTACT_INTERESTS.map((interest) => interest.value)).optional(),
+  teamSize: z.enum(TEAM_SIZES).optional(),
   message: z
     .string()
     .trim()

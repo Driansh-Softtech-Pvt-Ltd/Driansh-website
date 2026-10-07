@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react";
-import { ContactForm } from "@/components/Contact-Form";
+import ContactForm from "@/components/ContactForm";
 import { Section, SectionHeader, FeatureCard, CardGrid } from "@/components/site";
 import type { IconItem, LinkItem } from "@/content/types";
 
@@ -117,7 +117,11 @@ export function LeadFormSection({ title, text, id = "contact" }: { title: string
             </li>
           </ul>
         </div>
-        <ContactForm />
+        <div className="rounded-3xl bg-white p-6 text-slate-800 shadow-2xl sm:p-10">
+          <h3 className="heading-3 text-ink">Tell us about your project</h3>
+          <p className="mt-1 mb-8 text-slate-600">Share a few details and the right engineer will get back to you.</p>
+          <ContactForm defaultInterest="custom-project" />
+        </div>
       </div>
     </Section>
   );

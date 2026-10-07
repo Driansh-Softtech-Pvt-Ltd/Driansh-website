@@ -4,6 +4,7 @@ import { mailer } from "@/lib/mailer";
 import { saveLead } from "@/lib/leads";
 import { escapeHtml, isRateLimited } from "@/lib/security";
 import { contactSchema, type ContactFormData } from "@/validations/contact-schema";
+import { interestLabel } from "@/constants/contact";
 
 type SubmitResult = { success: boolean; message: string };
 
@@ -29,6 +30,11 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { website: _honeypot, attribution, ...contact } = data;
 
+  const interest = interestLabel(contact.interest);
+  const details = [interest && `Interested in: ${interest}`, contact.teamSize && `Team size: ${contact.teamSize}`]
+    .filter(Boolean)
+    .join(" · ");
+
   let saved = false;
   try {
     await saveLead({
@@ -37,7 +43,7 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
       email: contact.email,
       phone: contact.phone,
       company: contact.company,
-      message: contact.message,
+      message: details ? `${details}\n\n${contact.message}` : contact.message,
       newsletter: Boolean(contact.consent),
       source: attribution,
     });
@@ -54,8 +60,8 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
     await mailer.sendMail({
       to: process.env.MAIL_TO,
       replyTo: contact.email,
-      subject: "Contact Form Inquiry From Website",
-      html: buildContactEmail(contact),
+      subject: `New website enquiry${interest ? `: ${interest}` : ""} — ${contact.name}`,
+      html: buildContactEmail(contact, interest),
     });
   } catch (error) {
     console.error("Error while sending mail:", error);
@@ -71,7 +77,7 @@ export const submitContact = async (input: ContactFormData): Promise<SubmitResul
   return SUCCESS;
 };
 
-function buildContactEmail(data: Omit<ContactFormData, "website" | "attribution">): string {
+function buildContactEmail(data: Omit<ContactFormData, "website" | "attribution">, interest?: string): string {
   const name = escapeHtml(data.name);
   const email = escapeHtml(data.email);
   const phone = escapeHtml(data.phone);
@@ -93,6 +99,8 @@ function buildContactEmail(data: Omit<ContactFormData, "website" | "attribution"
           ${phone ? `<tr><td style="padding: 6px 0;"><strong>Phone:</strong></td><td>${phone}</td></tr>` : ""}
           <tr><td style="padding: 6px 0;"><strong>Email:</strong></td><td>${email}</td></tr>
           ${company ? `<tr><td style="padding: 6px 0;"><strong>Company:</strong></td><td>${company}</td></tr>` : ""}
+          ${interest ? `<tr><td style="padding: 6px 0;"><strong>Interested in:</strong></td><td>${escapeHtml(interest)}</td></tr>` : ""}
+          ${data.teamSize ? `<tr><td style="padding: 6px 0;"><strong>Team size:</strong></td><td>${escapeHtml(data.teamSize)}</td></tr>` : ""}
           <tr><td style="padding: 6px 0;"><strong>Newsletter:</strong></td><td>${data.consent ? "Yes" : "No"}</td></tr>
         </table>
 

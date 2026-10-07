@@ -1,5 +1,5 @@
 import { PageHero, Section, SectionHeader, CheckList } from "@/components/site";
-import ContactForm from "@/components/home/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import { DemoHeroVisual } from "@/components/visuals/engageone/FeatureVisuals";
 
 const DEMO_COVERS = [
@@ -46,9 +46,9 @@ export default function RequestDemoPage() {
           <div id="demo-form" className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl sm:p-10">
             <h2 className="heading-3 text-ink">Book your EngageOne demo</h2>
             <p className="mb-8 mt-1 text-slate-600">
-              In the requirements box, tell us your team size and the channels you use.
+              Tell us your team size and the channels you use, and we&apos;ll tailor the demo to you.
             </p>
-            <ContactForm />
+            <ContactForm defaultInterest="engageone-demo" submitLabel="Request my demo" />
           </div>
         </div>
       </Section>
