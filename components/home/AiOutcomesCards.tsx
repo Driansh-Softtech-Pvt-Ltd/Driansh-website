@@ -1,391 +1,278 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { animate, motion, useInView, useReducedMotion } from "framer-motion";
-import { Check, FileText, MessageSquareText, Sparkles, Tag, UserRoundCheck, Workflow, X } from "lucide-react";
+import Link from "next/link";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
+import { ArrowUpRight, CornerDownLeft, Lightbulb, RotateCcw, Sparkles, Truck } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Bubble } from "@/components/visuals/engageone/primitives";
+import { ENGAGEONE_BASE } from "./links";
 
 /*
- * Bento cards for the "AI Assistant outcomes" home section. Every number
- * here is sample data for illustration, and each card says so where numbers appear.
+ * "Fewer conversations" block for the home page: a banner with an animated
+ * flow of how conversations ended, then Monitors, Copilot and Scenarios cards.
+ * All numbers are sample data.
  */
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-/** Becomes true once the element scrolls into view (immediately when motion is reduced). */
+/** True once the element has scrolled into view (always true without motion). */
 function useShown<T extends Element>() {
   const ref = useRef<T>(null);
-  const inView = useInView(ref, { once: true, amount: 0.35 });
-  const reduceMotion = useReducedMotion();
-  return { ref, shown: inView || !!reduceMotion, reduceMotion: !!reduceMotion };
+  const inView = useInView(ref, { once: true, amount: 0.4 });
+  const reduceMotion = useReducedMotion() ?? false;
+  return { ref, shown: inView || reduceMotion, reduceMotion };
 }
 
-function CountUp({ value, start, instant, suffix = "" }: { value: number; start: boolean; instant: boolean; suffix?: string }) {
-  const [shown, setShown] = useState(0);
+/* ---------- Banner flow ---------- */
 
-  useEffect(() => {
-    if (!start || instant) return;
-    const controls = animate(0, value, { duration: 1.4, ease: EASE, onUpdate: (v) => setShown(Math.round(v)) });
-    return () => controls.stop();
-  }, [start, instant, value]);
-
-  return (
-    <>
-      {(instant && start ? value : shown).toLocaleString("en-US")}
-      {suffix}
-    </>
-  );
-}
-
-function CardShell({
-  title,
-  description,
-  children,
-  className,
-}: {
-  title: string;
-  description: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <article
-      className={cn(
-        "flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-surface p-5 shadow-sm sm:p-6",
-        className
-      )}
-    >
-      <div className="flex-1">{children}</div>
-      <h3 className="heading-3 mt-6 text-ink">{title}</h3>
-      <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{description}</p>
-    </article>
-  );
-}
-
-function SampleTag() {
-  return (
-    <span className="shrink-0 rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500">
-      Sample data
-    </span>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/* Outcome breakdown                                                    */
-/* ------------------------------------------------------------------ */
-
-const HANDLED = 1240;
-
-const OUTCOMES = [
-  { label: "Resolved by AI", value: 62, bar: "bg-brand-gradient", dot: "bg-violet-500" },
-  { label: "Handed to team", value: 24, bar: "bg-sky-400", dot: "bg-sky-400" },
-  { label: "Closed by team", value: 14, bar: "bg-slate-300", dot: "bg-slate-300" },
+const FLOW_LABELS = [
+  { text: "Resolved by AI", left: "5%", top: "22%" },
+  { text: "Handed to team", left: "33%", top: "82%" },
+  { text: "Stayed resolved", left: "54%", top: "25%" },
+  { text: "Reopened", left: "76%", top: "77%" },
 ];
 
-const RESOLVED_SPLIT = [
-  { label: "Stayed resolved", value: 91, bar: "bg-emerald-500", dot: "bg-emerald-500" },
-  { label: "Reopened within 7 days", value: 9, bar: "bg-amber-400", dot: "bg-amber-400" },
-];
-
-const HANDOFF_REASONS = [
-  { label: "Customer asked for a person", value: 46 },
-  { label: "Missing knowledge", value: 31 },
-  { label: "Request not supported", value: 23 },
-];
-
-function StackedBar({
-  parts,
-  shown,
-  delay = 0,
-}: {
-  parts: { label: string; value: number; bar: string }[];
-  shown: boolean;
-  delay?: number;
-}) {
+function OutcomeFlow() {
+  const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
   return (
-    <div className="flex h-4 w-full gap-1 overflow-hidden rounded-full bg-white sm:h-5">
-      {parts.map((part, i) => (
-        <motion.div
-          key={part.label}
-          className={cn("h-full rounded-full", part.bar)}
-          initial={{ width: 0 }}
-          animate={{ width: shown ? `${part.value}%` : 0 }}
-          transition={{ duration: 1, delay: delay + i * 0.15, ease: EASE }}
-        />
+    <div ref={ref} className="relative w-full" aria-hidden="true">
+      <svg viewBox="0 0 600 250" className="h-auto w-full">
+        <defs>
+          <clipPath id="ai-flow-reveal">
+            <motion.rect
+              x={0}
+              y={0}
+              height={250}
+              initial={{ width: reduceMotion ? 600 : 0 }}
+              animate={{ width: shown ? 600 : 0 }}
+              transition={{ duration: 1.6, ease: EASE }}
+            />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#ai-flow-reveal)">
+          {/* Resolved by AI → middle bar */}
+          <path d="M12 20 C150 20 160 35 300 35 L300 165 C160 165 150 150 12 150 Z" className="fill-violet-500/35" />
+          {/* Handed to team */}
+          <path d="M12 150 C150 150 170 214 292 214 L292 232 C170 232 150 196 12 196 Z" className="fill-white/70" />
+          {/* Stayed resolved → end bar */}
+          <path d="M300 35 C440 35 450 46 586 46 L586 154 C450 154 440 145 300 145 Z" className="fill-violet-500/45" />
+          {/* Reopened */}
+          <path d="M300 145 C440 145 460 200 578 200 L578 212 C460 212 440 165 300 165 Z" className="fill-white/70" />
+          <rect x={4} y={20} width={8} height={176} rx={2} className="fill-ink" />
+          <rect x={296} y={35} width={8} height={130} rx={2} className="fill-ink" />
+          <rect x={584} y={46} width={8} height={108} rx={2} className="fill-ink" />
+          <rect x={290} y={214} width={6} height={18} rx={1} className="fill-white" />
+          <rect x={576} y={200} width={6} height={12} rx={1} className="fill-white" />
+        </g>
+      </svg>
+      {FLOW_LABELS.map((label, i) => (
+        <motion.span
+          key={label.text}
+          initial={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 6 }}
+          animate={shown ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: reduceMotion ? 0 : 0.5 + i * 0.3, duration: 0.4 }}
+          className="absolute -translate-y-1/2 whitespace-nowrap rounded-lg border border-white bg-white px-2.5 py-1 text-[11px] font-medium text-ink shadow-sm sm:text-sm"
+          style={{ left: label.left, top: label.top }}
+        >
+          {label.text}
+        </motion.span>
       ))}
     </div>
   );
 }
 
-function Legend({
-  parts,
-  shown,
-  instant,
+export function AiOutcomesBanner() {
+  return (
+    <div className="relative overflow-hidden rounded-3xl bg-violet-200/80">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.25)_1px,transparent_1px)] bg-size-[56px_100%]"
+      />
+      <span className="absolute left-5 top-5 inline-flex -rotate-2 items-center gap-1.5 rounded-xl border-2 border-ink bg-white px-3 py-1 text-sm font-semibold text-ink shadow-[3px_3px_0_0_#1D1A4E]">
+        <Sparkles className="h-4 w-4 text-violet-600" /> EngageOne AI
+      </span>
+      <div className="relative grid items-center gap-8 px-6 pb-8 pt-20 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6 lg:py-14 lg:pt-20">
+        <div>
+          <h2 className="heading-2 text-ink">Fewer conversations, not just faster replies</h2>
+          <p className="text-lead mt-4 text-slate-700">
+            The EngageOne AI Assistant resolves routine questions end to end and hands the rest to your team, so the queue
+            actually gets shorter.
+          </p>
+          <p className="mt-4 text-xs font-medium uppercase tracking-wider text-violet-800/70">Illustration · sample data</p>
+        </div>
+        <OutcomeFlow />
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Cards ---------- */
+
+function FeatureCard({
+  label,
+  href,
+  title,
+  description,
+  children,
 }: {
-  parts: { label: string; value: number; dot: string }[];
-  shown: boolean;
-  instant: boolean;
+  label: string;
+  href: string;
+  title: string;
+  description: string;
+  children: React.ReactNode;
 }) {
   return (
-    <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
-      {parts.map((part) => (
-        <li key={part.label} className="flex items-center gap-2 text-xs text-slate-600">
-          <span className={cn("h-2.5 w-2.5 rounded-full", part.dot)} />
-          {part.label}
-          <span className="font-semibold text-ink">
-            <CountUp value={part.value} start={shown} instant={instant} suffix="%" />
-          </span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-export function AiOutcomesBreakdownCard({ className }: { className?: string }) {
-  const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
-
-  return (
-    <CardShell
-      className={className}
-      title="See how every conversation ended"
-      description="Track what the assistant resolved on its own, what it handed to your team and why, and whether resolved chats stayed closed."
-    >
-      <div ref={ref} className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6" aria-hidden="true">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <div className="text-xs font-medium text-slate-500">Conversations handled · Last 7 days</div>
-            <div className="mt-1 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-              <CountUp value={HANDLED} start={shown} instant={reduceMotion} />
-            </div>
-          </div>
-          <SampleTag />
-        </div>
-
-        <div className="mt-5">
-          <StackedBar parts={OUTCOMES} shown={shown} />
-          <Legend parts={OUTCOMES} shown={shown} instant={reduceMotion} />
-        </div>
-
-        <div className="mt-6 grid gap-6 border-t border-slate-100 pt-5 md:grid-cols-2">
-          <div>
-            <div className="text-xs font-semibold text-ink">Of the chats resolved by AI</div>
-            <div className="mt-3">
-              <StackedBar parts={RESOLVED_SPLIT} shown={shown} delay={0.5} />
-              <Legend parts={RESOLVED_SPLIT} shown={shown} instant={reduceMotion} />
-            </div>
-          </div>
-          <div>
-            <div className="text-xs font-semibold text-ink">Why chats were handed over</div>
-            <ul className="mt-3 space-y-2.5">
-              {HANDOFF_REASONS.map((reason, i) => (
-                <li key={reason.label}>
-                  <div className="flex justify-between gap-3 text-xs text-slate-600">
-                    <span className="truncate">{reason.label}</span>
-                    <span className="font-semibold text-ink">
-                      <CountUp value={reason.value} start={shown} instant={reduceMotion} suffix="%" />
-                    </span>
-                  </div>
-                  <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-100">
-                    <motion.div
-                      className="h-full rounded-full bg-sky-400"
-                      initial={{ width: 0 }}
-                      animate={{ width: shown ? `${reason.value}%` : 0 }}
-                      transition={{ duration: 0.9, delay: 0.7 + i * 0.12, ease: EASE }}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+    <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+      <div className="flex items-stretch border-b border-slate-200">
+        <h3 className="flex-1 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-ink">{label}</h3>
+        <Link
+          href={href}
+          aria-label={`Learn more about ${label.toLowerCase()}`}
+          className="flex w-14 items-center justify-center border-l border-slate-200 text-slate-500 transition-colors hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand"
+        >
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
       </div>
-    </CardShell>
+      <div className="flex min-h-64 flex-col justify-center bg-surface bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[12px_12px] p-5">
+        {children}
+      </div>
+      <div className="border-t border-slate-200 px-6 py-6">
+        <p className="text-xl font-semibold text-ink">{title}</p>
+        <p className="mt-2 text-slate-600">{description}</p>
+      </div>
+    </article>
   );
 }
 
-/* ------------------------------------------------------------------ */
-/* Suggested FAQs                                                       */
-/* ------------------------------------------------------------------ */
-
-const FAQS = [
-  { question: "Can I change my delivery address?", seen: 18 },
-  { question: "How long do refunds take?", seen: 12 },
-  { question: "Do you ship outside the city?", seen: 7 },
+const TOPICS: { label: string; count: number; icon: LucideIcon; tint: string }[] = [
+  { label: "Delivery questions", count: 84, icon: Truck, tint: "text-emerald-600" },
+  { label: "Refund requests", count: 13, icon: RotateCcw, tint: "text-rose-500" },
+  { label: "Feature requests", count: 5, icon: Lightbulb, tint: "text-amber-500" },
 ];
 
-export function AiOutcomesFaqCard({ className }: { className?: string }) {
+function MonitorsCard() {
   const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
-  const [approved, setApproved] = useState(false);
+  return (
+    <FeatureCard
+      label="Monitors"
+      href={`${ENGAGEONE_BASE}/analyse/label-reports`}
+      title="Know what customers keep asking"
+      description="Label conversations automatically with rules or AI label suggestions, then see how often each topic comes up."
+    >
+      <div ref={ref}>
+        <div className="mb-2 flex justify-between text-xs text-slate-500" aria-hidden="true">
+          <span>Watching</span>
+          <span>Last 7 days</span>
+        </div>
+        <ul className="space-y-2" aria-hidden="true">
+          {TOPICS.map(({ label, count, icon: Icon, tint }, i) => (
+            <motion.li
+              key={label}
+              initial={{ opacity: reduceMotion ? 1 : 0, x: reduceMotion ? 0 : -8 }}
+              animate={shown ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: reduceMotion ? 0 : i * 0.15, duration: 0.35 }}
+              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm"
+            >
+              <span className={cn("flex h-8 w-8 items-center justify-center rounded-lg border border-slate-200", tint)}>
+                <Icon className="h-4 w-4" />
+              </span>
+              <span className="font-medium text-ink">{label}</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="ml-auto font-semibold tabular-nums text-ink">{count}</span>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </FeatureCard>
+  );
+}
+
+const DRAFT = "Sorry for the wait! Your order was held at the courier hub. It's back on the way and arrives Friday.";
+
+function CopilotCard() {
+  const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
+  const [typed, setTyped] = useState(0);
 
   useEffect(() => {
     if (!shown || reduceMotion) return;
-    const timer = setTimeout(() => setApproved(true), 1800);
-    return () => clearTimeout(timer);
+    const id = setInterval(() => setTyped((count) => (count >= DRAFT.length ? count : count + 2)), 30);
+    return () => clearInterval(id);
   }, [shown, reduceMotion]);
 
-  const firstApproved = approved || reduceMotion;
+  const text = reduceMotion ? DRAFT : DRAFT.slice(0, typed);
+  const done = reduceMotion || typed >= DRAFT.length;
 
   return (
-    <CardShell
-      className={className}
-      title="Suggested FAQs from real conversations"
-      description="Questions customers keep asking become FAQ drafts. You approve them before the assistant uses them."
-    >
-      <div ref={ref} className="space-y-2.5" aria-hidden="true">
-        <div className="flex items-center justify-between gap-2">
-          <span className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
-            <Sparkles className="h-3.5 w-3.5 text-violet-500" /> Suggested FAQs
-          </span>
-          <SampleTag />
-        </div>
-        {FAQS.map((faq, i) => (
-          <motion.div
-            key={faq.question}
-            className="rounded-xl border border-slate-200 bg-white p-3"
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-            animate={shown ? { opacity: 1, y: 0 } : undefined}
-            transition={{ duration: 0.5, delay: i * 0.15, ease: EASE }}
-          >
-            <div className="text-xs font-semibold text-ink">{faq.question}</div>
-            <div className="mt-1 flex flex-wrap items-center justify-between gap-2">
-              <span className="text-[10px] text-slate-500">Seen in {faq.seen} conversations</span>
-              {i === 0 && firstApproved ? (
-                <motion.span
-                  initial={reduceMotion ? false : { scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700"
-                >
-                  <Check className="h-3 w-3" /> Approved
-                </motion.span>
-              ) : (
-                <span className="flex gap-1">
-                  <span className="flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 text-[10px] font-medium text-white">
-                    <Check className="h-3 w-3" /> Approve
-                  </span>
-                  <span className="flex items-center rounded-full border border-slate-200 px-1.5 py-0.5 text-slate-500">
-                    <X className="h-3 w-3" />
-                  </span>
-                </span>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </CardShell>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/* Reply draft                                                          */
-/* ------------------------------------------------------------------ */
-
-export function AiOutcomesDraftCard({ className }: { className?: string }) {
-  const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
-
-  return (
-    <CardShell
-      className={className}
+    <FeatureCard
+      label="Copilot"
+      href={`${ENGAGEONE_BASE}/ai-assistant`}
       title="Get a reply draft in one click"
-      description="Agents ask the assistant for a suggested answer, review it, and send it as is or after a quick edit."
+      description="Ask the AI for a reply written from your help content and the conversation. You review it and send."
     >
-      <div ref={ref} className="flex flex-col gap-2.5" aria-hidden="true">
-        <Bubble from="customer">Hi, my order #4821 hasn&apos;t arrived yet. Can you check?</Bubble>
-        <span className="flex items-center gap-1.5 self-end rounded-full border border-violet-200 bg-white px-2.5 py-1 text-[10px] font-medium text-violet-700">
-          <Sparkles className="h-3 w-3" /> Suggest an answer
-        </span>
-        <motion.div
-          className="rounded-xl border border-violet-200 bg-violet-50 p-3 text-xs text-violet-900"
-          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-          animate={shown ? { opacity: 1, y: 0 } : undefined}
-          transition={{ duration: 0.5, delay: 0.6, ease: EASE }}
+      <div ref={ref} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm" aria-hidden="true">
+        <p className="flex items-center gap-1.5 text-sm font-semibold text-violet-700">
+          <Sparkles className="h-4 w-4" /> Copilot draft
+        </p>
+        <p className="mt-2 min-h-[4.5rem] text-sm leading-relaxed text-ink">
+          {text}
+          {!done && <span className="ml-0.5 inline-block h-4 w-0.5 translate-y-0.5 animate-pulse bg-violet-600" />}
+        </p>
+        <span
+          className={cn(
+            "mt-3 inline-flex items-center gap-1.5 rounded-md bg-violet-600 px-3 py-1.5 text-xs font-semibold text-white transition-opacity",
+            done ? "opacity-100" : "opacity-40"
+          )}
         >
-          <div className="mb-1 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wide text-violet-600">
-            <Sparkles className="h-3 w-3" /> AI draft
-          </div>
-          Sorry for the wait! Your order is with our courier and should reach you by tomorrow evening. I&apos;ll share the
-          tracking link here.
-          <div className="mt-2.5 flex justify-end">
-            <span className="rounded-full bg-violet-600 px-2.5 py-1 text-[10px] font-semibold text-white">Use this reply</span>
-          </div>
-        </motion.div>
+          <CornerDownLeft className="h-3.5 w-3.5" /> Use this reply
+        </span>
       </div>
-    </CardShell>
+    </FeatureCard>
   );
 }
 
-/* ------------------------------------------------------------------ */
-/* Scenario                                                             */
-/* ------------------------------------------------------------------ */
-
-const STEPS = [
-  { text: "Ask how many units they need and the delivery city." },
-  { text: "Save the answers for the team with", tool: "add_private_note", icon: FileText },
-  { text: "Tag the chat as a sales lead with", tool: "add_label_to_conversation", icon: Tag },
-  { text: "Tell the customer a person will follow up, then", tool: "handoff", icon: UserRoundCheck },
+const SCENARIO_STEPS = [
+  { text: "Ask team size and channels", tool: null },
+  { text: "Save the answers", tool: "@add_private_note" },
+  { text: "Pass to sales", tool: "@handoff" },
 ];
 
-const BUILT_IN_TOOLS = ["faq_lookup", "add_contact_note", "update_priority", "resolve_conversation"];
-
-export function AiOutcomesScenarioCard({ className }: { className?: string }) {
-  const { ref, shown, reduceMotion } = useShown<HTMLDivElement>();
-
+function ScenariosCard() {
+  const { ref, shown, reduceMotion } = useShown<HTMLOListElement>();
   return (
-    <CardShell
-      className={className}
+    <FeatureCard
+      label="Scenarios"
+      href={`${ENGAGEONE_BASE}/ai-assistant`}
       title="Set a process, the assistant follows it"
-      description="Write the steps in plain language and mention the tools to use. The assistant runs the same process every time."
+      description="Write how your team handles a case. The assistant runs the steps and tools, like saving notes or handing over."
     >
-      <div ref={ref} className="grid gap-4 md:grid-cols-[1fr_14rem]" aria-hidden="true">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4">
-          <div className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-soft text-brand">
-              <Workflow className="h-4 w-4" />
+      <ol ref={ref} className="space-y-2" aria-hidden="true">
+        {SCENARIO_STEPS.map(({ text, tool }, i) => (
+          <motion.li
+            key={text}
+            initial={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 8 }}
+            animate={shown ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: reduceMotion ? 0 : 0.2 + i * 0.35, duration: 0.35 }}
+            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm"
+          >
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
+              {i + 1}
             </span>
-            <div className="min-w-0">
-              <div className="truncate text-xs font-semibold text-ink">Scenario · Bulk order enquiry</div>
-              <div className="truncate text-[10px] text-slate-500">When a customer asks about buying in bulk</div>
-            </div>
-          </div>
-          <ol className="mt-4 space-y-2.5">
-            {STEPS.map((step, i) => (
-              <motion.li
-                key={step.text}
-                className="flex gap-2.5 text-xs text-slate-600"
-                initial={reduceMotion ? false : { opacity: 0, x: -12 }}
-                animate={shown ? { opacity: 1, x: 0 } : undefined}
-                transition={{ duration: 0.45, delay: i * 0.25, ease: EASE }}
-              >
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-[10px] font-semibold text-white">
-                  {i + 1}
-                </span>
-                <span className="min-w-0 leading-5">
-                  {step.text}
-                  {step.tool && (
-                    <span className="ms-1 inline-flex max-w-full items-center gap-1 break-all rounded-md bg-violet-100 px-1.5 py-0.5 font-mono text-[10px] font-medium text-violet-700">
-                      <step.icon className="h-3 w-3 shrink-0" />@{step.tool}
-                    </span>
-                  )}
-                </span>
-              </motion.li>
-            ))}
-          </ol>
-        </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-4">
-          <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">More tools</div>
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {BUILT_IN_TOOLS.map((tool) => (
-              <span key={tool} className="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[10px] text-slate-600">
-                @{tool}
-              </span>
-            ))}
-          </div>
-          <div className="mt-4 flex items-start gap-2 rounded-xl bg-brand-soft p-2.5 text-[11px] text-ink">
-            <MessageSquareText className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
-            Add your own tools that call your APIs, like an order status lookup.
-          </div>
-        </div>
-      </div>
-    </CardShell>
+            <span className="text-ink">{text}</span>
+            {tool && <span className="ml-auto font-mono text-xs font-medium text-violet-700">{tool}</span>}
+          </motion.li>
+        ))}
+      </ol>
+    </FeatureCard>
+  );
+}
+
+export function AiOutcomesFeatureCards() {
+  return (
+    <div className="mt-6 grid gap-6 lg:grid-cols-3">
+      <MonitorsCard />
+      <CopilotCard />
+      <ScenariosCard />
+    </div>
   );
 }
