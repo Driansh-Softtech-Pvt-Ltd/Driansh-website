@@ -1,6 +1,7 @@
 import { Headphones, ShoppingBag, UtensilsCrossed } from "lucide-react";
 import { PageHero, Section, SectionHeader, CardGrid, FeatureCard, CheckList, CTABanner } from "@/components/site";
 import { RestaurantChatVisual } from "@/components/visuals/engageone/IndustryVisuals";
+import { INDUSTRIES as MORE_INDUSTRIES } from "@/content/engageone/industries";
 
 const BASE = "/our-products/engageone";
 
@@ -26,6 +27,12 @@ const INDUSTRIES = [
     href: `${BASE}/industries/contact-centers`,
     icon: Headphones,
   },
+  ...MORE_INDUSTRIES.map(({ name, summary, slug, icon }) => ({
+    title: name,
+    description: summary,
+    href: `${BASE}/industries/${slug}`,
+    icon,
+  })),
 ];
 
 export default function IndustriesPage() {

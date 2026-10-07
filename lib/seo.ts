@@ -290,7 +290,7 @@ export const PAGES: Record<string, PageSeo> = {
   },
   "/our-products/engageone/industries": {
     title: "EngageOne Industries",
-    description: "See how restaurants, online stores and contact centers use Driansh EngageOne for orders, support, calls and campaigns in one inbox.",
+    description: "See how restaurants, retailers, healthcare, finance, education, logistics, telecom and more use Driansh EngageOne to talk to customers.",
   },
   "/our-products/engageone/industries/restaurants": {
     title: "EngageOne for Restaurants",
@@ -303,6 +303,74 @@ export const PAGES: Record<string, PageSeo> = {
   "/our-products/engageone/industries/contact-centers": {
     title: "EngageOne for Contact Centers",
     description: "Omnichannel queues, auto-assignment, SLAs, phone and WhatsApp calling, macros, reports and CSAT in one contact center platform.",
+  },
+  "/our-products/engageone/industries/healthcare": {
+    title: "EngageOne for Healthcare",
+    description: "Appointment requests, reports and patient questions handled by the right desk, with reminders on WhatsApp.",
+  },
+  "/our-products/engageone/industries/banking-insurance-fintech": {
+    title: "EngageOne for Banking, insurance & fintech",
+    description: "Account, claim and payment questions on every channel, with strict roles, audit logs and the option to self-host.",
+  },
+  "/our-products/engageone/industries/marketplaces": {
+    title: "EngageOne for Marketplaces & platforms",
+    description: "Buyers and sellers in separate inboxes, with bots for common questions and APIs to connect your platform.",
+  },
+  "/our-products/engageone/industries/saas": {
+    title: "EngageOne for B2B SaaS",
+    description: "In-app chat, help docs, bug reports to Linear and a clear view of each account's history.",
+  },
+  "/our-products/engageone/industries/government": {
+    title: "EngageOne for Public sector",
+    description: "Citizen questions answered on WhatsApp and the web, routed by department, hosted on your own servers.",
+  },
+  "/our-products/engageone/industries/education": {
+    title: "EngageOne for Education",
+    description: "Admissions, fees and student questions answered quickly, with WhatsApp updates for parents.",
+  },
+  "/our-products/engageone/industries/beauty-wellness": {
+    title: "EngageOne for Beauty & wellness",
+    description: "Bookings over Instagram and WhatsApp, service menus with prices, and reminders that cut no-shows.",
+  },
+  "/our-products/engageone/industries/local-businesses": {
+    title: "EngageOne for Local businesses",
+    description: "One simple inbox for WhatsApp, Instagram, Facebook and website chat, on desktop and mobile.",
+  },
+  "/our-products/engageone/industries/automotive": {
+    title: "EngageOne for Automotive",
+    description: "Test drives, service bookings and spare-part queries across showrooms and service centres.",
+  },
+  "/our-products/engageone/industries/pharmacies": {
+    title: "EngageOne for Pharmacies",
+    description: "Prescription uploads, medicine availability and refill reminders over WhatsApp and website chat.",
+  },
+  "/our-products/engageone/industries/manufacturing": {
+    title: "EngageOne for Manufacturing",
+    description: "Dealer, distributor and service enquiries routed to sales, support and spare-parts teams.",
+  },
+  "/our-products/engageone/industries/retail": {
+    title: "EngageOne for Retail",
+    description: "Store and online shoppers served in one inbox, with offers, order updates and loyalty campaigns.",
+  },
+  "/our-products/engageone/industries/travel-hospitality": {
+    title: "EngageOne for Travel & hospitality",
+    description: "Bookings, changes and guest requests handled across time zones, with confirmations on WhatsApp.",
+  },
+  "/our-products/engageone/industries/real-estate": {
+    title: "EngageOne for Real estate",
+    description: "Property enquiries from ads and portals captured, qualified and followed up from one inbox.",
+  },
+  "/our-products/engageone/industries/logistics": {
+    title: "EngageOne for Logistics & delivery",
+    description: "Tracking, delivery changes and driver issues handled at volume, with updates over WhatsApp.",
+  },
+  "/our-products/engageone/industries/telecom-isp": {
+    title: "EngageOne for Telecom & ISPs",
+    description: "Outage, billing and plan questions at scale, with bots, calling and SLA-driven queues.",
+  },
+  "/our-products/engageone/industries/nonprofits": {
+    title: "EngageOne for Non-profits & NGOs",
+    description: "Donor, volunteer and beneficiary conversations in one inbox, with WhatsApp updates for supporters.",
   },
 
   // Services
