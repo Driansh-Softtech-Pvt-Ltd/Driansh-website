@@ -99,7 +99,7 @@ export default function RootLayout({
         <Script id="chatwoot-script" strategy="lazyOnload">
           {`
             (function(d,t) {
-              var BASE_URL="https://store-ingredients-west-efficiently.trycloudflare.com";
+              var BASE_URL="https://classic-judges-cbs-baking.trycloudflare.com";
               var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
               g.src=BASE_URL+"/packs/js/sdk.js";
               g.async = true;
