@@ -36,12 +36,19 @@ import { cn } from "@/lib/utils";
 import {
   AccessVisual,
   AdminConsoleVisual,
+  AdminDashboardVisual,
+  AgentHomeVisual,
+  AgentPerformanceVisual,
   AgentWorkspaceVisual,
   BreaksVisual,
+  CallControlVisual,
+  CallDetailVisual,
   DialerVisual,
+  IncomingCallVisual,
   LiveFloorVisual,
+  OutgoingCallVisual,
+  QueueCampaignVisual,
   ReportsVisual,
-  SoftphoneVisual,
   WrapUpVisual,
 } from "@/components/visuals/contactcenter/OverviewVisuals";
 
@@ -204,6 +211,48 @@ function SplitBlock({
   );
 }
 
+/** A screen wide enough to need the whole container, with the points beneath it. */
+function WideBlock({
+  eyebrow,
+  title,
+  description,
+  points,
+  visual,
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  points: string[];
+  visual: React.ReactNode;
+}) {
+  return (
+    <>
+      <SectionHeader eyebrow={eyebrow} title={title} description={description} />
+      {visual}
+      <CheckList items={points} columns={2} className="mx-auto mt-12 max-w-3xl" />
+    </>
+  );
+}
+
+/** Three screens side by side, each under its own caption. */
+function TriptychBlock({ items }: { items: { title: string; caption: string; visual: React.ReactNode }[] }) {
+  return (
+    // Subgrid keeps the three windows on one row and the three captions on the
+    // next, so captions line up however tall each mock-up turns out to be.
+    <div className="grid gap-8 md:grid-cols-3 md:grid-rows-[auto_auto] md:gap-x-6 md:gap-y-0">
+      {items.map(({ title, caption, visual }) => (
+        <div key={title} className="md:row-span-2 md:grid md:grid-rows-subgrid md:gap-6">
+          <div>{visual}</div>
+          <div>
+            <h3 className="heading-3 text-ink">{title}</h3>
+            <p className="mt-2 leading-relaxed text-slate-600">{caption}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /* --------------------------------- page --------------------------------- */
 
 export default function ContactCenterPage() {
@@ -222,22 +271,69 @@ export default function ContactCenterPage() {
         secondaryCta={{ label: "See the agent workspace", href: "#agent-workspace" }}
       />
 
-      {/* Agent workspace */}
+      {/* Agent home */}
       <Section id="agent-workspace" tone="white">
-        <SplitBlock
+        <WideBlock
           eyebrow="Agent workspace"
-          title="The call, the customer and the controls on one screen"
-          description="The softphone column never leaves the screen, so answer, hold, mute, transfer, conference and hang up are always one click away, whatever else the agent has open."
+          title="The agent's home screen"
+          description="One screen holds the whole shift: availability and dial pad on the left, the queues the agent is signed into, and every conversation across voice, WhatsApp, live chat and email in the middle."
           points={[
-            "Answer in the browser over WebRTC, or on a registered IP phone",
-            "Availability, campaign, process and extension always in view",
-            "Recording, hold and transfer without leaving the conversation",
+            "Availability, session timer and global search in the app bar",
+            "Status, dial pad and queue depth in the left column",
+            "Active calls, open chats, missed and resolved counted for the day",
+            "One list for every channel, with a tab and a count each",
           ]}
-          visual={<SoftphoneVisual />}
+          visual={<AgentHomeVisual />}
+        />
+      </Section>
+
+      {/* Call handling */}
+      <Section tone="muted">
+        <SectionHeader
+          eyebrow="Call handling"
+          title="Incoming, outgoing, and everything during the call"
+          description="The softphone column never leaves the screen, so the agent answers, dials and controls a call from the same place, whatever else they have open."
+        />
+        <TriptychBlock
+          items={[
+            {
+              title: "Incoming",
+              caption:
+                "A queue call rings with the number, the queue it came from and how many are still waiting, so the agent knows what they are picking up.",
+              visual: <IncomingCallVisual />,
+            },
+            {
+              title: "Outgoing",
+              caption:
+                "Dial from the keypad, a contact or a recent call. Preview and progressive campaigns place the call for the agent instead.",
+              visual: <OutgoingCallVisual />,
+            },
+            {
+              title: "Call control",
+              caption:
+                "Hold, mute, DTMF keypad, conference, and transfer to an agent, queue, process, IVR or outside number — warm or blind.",
+              visual: <CallControlVisual />,
+            },
+          ]}
         />
         <div className="mt-16">
           <IconCards items={agentCards} />
         </div>
+      </Section>
+
+      {/* Call record */}
+      <Section tone="white">
+        <SplitBlock
+          eyebrow="Call record"
+          title="What happened on the call, kept with the call"
+          description="Direction, hangup cause, queue, campaign, who dialled it, the timings and the recording — one record per call, and the note the agent left at wrap-up."
+          points={[
+            "Recording playback and download from the record itself",
+            "Call back, add to contacts or tag without leaving the pane",
+            "The contact's full history one click away",
+          ]}
+          visual={<CallDetailVisual />}
+        />
       </Section>
 
       {/* Wrap-up */}
@@ -257,8 +353,24 @@ export default function ContactCenterPage() {
         />
       </Section>
 
-      {/* Admin console */}
+      {/* Admin dashboard */}
       <Section tone="white">
+        <WideBlock
+          eyebrow="Admin dashboard"
+          title="The tenant at a glance, the moment you sign in"
+          description="Campaigns, agents, supervisors, queues, numbers and teams counted up front, with the day's key indicators, call volume, channel mix and the teams carrying the load."
+          points={[
+            "Answered, answer rate, average handle time and service level",
+            "Call volume by hour, and the split across voice and digital",
+            "Live overall stats beside the historic figures",
+            "Counts that link straight into the list behind them",
+          ]}
+          visual={<AdminDashboardVisual />}
+        />
+      </Section>
+
+      {/* Admin console */}
+      <Section tone="muted">
         <SplitBlock
           eyebrow="Admin console"
           title="Set it up once, then run it every day"
@@ -277,7 +389,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Dialers */}
-      <Section tone="muted">
+      <Section tone="white">
         <SplitBlock
           reverse
           eyebrow="Dialers"
@@ -294,7 +406,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Live floor */}
-      <Section tone="white">
+      <Section tone="muted">
         <SplitBlock
           eyebrow="Live monitoring"
           title="See the floor as it is right now"
@@ -309,8 +421,41 @@ export default function ContactCenterPage() {
         />
       </Section>
 
-      {/* Workforce */}
+      {/* Queue and campaign live states */}
+      <Section tone="white">
+        <SplitBlock
+          reverse
+          eyebrow="Queue and campaign states"
+          title="Which queue is holding, and which campaign is carrying it"
+          description="Live queue and campaign boards sit beside the agent board: calls taken, how many are waiting, average talk and wait, and the service level each one is hitting right now."
+          points={[
+            "Active queues and campaigns with calls, waiting and SLA",
+            "Average wait and average talk per queue and process",
+            "Hourly trend under the day's totals",
+            "Filter by campaign, domain or date range",
+          ]}
+          visual={<QueueCampaignVisual />}
+        />
+      </Section>
+
+      {/* Agent performance */}
       <Section tone="muted">
+        <SplitBlock
+          eyebrow="Agent performance"
+          title="One set of numbers, read by both sides"
+          description="Calls handled, handle time, wrap-up, answer rate, adherence, QA score and CSAT. Supervisors see them across the team; each agent sees their own, updated through the day."
+          points={[
+            "Calls handled, AHT, ACW and answer rate per agent",
+            "Inbound and outbound mix, and time spent in each state",
+            "Adherence, QA score and CSAT beside the volume",
+            "Trend over any date range, exportable",
+          ]}
+          visual={<AgentPerformanceVisual />}
+        />
+      </Section>
+
+      {/* Workforce */}
+      <Section tone="white">
         <SplitBlock
           reverse
           eyebrow="Workforce"
@@ -326,7 +471,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Reports */}
-      <Section tone="white">
+      <Section tone="muted">
         <SplitBlock
           eyebrow="Reports"
           title="The numbers a contact center is run on"
@@ -344,7 +489,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Security and tenancy */}
-      <Section tone="muted">
+      <Section tone="white">
         <SplitBlock
           reverse
           eyebrow="Security and tenancy"
@@ -361,7 +506,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Benefits */}
-      <Section tone="white">
+      <Section tone="muted">
         <SectionHeader
           title="Benefits"
           description="Driansh Contact Center combines role-based security with a multi-tenant architecture, automation that cuts manual work, and workforce management across every process type — with flexible lead ingestion, compliance governance, and live monitoring and dashboards behind the decisions."
@@ -370,7 +515,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* Key features */}
-      <Section tone="muted">
+      <Section tone="white">
         <SectionHeader
           title="Key features"
           description="Calling, IVR, ACD, queue management, advanced dialers, reporting and agent tools, with multi-tenant deployment, multi-lingual operations, CRM integrations, add-on modules and real-time monitoring."
@@ -390,7 +535,7 @@ export default function ContactCenterPage() {
       </Section>
 
       {/* CRM */}
-      <Section tone="white">
+      <Section tone="muted">
         <SectionHeader
           title="CRM integrations"
           description="Connect Driansh Contact Center to the CRM and collaboration tools your team already uses, so leads, call outcomes and customer data stay in sync."
@@ -398,7 +543,7 @@ export default function ContactCenterPage() {
         <IconCards items={crm} />
       </Section>
 
-      <Section size="sm" tone="muted">
+      <Section size="sm" tone="white">
         <CTABanner
           title="Ready to modernize your contact center?"
           description={`Talk to our team about deploying ${contactCenterProduct.title} for your business.`}
