@@ -106,7 +106,7 @@ export const PAGES: Record<string, PageSeo> = {
   },
   "/our-products/contactcenter": {
     title: "Contact Center Software",
-    description: "Driansh Contact Center: predictive dialing, IVR, call recording, live monitoring, campaigns and reporting in one platform.",
+    description: "Driansh Contact Center: an agent workspace for calls, WhatsApp, chat and email, with predictive dialing, IVR, campaigns, live monitoring and reporting in one admin console.",
   },
   "/our-products/engageone": {
     title: "EngageOne — Omnichannel Customer Engagement",
