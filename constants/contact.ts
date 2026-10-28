@@ -10,6 +10,7 @@ export const CONTACT_ADDRESS = {
 
 export const CONTACT_INTERESTS = [
   { value: "engageone-demo", label: "EngageOne demo" },
+  { value: "contactcenter-demo", label: "Contact Center demo" },
   { value: "voice-call-center", label: "Voice Call Center" },
   { value: "unified-communications", label: "Unified Communications" },
   { value: "custom-project", label: "VoIP or software project" },

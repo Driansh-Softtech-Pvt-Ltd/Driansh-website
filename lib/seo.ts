@@ -108,6 +108,10 @@ export const PAGES: Record<string, PageSeo> = {
     title: "Contact Center Software",
     description: "Driansh Contact Center: an agent workspace for calls, WhatsApp, chat and email, with predictive dialing, IVR, campaigns, live monitoring and reporting in one admin console.",
   },
+  "/our-products/contactcenter/request-demo": {
+    title: "Request a Contact Center Demo",
+    description: "See Driansh Contact Center with your own queues, campaigns and dialers. Tell us about your team and we will set up a time.",
+  },
   "/our-products/engageone": {
     title: "EngageOne — Omnichannel Customer Engagement",
     description: "Driansh EngageOne brings chat, WhatsApp, email, social, SMS and calls into one inbox, with an AI Assistant, campaigns, help center and reports.",

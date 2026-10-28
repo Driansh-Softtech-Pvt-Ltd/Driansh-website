@@ -64,7 +64,7 @@ function href(f: LeadFilters, patch: Partial<Record<keyof LeadFilters, string | 
   return `?${params.toString()}`;
 }
 
-const TYPE_LABEL: Record<LeadType, string> = { contact: "Contact form", newsletter: "Newsletter", chat: "Chat" };
+const TYPE_LABEL: Record<LeadType, string> = { contact: "Contact form", demo: "Demo request", newsletter: "Newsletter", chat: "Chat" };
 
 export default async function AdminLeadsPage({
   searchParams,

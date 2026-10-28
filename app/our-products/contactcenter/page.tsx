@@ -52,7 +52,7 @@ import {
   WrapUpVisual,
 } from "@/components/visuals/contactcenter/OverviewVisuals";
 
-const DEMO = "/contact-us";
+const DEMO = "/our-products/contactcenter/request-demo";
 
 type IconCard = { title: string; description: string; icon: React.ComponentType<{ className?: string }> };
 
@@ -267,7 +267,7 @@ export default function ContactCenterPage() {
         title="Every call, queue and campaign in one workspace"
         description="Driansh Contact Center gives agents one screen for calls, WhatsApp, live chat and email, and gives supervisors the campaigns, dialers, live floor and reports behind it. Voice-first, multi-tenant, and deployed on your infrastructure or ours."
         visual={<AgentWorkspaceVisual />}
-        primaryCta={{ label: "Talk to our team", href: DEMO }}
+        primaryCta={{ label: "Request a demo", href: DEMO }}
         secondaryCta={{ label: "See the agent workspace", href: "#agent-workspace" }}
       />
 
@@ -546,7 +546,8 @@ export default function ContactCenterPage() {
       <Section size="sm" tone="white">
         <CTABanner
           title="Ready to modernize your contact center?"
-          description={`Talk to our team about deploying ${contactCenterProduct.title} for your business.`}
+          description={`See ${contactCenterProduct.title} running against your own queues and campaigns.`}
+          cta={{ label: "Request a demo", href: DEMO }}
         />
       </Section>
     </>
