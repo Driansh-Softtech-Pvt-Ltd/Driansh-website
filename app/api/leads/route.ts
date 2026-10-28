@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { intakeLead } from "@/lib/lead-intake";
 import { isRateLimited, safeEqual } from "@/lib/security";
+import { MAIL_FROM, mailerDescription, verifyMailer } from "@/lib/mailer";
 
 /*
  * POST /api/leads -- capture an enquiry from anywhere.
@@ -101,8 +102,9 @@ export async function GET(request: Request) {
   const configured = {
     MONGODB_URI: Boolean(process.env.MONGODB_URI),
     DB_NAME: Boolean(process.env.DB_NAME),
-    MAIL_USER: Boolean(process.env.MAIL_USER),
-    MAIL_PASS: Boolean(process.env.MAIL_PASS),
+    SMTP_ADDRESS: Boolean(process.env.SMTP_ADDRESS),
+    SMTP_USERNAME: Boolean(process.env.SMTP_USERNAME || process.env.MAIL_USER),
+    SMTP_PASSWORD: Boolean(process.env.SMTP_PASSWORD || process.env.MAIL_PASS),
     MAIL_TO: Boolean(process.env.MAIL_TO),
   };
 
@@ -117,5 +119,10 @@ export async function GET(request: Request) {
     }
   }
 
-  return json({ success: true, configured, database });
+  return json({
+    success: true,
+    configured,
+    database,
+    mail: { transport: mailerDescription, from: MAIL_FROM, status: await verifyMailer() },
+  });
 }

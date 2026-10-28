@@ -1,4 +1,4 @@
-import { mailer } from "@/lib/mailer";
+import { mailer, MAIL_FROM } from "@/lib/mailer";
 import { saveLead } from "@/lib/leads";
 import { escapeHtml } from "@/lib/security";
 import { contactSchema, type ContactFormData } from "@/validations/contact-schema";
@@ -99,6 +99,7 @@ export async function intakeLead(input: unknown): Promise<IntakeOutcome> {
     if (!to) throw new Error("MAIL_TO is not configured");
 
     await mailer.sendMail({
+      from: MAIL_FROM,
       to,
       replyTo: contact.email,
       subject: `New website enquiry${interest ? `: ${interest}` : ""} — ${contact.name}`,
