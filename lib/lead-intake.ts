@@ -20,9 +20,11 @@ export interface IntakeOutcome {
   saved: boolean;
   /** Handed to the mail transport. */
   mailed: boolean;
+  /** Pushed to the Contact Center as a dialable lead. */
+  forwarded: boolean;
   message: string;
-  /** Why each half failed, for the server log and the API's response. */
-  errors: { save?: string; mail?: string };
+  /** Why each part failed, for the server log and the API's response. */
+  errors: { save?: string; mail?: string; forward?: string };
 }
 
 const SUCCESS_MESSAGE = "Thank you! We'll contact you soon.";
@@ -50,6 +52,7 @@ export async function intakeLead(input: unknown): Promise<IntakeOutcome> {
       ok: false,
       saved: false,
       mailed: false,
+      forwarded: false,
       message: "Please check the form fields and try again.",
       errors: { save: "validation" },
     };
@@ -59,7 +62,7 @@ export async function intakeLead(input: unknown): Promise<IntakeOutcome> {
 
   // Honeypot filled in: report success so bots don't retry, but store nothing.
   if (data.website) {
-    return { ok: true, saved: false, mailed: false, message: SUCCESS_MESSAGE, errors: {} };
+    return { ok: true, saved: false, mailed: false, forwarded: false, message: SUCCESS_MESSAGE, errors: {} };
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -111,17 +114,110 @@ export async function intakeLead(input: unknown): Promise<IntakeOutcome> {
     console.error("[lead-intake] could not send the notification:", errors.mail);
   }
 
+  // Hand it to the dialer as well, when one is configured and the enquiry left
+  // a number. This is the slowest of the three and the least important -- an
+  // enquiry nobody can call is still an enquiry -- so it runs last and its
+  // failure never reaches the visitor.
+  const forwarded = await forwardToContactCenter(contact, errors);
+
   if (!saved && !mailed) {
     return {
       ok: false,
       saved,
       mailed,
+      forwarded,
       message: "Failed to send your message. Please try again later.",
       errors,
     };
   }
 
-  return { ok: true, saved, mailed, message: SUCCESS_MESSAGE, errors };
+  return { ok: true, saved, mailed, forwarded, message: SUCCESS_MESSAGE, errors };
+}
+
+/**
+ * Push the enquiry into the Contact Center so an agent can call it back.
+ *
+ * The endpoint is reached over a tunnel to a machine that is not always up, so
+ * this is strictly best-effort and bounded: a slow or missing dialer must not
+ * hold a visitor on a spinner. Without a phone number there is nothing to dial,
+ * so the lead is simply not forwarded.
+ */
+async function forwardToContactCenter(
+  contact: { name: string; email: string; phone?: string; company?: string; interest?: string; teamSize?: string; message: string },
+  errors: IntakeOutcome["errors"]
+): Promise<boolean> {
+  const url = process.env.LEADS_WEBHOOK_URL;
+  const secret = process.env.LEADS_WEBHOOK_SECRET;
+  if (!url || !secret) return false;
+
+  const { phoneCode, phoneNumber } = splitPhone(contact.phone);
+  if (!phoneNumber) return false;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-webhook-secret": secret,
+        // ngrok serves its interstitial to anything that looks like a browser.
+        "ngrok-skip-browser-warning": "true",
+      },
+      body: JSON.stringify({
+        name: contact.name,
+        email: contact.email,
+        phoneNumber,
+        phoneCode,
+        company: contact.company,
+        interest: interestLabel(contact.interest) || contact.interest,
+        teamSize: contact.teamSize,
+        message: contact.message,
+        source: "website",
+      }),
+      signal: AbortSignal.timeout(8000),
+    });
+
+    if (!response.ok) throw new Error(`${response.status} ${await response.text().catch(() => "")}`.trim());
+    return true;
+  } catch (error) {
+    errors.forward = error instanceof Error ? error.message : String(error);
+    console.error("[lead-intake] could not forward the lead to the contact center:", errors.forward);
+    return false;
+  }
+}
+
+/*
+ * Country codes we recognise on a number the visitor typed with a leading '+'.
+ * Longest first, so 971 is matched before 97 would be.
+ *
+ * A lead record keeps the code and the number in separate fields and the dialer
+ * joins them, so a number stored whole under a default code is dialled with the
+ * code twice -- +91 98765 00288 became 91 919876500288. This is not a complete
+ * list and is not meant to be; it covers where enquiries come from, and anything
+ * unrecognised keeps its digits and the default code, which is what it would
+ * have done anyway.
+ */
+const COUNTRY_CODES = ["971", "966", "880", "852", "91", "92", "94", "65", "61", "60", "49", "44", "33", "27", "1"];
+
+/** Split a typed phone number into the dialer's two fields. */
+export function splitPhone(input?: string): { phoneCode: string; phoneNumber: string } {
+  const fallback = process.env.LEADS_WEBHOOK_PHONE_CODE || "91";
+  const raw = (input || "").trim();
+  const digits = raw.replace(/\D/g, "");
+  if (!digits) return { phoneCode: fallback, phoneNumber: "" };
+
+  // Only a leading '+' says "what follows is a country code". Without it the
+  // number is local and the configured code applies.
+  if (raw.startsWith("+") || raw.startsWith("00")) {
+    const national = raw.startsWith("00") ? digits.slice(2) : digits;
+    for (const code of COUNTRY_CODES) {
+      if (national.startsWith(code) && national.length > code.length) {
+        return { phoneCode: code, phoneNumber: national.slice(code.length) };
+      }
+    }
+    return { phoneCode: fallback, phoneNumber: national };
+  }
+
+  return { phoneCode: fallback, phoneNumber: digits };
 }
 
 export function buildContactEmail(

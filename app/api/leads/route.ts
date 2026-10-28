@@ -87,6 +87,7 @@ export async function POST(request: Request) {
     message: outcome.message,
     stored: outcome.saved,
     notified: outcome.mailed,
+    dialable: outcome.forwarded,
     // One half failing still counts as accepted, but the caller should know.
     ...(Object.keys(outcome.errors).length ? { warnings: outcome.errors } : {}),
   });
