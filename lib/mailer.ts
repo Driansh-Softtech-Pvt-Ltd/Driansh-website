@@ -43,6 +43,10 @@ function createTransport(): Transporter {
   if (host) {
     const ssl = bool(process.env.SMTP_SSL);
     const starttls = bool(process.env.SMTP_ENABLE_STARTTLS_AUTO);
+    // Rails spells these plain / login / cram_md5.
+    const auth = process.env.SMTP_AUTHENTICATION?.trim().toUpperCase().replace(/_/g, "-");
+    // 'none' is the only setting that means "do not check the certificate".
+    const verifyMode = process.env.SMTP_OPENSSL_VERIFY_MODE?.trim().toLowerCase();
 
     return nodemailer.createTransport({
       host,
@@ -50,7 +54,12 @@ function createTransport(): Transporter {
       // Port 465 is TLS from the first byte; the rest open in the clear and
       // upgrade, which nodemailer does on its own unless told not to.
       secure: ssl ?? port === 465,
-      ...(starttls === false ? { ignoreTLS: true } : {}),
+      // Asking for STARTTLS should mean requiring it. Without this a relay
+      // that loses its TLS advertisement is talked to in the clear instead,
+      // and the password goes with it.
+      ...(starttls === false ? { ignoreTLS: true } : { requireTLS: true }),
+      ...(auth ? { authMethod: auth } : {}),
+      ...(verifyMode === "none" ? { tls: { rejectUnauthorized: false } } : {}),
       // Rails calls this the SMTP domain; it is the name sent in EHLO.
       ...(process.env.SMTP_DOMAIN ? { name: process.env.SMTP_DOMAIN } : {}),
       ...(user ? { auth: { user, pass } } : {}),
